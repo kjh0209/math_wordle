@@ -84,6 +84,7 @@ export interface StartRunResponse {
 export interface FinishRunRequest {
   runId: string;
   puzzleId: string;
+  stepCode: string;
   sessionKey: string;
   cleared: boolean;
   attemptsCount: number;
