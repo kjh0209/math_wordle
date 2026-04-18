@@ -40,7 +40,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -89,7 +90,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         },
         {
           "type": "token",
@@ -97,7 +98,7 @@
         },
         {
           "type": "token",
-          "value": "9"
+          "value": "7"
         }
       ],
       "length": 5
@@ -105,7 +106,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -154,7 +156,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "5"
         },
         {
           "type": "token",
@@ -162,15 +164,20 @@
         },
         {
           "type": "token",
-          "value": "9"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
         }
       ],
-      "length": 5
+      "length": 6
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -219,7 +226,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "1"
         },
         {
           "type": "token",
@@ -227,7 +234,7 @@
         },
         {
           "type": "token",
-          "value": "9"
+          "value": "6"
         }
       ],
       "length": 5
@@ -235,7 +242,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -284,7 +292,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "3"
         },
         {
           "type": "token",
@@ -292,7 +300,7 @@
         },
         {
           "type": "token",
-          "value": "9"
+          "value": "8"
         }
       ],
       "length": 5
@@ -300,7 +308,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

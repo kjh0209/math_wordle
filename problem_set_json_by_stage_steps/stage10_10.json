@@ -33,7 +33,9 @@
     },
     "difficulty": "hard",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -69,7 +71,7 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "7",
+            "n": "8",
             "r": "2"
           }
         },
@@ -83,14 +85,16 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "8"
         }
       ],
       "length": 4
     },
     "difficulty": "hard",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -126,7 +130,7 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "7",
+            "n": "9",
             "r": "2"
           }
         },
@@ -136,18 +140,20 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "6"
         }
       ],
       "length": 4
     },
     "difficulty": "hard",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -184,7 +190,7 @@
           "blockType": "Comb",
           "fields": {
             "n": "7",
-            "r": "2"
+            "r": "3"
           }
         },
         {
@@ -193,18 +199,20 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "5"
         }
       ],
       "length": 4
     },
     "difficulty": "hard",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -240,8 +248,8 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "7",
-            "r": "2"
+            "n": "8",
+            "r": "3"
           }
         },
         {
@@ -250,18 +258,20 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "5"
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "6"
         }
       ],
       "length": 4
     },
     "difficulty": "hard",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",

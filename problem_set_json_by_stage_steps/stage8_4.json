@@ -23,18 +23,6 @@
         },
         {
           "type": "token",
-          "value": "("
-        },
-        {
-          "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -42,12 +30,13 @@
           "value": "2"
         }
       ],
-      "length": 6
+      "length": 3
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -68,7 +57,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
@@ -100,18 +95,6 @@
         },
         {
           "type": "token",
-          "value": "("
-        },
-        {
-          "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -119,12 +102,13 @@
           "value": "2"
         }
       ],
-      "length": 6
+      "length": 3
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -145,7 +129,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
@@ -177,18 +167,6 @@
         },
         {
           "type": "token",
-          "value": "("
-        },
-        {
-          "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -196,12 +174,13 @@
           "value": "2"
         }
       ],
-      "length": 6
+      "length": 3
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -222,7 +201,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
@@ -254,18 +239,6 @@
         },
         {
           "type": "token",
-          "value": "("
-        },
-        {
-          "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -273,12 +246,13 @@
           "value": "2"
         }
       ],
-      "length": 6
+      "length": 3
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -299,7 +273,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
@@ -331,18 +311,6 @@
         },
         {
           "type": "token",
-          "value": "("
-        },
-        {
-          "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -350,12 +318,13 @@
           "value": "2"
         }
       ],
-      "length": 6
+      "length": 3
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -376,7 +345,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"

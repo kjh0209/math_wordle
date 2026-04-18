@@ -38,14 +38,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "x",
       "+",
-      "3",
       "=",
-      "5"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 2+3=5이다."
@@ -89,14 +102,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "x",
       "+",
-      "4",
       "=",
-      "7"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=3이면 3+4=7이다."
@@ -140,14 +166,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "+",
       "x",
       "=",
-      "6"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2+4=6이다."
@@ -191,14 +230,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "x",
       "+",
-      "1",
       "=",
-      "6"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=5이면 5+1=6이다."
@@ -242,14 +294,28 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "x",
       "+",
       "x",
       "=",
-      "4"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 2+2=4이다."

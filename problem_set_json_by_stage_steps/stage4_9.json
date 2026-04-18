@@ -12,7 +12,7 @@
     ],
     "answer": {
       "expression": "(x+3)/2=3",
-      "display": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -56,7 +56,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -98,7 +99,7 @@
     ],
     "answer": {
       "expression": "(x+3)/2=3",
-      "display": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -142,7 +143,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -184,7 +186,7 @@
     ],
     "answer": {
       "expression": "(x+3)/2=3",
-      "display": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -228,7 +230,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -270,7 +273,7 @@
     ],
     "answer": {
       "expression": "(x+3)/2=3",
-      "display": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -314,7 +317,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -356,7 +360,7 @@
     ],
     "answer": {
       "expression": "(x+3)/2=3",
-      "display": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -400,7 +404,8 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

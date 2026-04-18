@@ -33,7 +33,9 @@
     },
     "difficulty": "medium",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -45,7 +47,13 @@
       "7",
       "8",
       "9",
-      "="
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "Perm"
@@ -87,7 +95,9 @@
     },
     "difficulty": "medium",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -99,7 +109,13 @@
       "7",
       "8",
       "9",
-      "="
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "Perm"
@@ -141,7 +157,9 @@
     },
     "difficulty": "medium",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -153,7 +171,13 @@
       "7",
       "8",
       "9",
-      "="
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "Perm"
@@ -195,7 +219,9 @@
     },
     "difficulty": "medium",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -207,7 +233,13 @@
       "7",
       "8",
       "9",
-      "="
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "Perm"
@@ -249,7 +281,9 @@
     },
     "difficulty": "medium",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -261,7 +295,13 @@
       "7",
       "8",
       "9",
-      "="
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "Perm"

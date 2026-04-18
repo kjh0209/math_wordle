@@ -6,7 +6,7 @@
     "variable": [],
     "answer": {
       "expression": "sin(pi/2)+1=2",
-      "display": "sin(pi/2)+1=2",
+      "display": "sin(pi÷2)+1=2",
       "cells": [
         {
           "type": "token",
@@ -53,7 +53,9 @@
     },
     "difficulty": "hard",
     "category": "trigonometry",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -74,7 +76,12 @@
       "sin",
       "cos",
       "tan",
-      "e"
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase",
@@ -94,7 +101,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "sin"
+          "value": "cos"
         },
         {
           "type": "token",
@@ -102,15 +109,7 @@
         },
         {
           "type": "token",
-          "value": "pi"
-        },
-        {
-          "type": "token",
-          "value": "/"
-        },
-        {
-          "type": "token",
-          "value": "2"
+          "value": "0"
         },
         {
           "type": "token",
@@ -133,11 +132,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 8
     },
     "difficulty": "hard",
     "category": "trigonometry",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -158,7 +159,12 @@
       "sin",
       "cos",
       "tan",
-      "e"
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase",
@@ -174,11 +180,11 @@
     "variable": [],
     "answer": {
       "expression": "tan(pi/4)+1=2",
-      "display": "tan(pi/4)+1=2",
+      "display": "tan(pi÷4)+1=2",
       "cells": [
         {
           "type": "token",
-          "value": "sin"
+          "value": "tan"
         },
         {
           "type": "token",
@@ -194,7 +200,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "4"
         },
         {
           "type": "token",
@@ -221,7 +227,9 @@
     },
     "difficulty": "hard",
     "category": "trigonometry",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -242,7 +250,12 @@
       "sin",
       "cos",
       "tan",
-      "e"
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase",
@@ -258,7 +271,7 @@
     "variable": [],
     "answer": {
       "expression": "sin(pi/6)+0.5=1",
-      "display": "sin(pi/6)+0.5=1",
+      "display": "sin(pi÷6)+0.5=1",
       "cells": [
         {
           "type": "token",
@@ -278,7 +291,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "6"
         },
         {
           "type": "token",
@@ -290,7 +303,15 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
         },
         {
           "type": "token",
@@ -298,14 +319,16 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "1"
         }
       ],
-      "length": 10
+      "length": 12
     },
     "difficulty": "hard",
     "category": "trigonometry",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -326,7 +349,12 @@
       "sin",
       "cos",
       "tan",
-      "e"
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase",
@@ -342,11 +370,11 @@
     "variable": [],
     "answer": {
       "expression": "cos(pi/3)+0.5=1",
-      "display": "cos(pi/3)+0.5=1",
+      "display": "cos(pi÷3)+0.5=1",
       "cells": [
         {
           "type": "token",
-          "value": "sin"
+          "value": "cos"
         },
         {
           "type": "token",
@@ -362,7 +390,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
@@ -374,7 +402,15 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
         },
         {
           "type": "token",
@@ -382,14 +418,16 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "1"
         }
       ],
-      "length": 10
+      "length": 12
     },
     "difficulty": "hard",
     "category": "trigonometry",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -410,7 +448,12 @@
       "sin",
       "cos",
       "tan",
-      "e"
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase",

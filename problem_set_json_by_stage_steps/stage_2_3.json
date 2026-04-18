@@ -38,13 +38,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "|",
       "x",
       "=",
-      "3"
+      "+",
+      "-",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "|-3|=3이다."
@@ -88,13 +102,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "|",
       "x",
       "=",
-      "2"
+      "+",
+      "-",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "|-2|=2이다."
@@ -138,13 +166,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "|",
       "x",
       "=",
-      "4"
+      "+",
+      "-",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "|4|=4이다."
@@ -188,13 +230,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "|",
       "x",
       "=",
-      "5"
+      "+",
+      "-",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "|-5|=5이다."
@@ -238,13 +294,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "|",
       "x",
       "=",
-      "1"
+      "+",
+      "-",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "|-1|=1이다."

@@ -33,7 +33,9 @@
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -66,7 +68,7 @@
           "type": "block",
           "blockType": "Perm",
           "fields": {
-            "n": "4",
+            "n": "5",
             "r": "2"
           }
         },
@@ -76,18 +78,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "0"
         }
       ],
       "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -120,7 +124,7 @@
           "type": "block",
           "blockType": "Perm",
           "fields": {
-            "n": "4",
+            "n": "6",
             "r": "2"
           }
         },
@@ -130,18 +134,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "3"
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "0"
         }
       ],
       "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -175,7 +181,7 @@
           "blockType": "Perm",
           "fields": {
             "n": "4",
-            "r": "2"
+            "r": "3"
           }
         },
         {
@@ -184,18 +190,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "4"
         }
       ],
       "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -228,8 +236,8 @@
           "type": "block",
           "blockType": "Perm",
           "fields": {
-            "n": "4",
-            "r": "2"
+            "n": "5",
+            "r": "3"
           }
         },
         {
@@ -238,18 +246,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "6"
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "0"
         }
       ],
       "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",

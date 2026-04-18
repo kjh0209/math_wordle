@@ -10,7 +10,7 @@
     },
     "answer": {
       "expression": "sqrt(x)=2",
-      "display": "√(x)=2",
+      "display": "sqrt(x)=2",
       "cells": [
         {
           "type": "token",
@@ -42,15 +42,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "=",
-      "2"
+      "+",
+      "-",
+      "|",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "√4=2이다."
@@ -66,7 +81,7 @@
     },
     "answer": {
       "expression": "sqrt(x)=3",
-      "display": "√(x)=3",
+      "display": "sqrt(x)=3",
       "cells": [
         {
           "type": "token",
@@ -98,15 +113,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "=",
-      "3"
+      "+",
+      "-",
+      "|",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "√9=3이다."
@@ -122,7 +152,7 @@
     },
     "answer": {
       "expression": "sqrt(x)=1",
-      "display": "√(x)=1",
+      "display": "sqrt(x)=1",
       "cells": [
         {
           "type": "token",
@@ -154,15 +184,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "=",
-      "1"
+      "+",
+      "-",
+      "|",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "√1=1이다."
@@ -178,7 +223,7 @@
     },
     "answer": {
       "expression": "sqrt(x)=4",
-      "display": "√(x)=4",
+      "display": "sqrt(x)=4",
       "cells": [
         {
           "type": "token",
@@ -210,15 +255,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "=",
-      "4"
+      "+",
+      "-",
+      "|",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "√16=4이다."
@@ -234,7 +294,7 @@
     },
     "answer": {
       "expression": "sqrt(x)=5",
-      "display": "√(x)=5",
+      "display": "sqrt(x)=5",
       "cells": [
         {
           "type": "token",
@@ -266,15 +326,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "=",
-      "5"
+      "+",
+      "-",
+      "|",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "√25=5이다."

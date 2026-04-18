@@ -44,7 +44,8 @@
     "difficulty": "medium",
     "category": "trigonometry",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -64,7 +65,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "e"
     ],
     "shownBlocks": [],
     "explanation": "x=π/4이면 tan(x)=1이다.",
@@ -115,7 +122,8 @@
     "difficulty": "medium",
     "category": "trigonometry",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -135,7 +143,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "e"
     ],
     "shownBlocks": [],
     "explanation": "x=π/4이면 tan(x)=1이다.",
@@ -186,7 +200,8 @@
     "difficulty": "medium",
     "category": "trigonometry",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -206,7 +221,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "e"
     ],
     "shownBlocks": [],
     "explanation": "x=π/4이면 tan(x)=1이다.",
@@ -257,7 +278,8 @@
     "difficulty": "medium",
     "category": "trigonometry",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -277,7 +299,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "e"
     ],
     "shownBlocks": [],
     "explanation": "x=π/4이면 tan(x)=1이다.",
@@ -328,7 +356,8 @@
     "difficulty": "medium",
     "category": "trigonometry",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -348,7 +377,13 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "e"
     ],
     "shownBlocks": [],
     "explanation": "x=π/4이면 tan(x)=1이다.",

@@ -30,7 +30,9 @@
     },
     "difficulty": "easy",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -43,7 +45,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
@@ -82,7 +90,9 @@
     },
     "difficulty": "easy",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -95,7 +105,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
@@ -134,7 +150,9 @@
     },
     "difficulty": "easy",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -147,7 +165,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
@@ -186,7 +210,9 @@
     },
     "difficulty": "easy",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -199,7 +225,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
@@ -238,7 +270,9 @@
     },
     "difficulty": "easy",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -251,7 +285,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"

@@ -11,8 +11,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2+2*x+1=(x+1)^2",
-      "display": "x^2+2*x+1=(x+1)^2",
+      "expression": "x^2+2x+1=(x+1)^2",
+      "display": "x^2+2x+1=(x+1)^2",
       "cells": [
         {
           "type": "token",
@@ -33,10 +33,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -83,12 +79,13 @@
           "value": "2"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -118,7 +115,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+4+1=9이고 우변은 3^2=9이다.",
-    "puzzle": "x^2+2*x+1=(x+1)^2"
+    "puzzle": "x^2+2x+1=(x+1)^2"
   },
   {
     "id": "s6_5_2",
@@ -132,8 +129,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2+2*x+1=(x+1)^2",
-      "display": "x^2+2*x+1=(x+1)^2",
+      "expression": "x^2+2x+1=(x+1)^2",
+      "display": "x^2+2x+1=(x+1)^2",
       "cells": [
         {
           "type": "token",
@@ -154,10 +151,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -204,12 +197,13 @@
           "value": "2"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -239,7 +233,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+4+1=9이고 우변은 3^2=9이다.",
-    "puzzle": "x^2+2*x+1=(x+1)^2"
+    "puzzle": "x^2+2x+1=(x+1)^2"
   },
   {
     "id": "s6_5_3",
@@ -253,8 +247,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2+2*x+1=(x+1)^2",
-      "display": "x^2+2*x+1=(x+1)^2",
+      "expression": "x^2+2x+1=(x+1)^2",
+      "display": "x^2+2x+1=(x+1)^2",
       "cells": [
         {
           "type": "token",
@@ -275,10 +269,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -325,12 +315,13 @@
           "value": "2"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -360,7 +351,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+4+1=9이고 우변은 3^2=9이다.",
-    "puzzle": "x^2+2*x+1=(x+1)^2"
+    "puzzle": "x^2+2x+1=(x+1)^2"
   },
   {
     "id": "s6_5_4",
@@ -374,8 +365,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2+2*x+1=(x+1)^2",
-      "display": "x^2+2*x+1=(x+1)^2",
+      "expression": "x^2+2x+1=(x+1)^2",
+      "display": "x^2+2x+1=(x+1)^2",
       "cells": [
         {
           "type": "token",
@@ -396,10 +387,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -446,12 +433,13 @@
           "value": "2"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -481,7 +469,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+4+1=9이고 우변은 3^2=9이다.",
-    "puzzle": "x^2+2*x+1=(x+1)^2"
+    "puzzle": "x^2+2x+1=(x+1)^2"
   },
   {
     "id": "s6_5_5",
@@ -495,8 +483,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2+2*x+1=(x+1)^2",
-      "display": "x^2+2*x+1=(x+1)^2",
+      "expression": "x^2+2x+1=(x+1)^2",
+      "display": "x^2+2x+1=(x+1)^2",
       "cells": [
         {
           "type": "token",
@@ -517,10 +505,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -567,12 +551,13 @@
           "value": "2"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -602,6 +587,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+4+1=9이고 우변은 3^2=9이다.",
-    "puzzle": "x^2+2*x+1=(x+1)^2"
+    "puzzle": "x^2+2x+1=(x+1)^2"
   }
 ]

@@ -37,14 +37,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "4",
+      "0",
+      "1",
+      "2",
       "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "=",
-      "1",
-      "2"
+      "+",
+      "-",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "4*3=12이다."
@@ -87,14 +98,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "5",
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "=",
-      "1",
-      "0"
+      "+",
+      "-",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "5*2=10이다."
@@ -137,14 +159,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "6",
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "=",
-      "1",
-      "2"
+      "+",
+      "-",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "6*2=12이다."
@@ -187,14 +220,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "7",
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "=",
-      "1",
-      "4"
+      "+",
+      "-",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "7*2=14이다."
@@ -237,14 +281,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
       "3",
+      "4",
       "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "=",
-      "1",
-      "5"
+      "+",
+      "-",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "3*5=15이다."

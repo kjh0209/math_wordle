@@ -18,10 +18,6 @@
         },
         {
           "type": "token",
-          "value": "i"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -33,11 +29,13 @@
           "value": "5"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "hard",
     "category": "summation",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -50,7 +48,13 @@
       "8",
       "9",
       "=",
-      "i"
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "SigmaRange"
@@ -77,10 +81,6 @@
         },
         {
           "type": "token",
-          "value": "i"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
@@ -89,14 +89,16 @@
         },
         {
           "type": "token",
-          "value": "5"
+          "value": "0"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "hard",
     "category": "summation",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -109,7 +111,13 @@
       "8",
       "9",
       "=",
-      "i"
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "SigmaRange"
@@ -136,26 +144,20 @@
         },
         {
           "type": "token",
-          "value": "i"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
           "type": "token",
-          "value": "1"
-        },
-        {
-          "type": "token",
-          "value": "5"
+          "value": "6"
         }
       ],
-      "length": 5
+      "length": 3
     },
     "difficulty": "hard",
     "category": "summation",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -168,7 +170,13 @@
       "8",
       "9",
       "=",
-      "i"
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "SigmaRange"
@@ -195,26 +203,24 @@
         },
         {
           "type": "token",
-          "value": "i"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
-          "value": "5"
+          "value": "1"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "hard",
     "category": "summation",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -227,7 +233,13 @@
       "8",
       "9",
       "=",
-      "i"
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "SigmaRange"
@@ -254,26 +266,20 @@
         },
         {
           "type": "token",
-          "value": "i"
-        },
-        {
-          "type": "token",
           "value": "="
         },
         {
           "type": "token",
-          "value": "1"
-        },
-        {
-          "type": "token",
-          "value": "5"
+          "value": "3"
         }
       ],
-      "length": 5
+      "length": 3
     },
     "difficulty": "hard",
     "category": "summation",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -286,7 +292,13 @@
       "8",
       "9",
       "=",
-      "i"
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "SigmaRange"

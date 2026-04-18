@@ -40,7 +40,8 @@
     "difficulty": "medium",
     "category": "absolute-value",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -112,7 +113,8 @@
     "difficulty": "medium",
     "category": "absolute-value",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -184,7 +186,8 @@
     "difficulty": "medium",
     "category": "absolute-value",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -256,7 +259,8 @@
     "difficulty": "medium",
     "category": "absolute-value",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -328,7 +332,8 @@
     "difficulty": "medium",
     "category": "absolute-value",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

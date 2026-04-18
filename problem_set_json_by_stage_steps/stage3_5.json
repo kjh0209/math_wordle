@@ -6,7 +6,7 @@
     "variable": [],
     "answer": {
       "expression": "(8-2)/3=2",
-      "display": "(8-2)/3=2",
+      "display": "(8-2)÷3=2",
       "cells": [
         {
           "type": "token",
@@ -49,7 +49,9 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -80,7 +82,7 @@
     "variable": [],
     "answer": {
       "expression": "(9-3)/2=3",
-      "display": "(9-3)/2=3",
+      "display": "(9-3)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -88,7 +90,7 @@
         },
         {
           "type": "token",
-          "value": "8"
+          "value": "9"
         },
         {
           "type": "token",
@@ -96,7 +98,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
@@ -108,7 +110,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         },
         {
           "type": "token",
@@ -116,14 +118,16 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         }
       ],
       "length": 9
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -154,7 +158,7 @@
     "variable": [],
     "answer": {
       "expression": "(10-4)/2=3",
-      "display": "(10-4)/2=3",
+      "display": "(10-4)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -162,7 +166,11 @@
         },
         {
           "type": "token",
-          "value": "8"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
         },
         {
           "type": "token",
@@ -170,7 +178,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "4"
         },
         {
           "type": "token",
@@ -182,7 +190,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         },
         {
           "type": "token",
@@ -190,14 +198,16 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         }
       ],
-      "length": 9
+      "length": 10
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -228,7 +238,7 @@
     "variable": [],
     "answer": {
       "expression": "(7-1)/3=2",
-      "display": "(7-1)/3=2",
+      "display": "(7-1)÷3=2",
       "cells": [
         {
           "type": "token",
@@ -236,7 +246,7 @@
         },
         {
           "type": "token",
-          "value": "8"
+          "value": "7"
         },
         {
           "type": "token",
@@ -244,7 +254,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "1"
         },
         {
           "type": "token",
@@ -271,7 +281,9 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -302,7 +314,7 @@
     "variable": [],
     "answer": {
       "expression": "(6-2)/2=2",
-      "display": "(6-2)/2=2",
+      "display": "(6-2)÷2=2",
       "cells": [
         {
           "type": "token",
@@ -310,7 +322,7 @@
         },
         {
           "type": "token",
-          "value": "8"
+          "value": "6"
         },
         {
           "type": "token",
@@ -330,7 +342,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         },
         {
           "type": "token",
@@ -345,7 +357,9 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",

@@ -12,7 +12,7 @@
     ],
     "answer": {
       "expression": "x^2-4=(x-2)*(x+2)",
-      "display": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
       "cells": [
         {
           "type": "token",
@@ -88,7 +88,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -132,7 +133,7 @@
     ],
     "answer": {
       "expression": "x^2-4=(x-2)*(x+2)",
-      "display": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
       "cells": [
         {
           "type": "token",
@@ -208,7 +209,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -252,7 +254,7 @@
     ],
     "answer": {
       "expression": "x^2-4=(x-2)*(x+2)",
-      "display": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
       "cells": [
         {
           "type": "token",
@@ -328,7 +330,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -372,7 +375,7 @@
     ],
     "answer": {
       "expression": "x^2-4=(x-2)*(x+2)",
-      "display": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
       "cells": [
         {
           "type": "token",
@@ -448,7 +451,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -492,7 +496,7 @@
     ],
     "answer": {
       "expression": "x^2-4=(x-2)*(x+2)",
-      "display": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
       "cells": [
         {
           "type": "token",
@@ -568,7 +572,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

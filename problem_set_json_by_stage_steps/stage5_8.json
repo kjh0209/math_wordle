@@ -11,8 +11,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2-5*x+6=0",
-      "display": "x^2-5*x+6=0",
+      "expression": "x^2-5x+6=0",
+      "display": "x^2-5x+6=0",
       "cells": [
         {
           "type": "token",
@@ -36,10 +36,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -59,12 +55,13 @@
           "value": "0"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -93,7 +90,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 4-10+6=0이다.",
-    "puzzle": "x^2-5*x+6=0"
+    "puzzle": "x^2-5x+6=0"
   },
   {
     "id": "s5_8_2",
@@ -107,8 +104,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2-3*x+2=0",
-      "display": "x^2-3*x+2=0",
+      "expression": "x^2-3x+2=0",
+      "display": "x^2-3x+2=0",
       "cells": [
         {
           "type": "token",
@@ -128,11 +125,7 @@
         },
         {
           "type": "token",
-          "value": "5"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
@@ -144,7 +137,7 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "2"
         },
         {
           "type": "token",
@@ -155,12 +148,13 @@
           "value": "0"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -189,7 +183,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 4-10+6=0이다.",
-    "puzzle": "x^2-3*x+2=0"
+    "puzzle": "x^2-3x+2=0"
   },
   {
     "id": "s5_8_3",
@@ -203,8 +197,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2-4*x+3=0",
-      "display": "x^2-4*x+3=0",
+      "expression": "x^2-4x+3=0",
+      "display": "x^2-4x+3=0",
       "cells": [
         {
           "type": "token",
@@ -224,11 +218,7 @@
         },
         {
           "type": "token",
-          "value": "5"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
@@ -240,7 +230,7 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "3"
         },
         {
           "type": "token",
@@ -251,12 +241,13 @@
           "value": "0"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -285,7 +276,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 4-10+6=0이다.",
-    "puzzle": "x^2-4*x+3=0"
+    "puzzle": "x^2-4x+3=0"
   },
   {
     "id": "s5_8_4",
@@ -299,8 +290,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2-7*x+12=0",
-      "display": "x^2-7*x+12=0",
+      "expression": "x^2-7x+12=0",
+      "display": "x^2-7x+12=0",
       "cells": [
         {
           "type": "token",
@@ -320,11 +311,7 @@
         },
         {
           "type": "token",
-          "value": "5"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "7"
         },
         {
           "type": "token",
@@ -336,7 +323,11 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "2"
         },
         {
           "type": "token",
@@ -352,7 +343,8 @@
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -381,7 +373,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 4-10+6=0이다.",
-    "puzzle": "x^2-7*x+12=0"
+    "puzzle": "x^2-7x+12=0"
   },
   {
     "id": "s5_8_5",
@@ -395,8 +387,8 @@
       }
     ],
     "answer": {
-      "expression": "x^2-6*x+8=0",
-      "display": "x^2-6*x+8=0",
+      "expression": "x^2-6x+8=0",
+      "display": "x^2-6x+8=0",
       "cells": [
         {
           "type": "token",
@@ -416,11 +408,7 @@
         },
         {
           "type": "token",
-          "value": "5"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "6"
         },
         {
           "type": "token",
@@ -432,7 +420,7 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "8"
         },
         {
           "type": "token",
@@ -443,12 +431,13 @@
           "value": "0"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "quadratic",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -477,6 +466,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 4-10+6=0이다.",
-    "puzzle": "x^2-6*x+8=0"
+    "puzzle": "x^2-6x+8=0"
   }
 ]

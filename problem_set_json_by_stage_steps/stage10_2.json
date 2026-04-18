@@ -29,7 +29,9 @@
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -62,7 +64,7 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "4",
+            "n": "5",
             "r": "2"
           }
         },
@@ -72,14 +74,20 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
         }
       ],
-      "length": 3
+      "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -112,7 +120,7 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "4",
+            "n": "6",
             "r": "2"
           }
         },
@@ -122,14 +130,20 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
         }
       ],
-      "length": 3
+      "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -162,8 +176,8 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "4",
-            "r": "2"
+            "n": "5",
+            "r": "3"
           }
         },
         {
@@ -172,14 +186,20 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
         }
       ],
-      "length": 3
+      "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -212,8 +232,8 @@
           "type": "block",
           "blockType": "Comb",
           "fields": {
-            "n": "4",
-            "r": "2"
+            "n": "6",
+            "r": "3"
           }
         },
         {
@@ -222,14 +242,20 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
         }
       ],
-      "length": 3
+      "length": 4
     },
     "difficulty": "easy",
     "category": "combinatorics",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",

@@ -11,8 +11,8 @@
       }
     ],
     "answer": {
-      "expression": "(2*x+4)/2=6",
-      "display": "(2*x+4)/2=6",
+      "expression": "(2x+4)/2=6",
+      "display": "(2x+4)÷2=6",
       "cells": [
         {
           "type": "token",
@@ -21,10 +21,6 @@
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -59,12 +55,13 @@
           "value": "6"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -88,7 +85,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
-    "puzzle": "(2*x+4)/2=6"
+    "puzzle": "(2x+4)/2=6"
   },
   {
     "id": "s3_10_2",
@@ -102,8 +99,8 @@
       }
     ],
     "answer": {
-      "expression": "(3*x+3)/3=4",
-      "display": "(3*x+3)/3=4",
+      "expression": "(3x+3)/3=4",
+      "display": "(3x+3)÷3=4",
       "cells": [
         {
           "type": "token",
@@ -111,11 +108,7 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
@@ -127,7 +120,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "3"
         },
         {
           "type": "token",
@@ -139,7 +132,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
@@ -147,15 +140,16 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "4"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -179,7 +173,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
-    "puzzle": "(3*x+3)/3=4"
+    "puzzle": "(3x+3)/3=4"
   },
   {
     "id": "s3_10_3",
@@ -193,8 +187,8 @@
       }
     ],
     "answer": {
-      "expression": "(2*x-2)/2=3",
-      "display": "(2*x-2)/2=3",
+      "expression": "(2x-2)/2=3",
+      "display": "(2x-2)÷2=3",
       "cells": [
         {
           "type": "token",
@@ -206,19 +200,15 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         },
         {
           "type": "token",
@@ -238,15 +228,16 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "3"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -270,7 +261,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
-    "puzzle": "(2*x-2)/2=3"
+    "puzzle": "(2x-2)/2=3"
   },
   {
     "id": "s3_10_4",
@@ -284,8 +275,8 @@
       }
     ],
     "answer": {
-      "expression": "(4*x+4)/4=5",
-      "display": "(4*x+4)/4=5",
+      "expression": "(4x+4)/4=5",
+      "display": "(4x+4)÷4=5",
       "cells": [
         {
           "type": "token",
@@ -293,11 +284,7 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
@@ -321,7 +308,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "4"
         },
         {
           "type": "token",
@@ -329,15 +316,16 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "5"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -361,7 +349,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
-    "puzzle": "(4*x+4)/4=5"
+    "puzzle": "(4x+4)/4=5"
   },
   {
     "id": "s3_10_5",
@@ -375,8 +363,8 @@
       }
     ],
     "answer": {
-      "expression": "(2*x+2)/2=5",
-      "display": "(2*x+2)/2=5",
+      "expression": "(2x+2)/2=5",
+      "display": "(2x+2)÷2=5",
       "cells": [
         {
           "type": "token",
@@ -388,10 +376,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -400,7 +384,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         },
         {
           "type": "token",
@@ -420,15 +404,16 @@
         },
         {
           "type": "token",
-          "value": "6"
+          "value": "5"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -452,6 +437,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
-    "puzzle": "(2*x+2)/2=5"
+    "puzzle": "(2x+2)/2=5"
   }
 ]

@@ -10,7 +10,7 @@
     },
     "answer": {
       "expression": "sqrt(x+1)=2",
-      "display": "√(x+1)=2",
+      "display": "sqrt(x+1)=2",
       "cells": [
         {
           "type": "token",
@@ -50,17 +50,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "+",
-      "1",
       "=",
-      "2"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=3이면 √(3+1)=2이다."
@@ -76,7 +89,7 @@
     },
     "answer": {
       "expression": "sqrt(x-1)=2",
-      "display": "√(x-1)=2",
+      "display": "sqrt(x-1)=2",
       "cells": [
         {
           "type": "token",
@@ -116,17 +129,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "-",
-      "1",
       "=",
-      "2"
+      "+",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=5이면 √(5-1)=2이다."
@@ -142,7 +168,7 @@
     },
     "answer": {
       "expression": "sqrt(x+2)=3",
-      "display": "√(x+2)=3",
+      "display": "sqrt(x+2)=3",
       "cells": [
         {
           "type": "token",
@@ -182,17 +208,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "+",
-      "2",
       "=",
-      "3"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=7이면 √(7+2)=3이다."
@@ -208,7 +247,7 @@
     },
     "answer": {
       "expression": "sqrt(x-2)=1",
-      "display": "√(x-2)=1",
+      "display": "sqrt(x-2)=1",
       "cells": [
         {
           "type": "token",
@@ -248,17 +287,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "-",
-      "2",
       "=",
-      "1"
+      "+",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=3이면 √(3-2)=1이다."
@@ -274,7 +326,7 @@
     },
     "answer": {
       "expression": "sqrt(x+5)=3",
-      "display": "√(x+5)=3",
+      "display": "sqrt(x+5)=3",
       "cells": [
         {
           "type": "token",
@@ -314,17 +366,30 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "sqrt",
       "(",
       ")",
       "x",
       "+",
-      "5",
       "=",
-      "3"
+      "-",
+      "*",
+      "|",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 √(4+5)=3이다."

@@ -17,7 +17,7 @@
     ],
     "answer": {
       "expression": "(x+y)*(x-y)=x^2-y^2",
-      "display": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
       "cells": [
         {
           "type": "token",
@@ -101,7 +101,8 @@
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -151,7 +152,7 @@
     ],
     "answer": {
       "expression": "(x+y)*(x-y)=x^2-y^2",
-      "display": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
       "cells": [
         {
           "type": "token",
@@ -235,7 +236,8 @@
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -285,7 +287,7 @@
     ],
     "answer": {
       "expression": "(x+y)*(x-y)=x^2-y^2",
-      "display": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
       "cells": [
         {
           "type": "token",
@@ -369,7 +371,8 @@
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -419,7 +422,7 @@
     ],
     "answer": {
       "expression": "(x+y)*(x-y)=x^2-y^2",
-      "display": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
       "cells": [
         {
           "type": "token",
@@ -503,7 +506,8 @@
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -553,7 +557,7 @@
     ],
     "answer": {
       "expression": "(x+y)*(x-y)=x^2-y^2",
-      "display": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
       "cells": [
         {
           "type": "token",
@@ -637,7 +641,8 @@
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

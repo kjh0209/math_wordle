@@ -61,7 +61,8 @@
     "difficulty": "hard",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -145,7 +146,7 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "4"
         }
       ],
       "length": 9
@@ -153,7 +154,8 @@
     "difficulty": "hard",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -237,7 +239,7 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "9"
         }
       ],
       "length": 9
@@ -245,7 +247,8 @@
     "difficulty": "hard",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -330,14 +333,19 @@
         {
           "type": "token",
           "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "6"
         }
       ],
-      "length": 9
+      "length": 10
     },
     "difficulty": "hard",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -421,15 +429,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "5"
         }
       ],
-      "length": 9
+      "length": 10
     },
     "difficulty": "hard",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

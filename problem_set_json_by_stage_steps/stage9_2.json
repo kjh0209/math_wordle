@@ -5,8 +5,8 @@
     "title": "다항식 미분",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -35,10 +35,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -50,11 +46,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -69,13 +67,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^3를 x에 대해 미분하면 3*x^2가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   },
   {
     "id": "s9_2_2",
@@ -83,8 +86,8 @@
     "title": "다항식 미분",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -113,10 +116,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -128,11 +127,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -147,13 +148,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^3를 x에 대해 미분하면 3*x^2가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   },
   {
     "id": "s9_2_3",
@@ -161,8 +167,8 @@
     "title": "다항식 미분",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -191,10 +197,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -206,11 +208,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -225,13 +229,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^3를 x에 대해 미분하면 3*x^2가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   },
   {
     "id": "s9_2_4",
@@ -239,8 +248,8 @@
     "title": "다항식 미분",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -269,10 +278,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -284,11 +289,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -303,13 +310,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^3를 x에 대해 미분하면 3*x^2가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   },
   {
     "id": "s9_2_5",
@@ -317,8 +329,8 @@
     "title": "다항식 미분",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -347,10 +359,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -362,11 +370,13 @@
           "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -381,12 +391,17 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^3를 x에 대해 미분하면 3*x^2가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   }
 ]

@@ -33,13 +33,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "3",
+      "0",
       "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "-",
       "=",
-      "2"
+      "+",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "3-1=2이다."
@@ -78,13 +90,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "4",
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "-",
       "=",
-      "2"
+      "+",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "4-2=2이다."
@@ -123,13 +147,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "5",
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "-",
       "=",
-      "3"
+      "+",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "5-2=3이다."
@@ -168,13 +204,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "6",
+      "0",
+      "1",
+      "2",
       "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "-",
       "=",
-      "3"
+      "+",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "6-3=3이다."
@@ -213,13 +261,25 @@
     },
     "difficulty": "easy",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "7",
+      "0",
+      "1",
+      "2",
+      "3",
       "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "-",
       "=",
-      "3"
+      "+",
+      "*",
+      "/"
     ],
     "shownBlocks": [],
     "explanation": "7-4=3이다."

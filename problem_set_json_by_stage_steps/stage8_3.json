@@ -11,8 +11,8 @@
       }
     ],
     "answer": {
-      "expression": "log_2(x)=3",
-      "display": "log_2(x)=3",
+      "expression": "log_2(x)+1=4",
+      "display": "log_2(x)+1=4",
       "cells": [
         {
           "type": "block",
@@ -23,15 +23,11 @@
         },
         {
           "type": "token",
-          "value": "("
+          "value": "+"
         },
         {
           "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
+          "value": "1"
         },
         {
           "type": "token",
@@ -39,15 +35,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "4"
         }
       ],
-      "length": 6
+      "length": 5
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -68,13 +65,19 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
     ],
-    "explanation": "x=8이면 log₂(x)=3이다.",
-    "puzzle": "log_2(x)=3"
+    "explanation": "x=8이면 log₂(8)=3, 3+1=4이다.",
+    "puzzle": "log_2(x)+1=4"
   },
   {
     "id": "s8_3_2",
@@ -83,32 +86,28 @@
     "variable": [
       {
         "name": "x",
-        "valueExpression": "8",
-        "valueDisplay": "8"
+        "valueExpression": "9",
+        "valueDisplay": "9"
       }
     ],
     "answer": {
-      "expression": "log_2(x)=3",
-      "display": "log_2(x)=3",
+      "expression": "log_3(x)-1=1",
+      "display": "log_3(x)-1=1",
       "cells": [
         {
           "type": "block",
           "blockType": "LogBase",
           "fields": {
-            "base": "2"
+            "base": "3"
           }
         },
         {
           "type": "token",
-          "value": "("
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
+          "value": "1"
         },
         {
           "type": "token",
@@ -116,15 +115,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "1"
         }
       ],
-      "length": 6
+      "length": 5
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -145,13 +145,19 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
     ],
-    "explanation": "x=8이면 log₂(x)=3이다.",
-    "puzzle": "log_2(x)=3"
+    "explanation": "x=9이면 log₃(9)=2, 2-1=1이다.",
+    "puzzle": "log_3(x)-1=1"
   },
   {
     "id": "s8_3_3",
@@ -160,32 +166,28 @@
     "variable": [
       {
         "name": "x",
-        "valueExpression": "8",
-        "valueDisplay": "8"
+        "valueExpression": "16",
+        "valueDisplay": "16"
       }
     ],
     "answer": {
-      "expression": "log_2(x)=3",
-      "display": "log_2(x)=3",
+      "expression": "log_4(x)+2=4",
+      "display": "log_4(x)+2=4",
       "cells": [
         {
           "type": "block",
           "blockType": "LogBase",
           "fields": {
-            "base": "2"
+            "base": "4"
           }
         },
         {
           "type": "token",
-          "value": "("
+          "value": "+"
         },
         {
           "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
+          "value": "2"
         },
         {
           "type": "token",
@@ -193,15 +195,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "4"
         }
       ],
-      "length": 6
+      "length": 5
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -222,13 +225,19 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
     ],
-    "explanation": "x=8이면 log₂(x)=3이다.",
-    "puzzle": "log_2(x)=3"
+    "explanation": "x=16이면 log₄(16)=2, 2+2=4이다.",
+    "puzzle": "log_4(x)+2=4"
   },
   {
     "id": "s8_3_4",
@@ -242,8 +251,8 @@
       }
     ],
     "answer": {
-      "expression": "log_2(x)=3",
-      "display": "log_2(x)=3",
+      "expression": "log_2(x)-1=2",
+      "display": "log_2(x)-1=2",
       "cells": [
         {
           "type": "block",
@@ -254,15 +263,11 @@
         },
         {
           "type": "token",
-          "value": "("
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
+          "value": "1"
         },
         {
           "type": "token",
@@ -270,15 +275,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         }
       ],
-      "length": 6
+      "length": 5
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -299,13 +305,19 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
     ],
-    "explanation": "x=8이면 log₂(x)=3이다.",
-    "puzzle": "log_2(x)=3"
+    "explanation": "x=8이면 log₂(8)=3, 3-1=2이다.",
+    "puzzle": "log_2(x)-1=2"
   },
   {
     "id": "s8_3_5",
@@ -314,32 +326,28 @@
     "variable": [
       {
         "name": "x",
-        "valueExpression": "8",
-        "valueDisplay": "8"
+        "valueExpression": "25",
+        "valueDisplay": "25"
       }
     ],
     "answer": {
-      "expression": "log_2(x)=3",
-      "display": "log_2(x)=3",
+      "expression": "log_5(x)+1=3",
+      "display": "log_5(x)+1=3",
       "cells": [
         {
           "type": "block",
           "blockType": "LogBase",
           "fields": {
-            "base": "2"
+            "base": "5"
           }
         },
         {
           "type": "token",
-          "value": "("
+          "value": "+"
         },
         {
           "type": "token",
-          "value": "x"
-        },
-        {
-          "type": "token",
-          "value": ")"
+          "value": "1"
         },
         {
           "type": "token",
@@ -350,12 +358,13 @@
           "value": "3"
         }
       ],
-      "length": 6
+      "length": 5
     },
     "difficulty": "medium",
     "category": "logarithm",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -376,12 +385,18 @@
       "pi",
       "sin",
       "cos",
-      "tan"
+      "tan",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [
       "LogBase"
     ],
-    "explanation": "x=8이면 log₂(x)=3이다.",
-    "puzzle": "log_2(x)=3"
+    "explanation": "x=25이면 log₅(25)=2, 2+1=3이다.",
+    "puzzle": "log_5(x)+1=3"
   }
 ]

@@ -16,8 +16,8 @@
       }
     ],
     "answer": {
-      "expression": "y=2*x+1",
-      "display": "y=2*x+1",
+      "expression": "y=2x+1",
+      "display": "y=2x+1",
       "cells": [
         {
           "type": "token",
@@ -33,10 +33,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -48,12 +44,13 @@
           "value": "1"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "easy",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -81,7 +78,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 y=5이다.",
-    "puzzle": "y=2*x+1"
+    "puzzle": "y=2x+1"
   },
   {
     "id": "s7_1_2",
@@ -100,8 +97,8 @@
       }
     ],
     "answer": {
-      "expression": "y=3*x+2",
-      "display": "y=3*x+2",
+      "expression": "y=3x+2",
+      "display": "y=3x+2",
       "cells": [
         {
           "type": "token",
@@ -113,11 +110,7 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
@@ -129,15 +122,16 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "easy",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -165,7 +159,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 y=5이다.",
-    "puzzle": "y=3*x+2"
+    "puzzle": "y=3x+2"
   },
   {
     "id": "s7_1_3",
@@ -184,8 +178,8 @@
       }
     ],
     "answer": {
-      "expression": "y=4*x+3",
-      "display": "y=4*x+3",
+      "expression": "y=4x+3",
+      "display": "y=4x+3",
       "cells": [
         {
           "type": "token",
@@ -197,11 +191,7 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
@@ -213,15 +203,16 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "3"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "easy",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -249,7 +240,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 y=5이다.",
-    "puzzle": "y=4*x+3"
+    "puzzle": "y=4x+3"
   },
   {
     "id": "s7_1_4",
@@ -268,8 +259,8 @@
       }
     ],
     "answer": {
-      "expression": "y=-2*x-1",
-      "display": "y=-2*x-1",
+      "expression": "y=-2x-1",
+      "display": "y=-2x-1",
       "cells": [
         {
           "type": "token",
@@ -281,11 +272,11 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "2"
         },
         {
           "type": "token",
@@ -293,7 +284,7 @@
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
@@ -305,7 +296,8 @@
     "difficulty": "easy",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -333,7 +325,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 y=5이다.",
-    "puzzle": "y=-2*x-1"
+    "puzzle": "y=-2x-1"
   },
   {
     "id": "s7_1_5",
@@ -352,8 +344,8 @@
       }
     ],
     "answer": {
-      "expression": "y=-3*x-2",
-      "display": "y=-3*x-2",
+      "expression": "y=-3x-2",
+      "display": "y=-3x-2",
       "cells": [
         {
           "type": "token",
@@ -365,11 +357,11 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
@@ -377,11 +369,11 @@
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         }
       ],
       "length": 7
@@ -389,7 +381,8 @@
     "difficulty": "easy",
     "category": "function",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -417,6 +410,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 y=5이다.",
-    "puzzle": "y=-3*x-2"
+    "puzzle": "y=-3x-2"
   }
 ]

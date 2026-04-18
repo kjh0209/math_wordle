@@ -5,8 +5,8 @@
     "title": "공통수학1 종합",
     "variable": [],
     "answer": {
-      "expression": "(1+i)^2=2*i",
-      "display": "(1+i)^2=2*i",
+      "expression": "(1+i)^2=2i",
+      "display": "(1+i)^2=2i",
       "cells": [
         {
           "type": "token",
@@ -46,18 +46,16 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "i"
         }
       ],
-      "length": 11
+      "length": 10
     },
     "difficulty": "hard",
     "category": "algebra",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -89,7 +87,7 @@
       "Comb"
     ],
     "explanation": "(1+i)^2=1+2*i+i^2=2*i이다.",
-    "puzzle": "(1+i)^2=2*i"
+    "puzzle": "(1+i)^2=2i"
   },
   {
     "id": "s6_10_2",
@@ -97,8 +95,8 @@
     "title": "공통수학1 종합",
     "variable": [],
     "answer": {
-      "expression": "(1-i)^2=-2*i",
-      "display": "(1-i)^2=-2*i",
+      "expression": "(1-i)^2=-2i",
+      "display": "(1-i)^2=-2i",
       "cells": [
         {
           "type": "token",
@@ -110,7 +108,7 @@
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
@@ -134,11 +132,11 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "2"
         },
         {
           "type": "token",
@@ -149,7 +147,9 @@
     },
     "difficulty": "hard",
     "category": "algebra",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -181,7 +181,7 @@
       "Comb"
     ],
     "explanation": "(1+i)^2=1+2*i+i^2=2*i이다.",
-    "puzzle": "(1-i)^2=-2*i"
+    "puzzle": "(1-i)^2=-2i"
   },
   {
     "id": "s6_10_3",
@@ -189,8 +189,8 @@
     "title": "공통수학1 종합",
     "variable": [],
     "answer": {
-      "expression": "(2+i)^2=3+4*i",
-      "display": "(2+i)^2=3+4*i",
+      "expression": "(2+i)^2=3+4i",
+      "display": "(2+i)^2=3+4i",
       "cells": [
         {
           "type": "token",
@@ -198,7 +198,7 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
@@ -226,22 +226,28 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
         },
         {
           "type": "token",
           "value": "i"
         }
       ],
-      "length": 11
+      "length": 12
     },
     "difficulty": "hard",
     "category": "algebra",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -273,7 +279,7 @@
       "Comb"
     ],
     "explanation": "(1+i)^2=1+2*i+i^2=2*i이다.",
-    "puzzle": "(2+i)^2=3+4*i"
+    "puzzle": "(2+i)^2=3+4i"
   },
   {
     "id": "s6_10_4",
@@ -281,8 +287,8 @@
     "title": "공통수학1 종합",
     "variable": [],
     "answer": {
-      "expression": "(2-i)^2=3-4*i",
-      "display": "(2-i)^2=3-4*i",
+      "expression": "(2-i)^2=3-4i",
+      "display": "(2-i)^2=3-4i",
       "cells": [
         {
           "type": "token",
@@ -290,11 +296,11 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
@@ -318,22 +324,28 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
         },
         {
           "type": "token",
           "value": "i"
         }
       ],
-      "length": 11
+      "length": 12
     },
     "difficulty": "hard",
     "category": "algebra",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -365,7 +377,7 @@
       "Comb"
     ],
     "explanation": "(1+i)^2=1+2*i+i^2=2*i이다.",
-    "puzzle": "(2-i)^2=3-4*i"
+    "puzzle": "(2-i)^2=3-4i"
   },
   {
     "id": "s6_10_5",
@@ -373,8 +385,8 @@
     "title": "공통수학1 종합",
     "variable": [],
     "answer": {
-      "expression": "(1+2*i)^2=-3+4*i",
-      "display": "(1+2*i)^2=-3+4*i",
+      "expression": "(1+2i)^2=-3+4i",
+      "display": "(1+2i)^2=-3+4i",
       "cells": [
         {
           "type": "token",
@@ -387,6 +399,10 @@
         {
           "type": "token",
           "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
         },
         {
           "type": "token",
@@ -410,22 +426,32 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "*"
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
         },
         {
           "type": "token",
           "value": "i"
         }
       ],
-      "length": 11
+      "length": 14
     },
     "difficulty": "hard",
     "category": "algebra",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -457,6 +483,6 @@
       "Comb"
     ],
     "explanation": "(1+i)^2=1+2*i+i^2=2*i이다.",
-    "puzzle": "(1+2*i)^2=-3+4*i"
+    "puzzle": "(1+2i)^2=-3+4i"
   }
 ]

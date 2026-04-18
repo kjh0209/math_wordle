@@ -17,10 +17,6 @@
           }
         },
         {
-          "type": "token",
-          "value": "x"
-        },
-        {
           "type": "block",
           "blockType": "dx",
           "fields": {}
@@ -34,11 +30,13 @@
           "value": "2"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -51,7 +49,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -78,10 +82,6 @@
           }
         },
         {
-          "type": "token",
-          "value": "x"
-        },
-        {
           "type": "block",
           "blockType": "dx",
           "fields": {}
@@ -95,11 +95,13 @@
           "value": "2"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -112,7 +114,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -139,10 +147,6 @@
           }
         },
         {
-          "type": "token",
-          "value": "x"
-        },
-        {
           "type": "block",
           "blockType": "dx",
           "fields": {}
@@ -156,11 +160,13 @@
           "value": "2"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -173,7 +179,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -200,10 +212,6 @@
           }
         },
         {
-          "type": "token",
-          "value": "x"
-        },
-        {
           "type": "block",
           "blockType": "dx",
           "fields": {}
@@ -217,11 +225,13 @@
           "value": "2"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -234,7 +244,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -261,10 +277,6 @@
           }
         },
         {
-          "type": "token",
-          "value": "x"
-        },
-        {
           "type": "block",
           "blockType": "dx",
           "fields": {}
@@ -278,11 +290,13 @@
           "value": "2"
         }
       ],
-      "length": 5
+      "length": 4
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -295,7 +309,13 @@
       "8",
       "9",
       "=",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",

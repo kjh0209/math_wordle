@@ -49,15 +49,28 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
-      ".",
-      "5",
-      "+",
       "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
       "=",
-      "2"
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "0.5+1.5=2이다."
@@ -112,16 +125,28 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "1",
-      ".",
-      "2",
-      "+",
       "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
       "8",
+      "9",
+      ".",
+      "+",
       "=",
-      "2"
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "1.2+0.8=2이다."
@@ -176,15 +201,28 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "2",
-      ".",
-      "5",
-      "-",
       "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "-",
       "=",
-      "2"
+      "+",
+      "*",
+      "x",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "2.5-0.5=2이다."
@@ -239,14 +277,28 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
+      "0",
       "1",
-      ".",
+      "2",
+      "3",
+      "4",
       "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
       "+",
       "=",
-      "3"
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "1.5+1.5=3이다."
@@ -301,15 +353,28 @@
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
-      "3",
-      ".",
-      "2",
-      "-",
+      "0",
       "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "-",
       "=",
-      "2"
+      "+",
+      "*",
+      "x",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "3.2-1.2=2이다."

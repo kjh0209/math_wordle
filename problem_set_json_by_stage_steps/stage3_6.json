@@ -5,16 +5,12 @@
     "title": "혼합 구조 2",
     "variable": [],
     "answer": {
-      "expression": "2*(3+4)=14",
-      "display": "2*(3+4)=14",
+      "expression": "2(3+4)=14",
+      "display": "2(3+4)=14",
       "cells": [
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -49,11 +45,13 @@
           "value": "4"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -75,7 +73,7 @@
     ],
     "shownBlocks": [],
     "explanation": "괄호 안은 3+4=7이고, 2*7=14이다.",
-    "puzzle": "2*(3+4)=14"
+    "puzzle": "2(3+4)=14"
   },
   {
     "id": "s3_6_2",
@@ -83,16 +81,12 @@
     "title": "혼합 구조 2",
     "variable": [],
     "answer": {
-      "expression": "3*(2+1)=9",
-      "display": "3*(2+1)=9",
+      "expression": "3(2+1)=9",
+      "display": "3(2+1)=9",
       "cells": [
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
@@ -100,7 +94,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         },
         {
           "type": "token",
@@ -108,7 +102,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "1"
         },
         {
           "type": "token",
@@ -120,18 +114,16 @@
         },
         {
           "type": "token",
-          "value": "1"
-        },
-        {
-          "type": "token",
-          "value": "4"
+          "value": "9"
         }
       ],
-      "length": 10
+      "length": 8
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -153,7 +145,7 @@
     ],
     "shownBlocks": [],
     "explanation": "괄호 안은 3+4=7이고, 2*7=14이다.",
-    "puzzle": "3*(2+1)=9"
+    "puzzle": "3(2+1)=9"
   },
   {
     "id": "s3_6_3",
@@ -161,16 +153,12 @@
     "title": "혼합 구조 2",
     "variable": [],
     "answer": {
-      "expression": "4*(1+2)=12",
-      "display": "4*(1+2)=12",
+      "expression": "4(1+2)=12",
+      "display": "4(1+2)=12",
       "cells": [
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
@@ -178,7 +166,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "1"
         },
         {
           "type": "token",
@@ -186,7 +174,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         },
         {
           "type": "token",
@@ -202,14 +190,16 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -231,7 +221,7 @@
     ],
     "shownBlocks": [],
     "explanation": "괄호 안은 3+4=7이고, 2*7=14이다.",
-    "puzzle": "4*(1+2)=12"
+    "puzzle": "4(1+2)=12"
   },
   {
     "id": "s3_6_4",
@@ -239,8 +229,8 @@
     "title": "혼합 구조 2",
     "variable": [],
     "answer": {
-      "expression": "2*(4+1)=10",
-      "display": "2*(4+1)=10",
+      "expression": "2(4+1)=10",
+      "display": "2(4+1)=10",
       "cells": [
         {
           "type": "token",
@@ -248,15 +238,11 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "("
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "4"
         },
         {
           "type": "token",
@@ -264,7 +250,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "1"
         },
         {
           "type": "token",
@@ -280,14 +266,16 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "0"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -309,7 +297,7 @@
     ],
     "shownBlocks": [],
     "explanation": "괄호 안은 3+4=7이고, 2*7=14이다.",
-    "puzzle": "2*(4+1)=10"
+    "puzzle": "2(4+1)=10"
   },
   {
     "id": "s3_6_5",
@@ -317,16 +305,12 @@
     "title": "혼합 구조 2",
     "variable": [],
     "answer": {
-      "expression": "5*(2+2)=20",
-      "display": "5*(2+2)=20",
+      "expression": "5(2+2)=20",
+      "display": "5(2+2)=20",
       "cells": [
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "5"
         },
         {
           "type": "token",
@@ -334,7 +318,7 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         },
         {
           "type": "token",
@@ -342,7 +326,7 @@
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "2"
         },
         {
           "type": "token",
@@ -354,18 +338,20 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
-          "value": "4"
+          "value": "0"
         }
       ],
-      "length": 10
+      "length": 9
     },
     "difficulty": "medium",
     "category": "arithmetic",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -387,6 +373,6 @@
     ],
     "shownBlocks": [],
     "explanation": "괄호 안은 3+4=7이고, 2*7=14이다.",
-    "puzzle": "5*(2+2)=20"
+    "puzzle": "5(2+2)=20"
   }
 ]

@@ -11,8 +11,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+2)+(x+3)=2*x+5",
-      "display": "(x+2)+(x+3)=2*x+5",
+      "expression": "(x+2)+(x+3)=2x+5",
+      "display": "(x+2)+(x+3)=2x+5",
       "cells": [
         {
           "type": "token",
@@ -68,10 +68,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -83,12 +79,13 @@
           "value": "5"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -114,7 +111,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+5=9이고, 우변도 2*2+5=9이다.",
-    "puzzle": "(x+2)+(x+3)=2*x+5"
+    "puzzle": "(x+2)+(x+3)=2x+5"
   },
   {
     "id": "s4_4_2",
@@ -128,8 +125,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+2)+(x+3)=2*x+5",
-      "display": "(x+2)+(x+3)=2*x+5",
+      "expression": "(x+2)+(x+3)=2x+5",
+      "display": "(x+2)+(x+3)=2x+5",
       "cells": [
         {
           "type": "token",
@@ -185,10 +182,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -200,12 +193,13 @@
           "value": "5"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -231,7 +225,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+5=9이고, 우변도 2*2+5=9이다.",
-    "puzzle": "(x+2)+(x+3)=2*x+5"
+    "puzzle": "(x+2)+(x+3)=2x+5"
   },
   {
     "id": "s4_4_3",
@@ -245,8 +239,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+2)+(x+3)=2*x+5",
-      "display": "(x+2)+(x+3)=2*x+5",
+      "expression": "(x+2)+(x+3)=2x+5",
+      "display": "(x+2)+(x+3)=2x+5",
       "cells": [
         {
           "type": "token",
@@ -302,10 +296,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -317,12 +307,13 @@
           "value": "5"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -348,7 +339,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+5=9이고, 우변도 2*2+5=9이다.",
-    "puzzle": "(x+2)+(x+3)=2*x+5"
+    "puzzle": "(x+2)+(x+3)=2x+5"
   },
   {
     "id": "s4_4_4",
@@ -362,8 +353,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+2)+(x+3)=2*x+5",
-      "display": "(x+2)+(x+3)=2*x+5",
+      "expression": "(x+2)+(x+3)=2x+5",
+      "display": "(x+2)+(x+3)=2x+5",
       "cells": [
         {
           "type": "token",
@@ -419,10 +410,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -434,12 +421,13 @@
           "value": "5"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -465,7 +453,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+5=9이고, 우변도 2*2+5=9이다.",
-    "puzzle": "(x+2)+(x+3)=2*x+5"
+    "puzzle": "(x+2)+(x+3)=2x+5"
   },
   {
     "id": "s4_4_5",
@@ -479,8 +467,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+2)+(x+3)=2*x+5",
-      "display": "(x+2)+(x+3)=2*x+5",
+      "expression": "(x+2)+(x+3)=2x+5",
+      "display": "(x+2)+(x+3)=2x+5",
       "cells": [
         {
           "type": "token",
@@ -536,10 +524,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -551,12 +535,13 @@
           "value": "5"
         }
       ],
-      "length": 17
+      "length": 16
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -582,6 +567,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2이면 좌변은 4+5=9이고, 우변도 2*2+5=9이다.",
-    "puzzle": "(x+2)+(x+3)=2*x+5"
+    "puzzle": "(x+2)+(x+3)=2x+5"
   }
 ]

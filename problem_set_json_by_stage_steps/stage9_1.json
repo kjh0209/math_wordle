@@ -5,8 +5,8 @@
     "title": "미분 도입",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^2=2*x",
-      "display": "d/dx x^2=2*x",
+      "expression": "d/dx x^2=2x",
+      "display": "d/dx x^2=2x",
       "cells": [
         {
           "type": "block",
@@ -35,18 +35,16 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         }
       ],
-      "length": 8
+      "length": 7
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -61,13 +59,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^2를 x에 대해 미분하면 2*x가 된다.",
-    "puzzle": "d/dx x^2=2*x"
+    "puzzle": "d/dx x^2=2x"
   },
   {
     "id": "s9_1_2",
@@ -75,8 +78,8 @@
     "title": "미분 도입",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^3=3*x^2",
-      "display": "d/dx x^3=3*x^2",
+      "expression": "d/dx x^3=3x^2",
+      "display": "d/dx x^3=3x^2",
       "cells": [
         {
           "type": "block",
@@ -93,7 +96,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "3"
         },
         {
           "type": "token",
@@ -101,22 +104,28 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "3"
         },
         {
           "type": "token",
           "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
         }
       ],
-      "length": 8
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -131,13 +140,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^2를 x에 대해 미분하면 2*x가 된다.",
-    "puzzle": "d/dx x^3=3*x^2"
+    "puzzle": "d/dx x^3=3x^2"
   },
   {
     "id": "s9_1_3",
@@ -145,8 +159,8 @@
     "title": "미분 도입",
     "variable": [],
     "answer": {
-      "expression": "d/dx x^4=4*x^3",
-      "display": "d/dx x^4=4*x^3",
+      "expression": "d/dx x^4=4x^3",
+      "display": "d/dx x^4=4x^3",
       "cells": [
         {
           "type": "block",
@@ -163,7 +177,7 @@
         },
         {
           "type": "token",
-          "value": "2"
+          "value": "4"
         },
         {
           "type": "token",
@@ -171,22 +185,28 @@
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
           "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
         }
       ],
-      "length": 8
+      "length": 9
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -201,13 +221,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^2를 x에 대해 미분하면 2*x가 된다.",
-    "puzzle": "d/dx x^4=4*x^3"
+    "puzzle": "d/dx x^4=4x^3"
   },
   {
     "id": "s9_1_4",
@@ -215,13 +240,21 @@
     "title": "미분 도입",
     "variable": [],
     "answer": {
-      "expression": "d/dx (2*x^2)=4*x",
-      "display": "d/dx (2*x^2)=4*x",
+      "expression": "d/dx (2x^2)=4x",
+      "display": "d/dx (2x^2)=4x",
       "cells": [
         {
           "type": "block",
           "blockType": "d/dx",
           "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
         },
         {
           "type": "token",
@@ -237,26 +270,28 @@
         },
         {
           "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
           "value": "="
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "4"
         },
         {
           "type": "token",
           "value": "x"
         }
       ],
-      "length": 8
+      "length": 10
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -271,13 +306,18 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^2를 x에 대해 미분하면 2*x가 된다.",
-    "puzzle": "d/dx (2*x^2)=4*x"
+    "puzzle": "d/dx (2x^2)=4x"
   },
   {
     "id": "s9_1_5",
@@ -285,13 +325,21 @@
     "title": "미분 도입",
     "variable": [],
     "answer": {
-      "expression": "d/dx (3*x^2)=6*x",
-      "display": "d/dx (3*x^2)=6*x",
+      "expression": "d/dx (3x^2)=6x",
+      "display": "d/dx (3x^2)=6x",
       "cells": [
         {
           "type": "block",
           "blockType": "d/dx",
           "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "3"
         },
         {
           "type": "token",
@@ -307,26 +355,28 @@
         },
         {
           "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
           "value": "="
         },
         {
           "type": "token",
-          "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
+          "value": "6"
         },
         {
           "type": "token",
           "value": "x"
         }
       ],
-      "length": 8
+      "length": 10
     },
     "difficulty": "medium",
     "category": "function",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -341,12 +391,17 @@
       "=",
       "*",
       "^",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "/",
+      "("
     ],
     "shownBlocks": [
       "d/dx"
     ],
     "explanation": "x^2를 x에 대해 미분하면 2*x가 된다.",
-    "puzzle": "d/dx (3*x^2)=6*x"
+    "puzzle": "d/dx (3x^2)=6x"
   }
 ]

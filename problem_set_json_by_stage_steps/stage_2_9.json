@@ -54,18 +54,29 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "(",
       ")",
       "x",
       "+",
-      "3",
       "/",
-      "2",
       "=",
-      "3"
+      "-",
+      "*",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=3이면 (3+3)/2=3이다."
@@ -80,16 +91,12 @@
       "valueDisplay": "3"
     },
     "answer": {
-      "expression": "2*x-1=5",
-      "display": "2×x-1=5",
+      "expression": "2x-1=5",
+      "display": "2x-1=5",
       "cells": [
         {
           "type": "token",
           "value": "2"
-        },
-        {
-          "type": "token",
-          "value": "*"
         },
         {
           "type": "token",
@@ -112,21 +119,32 @@
           "value": "5"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
       "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "*",
       "x",
       "-",
-      "1",
       "=",
-      "5"
+      "+",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=3이면 6-1=5이다."
@@ -186,18 +204,29 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "(",
       ")",
       "x",
       "-",
-      "1",
       "*",
-      "2",
       "=",
-      "6"
+      "+",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 3*2=6이다."
@@ -249,16 +278,27 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "x",
       "/",
-      "2",
       "+",
-      "1",
       "=",
-      "3"
+      "-",
+      "*",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=4이면 2+1=3이다."
@@ -318,18 +358,29 @@
     "difficulty": "medium",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       "(",
       ")",
       "x",
       "+",
-      "2",
       "*",
-      "3",
       "=",
-      "9"
+      "-",
+      "/",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=1이면 3*3=9이다."

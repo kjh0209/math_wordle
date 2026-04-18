@@ -16,8 +16,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+y)^2=x^2+2*x*y+y^2",
-      "display": "(x+y)^2=x^2+2*x*y+y^2",
+      "expression": "(x+y)^2=x^2+2x*y+y^2",
+      "display": "(x+y)^2=x^2+2x×y+y^2",
       "cells": [
         {
           "type": "token",
@@ -73,10 +73,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -104,12 +100,13 @@
           "value": "2"
         }
       ],
-      "length": 21
+      "length": 20
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -139,7 +136,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2, y=1이면 좌변은 9, 우변도 4+4+1=9가 된다.",
-    "puzzle": "(x+y)^2=x^2+2*x*y+y^2"
+    "puzzle": "(x+y)^2=x^2+2x*y+y^2"
   },
   {
     "id": "s6_3_2",
@@ -158,8 +155,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+y)^2=x^2+2*x*y+y^2",
-      "display": "(x+y)^2=x^2+2*x*y+y^2",
+      "expression": "(x+y)^2=x^2+2x*y+y^2",
+      "display": "(x+y)^2=x^2+2x×y+y^2",
       "cells": [
         {
           "type": "token",
@@ -215,10 +212,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -246,12 +239,13 @@
           "value": "2"
         }
       ],
-      "length": 21
+      "length": 20
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -281,7 +275,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2, y=1이면 좌변은 9, 우변도 4+4+1=9가 된다.",
-    "puzzle": "(x+y)^2=x^2+2*x*y+y^2"
+    "puzzle": "(x+y)^2=x^2+2x*y+y^2"
   },
   {
     "id": "s6_3_3",
@@ -300,8 +294,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+y)^2=x^2+2*x*y+y^2",
-      "display": "(x+y)^2=x^2+2*x*y+y^2",
+      "expression": "(x+y)^2=x^2+2x*y+y^2",
+      "display": "(x+y)^2=x^2+2x×y+y^2",
       "cells": [
         {
           "type": "token",
@@ -357,10 +351,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -388,12 +378,13 @@
           "value": "2"
         }
       ],
-      "length": 21
+      "length": 20
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -423,7 +414,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2, y=1이면 좌변은 9, 우변도 4+4+1=9가 된다.",
-    "puzzle": "(x+y)^2=x^2+2*x*y+y^2"
+    "puzzle": "(x+y)^2=x^2+2x*y+y^2"
   },
   {
     "id": "s6_3_4",
@@ -442,8 +433,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+y)^2=x^2+2*x*y+y^2",
-      "display": "(x+y)^2=x^2+2*x*y+y^2",
+      "expression": "(x+y)^2=x^2+2x*y+y^2",
+      "display": "(x+y)^2=x^2+2x×y+y^2",
       "cells": [
         {
           "type": "token",
@@ -499,10 +490,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -530,12 +517,13 @@
           "value": "2"
         }
       ],
-      "length": 21
+      "length": 20
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -565,7 +553,7 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2, y=1이면 좌변은 9, 우변도 4+4+1=9가 된다.",
-    "puzzle": "(x+y)^2=x^2+2*x*y+y^2"
+    "puzzle": "(x+y)^2=x^2+2x*y+y^2"
   },
   {
     "id": "s6_3_5",
@@ -584,8 +572,8 @@
       }
     ],
     "answer": {
-      "expression": "(x+y)^2=x^2+2*x*y+y^2",
-      "display": "(x+y)^2=x^2+2*x*y+y^2",
+      "expression": "(x+y)^2=x^2+2x*y+y^2",
+      "display": "(x+y)^2=x^2+2x×y+y^2",
       "cells": [
         {
           "type": "token",
@@ -641,10 +629,6 @@
         },
         {
           "type": "token",
-          "value": "*"
-        },
-        {
-          "type": "token",
           "value": "x"
         },
         {
@@ -672,12 +656,13 @@
           "value": "2"
         }
       ],
-      "length": 21
+      "length": 20
     },
     "difficulty": "hard",
     "category": "algebra",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -707,6 +692,6 @@
     ],
     "shownBlocks": [],
     "explanation": "x=2, y=1이면 좌변은 9, 우변도 4+4+1=9가 된다.",
-    "puzzle": "(x+y)^2=x^2+2*x*y+y^2"
+    "puzzle": "(x+y)^2=x^2+2x*y+y^2"
   }
 ]

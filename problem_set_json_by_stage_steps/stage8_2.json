@@ -5,9 +5,25 @@
     "title": "자연상수",
     "variable": [],
     "answer": {
-      "expression": "e^0=1",
-      "display": "e^0=1",
+      "expression": "2^0+e^0=2",
+      "display": "2^0+e^0=2",
       "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
         {
           "type": "token",
           "value": "e"
@@ -26,14 +42,16 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         }
       ],
-      "length": 5
+      "length": 9
     },
     "difficulty": "easy",
     "category": "exponential",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -53,11 +71,17 @@
       "cos",
       "tan",
       "(",
-      ")"
+      ")",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [],
-    "explanation": "e의 0제곱은 1이다.",
-    "puzzle": "e^0=1"
+    "explanation": "x^0=1(x≠0)이므로 2^0=e^0=1, 합은 2이다.",
+    "puzzle": "2^0+e^0=2"
   },
   {
     "id": "s8_2_2",
@@ -65,12 +89,28 @@
     "title": "자연상수",
     "variable": [],
     "answer": {
-      "expression": "10^0=1",
-      "display": "10^0=1",
+      "expression": "3^0+pi^0=2",
+      "display": "3^0+pi^0=2",
       "cells": [
         {
           "type": "token",
-          "value": "e"
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "pi"
         },
         {
           "type": "token",
@@ -86,14 +126,16 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         }
       ],
-      "length": 5
+      "length": 9
     },
     "difficulty": "easy",
     "category": "exponential",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -113,11 +155,17 @@
       "cos",
       "tan",
       "(",
-      ")"
+      ")",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [],
-    "explanation": "e의 0제곱은 1이다.",
-    "puzzle": "10^0=1"
+    "explanation": "x^0=1이므로 3^0=pi^0=1, 합은 2이다.",
+    "puzzle": "3^0+pi^0=2"
   },
   {
     "id": "s8_2_3",
@@ -125,12 +173,12 @@
     "title": "자연상수",
     "variable": [],
     "answer": {
-      "expression": "5^0=1",
-      "display": "5^0=1",
+      "expression": "2^3/2^3=1",
+      "display": "2^3÷2^3=1",
       "cells": [
         {
           "type": "token",
-          "value": "e"
+          "value": "2"
         },
         {
           "type": "token",
@@ -138,7 +186,23 @@
         },
         {
           "type": "token",
-          "value": "0"
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
         },
         {
           "type": "token",
@@ -149,11 +213,13 @@
           "value": "1"
         }
       ],
-      "length": 5
+      "length": 9
     },
     "difficulty": "easy",
     "category": "exponential",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -173,11 +239,17 @@
       "cos",
       "tan",
       "(",
-      ")"
+      ")",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [],
-    "explanation": "e의 0제곱은 1이다.",
-    "puzzle": "5^0=1"
+    "explanation": "같은 밑의 나누기: 2^3/2^3=2^0=1이다.",
+    "puzzle": "2^3/2^3=1"
   },
   {
     "id": "s8_2_4",
@@ -185,12 +257,12 @@
     "title": "자연상수",
     "variable": [],
     "answer": {
-      "expression": "2^0=1",
-      "display": "2^0=1",
+      "expression": "3^2/3^2=1",
+      "display": "3^2÷3^2=1",
       "cells": [
         {
           "type": "token",
-          "value": "e"
+          "value": "3"
         },
         {
           "type": "token",
@@ -198,7 +270,23 @@
         },
         {
           "type": "token",
-          "value": "0"
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
         },
         {
           "type": "token",
@@ -209,11 +297,13 @@
           "value": "1"
         }
       ],
-      "length": 5
+      "length": 9
     },
     "difficulty": "easy",
     "category": "exponential",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -233,11 +323,17 @@
       "cos",
       "tan",
       "(",
-      ")"
+      ")",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [],
-    "explanation": "e의 0제곱은 1이다.",
-    "puzzle": "2^0=1"
+    "explanation": "3^2/3^2=3^0=1이다.",
+    "puzzle": "3^2/3^2=1"
   },
   {
     "id": "s8_2_5",
@@ -245,8 +341,8 @@
     "title": "자연상수",
     "variable": [],
     "answer": {
-      "expression": "pi^0=1",
-      "display": "pi^0=1",
+      "expression": "e^1/e^1=1",
+      "display": "e^1÷e^1=1",
       "cells": [
         {
           "type": "token",
@@ -258,7 +354,23 @@
         },
         {
           "type": "token",
-          "value": "0"
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "1"
         },
         {
           "type": "token",
@@ -269,11 +381,13 @@
           "value": "1"
         }
       ],
-      "length": 5
+      "length": 9
     },
     "difficulty": "easy",
     "category": "exponential",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -293,10 +407,16 @@
       "cos",
       "tan",
       "(",
-      ")"
+      ")",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "sqrt"
     ],
     "shownBlocks": [],
-    "explanation": "e의 0제곱은 1이다.",
-    "puzzle": "pi^0=1"
+    "explanation": "e^1/e^1=e^0=1이다.",
+    "puzzle": "e^1/e^1=1"
   }
 ]

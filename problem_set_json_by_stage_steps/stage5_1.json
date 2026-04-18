@@ -16,19 +16,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -59,12 +47,13 @@
           "value": "3"
         }
       ],
-      "length": 11
+      "length": 8
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -88,7 +77,8 @@
       ")",
       "x",
       "y",
-      "sqrt"
+      "sqrt",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=8이면 x+1=9이고, sqrt(9)=3이다.",
@@ -111,19 +101,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -139,7 +117,7 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
@@ -151,15 +129,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "4"
         }
       ],
-      "length": 11
+      "length": 8
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -183,7 +162,8 @@
       ")",
       "x",
       "y",
-      "sqrt"
+      "sqrt",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=8이면 x+1=9이고, sqrt(9)=3이다.",
@@ -206,19 +186,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -230,7 +198,7 @@
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
@@ -246,15 +214,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "2"
         }
       ],
-      "length": 11
+      "length": 8
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -278,7 +247,8 @@
       ")",
       "x",
       "y",
-      "sqrt"
+      "sqrt",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=8이면 x+1=9이고, sqrt(9)=3이다.",
@@ -301,19 +271,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -325,11 +283,11 @@
         },
         {
           "type": "token",
-          "value": "+"
+          "value": "-"
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "2"
         },
         {
           "type": "token",
@@ -344,12 +302,13 @@
           "value": "3"
         }
       ],
-      "length": 11
+      "length": 8
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -373,7 +332,8 @@
       ")",
       "x",
       "y",
-      "sqrt"
+      "sqrt",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=8이면 x+1=9이고, sqrt(9)=3이다.",
@@ -396,19 +356,7 @@
       "cells": [
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -424,7 +372,7 @@
         },
         {
           "type": "token",
-          "value": "1"
+          "value": "5"
         },
         {
           "type": "token",
@@ -436,15 +384,16 @@
         },
         {
           "type": "token",
-          "value": "3"
+          "value": "4"
         }
       ],
-      "length": 11
+      "length": 8
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -468,7 +417,8 @@
       ")",
       "x",
       "y",
-      "sqrt"
+      "sqrt",
+      "|"
     ],
     "shownBlocks": [],
     "explanation": "x=8이면 x+1=9이고, sqrt(9)=3이다.",

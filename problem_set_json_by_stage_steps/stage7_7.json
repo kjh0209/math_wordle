@@ -29,19 +29,7 @@
         },
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -56,12 +44,13 @@
           "value": ")"
         }
       ],
-      "length": 9
+      "length": 6
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -121,19 +110,7 @@
         },
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -148,12 +125,13 @@
           "value": ")"
         }
       ],
-      "length": 9
+      "length": 6
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -213,19 +191,7 @@
         },
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -240,12 +206,13 @@
           "value": ")"
         }
       ],
-      "length": 9
+      "length": 6
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -305,19 +272,7 @@
         },
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -332,12 +287,13 @@
           "value": ")"
         }
       ],
-      "length": 9
+      "length": 6
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",
@@ -397,19 +353,7 @@
         },
         {
           "type": "token",
-          "value": "s"
-        },
-        {
-          "type": "token",
-          "value": "q"
-        },
-        {
-          "type": "token",
-          "value": "r"
-        },
-        {
-          "type": "token",
-          "value": "t"
+          "value": "sqrt"
         },
         {
           "type": "token",
@@ -424,12 +368,13 @@
           "value": ")"
         }
       ],
-      "length": 9
+      "length": 6
     },
     "difficulty": "medium",
     "category": "root",
     "rules": {
-      "requiresVariable": true
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
     },
     "shownTokens": [
       "0",

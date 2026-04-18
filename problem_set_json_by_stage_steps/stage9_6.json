@@ -6,7 +6,7 @@
     "variable": [],
     "answer": {
       "expression": "∫[1,2]x dx=3/2",
-      "display": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
       "cells": [
         {
           "type": "block",
@@ -15,10 +15,6 @@
             "start": "1",
             "end": "2"
           }
-        },
-        {
-          "type": "token",
-          "value": "x"
         },
         {
           "type": "block",
@@ -42,11 +38,13 @@
           "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -60,7 +58,13 @@
       "9",
       "=",
       "/",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -76,7 +80,7 @@
     "variable": [],
     "answer": {
       "expression": "∫[1,2]x dx=3/2",
-      "display": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
       "cells": [
         {
           "type": "block",
@@ -85,10 +89,6 @@
             "start": "1",
             "end": "2"
           }
-        },
-        {
-          "type": "token",
-          "value": "x"
         },
         {
           "type": "block",
@@ -112,11 +112,13 @@
           "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -130,7 +132,13 @@
       "9",
       "=",
       "/",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -146,7 +154,7 @@
     "variable": [],
     "answer": {
       "expression": "∫[1,2]x dx=3/2",
-      "display": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
       "cells": [
         {
           "type": "block",
@@ -155,10 +163,6 @@
             "start": "1",
             "end": "2"
           }
-        },
-        {
-          "type": "token",
-          "value": "x"
         },
         {
           "type": "block",
@@ -182,11 +186,13 @@
           "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -200,7 +206,13 @@
       "9",
       "=",
       "/",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -216,7 +228,7 @@
     "variable": [],
     "answer": {
       "expression": "∫[1,2]x dx=3/2",
-      "display": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
       "cells": [
         {
           "type": "block",
@@ -225,10 +237,6 @@
             "start": "1",
             "end": "2"
           }
-        },
-        {
-          "type": "token",
-          "value": "x"
         },
         {
           "type": "block",
@@ -252,11 +260,13 @@
           "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -270,7 +280,13 @@
       "9",
       "=",
       "/",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
@@ -286,7 +302,7 @@
     "variable": [],
     "answer": {
       "expression": "∫[1,2]x dx=3/2",
-      "display": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
       "cells": [
         {
           "type": "block",
@@ -295,10 +311,6 @@
             "start": "1",
             "end": "2"
           }
-        },
-        {
-          "type": "token",
-          "value": "x"
         },
         {
           "type": "block",
@@ -322,11 +334,13 @@
           "value": "2"
         }
       ],
-      "length": 7
+      "length": 6
     },
     "difficulty": "medium",
     "category": "integral",
-    "rules": {},
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
     "shownTokens": [
       "0",
       "1",
@@ -340,7 +354,13 @@
       "9",
       "=",
       "/",
-      "x"
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
     ],
     "shownBlocks": [
       "IntegralRange",
