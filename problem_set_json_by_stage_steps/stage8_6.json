@@ -1,0 +1,382 @@
+[
+  {
+    "id": "s8_6_1",
+    "level": "algebra",
+    "title": "코사인",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi",
+        "valueDisplay": "π"
+      }
+    ],
+    "answer": {
+      "expression": "cos(x)=-1",
+      "display": "cos(x)=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "-",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π이면 cos(x)=-1이다.",
+    "puzzle": "cos(x)=-1"
+  },
+  {
+    "id": "s8_6_2",
+    "level": "algebra",
+    "title": "코사인",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi",
+        "valueDisplay": "π"
+      }
+    ],
+    "answer": {
+      "expression": "cos(x)=-1",
+      "display": "cos(x)=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "-",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π이면 cos(x)=-1이다.",
+    "puzzle": "cos(x)=-1"
+  },
+  {
+    "id": "s8_6_3",
+    "level": "algebra",
+    "title": "코사인",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi",
+        "valueDisplay": "π"
+      }
+    ],
+    "answer": {
+      "expression": "cos(x)=-1",
+      "display": "cos(x)=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "-",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π이면 cos(x)=-1이다.",
+    "puzzle": "cos(x)=-1"
+  },
+  {
+    "id": "s8_6_4",
+    "level": "algebra",
+    "title": "코사인",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi",
+        "valueDisplay": "π"
+      }
+    ],
+    "answer": {
+      "expression": "cos(x)=-1",
+      "display": "cos(x)=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "-",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π이면 cos(x)=-1이다.",
+    "puzzle": "cos(x)=-1"
+  },
+  {
+    "id": "s8_6_5",
+    "level": "algebra",
+    "title": "코사인",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi",
+        "valueDisplay": "π"
+      }
+    ],
+    "answer": {
+      "expression": "cos(x)=-1",
+      "display": "cos(x)=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "-",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π이면 cos(x)=-1이다.",
+    "puzzle": "cos(x)=-1"
+  }
+]

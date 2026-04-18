@@ -26,6 +26,8 @@ import {
   cellDisplayKey,
   compareGuessCells,
   validateGuessCells,
+  evaluateCellEquality,
+  validateAllowedCells,
   submitResult,
   validateGuessApi,
 } from "@mathdle/core";
@@ -40,7 +42,10 @@ interface UseGameSessionReturn {
   state: GameState;
   keyboardState: KeyboardState;
   toast: ToastMessage | null;
+  focusedPath: (string | number)[] | null;
+  setFocusedPath: (path: (string | number)[] | null) => void;
   appendToken: (token: KeypadToken) => void;
+  appendBlock: (blockType: string, fields: Record<string, string>) => void;
   deleteCell: () => void;
   clearInput: () => void;
   submitGuess: () => Promise<void>;
@@ -83,6 +88,7 @@ export function useGameSession({
   });
 
   const [toast, setToast] = useState<ToastMessage | null>(null);
+  const [focusedPath, setFocusedPath] = useState<(string | number)[] | null>(null);
 
   // ── Load saved game on mount / puzzle change ─────────────────────────
   useEffect(() => {
@@ -94,7 +100,7 @@ export function useGameSession({
 
       if (saved && saved.status === "playing") {
         // Migrate old saves: currentTokens → currentCells
-        const savedAny = saved as Record<string, unknown>;
+        const savedAny = saved as unknown as Record<string, unknown>;
         const cells = (saved.currentCells ??
           (savedAny.currentTokens as PuzzleCell[] | undefined) ??
           []) as PuzzleCell[];
@@ -181,32 +187,108 @@ export function useGameSession({
 
   const dismissToast = useCallback(() => setToast(null), []);
 
+  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      if (cells.length >= maxLength) return cells;
+      return [...cells, newCell];
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block") return cells;
+    
+    const newFields = { ...(targetBlock.cellFields || {}) };
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
+  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      return cells.slice(0, -1);
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
+    
+    const newFields = { ...targetBlock.cellFields };
+    if (newFields[fieldName]) {
+       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+    }
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
   // ── Input actions ────────────────────────────────────────────────────
   const appendToken = useCallback(
     (token: KeypadToken) => {
-      if (token.type === "block") return; // blocks handled separately (web only for now)
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        if (prev.currentCells.length >= puzzle.answerLength) return prev;
+        if (token.type === "block") {
+          // 0-field blocks (dx, d/dx) are appended directly here.
+          if ((token.blockFieldCount ?? 0) > 0) return prev;
+          const cell: PuzzleCell = {
+            type: "block",
+            blockType: token.value as any,
+            fields: {},
+          };
+          const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+          return { ...prev, currentCells: newCells, errorMessage: null };
+        }
         const cell: PuzzleCell = { type: "token", value: token.value };
-        return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        return { ...prev, currentCells: newCells, errorMessage: null };
       });
     },
-    [puzzle.answerLength],
+    [puzzle.answerLength, focusedPath, insertAtCursor],
+  );
+
+  const appendBlock = useCallback(
+    (blockType: string, fields: Record<string, string>) => {
+      setState((prev) => {
+        if (prev.status !== "playing") return prev;
+        
+        // Initialize cellFields for Native nested editing
+        const cellFields: Record<string, PuzzleCell[]> = {};
+        for (const key of Object.keys(fields)) {
+           cellFields[key] = [];
+        }
+
+        const cell: PuzzleCell = {
+          type: "block",
+          blockType: blockType as any,
+          fields,
+          cellFields
+        };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        return { ...prev, currentCells: newCells, errorMessage: null };
+      });
+    },
+    [puzzle.answerLength, focusedPath, insertAtCursor],
   );
 
   const deleteCell = useCallback(() => {
     setState((prev) => {
       if (prev.status !== "playing") return prev;
-      return { ...prev, currentCells: prev.currentCells.slice(0, -1), errorMessage: null };
+      return { ...prev, currentCells: deleteAtCursor(prev.currentCells, focusedPath), errorMessage: null };
     });
-  }, []);
+  }, [focusedPath, deleteAtCursor]);
 
   const clearInput = useCallback(() => {
     setState((prev) => {
       if (prev.status !== "playing") return prev;
       return { ...prev, currentCells: [], errorMessage: null };
     });
+    setFocusedPath(null);
   }, []);
 
   // ── Submit guess ─────────────────────────────────────────────────────
@@ -229,9 +311,13 @@ export function useGameSession({
       let won: boolean;
       let gameOver: boolean;
 
+      const answerCells = puzzle.meta?.answerCells;
+      // Use local grading when answer is embedded in the puzzle (problem-set puzzles).
+      // Fall back to server grading only for puzzles without a local answer (daily mode).
+      const useOffline = !!(answerCells && answerCells.length > 0);
       const hasApi = !!(process.env.EXPO_PUBLIC_API_BASE_URL || process.env.EXPO_PUBLIC_API_URL);
 
-      if (hasApi) {
+      if (!useOffline && hasApi) {
         // ── Server-side validation ──────────────────────────────────
         const data = await validateGuessApi({
           puzzleId: puzzle.id,
@@ -254,15 +340,36 @@ export function useGameSession({
         gameOver = data.gameOver ?? false;
       } else {
         // ── Offline / client-side validation ────────────────────────
-        const answerCells = puzzle.meta?.answerCells;
         if (!answerCells) {
           showToast("오프라인 모드에서는 정답 정보가 필요합니다.");
           return;
         }
 
-        // Basic length check (no full domain model needed offline)
         if (snap.currentCells.length !== puzzle.answerLength) {
           showToast(`${puzzle.answerLength}칸을 모두 채워주세요.`);
+          return;
+        }
+
+        const allowedCheck = validateAllowedCells(
+          snap.currentCells,
+          puzzle.shownTokens,
+          puzzle.shownBlocks
+        );
+        if (!allowedCheck.ok) {
+          showToast(allowedCheck.message);
+          setState((prev) => ({ ...prev, errorMessage: allowedCheck.message }));
+          return;
+        }
+
+        const variableValue = (() => {
+          if (!puzzle.variable) return undefined;
+          const val = parseValueExpr(puzzle.variable.valueExpression);
+          return val !== null ? { [puzzle.variable.name]: val } : undefined;
+        })();
+        const equalityCheck = evaluateCellEquality(snap.currentCells, variableValue);
+        if (!equalityCheck.ok) {
+          showToast(equalityCheck.message);
+          setState((prev) => ({ ...prev, errorMessage: equalityCheck.message }));
           return;
         }
 
@@ -352,7 +459,10 @@ export function useGameSession({
     state,
     keyboardState,
     toast,
+    focusedPath,
+    setFocusedPath,
     appendToken,
+    appendBlock,
     deleteCell,
     clearInput,
     submitGuess,

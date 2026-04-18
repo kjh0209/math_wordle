@@ -1,0 +1,457 @@
+[
+  {
+    "id": "s3_10_1",
+    "level": "middle1",
+    "title": "중1 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "(2*x+4)/2=6",
+      "display": "(2*x+4)/2=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
+    "puzzle": "(2*x+4)/2=6"
+  },
+  {
+    "id": "s3_10_2",
+    "level": "middle1",
+    "title": "중1 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "(3*x+3)/3=4",
+      "display": "(3*x+3)/3=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
+    "puzzle": "(3*x+3)/3=4"
+  },
+  {
+    "id": "s3_10_3",
+    "level": "middle1",
+    "title": "중1 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "(2*x-2)/2=3",
+      "display": "(2*x-2)/2=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
+    "puzzle": "(2*x-2)/2=3"
+  },
+  {
+    "id": "s3_10_4",
+    "level": "middle1",
+    "title": "중1 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "(4*x+4)/4=5",
+      "display": "(4*x+4)/4=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
+    "puzzle": "(4*x+4)/4=5"
+  },
+  {
+    "id": "s3_10_5",
+    "level": "middle1",
+    "title": "중1 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "(2*x+2)/2=5",
+      "display": "(2*x+2)/2=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2*x+4=12이고, 12/2=6이 된다.",
+    "puzzle": "(2*x+2)/2=5"
+  }
+]

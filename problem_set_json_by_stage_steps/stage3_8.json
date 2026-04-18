@@ -1,0 +1,367 @@
+[
+  {
+    "id": "s3_8_1",
+    "level": "middle1",
+    "title": "문자 도입 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "2*x+1=7",
+      "display": "2*x+1=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 2*3+1=7이다.",
+    "puzzle": "2*x+1=7"
+  },
+  {
+    "id": "s3_8_2",
+    "level": "middle1",
+    "title": "문자 도입 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "3*x+2=11",
+      "display": "3*x+2=11",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 2*3+1=7이다.",
+    "puzzle": "3*x+2=11"
+  },
+  {
+    "id": "s3_8_3",
+    "level": "middle1",
+    "title": "문자 도입 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "2*x+3=9",
+      "display": "2*x+3=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 2*3+1=7이다.",
+    "puzzle": "2*x+3=9"
+  },
+  {
+    "id": "s3_8_4",
+    "level": "middle1",
+    "title": "문자 도입 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "4*x-1=11",
+      "display": "4*x-1=11",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 2*3+1=7이다.",
+    "puzzle": "4*x-1=11"
+  },
+  {
+    "id": "s3_8_5",
+    "level": "middle1",
+    "title": "문자 도입 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "3*x-2=7",
+      "display": "3*x-2=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 2*3+1=7이다.",
+    "puzzle": "3*x-2=7"
+  }
+]

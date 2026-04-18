@@ -1,0 +1,337 @@
+[
+  {
+    "id": "2_9_1",
+    "level": "middle_linear_equation",
+    "title": "혼합 연산",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "(x+3)/2=3",
+      "display": "(x+3)÷2=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "(",
+      ")",
+      "x",
+      "+",
+      "3",
+      "/",
+      "2",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 (3+3)/2=3이다."
+  },
+  {
+    "id": "2_9_2",
+    "level": "middle_linear_equation",
+    "title": "혼합 연산",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "2*x-1=5",
+      "display": "2×x-1=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "2",
+      "*",
+      "x",
+      "-",
+      "1",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 6-1=5이다."
+  },
+  {
+    "id": "2_9_3",
+    "level": "middle_linear_equation",
+    "title": "혼합 연산",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "(x-1)*2=6",
+      "display": "(x-1)×2=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "(",
+      ")",
+      "x",
+      "-",
+      "1",
+      "*",
+      "2",
+      "=",
+      "6"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 3*2=6이다."
+  },
+  {
+    "id": "2_9_4",
+    "level": "middle_linear_equation",
+    "title": "혼합 연산",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "x/2+1=3",
+      "display": "x÷2+1=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "x",
+      "/",
+      "2",
+      "+",
+      "1",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2+1=3이다."
+  },
+  {
+    "id": "2_9_5",
+    "level": "middle_linear_equation",
+    "title": "혼합 연산",
+    "variable": {
+      "name": "x",
+      "valueExpression": "1",
+      "valueDisplay": "1"
+    },
+    "answer": {
+      "expression": "(x+2)*3=9",
+      "display": "(x+2)×3=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "(",
+      ")",
+      "x",
+      "+",
+      "2",
+      "*",
+      "3",
+      "=",
+      "9"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 3*3=9이다."
+  }
+]

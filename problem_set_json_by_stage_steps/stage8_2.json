@@ -1,0 +1,302 @@
+[
+  {
+    "id": "s8_2_1",
+    "level": "algebra",
+    "title": "자연상수",
+    "variable": [],
+    "answer": {
+      "expression": "e^0=1",
+      "display": "e^0=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "e의 0제곱은 1이다.",
+    "puzzle": "e^0=1"
+  },
+  {
+    "id": "s8_2_2",
+    "level": "algebra",
+    "title": "자연상수",
+    "variable": [],
+    "answer": {
+      "expression": "10^0=1",
+      "display": "10^0=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "e의 0제곱은 1이다.",
+    "puzzle": "10^0=1"
+  },
+  {
+    "id": "s8_2_3",
+    "level": "algebra",
+    "title": "자연상수",
+    "variable": [],
+    "answer": {
+      "expression": "5^0=1",
+      "display": "5^0=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "e의 0제곱은 1이다.",
+    "puzzle": "5^0=1"
+  },
+  {
+    "id": "s8_2_4",
+    "level": "algebra",
+    "title": "자연상수",
+    "variable": [],
+    "answer": {
+      "expression": "2^0=1",
+      "display": "2^0=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "e의 0제곱은 1이다.",
+    "puzzle": "2^0=1"
+  },
+  {
+    "id": "s8_2_5",
+    "level": "algebra",
+    "title": "자연상수",
+    "variable": [],
+    "answer": {
+      "expression": "pi^0=1",
+      "display": "pi^0=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "e"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "e의 0제곱은 1이다.",
+    "puzzle": "pi^0=1"
+  }
+]

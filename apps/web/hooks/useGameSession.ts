@@ -36,6 +36,8 @@ interface UseGameSessionReturn {
   clearInput: () => void;
   submitGuess: () => Promise<void>;
   dismissToast: () => void;
+  focusedPath: (string|number)[] | null;
+  setFocusedPath: (path: (string|number)[] | null) => void;
 }
 
 export function useGameSession({
@@ -79,9 +81,11 @@ export function useGameSession({
   const [state, setState] = useState<GameState>(initState);
   const [toast, setToast] = useState<ToastMessage | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [focusedPath, setFocusedPath] = useState<(string|number)[] | null>(null);
 
   useEffect(() => {
     setState(initState());
+    setFocusedPath(null);
   }, [puzzle.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -99,20 +103,39 @@ export function useGameSession({
     saveGame(record);
   }, [state, saveGame]);
 
-  // Keyboard state: best feedback color per cell display key
+  // Keyboard state: best feedback color per cell display key.
+  // We need to flatten the nested feedback to find best color for tokens.
   const keyboardState = useMemo<KeyboardState>(() => {
     const ks: KeyboardState = {};
-    for (const row of state.rows) {
-      if (row.status !== "submitted") continue;
-      row.cells.forEach((cell, i) => {
-        const color = row.feedback[i];
-        if (!color) return;
+    
+    function processFeedback(cells: PuzzleCell[], feedbackList: import("@/types/game").NestedFeedback[] | import("@/types/game").FeedbackColor[]) {
+      cells.forEach((cell, i) => {
+        const feedbackObj = feedbackList[i];
+        if (!feedbackObj) return;
+        
+        // Handle both backward-compatible string colors and NestedFeedback objects
+        const color = typeof feedbackObj === "string" ? feedbackObj : feedbackObj.color;
+        
         const key = cellDisplayKey(cell);
         const current = ks[key];
-        if (!current || colorPriority(color) > colorPriority(current as FeedbackColor)) {
-          ks[key] = color;
+        if (!current || colorPriority(color as FeedbackColor) > colorPriority(current as FeedbackColor)) {
+          ks[key] = color as FeedbackColor;
+        }
+
+        // Process sub-fields recursively
+        if (cell.type === "block" && cell.cellFields && typeof feedbackObj !== "string" && feedbackObj.fields) {
+          for (const [fieldName, fieldCells] of Object.entries(cell.cellFields)) {
+            if (feedbackObj.fields[fieldName]) {
+              processFeedback(fieldCells, feedbackObj.fields[fieldName]);
+            }
+          }
         }
       });
+    }
+
+    for (const row of state.rows) {
+      if (row.status !== "submitted") continue;
+      processFeedback(row.cells, row.feedback);
     }
     return ks;
   }, [state.rows]);
@@ -126,33 +149,82 @@ export function useGameSession({
     []
   );
 
+  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      if (cells.length >= maxLength) return cells;
+      return [...cells, newCell];
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block") return cells;
+    
+    const newFields = { ...(targetBlock.cellFields || {}) };
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
+  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      return cells.slice(0, -1);
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
+    
+    const newFields = { ...targetBlock.cellFields };
+    if (newFields[fieldName]) {
+       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+    }
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
   const appendToken = useCallback(
     (token: KeypadToken) => {
       if (token.type === "block") return; // handled by appendBlock
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        if (prev.currentCells.length >= puzzle.answerLength) return prev;
         const cell: PuzzleCell = { type: "token", value: token.value };
-        return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        return { ...prev, currentCells: newCells, errorMessage: null };
       });
     },
-    [puzzle.answerLength]
+    [puzzle.answerLength, focusedPath, insertAtCursor]
   );
 
   const appendBlock = useCallback(
     (payload: BlockInsertPayload) => {
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        if (prev.currentCells.length >= puzzle.answerLength) return prev;
+        
+        // Initialize cellFields from the JSON spec fields
+        const cellFields: Record<string, PuzzleCell[]> = {};
+        for (const key of Object.keys(payload.fields)) {
+          cellFields[key] = [];
+        }
+        
         const cell: PuzzleCell = {
           type: "block",
           blockType: payload.blockType as ReservedBlock,
           fields: payload.fields,
+          cellFields
         };
-        return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        return { ...prev, currentCells: newCells, errorMessage: null };
       });
     },
-    [puzzle.answerLength]
+    [puzzle.answerLength, focusedPath, insertAtCursor]
   );
 
   const deleteCell = useCallback(() => {
@@ -160,17 +232,18 @@ export function useGameSession({
       if (prev.status !== "playing") return prev;
       return {
         ...prev,
-        currentCells: prev.currentCells.slice(0, -1),
+        currentCells: deleteAtCursor(prev.currentCells, focusedPath),
         errorMessage: null,
       };
     });
-  }, []);
+  }, [focusedPath, deleteCell]);
 
   const clearInput = useCallback(() => {
     setState((prev) => {
       if (prev.status !== "playing") return prev;
       return { ...prev, currentCells: [], errorMessage: null };
     });
+    setFocusedPath(null);
   }, []);
 
   const submitGuess = useCallback(async () => {
@@ -202,7 +275,7 @@ export function useGameSession({
 
       const data = (await res.json()) as {
         ok: boolean;
-        feedback?: FeedbackColor[];
+        feedback?: import("@/types/game").NestedFeedback[];
         solved?: boolean;
         gameOver?: boolean;
         message?: string;
@@ -304,5 +377,7 @@ export function useGameSession({
     clearInput,
     submitGuess,
     dismissToast,
+    focusedPath,
+    setFocusedPath,
   };
 }

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "1_7_1",
+    "level": "elementary_arithmetic",
+    "title": "나눗셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "4/2=2",
+      "display": "4÷2=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "4",
+      "2",
+      "/",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "4/2=2이다."
+  },
+  {
+    "id": "1_7_2",
+    "level": "elementary_arithmetic",
+    "title": "나눗셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "6/2=3",
+      "display": "6÷2=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "6",
+      "2",
+      "/",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "6/2=3이다."
+  },
+  {
+    "id": "1_7_3",
+    "level": "elementary_arithmetic",
+    "title": "나눗셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "8/2=4",
+      "display": "8÷2=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "8",
+      "2",
+      "/",
+      "=",
+      "4"
+    ],
+    "shownBlocks": [],
+    "explanation": "8/2=4이다."
+  },
+  {
+    "id": "1_7_4",
+    "level": "elementary_arithmetic",
+    "title": "나눗셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "9/3=3",
+      "display": "9÷3=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "9",
+      "3",
+      "/",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "9/3=3이다."
+  },
+  {
+    "id": "1_7_5",
+    "level": "elementary_arithmetic",
+    "title": "나눗셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "8/4=2",
+      "display": "8÷4=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "8",
+      "4",
+      "/",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "8/4=2이다."
+  }
+]

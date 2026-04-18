@@ -1,0 +1,307 @@
+[
+  {
+    "id": "2_8_1",
+    "level": "middle_variable",
+    "title": "소수와 변수",
+    "variable": {
+      "name": "x",
+      "valueExpression": "1.5",
+      "valueDisplay": "1.5"
+    },
+    "answer": {
+      "expression": "x+0.5=2",
+      "display": "x+0.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "x",
+      "+",
+      "0",
+      ".",
+      "5",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1.5이면 1.5+0.5=2이다."
+  },
+  {
+    "id": "2_8_2",
+    "level": "middle_variable",
+    "title": "소수와 변수",
+    "variable": {
+      "name": "x",
+      "valueExpression": "2.2",
+      "valueDisplay": "2.2"
+    },
+    "answer": {
+      "expression": "x-1.2=1",
+      "display": "x-1.2=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "x",
+      "-",
+      "1",
+      ".",
+      "2",
+      "=",
+      "1"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2.2이면 2.2-1.2=1이다."
+  },
+  {
+    "id": "2_8_3",
+    "level": "middle_variable",
+    "title": "소수와 변수",
+    "variable": {
+      "name": "x",
+      "valueExpression": "1.2",
+      "valueDisplay": "1.2"
+    },
+    "answer": {
+      "expression": "0.8+x=2",
+      "display": "0.8+x=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      ".",
+      "8",
+      "+",
+      "x",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1.2이면 0.8+1.2=2이다."
+  },
+  {
+    "id": "2_8_4",
+    "level": "middle_variable",
+    "title": "소수와 변수",
+    "variable": {
+      "name": "x",
+      "valueExpression": "1.5",
+      "valueDisplay": "1.5"
+    },
+    "answer": {
+      "expression": "x+1.5=3",
+      "display": "x+1.5=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "x",
+      "+",
+      "1",
+      ".",
+      "5",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1.5이면 1.5+1.5=3이다."
+  },
+  {
+    "id": "2_8_5",
+    "level": "middle_variable",
+    "title": "소수와 변수",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3.5",
+      "valueDisplay": "3.5"
+    },
+    "answer": {
+      "expression": "x-0.5=3",
+      "display": "x-0.5=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "x",
+      "-",
+      "0",
+      ".",
+      "5",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3.5이면 3.5-0.5=3이다."
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "s10_5_1",
+    "level": "probstat",
+    "title": "순열 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "6P2는 6*5=30이다.",
+    "puzzle": "6P2=30"
+  },
+  {
+    "id": "s10_5_2",
+    "level": "probstat",
+    "title": "순열 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "6P2는 6*5=30이다.",
+    "puzzle": "6P2=30"
+  },
+  {
+    "id": "s10_5_3",
+    "level": "probstat",
+    "title": "순열 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "6P2는 6*5=30이다.",
+    "puzzle": "6P2=30"
+  },
+  {
+    "id": "s10_5_4",
+    "level": "probstat",
+    "title": "순열 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "6P2는 6*5=30이다.",
+    "puzzle": "6P2=30"
+  },
+  {
+    "id": "s10_5_5",
+    "level": "probstat",
+    "title": "순열 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "6P2는 6*5=30이다.",
+    "puzzle": "6P2=30"
+  }
+]

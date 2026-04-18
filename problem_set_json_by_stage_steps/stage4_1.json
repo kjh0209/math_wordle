@@ -1,0 +1,357 @@
+[
+  {
+    "id": "s4_1_1",
+    "level": "middle2",
+    "title": "문자 y 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x+y=5",
+      "display": "x+y=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2, y=3이면 x+y=5이다.",
+    "puzzle": "x+y=5"
+  },
+  {
+    "id": "s4_1_2",
+    "level": "middle2",
+    "title": "문자 y 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x+y=7",
+      "display": "x+y=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2, y=3이면 x+y=5이다.",
+    "puzzle": "x+y=7"
+  },
+  {
+    "id": "s4_1_3",
+    "level": "middle2",
+    "title": "문자 y 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x+y=4",
+      "display": "x+y=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2, y=3이면 x+y=5이다.",
+    "puzzle": "x+y=4"
+  },
+  {
+    "id": "s4_1_4",
+    "level": "middle2",
+    "title": "문자 y 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x+y=6",
+      "display": "x+y=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2, y=3이면 x+y=5이다.",
+    "puzzle": "x+y=6"
+  },
+  {
+    "id": "s4_1_5",
+    "level": "middle2",
+    "title": "문자 y 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x+y=8",
+      "display": "x+y=8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2, y=3이면 x+y=5이다.",
+    "puzzle": "x+y=8"
+  }
+]

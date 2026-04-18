@@ -1,0 +1,357 @@
+[
+  {
+    "id": "s8_7_1",
+    "level": "algebra",
+    "title": "탄젠트",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi/4",
+        "valueDisplay": "π/4"
+      }
+    ],
+    "answer": {
+      "expression": "tan(x)=1",
+      "display": "tan(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π/4이면 tan(x)=1이다.",
+    "puzzle": "tan(x)=1"
+  },
+  {
+    "id": "s8_7_2",
+    "level": "algebra",
+    "title": "탄젠트",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi/4",
+        "valueDisplay": "π/4"
+      }
+    ],
+    "answer": {
+      "expression": "tan(x)=1",
+      "display": "tan(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π/4이면 tan(x)=1이다.",
+    "puzzle": "tan(x)=1"
+  },
+  {
+    "id": "s8_7_3",
+    "level": "algebra",
+    "title": "탄젠트",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi/4",
+        "valueDisplay": "π/4"
+      }
+    ],
+    "answer": {
+      "expression": "tan(x)=1",
+      "display": "tan(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π/4이면 tan(x)=1이다.",
+    "puzzle": "tan(x)=1"
+  },
+  {
+    "id": "s8_7_4",
+    "level": "algebra",
+    "title": "탄젠트",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi/4",
+        "valueDisplay": "π/4"
+      }
+    ],
+    "answer": {
+      "expression": "tan(x)=1",
+      "display": "tan(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π/4이면 tan(x)=1이다.",
+    "puzzle": "tan(x)=1"
+  },
+  {
+    "id": "s8_7_5",
+    "level": "algebra",
+    "title": "탄젠트",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "pi/4",
+        "valueDisplay": "π/4"
+      }
+    ],
+    "answer": {
+      "expression": "tan(x)=1",
+      "display": "tan(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "trigonometry",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "(",
+      ")",
+      "x",
+      "pi",
+      "sin",
+      "cos",
+      "tan"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=π/4이면 tan(x)=1이다.",
+    "puzzle": "tan(x)=1"
+  }
+]

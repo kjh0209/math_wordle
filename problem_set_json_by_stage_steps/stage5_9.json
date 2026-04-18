@@ -1,0 +1,387 @@
+[
+  {
+    "id": "s5_9_1",
+    "level": "middle3",
+    "title": "이차함수 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2",
+      "display": "y=x^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 x^2=4이므로 y=4이다.",
+    "puzzle": "y=x^2"
+  },
+  {
+    "id": "s5_9_2",
+    "level": "middle3",
+    "title": "이차함수 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=2*x^2",
+      "display": "y=2*x^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 x^2=4이므로 y=4이다.",
+    "puzzle": "y=2*x^2"
+  },
+  {
+    "id": "s5_9_3",
+    "level": "middle3",
+    "title": "이차함수 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=3*x^2",
+      "display": "y=3*x^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 x^2=4이므로 y=4이다.",
+    "puzzle": "y=3*x^2"
+  },
+  {
+    "id": "s5_9_4",
+    "level": "middle3",
+    "title": "이차함수 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=-x^2",
+      "display": "y=-x^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 x^2=4이므로 y=4이다.",
+    "puzzle": "y=-x^2"
+  },
+  {
+    "id": "s5_9_5",
+    "level": "middle3",
+    "title": "이차함수 도입",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=-2*x^2",
+      "display": "y=-2*x^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 x^2=4이므로 y=4이다.",
+    "puzzle": "y=-2*x^2"
+  }
+]

@@ -13,6 +13,8 @@ interface AttemptGridProps {
   isInvalid?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
+  focusedPath?: (string | number)[] | null;
+  setFocusedPath?: (path: (string | number)[] | null) => void;
 }
 
 export function AttemptGrid({
@@ -23,6 +25,8 @@ export function AttemptGrid({
   isInvalid = false,
   size = "md",
   className,
+  focusedPath = null,
+  setFocusedPath,
 }: AttemptGridProps) {
   const submittedRows = rows.filter((r) => r.status === "submitted");
   const activeIndex = submittedRows.length;
@@ -35,7 +39,7 @@ export function AttemptGrid({
       aria-label="Guess grid"
     >
       {submittedRows.map((row, i) => (
-        <AttemptRow key={i} row={row} answerLength={answerLength} size={size} />
+        <AttemptRow key={i} row={row} answerLength={answerLength} size={size} pathPrefix={[]} />
       ))}
 
       {activeIndex < maxAttempts && (
@@ -45,6 +49,9 @@ export function AttemptGrid({
           activeCells={currentCells}
           isInvalid={isInvalid}
           size={size}
+          pathPrefix={[]}
+          focusedPath={focusedPath}
+          setFocusedPath={setFocusedPath}
         />
       )}
 

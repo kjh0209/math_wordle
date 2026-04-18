@@ -25,6 +25,11 @@ export interface BlockCell {
   type: "block";
   blockType: ReservedBlock;
   fields: Record<string, string>;
+  /**
+   * For the JSON spec, 'fields' contains raw string expressions (e.g. "0").
+   * During play, 'cellFields' contains the actual user input as token arrays.
+   */
+  cellFields?: Record<string, PuzzleCell[]>;
 }
 
 /** A single cell in a puzzle answer or player guess */

@@ -1,0 +1,397 @@
+[
+  {
+    "id": "s9_5_1",
+    "level": "calculus",
+    "title": "적분 확장",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1]x^2 dx=1/3",
+      "display": "∫[0,1]x^2 dx=1/3",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "^",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "0부터 1까지 x^2를 적분하면 1/3이다.",
+    "puzzle": "∫[0,1]x^2 dx=1/3"
+  },
+  {
+    "id": "s9_5_2",
+    "level": "calculus",
+    "title": "적분 확장",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1]x^2 dx=1/3",
+      "display": "∫[0,1]x^2 dx=1/3",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "^",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "0부터 1까지 x^2를 적분하면 1/3이다.",
+    "puzzle": "∫[0,1]x^2 dx=1/3"
+  },
+  {
+    "id": "s9_5_3",
+    "level": "calculus",
+    "title": "적분 확장",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1]x^2 dx=1/3",
+      "display": "∫[0,1]x^2 dx=1/3",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "^",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "0부터 1까지 x^2를 적분하면 1/3이다.",
+    "puzzle": "∫[0,1]x^2 dx=1/3"
+  },
+  {
+    "id": "s9_5_4",
+    "level": "calculus",
+    "title": "적분 확장",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1]x^2 dx=1/3",
+      "display": "∫[0,1]x^2 dx=1/3",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "^",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "0부터 1까지 x^2를 적분하면 1/3이다.",
+    "puzzle": "∫[0,1]x^2 dx=1/3"
+  },
+  {
+    "id": "s9_5_5",
+    "level": "calculus",
+    "title": "적분 확장",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1]x^2 dx=1/3",
+      "display": "∫[0,1]x^2 dx=1/3",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "^",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "0부터 1까지 x^2를 적분하면 1/3이다.",
+    "puzzle": "∫[0,1]x^2 dx=1/3"
+  }
+]

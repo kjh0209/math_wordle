@@ -1,0 +1,322 @@
+[
+  {
+    "id": "s3_2_1",
+    "level": "middle1",
+    "title": "연산 순서 2",
+    "variable": [],
+    "answer": {
+      "expression": "9-6/3=7",
+      "display": "9-6/3=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "="
+    ],
+    "shownBlocks": [],
+    "explanation": "나눗셈을 먼저 계산하면 6/3=2이고, 9-2=7이다.",
+    "puzzle": "9-6/3=7"
+  },
+  {
+    "id": "s3_2_2",
+    "level": "middle1",
+    "title": "연산 순서 2",
+    "variable": [],
+    "answer": {
+      "expression": "8-4/2=6",
+      "display": "8-4/2=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "="
+    ],
+    "shownBlocks": [],
+    "explanation": "나눗셈을 먼저 계산하면 6/3=2이고, 9-2=7이다.",
+    "puzzle": "8-4/2=6"
+  },
+  {
+    "id": "s3_2_3",
+    "level": "middle1",
+    "title": "연산 순서 2",
+    "variable": [],
+    "answer": {
+      "expression": "10-6/2=7",
+      "display": "10-6/2=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "="
+    ],
+    "shownBlocks": [],
+    "explanation": "나눗셈을 먼저 계산하면 6/3=2이고, 9-2=7이다.",
+    "puzzle": "10-6/2=7"
+  },
+  {
+    "id": "s3_2_4",
+    "level": "middle1",
+    "title": "연산 순서 2",
+    "variable": [],
+    "answer": {
+      "expression": "12-8/4=10",
+      "display": "12-8/4=10",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "="
+    ],
+    "shownBlocks": [],
+    "explanation": "나눗셈을 먼저 계산하면 6/3=2이고, 9-2=7이다.",
+    "puzzle": "12-8/4=10"
+  },
+  {
+    "id": "s3_2_5",
+    "level": "middle1",
+    "title": "연산 순서 2",
+    "variable": [],
+    "answer": {
+      "expression": "7-4/2=5",
+      "display": "7-4/2=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "="
+    ],
+    "shownBlocks": [],
+    "explanation": "나눗셈을 먼저 계산하면 6/3=2이고, 9-2=7이다.",
+    "puzzle": "7-4/2=5"
+  }
+]

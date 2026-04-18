@@ -1,0 +1,272 @@
+[
+  {
+    "id": "s6_7_1",
+    "level": "common1",
+    "title": "조합 도입",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "5C2는 10이다.",
+    "puzzle": "5C2=10"
+  },
+  {
+    "id": "s6_7_2",
+    "level": "common1",
+    "title": "조합 도입",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "5C2는 10이다.",
+    "puzzle": "5C2=10"
+  },
+  {
+    "id": "s6_7_3",
+    "level": "common1",
+    "title": "조합 도입",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "5C2는 10이다.",
+    "puzzle": "5C2=10"
+  },
+  {
+    "id": "s6_7_4",
+    "level": "common1",
+    "title": "조합 도입",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "5C2는 10이다.",
+    "puzzle": "5C2=10"
+  },
+  {
+    "id": "s6_7_5",
+    "level": "common1",
+    "title": "조합 도입",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "5C2는 10이다.",
+    "puzzle": "5C2=10"
+  }
+]

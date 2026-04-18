@@ -12,11 +12,13 @@ interface AttemptRowProps {
   row?: GuessRow;
   answerLength: number;
   isActive?: boolean;
-  /** Cells being built for the current active row */
   activeCells?: PuzzleCell[];
   isInvalid?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
+  pathPrefix?: (string | number)[];
+  focusedPath?: (string | number)[] | null;
+  setFocusedPath?: (path: (string | number)[] | null) => void;
 }
 
 export function AttemptRow({
@@ -27,14 +29,23 @@ export function AttemptRow({
   isInvalid = false,
   size = "md",
   className,
+  pathPrefix = [],
+  focusedPath = null,
+  setFocusedPath,
 }: AttemptRowProps) {
   const tiles = Array.from({ length: answerLength }, (_, i) => {
+    const currentPath = [...pathPrefix, i];
+    const isFocused = focusedPath && JSON.stringify(focusedPath) === JSON.stringify(currentPath);
+
     // ── Submitted row ──────────────────────────────────────────────────────────
     if (row && row.status === "submitted") {
       const cell = row.cells[i];
-      const feedback = row.feedback[i];
+      const feedbackObj = row.feedback[i];
+      
+      // Backward compat handling for string-based feedback or new NestedFeedback
+      const feedbackColor = typeof feedbackObj === "string" ? feedbackObj : feedbackObj?.color;
       const state: TileState =
-        feedback === "correct" ? "correct" : feedback === "present" ? "present" : "absent";
+        feedbackColor === "correct" ? "correct" : feedbackColor === "present" ? "present" : "absent";
 
       if (!cell) return <TokenTile key={i} state="empty" size={size} />;
 
@@ -47,6 +58,8 @@ export function AttemptRow({
             size={size}
             animationDelay={i * 120}
             className="tile-flip-reveal"
+            nestedFeedback={typeof feedbackObj === "string" ? undefined : feedbackObj}
+            pathPrefix={currentPath}
           />
         );
       }
@@ -67,9 +80,18 @@ export function AttemptRow({
     // ── Active input row ───────────────────────────────────────────────────────
     if (isActive) {
       const cell = activeCells[i];
-      const state: TileState = isInvalid ? "invalid" : cell ? "active" : "empty";
+      const baseState: TileState = isInvalid ? "invalid" : cell ? "active" : "empty";
+      
+      // If we are placing the root token, highlighting the empty box.
+      const state = (isFocused || (!focusedPath && i === activeCells.length)) ? "pending" : baseState;
 
-      if (!cell) return <TokenTile key={i} state={state} size={size} />;
+      if (!cell) {
+        return (
+          <div key={i} onClick={() => setFocusedPath?.(null)} className="cursor-pointer">
+            <TokenTile state={state} size={size} />
+          </div>
+        );
+      }
 
       if (cell.type === "block") {
         return (
@@ -79,19 +101,23 @@ export function AttemptRow({
             state={state}
             size={size}
             className={cn(!isInvalid && "tile-pop")}
+            pathPrefix={currentPath}
+            focusedPath={focusedPath}
+            setFocusedPath={setFocusedPath}
           />
         );
       }
 
       return (
-        <TokenTile
-          key={i}
-          value={cell.value}
-          display={getTokenDisplay(cell.value)}
-          state={state}
-          size={size}
-          className={cn(!isInvalid && "tile-pop")}
-        />
+        <div key={i} onClick={() => setFocusedPath?.(currentPath)} className="cursor-pointer">
+          <TokenTile
+            value={cell.value}
+            display={getTokenDisplay(cell.value)}
+            state={state}
+            size={size}
+            className={cn(!isInvalid && "tile-pop", isFocused && "ring-2 ring-primary")}
+          />
+        </div>
       );
     }
 

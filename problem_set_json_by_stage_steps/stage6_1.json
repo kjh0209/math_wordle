@@ -1,0 +1,347 @@
+[
+  {
+    "id": "s6_1_1",
+    "level": "common1",
+    "title": "복소수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "i^2=-1",
+      "display": "i^2=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "복소수 i의 기본 성질은 i^2=-1이다.",
+    "puzzle": "i^2=-1"
+  },
+  {
+    "id": "s6_1_2",
+    "level": "common1",
+    "title": "복소수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "i^3=-i",
+      "display": "i^3=-i",
+      "cells": [
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "복소수 i의 기본 성질은 i^2=-1이다.",
+    "puzzle": "i^3=-i"
+  },
+  {
+    "id": "s6_1_3",
+    "level": "common1",
+    "title": "복소수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "i^4=1",
+      "display": "i^4=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "복소수 i의 기본 성질은 i^2=-1이다.",
+    "puzzle": "i^4=1"
+  },
+  {
+    "id": "s6_1_4",
+    "level": "common1",
+    "title": "복소수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "i^5=i",
+      "display": "i^5=i",
+      "cells": [
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "복소수 i의 기본 성질은 i^2=-1이다.",
+    "puzzle": "i^5=i"
+  },
+  {
+    "id": "s6_1_5",
+    "level": "common1",
+    "title": "복소수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "i^6=-1",
+      "display": "i^6=-1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "복소수 i의 기본 성질은 i^2=-1이다.",
+    "puzzle": "i^6=-1"
+  }
+]

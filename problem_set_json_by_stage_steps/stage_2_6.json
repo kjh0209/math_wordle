@@ -1,0 +1,332 @@
+[
+  {
+    "id": "2_6_1",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "sqrt(x+1)=2",
+      "display": "√(x+1)=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "+",
+      "1",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 √(3+1)=2이다."
+  },
+  {
+    "id": "2_6_2",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "5",
+      "valueDisplay": "5"
+    },
+    "answer": {
+      "expression": "sqrt(x-1)=2",
+      "display": "√(x-1)=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "-",
+      "1",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 √(5-1)=2이다."
+  },
+  {
+    "id": "2_6_3",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "7",
+      "valueDisplay": "7"
+    },
+    "answer": {
+      "expression": "sqrt(x+2)=3",
+      "display": "√(x+2)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "+",
+      "2",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=7이면 √(7+2)=3이다."
+  },
+  {
+    "id": "2_6_4",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "sqrt(x-2)=1",
+      "display": "√(x-2)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "-",
+      "2",
+      "=",
+      "1"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 √(3-2)=1이다."
+  },
+  {
+    "id": "2_6_5",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "sqrt(x+5)=3",
+      "display": "√(x+5)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "+",
+      "5",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 √(4+5)=3이다."
+  }
+]

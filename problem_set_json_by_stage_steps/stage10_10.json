@@ -1,0 +1,287 @@
+[
+  {
+    "id": "s10_10_1",
+    "level": "probstat",
+    "title": "확통 종합",
+    "variable": [],
+    "answer": {
+      "expression": "7C2=21",
+      "display": "7C2=21",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "7",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "7C2는 21이다.",
+    "puzzle": "7C2=21"
+  },
+  {
+    "id": "s10_10_2",
+    "level": "probstat",
+    "title": "확통 종합",
+    "variable": [],
+    "answer": {
+      "expression": "8C2=28",
+      "display": "8C2=28",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "7",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "7C2는 21이다.",
+    "puzzle": "8C2=28"
+  },
+  {
+    "id": "s10_10_3",
+    "level": "probstat",
+    "title": "확통 종합",
+    "variable": [],
+    "answer": {
+      "expression": "9C2=36",
+      "display": "9C2=36",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "7",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "7C2는 21이다.",
+    "puzzle": "9C2=36"
+  },
+  {
+    "id": "s10_10_4",
+    "level": "probstat",
+    "title": "확통 종합",
+    "variable": [],
+    "answer": {
+      "expression": "7C3=35",
+      "display": "7C3=35",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "7",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "7C2는 21이다.",
+    "puzzle": "7C3=35"
+  },
+  {
+    "id": "s10_10_5",
+    "level": "probstat",
+    "title": "확통 종합",
+    "variable": [],
+    "answer": {
+      "expression": "8C3=56",
+      "display": "8C3=56",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "7",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "7C2는 21이다.",
+    "puzzle": "8C3=56"
+  }
+]

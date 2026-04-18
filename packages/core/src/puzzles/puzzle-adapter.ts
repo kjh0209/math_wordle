@@ -36,6 +36,38 @@ import {
 export function mapPuzzleDbRowToDomain(row: PuzzleDbRow): PuzzleDomainModel {
   const raw = row.raw_payload;
 
+  // Enrich block cells with tokenized cellFields
+  const answerCells = raw.answer.cells.map((cell) => {
+    if (cell.type === "block") {
+      const cellFields: Record<string, import("../types/puzzle").PuzzleCell[]> = {};
+      for (const [key, value] of Object.entries(cell.fields)) {
+        // Split string into 1-char tokens. For things like "10", it correctly becomes "1", "0"
+        // Wait, mathjs tokens might be distinct, e.g. "pi" or "sqrt".
+        // Instead of writing a complex tokenizer, we rely on the parser to map fields cleanly.
+        // For the static answer in JSON, we can reasonably assume single digit inputs,
+        // or we use a basic naive tokenizer for testing, but let's just create token arrays.
+        const tokens: import("../types/puzzle").PuzzleCell[] = [];
+        let i = 0;
+        while (i < value.length) {
+          const c = value[i];
+          if (/[a-zA-Z]/.test(c)) {
+            let funcName = c;
+            while (i + 1 < value.length && /[a-zA-Z]/.test(value[i + 1])) {
+              funcName += value[++i];
+            }
+            tokens.push({ type: "token", value: funcName });
+          } else {
+            tokens.push({ type: "token", value: c });
+          }
+          i++;
+        }
+        cellFields[key] = tokens;
+      }
+      return { ...cell, cellFields };
+    }
+    return cell;
+  });
+
   return {
     id: row.id,
     title: row.title,
@@ -43,7 +75,10 @@ export function mapPuzzleDbRowToDomain(row: PuzzleDbRow): PuzzleDomainModel {
     difficulty: row.difficulty as PuzzleDifficulty,
     category: row.category as PuzzleCategory,
     variable: raw.variable ?? null,
-    answer: raw.answer,
+    answer: {
+      ...raw.answer,
+      cells: answerCells,
+    },
     rules: {
       requiresVariable: raw.rules.requiresVariable ?? DEFAULT_RULES.requiresVariable,
       allowImplicitMultiplication:
@@ -105,7 +140,7 @@ export function adaptPuzzle(
 
 type TokenCategory = "digit" | "operator" | "paren" | "function" | "constant" | "variable";
 
-const DIGIT_ORDER = ["7","8","9","4","5","6","1","2","3","0","."];
+const DIGIT_ORDER = ["0","1","2","3","4","5","6","7","8","9","."];
 
 function classifyToken(value: string): TokenCategory {
   const def = TOKEN_DEFINITIONS[value as keyof typeof TOKEN_DEFINITIONS];
@@ -209,6 +244,43 @@ export function buildKeypadGroups(
   }
 
   return groups;
+}
+
+// ─── Problem-set puzzle → ViewModel ──────────────────────────────────────────
+
+export function mapProblemSetPuzzleToViewModel(
+  p: import("./problem-sets").ProblemSetPuzzle
+): PuzzleViewModel {
+  const shownBlocks = (p.shownBlocks ?? []).filter((b): b is ReservedBlock =>
+    (["LogBase", "SigmaRange", "IntegralRange", "dx", "d/dx", "Comb", "Perm"] as string[]).includes(b)
+  );
+  return {
+    id: p.id,
+    title: p.title,
+    level: p.level as PuzzleLevel,
+    difficulty: p.difficulty as PuzzleDifficulty,
+    category: p.category as PuzzleCategory,
+    variable: p.variable
+      ? {
+          name: p.variable.name,
+          valueExpression: p.variable.valueExpression,
+          valueDisplay: p.variable.valueDisplay,
+        }
+      : null,
+    answerDisplay: p.answer.display,
+    answerLength: p.answer.length,
+    maxAttempts: (p.rules as any).maxAttempts ?? 6,
+    shownTokens: p.shownTokens,
+    shownBlocks,
+    availableTokenGroups: buildKeypadGroups(p.shownTokens, shownBlocks),
+    explanation: p.explanation ?? null,
+    isDaily: false,
+    dailyDate: null,
+    meta: {
+      answerCells: p.answer.cells as import("../types/puzzle").PuzzleCell[],
+      answerExpression: p.answer.expression,
+    },
+  };
 }
 
 // ─── Validation context extractor (for server-side use) ───────────────────────

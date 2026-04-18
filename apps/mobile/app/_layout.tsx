@@ -55,6 +55,9 @@ export default function RootLayout() {
       >
         <Stack.Screen name="index" />
         <Stack.Screen name="play" />
+        <Stack.Screen name="stage/[stageNum]" />
+        <Stack.Screen name="step/[code]" />
+        <Stack.Screen name="step/[code]/play" />
         <Stack.Screen name="leaderboard" />
         <Stack.Screen name="share/[code]" />
       </Stack>

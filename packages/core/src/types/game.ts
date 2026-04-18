@@ -18,6 +18,11 @@ export type GameMode = "daily" | "practice" | "shared";
 
 export type FeedbackColor = "correct" | "present" | "absent";
 
+export interface NestedFeedback {
+  color: FeedbackColor;
+  fields?: Record<string, FeedbackColor[]>;
+}
+
 export type TileState =
   | "empty"
   | "active"
@@ -31,7 +36,7 @@ export type TileState =
 export interface GuessRow {
   /** Cells the player submitted — token or block cells */
   cells: PuzzleCell[];
-  feedback: FeedbackColor[];
+  feedback: NestedFeedback[];
   status: "empty" | "active" | "submitted" | "invalid";
   revealIndex?: number;
 }

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "s5_4_1",
+    "level": "middle3",
+    "title": "이차식 기본",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2=9",
+      "display": "x^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 x^2=9가 된다.",
+    "puzzle": "x^2=9"
+  },
+  {
+    "id": "s5_4_2",
+    "level": "middle3",
+    "title": "이차식 기본",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2=9",
+      "display": "x^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 x^2=9가 된다.",
+    "puzzle": "x^2=9"
+  },
+  {
+    "id": "s5_4_3",
+    "level": "middle3",
+    "title": "이차식 기본",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2=9",
+      "display": "x^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 x^2=9가 된다.",
+    "puzzle": "x^2=9"
+  },
+  {
+    "id": "s5_4_4",
+    "level": "middle3",
+    "title": "이차식 기본",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2=9",
+      "display": "x^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 x^2=9가 된다.",
+    "puzzle": "x^2=9"
+  },
+  {
+    "id": "s5_4_5",
+    "level": "middle3",
+    "title": "이차식 기본",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2=9",
+      "display": "x^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 x^2=9가 된다.",
+    "puzzle": "x^2=9"
+  }
+]

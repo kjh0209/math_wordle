@@ -1,0 +1,457 @@
+[
+  {
+    "id": "s9_9_1",
+    "level": "calculus",
+    "title": "미적분 혼합",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+1)=2*x",
+      "display": "d/dx(x^2+1)=2*x",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx",
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "x^2+1을 미분하면 2*x가 된다.",
+    "puzzle": "d/dx(x^2+1)=2*x"
+  },
+  {
+    "id": "s9_9_2",
+    "level": "calculus",
+    "title": "미적분 혼합",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+1)=2*x",
+      "display": "d/dx(x^2+1)=2*x",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx",
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "x^2+1을 미분하면 2*x가 된다.",
+    "puzzle": "d/dx(x^2+1)=2*x"
+  },
+  {
+    "id": "s9_9_3",
+    "level": "calculus",
+    "title": "미적분 혼합",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+1)=2*x",
+      "display": "d/dx(x^2+1)=2*x",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx",
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "x^2+1을 미분하면 2*x가 된다.",
+    "puzzle": "d/dx(x^2+1)=2*x"
+  },
+  {
+    "id": "s9_9_4",
+    "level": "calculus",
+    "title": "미적분 혼합",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+1)=2*x",
+      "display": "d/dx(x^2+1)=2*x",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx",
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "x^2+1을 미분하면 2*x가 된다.",
+    "puzzle": "d/dx(x^2+1)=2*x"
+  },
+  {
+    "id": "s9_9_5",
+    "level": "calculus",
+    "title": "미적분 혼합",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+1)=2*x",
+      "display": "d/dx(x^2+1)=2*x",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx",
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "x^2+1을 미분하면 2*x가 된다.",
+    "puzzle": "d/dx(x^2+1)=2*x"
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "id": "s10_2_1",
+    "level": "probstat",
+    "title": "조합 기본",
+    "variable": [],
+    "answer": {
+      "expression": "4C2=6",
+      "display": "4C2=6",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 3
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "4C2는 6이다.",
+    "puzzle": "4C2=6"
+  },
+  {
+    "id": "s10_2_2",
+    "level": "probstat",
+    "title": "조합 기본",
+    "variable": [],
+    "answer": {
+      "expression": "5C2=10",
+      "display": "5C2=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 3
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "4C2는 6이다.",
+    "puzzle": "5C2=10"
+  },
+  {
+    "id": "s10_2_3",
+    "level": "probstat",
+    "title": "조합 기본",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 3
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "4C2는 6이다.",
+    "puzzle": "6C2=15"
+  },
+  {
+    "id": "s10_2_4",
+    "level": "probstat",
+    "title": "조합 기본",
+    "variable": [],
+    "answer": {
+      "expression": "5C3=10",
+      "display": "5C3=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 3
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "4C2는 6이다.",
+    "puzzle": "5C3=10"
+  },
+  {
+    "id": "s10_2_5",
+    "level": "probstat",
+    "title": "조합 기본",
+    "variable": [],
+    "answer": {
+      "expression": "6C3=20",
+      "display": "6C3=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 3
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "4C2는 6이다.",
+    "puzzle": "6C3=20"
+  }
+]

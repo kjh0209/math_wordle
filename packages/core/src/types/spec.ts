@@ -111,6 +111,7 @@ export const RESERVED_BLOCKS = [
   "SigmaRange",
   "IntegralRange",
   "dx",
+  "d/dx",
   "Comb",
   "Perm",
 ] as const;
@@ -149,6 +150,12 @@ export const BLOCK_DEFINITIONS: Record<ReservedBlock, BlockDefinition> = {
     fieldNames: [],
     description: "미분 변수 블록",
   },
+  "d/dx": {
+    display: "d/dx",
+    fieldCount: 0,
+    fieldNames: [],
+    description: "미분 연산자 블록",
+  },
   Comb: {
     display: "C( , )",
     fieldCount: 2,
@@ -177,6 +184,8 @@ export function getBlockDisplay(
       return `∫[${fields.start ?? "?"},${fields.end ?? "?"}]`;
     case "dx":
       return "dx";
+    case "d/dx":
+      return "d/dx";
     case "Comb":
       return `C(${fields.n ?? "?"},${fields.r ?? "?"})`;
     case "Perm":

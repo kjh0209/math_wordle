@@ -1,0 +1,487 @@
+[
+  {
+    "id": "s9_3_1",
+    "level": "calculus",
+    "title": "미분 활용",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+x)=2*x+1",
+      "display": "d/dx(x^2+x)=2*x+1",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx"
+    ],
+    "explanation": "x^2+x를 미분하면 2*x+1이 된다.",
+    "puzzle": "d/dx(x^2+x)=2*x+1"
+  },
+  {
+    "id": "s9_3_2",
+    "level": "calculus",
+    "title": "미분 활용",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+x)=2*x+1",
+      "display": "d/dx(x^2+x)=2*x+1",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx"
+    ],
+    "explanation": "x^2+x를 미분하면 2*x+1이 된다.",
+    "puzzle": "d/dx(x^2+x)=2*x+1"
+  },
+  {
+    "id": "s9_3_3",
+    "level": "calculus",
+    "title": "미분 활용",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+x)=2*x+1",
+      "display": "d/dx(x^2+x)=2*x+1",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx"
+    ],
+    "explanation": "x^2+x를 미분하면 2*x+1이 된다.",
+    "puzzle": "d/dx(x^2+x)=2*x+1"
+  },
+  {
+    "id": "s9_3_4",
+    "level": "calculus",
+    "title": "미분 활용",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+x)=2*x+1",
+      "display": "d/dx(x^2+x)=2*x+1",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx"
+    ],
+    "explanation": "x^2+x를 미분하면 2*x+1이 된다.",
+    "puzzle": "d/dx(x^2+x)=2*x+1"
+  },
+  {
+    "id": "s9_3_5",
+    "level": "calculus",
+    "title": "미분 활용",
+    "variable": [],
+    "answer": {
+      "expression": "d/dx(x^2+x)=2*x+1",
+      "display": "d/dx(x^2+x)=2*x+1",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "d/dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "*",
+      "^",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "d/dx"
+    ],
+    "explanation": "x^2+x를 미분하면 2*x+1이 된다.",
+    "puzzle": "d/dx(x^2+x)=2*x+1"
+  }
+]

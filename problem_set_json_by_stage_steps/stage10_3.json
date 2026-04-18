@@ -1,0 +1,272 @@
+[
+  {
+    "id": "s10_3_1",
+    "level": "probstat",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "5P2는 20이다.",
+    "puzzle": "5P2=20"
+  },
+  {
+    "id": "s10_3_2",
+    "level": "probstat",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "5P2는 20이다.",
+    "puzzle": "5P2=20"
+  },
+  {
+    "id": "s10_3_3",
+    "level": "probstat",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "5P2는 20이다.",
+    "puzzle": "5P2=20"
+  },
+  {
+    "id": "s10_3_4",
+    "level": "probstat",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "5P2는 20이다.",
+    "puzzle": "5P2=20"
+  },
+  {
+    "id": "s10_3_5",
+    "level": "probstat",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "5P2는 20이다.",
+    "puzzle": "5P2=20"
+  }
+]

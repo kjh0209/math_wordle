@@ -55,6 +55,7 @@ export default function StepPlayPage() {
   const [toast, setToast] = useState<ToastMessage | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [keyboardState, setKeyboardState] = useState<Record<string, FeedbackColor>>({});
+  const [focusedPath, setFocusedPath] = useState<(string|number)[] | null>(null);
   const isSubmitting = useRef(false);
 
   // Step metadata for display (fetched separately if needed; we derive from code)
@@ -90,6 +91,7 @@ export default function StepPlayPage() {
         errorMessage: null,
       });
       setKeyboardState({});
+      setFocusedPath(null);
     } catch (e) {
       setLoadError(e instanceof Error ? e.message : "오류가 발생했습니다.");
     } finally {
@@ -107,41 +109,91 @@ export default function StepPlayPage() {
     setTimeout(() => setToast((t) => (t?.id === id ? null : t)), 2500);
   }, []);
 
+  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      if (cells.length >= maxLength) return cells;
+      return [...cells, newCell];
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block") return cells;
+    
+    const newFields = { ...(targetBlock.cellFields || {}) };
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
+  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      return cells.slice(0, -1);
+    }
+    
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+    
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
+    
+    const newFields = { ...targetBlock.cellFields };
+    if (newFields[fieldName]) {
+       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+    }
+    
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
   const appendToken = useCallback((token: KeypadToken) => {
     if (token.type === "block") return;
     setRun((prev) => {
       if (!prev || prev.status !== "playing") return prev;
-      if (prev.currentCells.length >= prev.puzzle.answerLength) return prev;
       const cell: PuzzleCell = { type: "token", value: token.value };
-      return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+      const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, prev.puzzle.answerLength);
+      return { ...prev, currentCells: newCells, errorMessage: null };
     });
-  }, []);
+  }, [focusedPath, insertAtCursor]);
 
   const appendBlock = useCallback((payload: BlockInsertPayload) => {
     setRun((prev) => {
       if (!prev || prev.status !== "playing") return prev;
-      if (prev.currentCells.length >= prev.puzzle.answerLength) return prev;
+      
+      const cellFields: Record<string, PuzzleCell[]> = {};
+      for (const key of Object.keys(payload.fields || {})) {
+        cellFields[key] = [];
+      }
+      
       const cell: PuzzleCell = {
         type: "block",
         blockType: payload.blockType as PuzzleCell extends { blockType: infer B } ? B : never,
         fields: payload.fields,
+        cellFields
       };
-      return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+      
+      const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, prev.puzzle.answerLength);
+      return { ...prev, currentCells: newCells, errorMessage: null };
     });
-  }, []);
+  }, [focusedPath, insertAtCursor]);
 
   const deleteCell = useCallback(() => {
     setRun((prev) => {
       if (!prev || prev.status !== "playing") return prev;
-      return { ...prev, currentCells: prev.currentCells.slice(0, -1), errorMessage: null };
+      return { ...prev, currentCells: deleteAtCursor(prev.currentCells, focusedPath), errorMessage: null };
     });
-  }, []);
+  }, [focusedPath, deleteAtCursor]);
 
   const clearInput = useCallback(() => {
     setRun((prev) => {
       if (!prev || prev.status !== "playing") return prev;
       return { ...prev, currentCells: [], errorMessage: null };
     });
+    setFocusedPath(null);
   }, []);
 
   const submitGuess = useCallback(async () => {
@@ -342,6 +394,8 @@ export default function StepPlayPage() {
           isInvalid={isInvalid}
           size="lg"
           className="items-center"
+          focusedPath={focusedPath}
+          setFocusedPath={setFocusedPath}
         />
 
         {/* Input preview */}

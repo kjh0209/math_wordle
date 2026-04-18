@@ -1,0 +1,497 @@
+[
+  {
+    "id": "s4_10_1",
+    "level": "middle2",
+    "title": "중2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2.5",
+        "valueDisplay": "2.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5*x+1.5",
+      "display": "y=0.5*x+1.5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1.5=2.5이므로 y=2.5이다.",
+    "puzzle": "y=0.5*x+1.5"
+  },
+  {
+    "id": "s4_10_2",
+    "level": "middle2",
+    "title": "중2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2.5",
+        "valueDisplay": "2.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.2*x+1.8",
+      "display": "y=0.2*x+1.8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1.5=2.5이므로 y=2.5이다.",
+    "puzzle": "y=0.2*x+1.8"
+  },
+  {
+    "id": "s4_10_3",
+    "level": "middle2",
+    "title": "중2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2.5",
+        "valueDisplay": "2.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=1.5*x+0.5",
+      "display": "y=1.5*x+0.5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1.5=2.5이므로 y=2.5이다.",
+    "puzzle": "y=1.5*x+0.5"
+  },
+  {
+    "id": "s4_10_4",
+    "level": "middle2",
+    "title": "중2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2.5",
+        "valueDisplay": "2.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=2.5*x-0.5",
+      "display": "y=2.5*x-0.5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1.5=2.5이므로 y=2.5이다.",
+    "puzzle": "y=2.5*x-0.5"
+  },
+  {
+    "id": "s4_10_5",
+    "level": "middle2",
+    "title": "중2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2.5",
+        "valueDisplay": "2.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.8*x+1.2",
+      "display": "y=0.8*x+1.2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1.5=2.5이므로 y=2.5이다.",
+    "puzzle": "y=0.8*x+1.2"
+  }
+]

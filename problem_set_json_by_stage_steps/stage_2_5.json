@@ -1,0 +1,282 @@
+[
+  {
+    "id": "2_5_1",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "sqrt(x)=2",
+      "display": "√(x)=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "√4=2이다."
+  },
+  {
+    "id": "2_5_2",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "9",
+      "valueDisplay": "9"
+    },
+    "answer": {
+      "expression": "sqrt(x)=3",
+      "display": "√(x)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "√9=3이다."
+  },
+  {
+    "id": "2_5_3",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "1",
+      "valueDisplay": "1"
+    },
+    "answer": {
+      "expression": "sqrt(x)=1",
+      "display": "√(x)=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "=",
+      "1"
+    ],
+    "shownBlocks": [],
+    "explanation": "√1=1이다."
+  },
+  {
+    "id": "2_5_4",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "16",
+      "valueDisplay": "16"
+    },
+    "answer": {
+      "expression": "sqrt(x)=4",
+      "display": "√(x)=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "=",
+      "4"
+    ],
+    "shownBlocks": [],
+    "explanation": "√16=4이다."
+  },
+  {
+    "id": "2_5_5",
+    "level": "middle_quadratic_intro",
+    "title": "제곱근 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "25",
+      "valueDisplay": "25"
+    },
+    "answer": {
+      "expression": "sqrt(x)=5",
+      "display": "√(x)=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "sqrt",
+      "(",
+      ")",
+      "x",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "√25=5이다."
+  }
+]

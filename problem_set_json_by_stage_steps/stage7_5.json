@@ -1,0 +1,382 @@
+[
+  {
+    "id": "s7_5_1",
+    "level": "common2",
+    "title": "유리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "0.5",
+        "valueDisplay": "0.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=1/x",
+      "display": "y=1/x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 y=1/2=0.5이다.",
+    "puzzle": "y=1/x"
+  },
+  {
+    "id": "s7_5_2",
+    "level": "common2",
+    "title": "유리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "0.5",
+        "valueDisplay": "0.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=2/x",
+      "display": "y=2/x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 y=1/2=0.5이다.",
+    "puzzle": "y=2/x"
+  },
+  {
+    "id": "s7_5_3",
+    "level": "common2",
+    "title": "유리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "0.5",
+        "valueDisplay": "0.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=3/x",
+      "display": "y=3/x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 y=1/2=0.5이다.",
+    "puzzle": "y=3/x"
+  },
+  {
+    "id": "s7_5_4",
+    "level": "common2",
+    "title": "유리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "0.5",
+        "valueDisplay": "0.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=-1/x",
+      "display": "y=-1/x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 y=1/2=0.5이다.",
+    "puzzle": "y=-1/x"
+  },
+  {
+    "id": "s7_5_5",
+    "level": "common2",
+    "title": "유리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "0.5",
+        "valueDisplay": "0.5"
+      }
+    ],
+    "answer": {
+      "expression": "y=-2/x",
+      "display": "y=-2/x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 y=1/2=0.5이다.",
+    "puzzle": "y=-2/x"
+  }
+]

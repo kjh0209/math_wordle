@@ -1,0 +1,302 @@
+[
+  {
+    "id": "s8_1_1",
+    "level": "algebra",
+    "title": "지수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "2^3=8",
+      "display": "2^3=8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "2의 3제곱은 8이다.",
+    "puzzle": "2^3=8"
+  },
+  {
+    "id": "s8_1_2",
+    "level": "algebra",
+    "title": "지수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "3^2=9",
+      "display": "3^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "2의 3제곱은 8이다.",
+    "puzzle": "3^2=9"
+  },
+  {
+    "id": "s8_1_3",
+    "level": "algebra",
+    "title": "지수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "4^2=16",
+      "display": "4^2=16",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "2의 3제곱은 8이다.",
+    "puzzle": "4^2=16"
+  },
+  {
+    "id": "s8_1_4",
+    "level": "algebra",
+    "title": "지수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "5^2=25",
+      "display": "5^2=25",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "2의 3제곱은 8이다.",
+    "puzzle": "5^2=25"
+  },
+  {
+    "id": "s8_1_5",
+    "level": "algebra",
+    "title": "지수의 기본",
+    "variable": [],
+    "answer": {
+      "expression": "2^4=16",
+      "display": "2^4=16",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "exponential",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "^",
+      "=",
+      "e",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "(",
+      ")"
+    ],
+    "shownBlocks": [],
+    "explanation": "2의 3제곱은 8이다.",
+    "puzzle": "2^4=16"
+  }
+]

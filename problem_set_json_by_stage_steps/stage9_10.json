@@ -1,0 +1,452 @@
+[
+  {
+    "id": "s9_10_1",
+    "level": "calculus",
+    "title": "미적분 종합",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1](x+1) dx=3/2",
+      "display": "∫[0,1](x+1) dx=3/2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx",
+      "d/dx"
+    ],
+    "explanation": "0부터 1까지 x+1을 적분하면 3/2이다.",
+    "puzzle": "∫[0,1](x+1) dx=3/2"
+  },
+  {
+    "id": "s9_10_2",
+    "level": "calculus",
+    "title": "미적분 종합",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1](x+2) dx=5/2",
+      "display": "∫[0,1](x+2) dx=5/2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx",
+      "d/dx"
+    ],
+    "explanation": "0부터 1까지 x+1을 적분하면 3/2이다.",
+    "puzzle": "∫[0,1](x+2) dx=5/2"
+  },
+  {
+    "id": "s9_10_3",
+    "level": "calculus",
+    "title": "미적분 종합",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2](x+1) dx=5/2",
+      "display": "∫[1,2](x+1) dx=5/2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx",
+      "d/dx"
+    ],
+    "explanation": "0부터 1까지 x+1을 적분하면 3/2이다.",
+    "puzzle": "∫[1,2](x+1) dx=5/2"
+  },
+  {
+    "id": "s9_10_4",
+    "level": "calculus",
+    "title": "미적분 종합",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,2](x+1) dx=4",
+      "display": "∫[0,2](x+1) dx=4",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx",
+      "d/dx"
+    ],
+    "explanation": "0부터 1까지 x+1을 적분하면 3/2이다.",
+    "puzzle": "∫[0,2](x+1) dx=4"
+  },
+  {
+    "id": "s9_10_5",
+    "level": "calculus",
+    "title": "미적분 종합",
+    "variable": [],
+    "answer": {
+      "expression": "∫[0,1](2*x+1) dx=2",
+      "display": "∫[0,1](2*x+1) dx=2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "0",
+            "end": "1"
+          }
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "integral",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "+",
+      "(",
+      ")",
+      "x"
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx",
+      "d/dx"
+    ],
+    "explanation": "0부터 1까지 x+1을 적분하면 3/2이다.",
+    "puzzle": "∫[0,1](2*x+1) dx=2"
+  }
+]

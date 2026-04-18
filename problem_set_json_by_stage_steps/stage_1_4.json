@@ -1,0 +1,227 @@
+[
+  {
+    "id": "1_4_1",
+    "level": "elementary_arithmetic",
+    "title": "덧셈과 뺄셈",
+    "variable": null,
+    "answer": {
+      "expression": "8-3=5",
+      "display": "8-3=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "8",
+      "3",
+      "-",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "8-3=5이다."
+  },
+  {
+    "id": "1_4_2",
+    "level": "elementary_arithmetic",
+    "title": "덧셈과 뺄셈",
+    "variable": null,
+    "answer": {
+      "expression": "9-4=5",
+      "display": "9-4=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "9"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "9",
+      "4",
+      "-",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "9-4=5이다."
+  },
+  {
+    "id": "1_4_3",
+    "level": "elementary_arithmetic",
+    "title": "덧셈과 뺄셈",
+    "variable": null,
+    "answer": {
+      "expression": "6+3=9",
+      "display": "6+3=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "6",
+      "3",
+      "+",
+      "=",
+      "9"
+    ],
+    "shownBlocks": [],
+    "explanation": "6+3=9이다."
+  },
+  {
+    "id": "1_4_4",
+    "level": "elementary_arithmetic",
+    "title": "덧셈과 뺄셈",
+    "variable": null,
+    "answer": {
+      "expression": "7-2=5",
+      "display": "7-2=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "7"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "7",
+      "2",
+      "-",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "7-2=5이다."
+  },
+  {
+    "id": "1_4_5",
+    "level": "elementary_arithmetic",
+    "title": "덧셈과 뺄셈",
+    "variable": null,
+    "answer": {
+      "expression": "8-6=2",
+      "display": "8-6=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "8",
+      "6",
+      "-",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "8-6=2이다."
+  }
+]

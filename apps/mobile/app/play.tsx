@@ -19,6 +19,7 @@ import { ResultModal } from "../components/result/ResultModal";
 import { usePuzzleLoader } from "../hooks/usePuzzleLoader";
 import { useGameSession } from "../hooks/useGameSession";
 import { useShareResult } from "../hooks/useShareResult";
+import { BlockFieldModal } from "../components/game/BlockFieldModal";
 import { Colors } from "../constants/Colors";
 import type { KeypadToken, FeedbackColor } from "@mathdle/core";
 
@@ -53,12 +54,14 @@ export default function PlayScreen() {
 function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzzleLoader>["puzzle"]> }) {
   const router = useRouter();
   const [showResult, setShowResult] = useState(false);
-
   const {
     state,
     keyboardState,
     toast,
+    focusedPath,
+    setFocusedPath,
     appendToken,
+    appendBlock,
     deleteCell,
     clearInput,
     submitGuess,
@@ -68,7 +71,6 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
   const isInvalid = !!state.errorMessage;
   const isLoading = state.status === "loading";
 
-  // Build submitted feedback rows for share
   const submittedFeedbackRows: FeedbackColor[][] = state.rows
     .filter((r) => r.status === "submitted")
     .map((r) => r.feedback);
@@ -86,7 +88,6 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
     shareCode: state.shareCode ?? undefined,
   });
 
-  // Auto-show result modal
   const handleGameOverBanner = useCallback(() => {
     setShowResult(true);
   }, []);
@@ -94,9 +95,17 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
   const handleToken = useCallback(
     (token: KeypadToken) => {
       if (isGameOver) return;
-      appendToken(token);
+      if (token.type === "block" && (token.blockFieldCount ?? 0) > 0) {
+        const defaultFields: Record<string, string> = {};
+        for (const fname of token.blockFieldNames || []) {
+          defaultFields[fname] = "";
+        }
+        appendBlock(token.value as string, defaultFields);
+      } else {
+        appendToken(token);
+      }
     },
-    [isGameOver, appendToken],
+    [isGameOver, appendToken, appendBlock],
   );
 
   if (isLoading) {
@@ -119,7 +128,7 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
         showsVerticalScrollIndicator={false}
       >
         {/* Puzzle header */}
-        <PuzzleHeaderCard puzzle={puzzle} attemptCount={state.attemptCount} />
+        <PuzzleHeaderCard puzzle={puzzle} attemptCount={state.attemptCount} solved={state.status === "win"} />
 
         {/* Game grid */}
         <AttemptGrid
@@ -128,6 +137,8 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
           rows={state.rows}
           currentCells={state.currentCells}
           isInvalid={isInvalid}
+          focusedPath={focusedPath}
+          setFocusedPath={setFocusedPath}
         />
 
         {/* Input preview */}

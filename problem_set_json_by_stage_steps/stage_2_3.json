@@ -1,0 +1,252 @@
+[
+  {
+    "id": "2_3_1",
+    "level": "middle_linear_expression",
+    "title": "절댓값 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-3",
+      "valueDisplay": "-3"
+    },
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "|",
+      "x",
+      "=",
+      "3"
+    ],
+    "shownBlocks": [],
+    "explanation": "|-3|=3이다."
+  },
+  {
+    "id": "2_3_2",
+    "level": "middle_linear_expression",
+    "title": "절댓값 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-2",
+      "valueDisplay": "-2"
+    },
+    "answer": {
+      "expression": "|x|=2",
+      "display": "|x|=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "|",
+      "x",
+      "=",
+      "2"
+    ],
+    "shownBlocks": [],
+    "explanation": "|-2|=2이다."
+  },
+  {
+    "id": "2_3_3",
+    "level": "middle_linear_expression",
+    "title": "절댓값 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "|x|=4",
+      "display": "|x|=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "|",
+      "x",
+      "=",
+      "4"
+    ],
+    "shownBlocks": [],
+    "explanation": "|4|=4이다."
+  },
+  {
+    "id": "2_3_4",
+    "level": "middle_linear_expression",
+    "title": "절댓값 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-5",
+      "valueDisplay": "-5"
+    },
+    "answer": {
+      "expression": "|x|=5",
+      "display": "|x|=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "|",
+      "x",
+      "=",
+      "5"
+    ],
+    "shownBlocks": [],
+    "explanation": "|-5|=5이다."
+  },
+  {
+    "id": "2_3_5",
+    "level": "middle_linear_expression",
+    "title": "절댓값 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-1",
+      "valueDisplay": "-1"
+    },
+    "answer": {
+      "expression": "|x|=1",
+      "display": "|x|=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "|",
+      "x",
+      "=",
+      "1"
+    ],
+    "shownBlocks": [],
+    "explanation": "|-1|=1이다."
+  }
+]

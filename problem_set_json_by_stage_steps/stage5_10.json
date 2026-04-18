@@ -1,0 +1,507 @@
+[
+  {
+    "id": "s5_10_1",
+    "level": "middle3",
+    "title": "중3 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2+2*x+1",
+      "display": "y=x^2+2*x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 1+2+1=4이므로 y=4이다.",
+    "puzzle": "y=x^2+2*x+1"
+  },
+  {
+    "id": "s5_10_2",
+    "level": "middle3",
+    "title": "중3 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2+4*x+4",
+      "display": "y=x^2+4*x+4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 1+2+1=4이므로 y=4이다.",
+    "puzzle": "y=x^2+4*x+4"
+  },
+  {
+    "id": "s5_10_3",
+    "level": "middle3",
+    "title": "중3 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2-2*x+1",
+      "display": "y=x^2-2*x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 1+2+1=4이므로 y=4이다.",
+    "puzzle": "y=x^2-2*x+1"
+  },
+  {
+    "id": "s5_10_4",
+    "level": "middle3",
+    "title": "중3 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2-4*x+4",
+      "display": "y=x^2-4*x+4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 1+2+1=4이므로 y=4이다.",
+    "puzzle": "y=x^2-4*x+4"
+  },
+  {
+    "id": "s5_10_5",
+    "level": "middle3",
+    "title": "중3 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      }
+    ],
+    "answer": {
+      "expression": "y=x^2+6*x+9",
+      "display": "y=x^2+6*x+9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 1+2+1=4이므로 y=4이다.",
+    "puzzle": "y=x^2+6*x+9"
+  }
+]

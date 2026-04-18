@@ -1,0 +1,407 @@
+[
+  {
+    "id": "s10_9_1",
+    "level": "probstat",
+    "title": "확률 준비 1",
+    "variable": [],
+    "answer": {
+      "expression": "1/2+1/4=3/4",
+      "display": "1/2+1/4=3/4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "분수의 덧셈 연습용 식이다.",
+    "puzzle": "1/2+1/4=3/4"
+  },
+  {
+    "id": "s10_9_2",
+    "level": "probstat",
+    "title": "확률 준비 1",
+    "variable": [],
+    "answer": {
+      "expression": "1/3+1/6=1/2",
+      "display": "1/3+1/6=1/2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "분수의 덧셈 연습용 식이다.",
+    "puzzle": "1/3+1/6=1/2"
+  },
+  {
+    "id": "s10_9_3",
+    "level": "probstat",
+    "title": "확률 준비 1",
+    "variable": [],
+    "answer": {
+      "expression": "1/4+1/8=3/8",
+      "display": "1/4+1/8=3/8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "분수의 덧셈 연습용 식이다.",
+    "puzzle": "1/4+1/8=3/8"
+  },
+  {
+    "id": "s10_9_4",
+    "level": "probstat",
+    "title": "확률 준비 1",
+    "variable": [],
+    "answer": {
+      "expression": "1/2+1/8=5/8",
+      "display": "1/2+1/8=5/8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "분수의 덧셈 연습용 식이다.",
+    "puzzle": "1/2+1/8=5/8"
+  },
+  {
+    "id": "s10_9_5",
+    "level": "probstat",
+    "title": "확률 준비 1",
+    "variable": [],
+    "answer": {
+      "expression": "1/3+1/9=4/9",
+      "display": "1/3+1/9=4/9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {},
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/"
+    ],
+    "shownBlocks": [
+      "Comb",
+      "Perm"
+    ],
+    "explanation": "분수의 덧셈 연습용 식이다.",
+    "puzzle": "1/3+1/9=4/9"
+  }
+]
