@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Mathdle",
+    "slug": "mathdle",
+    "version": "1.0.0",
+    "scheme": "mathdle",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.mathdle.app"
+    },
+    "android": {
+      "package": "com.mathdle.app"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": ["expo-router"]
+  }
+}
