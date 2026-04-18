@@ -59,7 +59,7 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
     keyboardState,
     toast,
     appendToken,
-    deleteToken,
+    deleteCell,
     clearInput,
     submitGuess,
   } = useGameSession({ puzzle, mode: "daily" });
@@ -94,11 +94,7 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
   const handleToken = useCallback(
     (token: KeypadToken) => {
       if (isGameOver) return;
-      appendToken({
-        value: token.value,
-        display: token.display,
-        type: token.type,
-      });
+      appendToken(token);
     },
     [isGameOver, appendToken],
   );
@@ -127,19 +123,19 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
 
         {/* Game grid */}
         <AttemptGrid
-          tokenLength={puzzle.tokenLength}
+          answerLength={puzzle.answerLength}
           maxAttempts={puzzle.maxAttempts}
           rows={state.rows}
-          currentTokens={state.currentTokens}
+          currentCells={state.currentCells}
           isInvalid={isInvalid}
         />
 
         {/* Input preview */}
         {!isGameOver && (
           <InputPreviewBar
-            tokens={state.currentTokens}
-            maxLength={puzzle.tokenLength}
-            onDelete={deleteToken}
+            cells={state.currentCells}
+            maxLength={puzzle.answerLength}
+            onDelete={deleteCell}
           />
         )}
 
@@ -168,7 +164,7 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
           keyboardState={keyboardState}
           disabled={isGameOver}
           onToken={handleToken}
-          onDelete={deleteToken}
+          onDelete={deleteCell}
           onClear={clearInput}
           onSubmit={() => void submitGuess()}
         />

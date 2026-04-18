@@ -20,7 +20,14 @@ export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps
   return (
     <View style={styles.container}>
       <View style={styles.topRow}>
-        <Text style={styles.title}>{puzzle.title}</Text>
+        <View style={styles.titleBlock}>
+          <Text style={styles.title}>{puzzle.title}</Text>
+          {puzzle.level && (
+            <Text style={styles.level}>
+              {puzzle.level.replace(/_/g, " ")}
+            </Text>
+          )}
+        </View>
         <View style={[styles.badge, { borderColor: diffColor }]}>
           <Text style={[styles.badgeText, { color: diffColor }]}>
             {puzzle.difficulty}
@@ -28,15 +35,15 @@ export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps
         </View>
       </View>
 
-      {puzzle.displayInfo.hint && (
-        <Text style={styles.hint}>{puzzle.displayInfo.hint}</Text>
+      {puzzle.explanation && (
+        <Text style={styles.hint}>💡 {puzzle.explanation}</Text>
       )}
 
       <View style={styles.statsRow}>
         <Text style={styles.stat}>
           시도 {attemptCount}/{puzzle.maxAttempts}
         </Text>
-        <Text style={styles.stat}>길이 {puzzle.tokenLength}</Text>
+        <Text style={styles.stat}>길이 {puzzle.answerLength}</Text>
         {puzzle.isDaily && (
           <View style={styles.dailyBadge}>
             <Text style={styles.dailyText}>오늘의 퍼즐</Text>
@@ -44,14 +51,16 @@ export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps
         )}
       </View>
 
-      {puzzle.displayInfo.context && (
+      {puzzle.variable && (
         <View style={styles.contextRow}>
-          {Object.entries(puzzle.displayInfo.context).map(([key, val]) => (
-            <View key={key} style={styles.contextChip}>
-              <Text style={styles.contextKey}>{key}</Text>
-              <Text style={styles.contextVal}>{String(val)}</Text>
-            </View>
-          ))}
+          <View style={styles.contextChip}>
+            <Text style={styles.contextKey}>{puzzle.variable.name}</Text>
+            <Text style={styles.contextVal}>
+              {puzzle.variable.valueDisplay === "?"
+                ? "?"
+                : puzzle.variable.valueDisplay}
+            </Text>
+          </View>
         </View>
       )}
     </View>
@@ -70,13 +79,23 @@ const styles = StyleSheet.create({
   },
   topRow: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "space-between",
+  },
+  titleBlock: {
+    flex: 1,
+    marginRight: 8,
   },
   title: {
     fontSize: 18,
     fontWeight: "700",
     color: Colors.gameText,
+  },
+  level: {
+    fontSize: 11,
+    color: Colors.gameMuted,
+    marginTop: 2,
+    textTransform: "capitalize",
   },
   badge: {
     borderWidth: 1,
@@ -93,6 +112,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: Colors.gameTextMuted,
     lineHeight: 18,
+    fontStyle: "italic",
   },
   statsRow: {
     flexDirection: "row",

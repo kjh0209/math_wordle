@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv app *)",
+      "Bash(mv components *)",
+      "Bash(mv data *)",
+      "Bash(mv hooks *)",
+      "Bash(mv lib *)",
+      "Bash(mv next.config.mjs apps/web/)",
+      "Bash(mv postcss.config.mjs apps/web/)",
+      "Bash(mv tailwind.config.ts apps/web/)",
+      "Bash(mv tsconfig.json apps/web/)",
+      "Bash(mv next-env.d.ts apps/web/)",
+      "Bash(npm test *)"
+    ]
+  }
+}

@@ -1,14 +1,20 @@
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
 import { Colors } from "../../constants/Colors";
-import type { TokenUnit } from "@mathdle/core";
+import type { PuzzleCell } from "@mathdle/core";
+import { getTokenDisplay, getBlockDisplay } from "@mathdle/core";
 
 interface InputPreviewBarProps {
-  tokens: TokenUnit[];
+  cells: PuzzleCell[];
   maxLength: number;
   onDelete: () => void;
 }
 
-export function InputPreviewBar({ tokens, maxLength, onDelete }: InputPreviewBarProps) {
+function cellDisplay(cell: PuzzleCell): string {
+  if (cell.type === "token") return getTokenDisplay(cell.value);
+  return getBlockDisplay(cell.blockType, cell.fields);
+}
+
+export function InputPreviewBar({ cells, maxLength, onDelete }: InputPreviewBarProps) {
   return (
     <View style={styles.container}>
       <ScrollView
@@ -16,12 +22,12 @@ export function InputPreviewBar({ tokens, maxLength, onDelete }: InputPreviewBar
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.scroll}
       >
-        {tokens.map((token, i) => (
+        {cells.map((cell, i) => (
           <View key={i} style={styles.tokenChip}>
-            <Text style={styles.tokenText}>{token.display}</Text>
+            <Text style={styles.tokenText}>{cellDisplay(cell)}</Text>
           </View>
         ))}
-        {tokens.length < maxLength && (
+        {cells.length < maxLength && (
           <View style={styles.cursor}>
             <Text style={styles.cursorText}>▎</Text>
           </View>
@@ -30,9 +36,9 @@ export function InputPreviewBar({ tokens, maxLength, onDelete }: InputPreviewBar
 
       <View style={styles.meta}>
         <Text style={styles.count}>
-          {tokens.length}/{maxLength}
+          {cells.length}/{maxLength}
         </Text>
-        {tokens.length > 0 && (
+        {cells.length > 0 && (
           <TouchableOpacity onPress={onDelete} style={styles.delBtn}>
             <Text style={styles.delText}>⌫</Text>
           </TouchableOpacity>

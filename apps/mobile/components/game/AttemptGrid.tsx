@@ -1,12 +1,12 @@
 import { View, StyleSheet, Dimensions } from "react-native";
 import { AttemptRow } from "./AttemptRow";
-import type { GuessRow, TokenUnit } from "@mathdle/core";
+import type { GuessRow, PuzzleCell } from "@mathdle/core";
 
 interface AttemptGridProps {
-  tokenLength: number;
+  answerLength: number;
   maxAttempts: number;
   rows: GuessRow[];
-  currentTokens: TokenUnit[];
+  currentCells: PuzzleCell[];
   isInvalid?: boolean;
 }
 
@@ -15,46 +15,39 @@ const MAX_GRID_WIDTH = SCREEN_WIDTH - 32;
 
 function buildDisplayRows(
   rows: GuessRow[],
-  currentTokens: TokenUnit[],
+  currentCells: PuzzleCell[],
   maxAttempts: number,
 ): GuessRow[] {
   const result: GuessRow[] = [];
 
-  // Submitted rows
   for (const row of rows) {
     result.push(row);
   }
 
-  // Active row (current input)
   if (result.length < maxAttempts) {
-    result.push({
-      tokens: currentTokens,
-      feedback: [],
-      status: "active",
-    });
+    result.push({ cells: currentCells, feedback: [], status: "active" });
   }
 
-  // Empty rows
   while (result.length < maxAttempts) {
-    result.push({ tokens: [], feedback: [], status: "empty" });
+    result.push({ cells: [], feedback: [], status: "empty" });
   }
 
   return result;
 }
 
 export function AttemptGrid({
-  tokenLength,
+  answerLength,
   maxAttempts,
   rows,
-  currentTokens,
+  currentCells,
   isInvalid = false,
 }: AttemptGridProps) {
   const tileSize = Math.min(
-    Math.floor((MAX_GRID_WIDTH - tokenLength * 4) / tokenLength),
+    Math.floor((MAX_GRID_WIDTH - answerLength * 4) / answerLength),
     48,
   );
 
-  const displayRows = buildDisplayRows(rows, currentTokens, maxAttempts);
+  const displayRows = buildDisplayRows(rows, currentCells, maxAttempts);
   const activeIndex = rows.length;
 
   return (
@@ -63,7 +56,7 @@ export function AttemptGrid({
         <AttemptRow
           key={i}
           row={row}
-          tokenLength={tokenLength}
+          answerLength={answerLength}
           tileSize={tileSize}
           isActive={i === activeIndex && rows.length < maxAttempts}
           isInvalid={isInvalid && i === activeIndex}

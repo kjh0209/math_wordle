@@ -1,10 +1,11 @@
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { TokenTile } from "./TokenTile";
-import type { GuessRow, TileState, TokenUnit } from "@mathdle/core";
+import type { GuessRow, TileState } from "@mathdle/core";
+import { getTokenDisplay, getBlockDisplay } from "@mathdle/core";
 
 interface AttemptRowProps {
   row: GuessRow;
-  tokenLength: number;
+  answerLength: number;
   tileSize: number;
   isActive?: boolean;
   isInvalid?: boolean;
@@ -20,24 +21,28 @@ function getTileState(
     return row.feedback[index] ?? "absent";
   }
   if (isActive && isInvalid) return "invalid";
-  if (isActive && index < row.tokens.length) return "active";
+  if (isActive && index < row.cells.length) return "active";
   return "empty";
+}
+
+function getCellDisplay(row: GuessRow, index: number): string {
+  const cell = row.cells[index];
+  if (!cell) return "";
+  if (cell.type === "token") return getTokenDisplay(cell.value);
+  return getBlockDisplay(cell.blockType, cell.fields);
 }
 
 export function AttemptRow({
   row,
-  tokenLength,
+  answerLength,
   tileSize,
   isActive = false,
   isInvalid = false,
 }: AttemptRowProps) {
-  const tiles = Array.from({ length: tokenLength }, (_, i) => {
-    const token = row.tokens[i];
-    const display = token?.display ?? "";
+  const tiles = Array.from({ length: answerLength }, (_, i) => {
+    const display = getCellDisplay(row, i);
     const state = getTileState(row, i, isActive, isInvalid);
-    return (
-      <TokenTile key={i} display={display} state={state} size={tileSize} />
-    );
+    return <TokenTile key={i} display={display} state={state} size={tileSize} />;
   });
 
   return <View style={styles.row}>{tiles}</View>;

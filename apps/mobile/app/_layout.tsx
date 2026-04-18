@@ -13,12 +13,23 @@ import { configureApiBaseUrl } from "@mathdle/core";
 import { Colors } from "../constants/Colors";
 
 // Configure API base URL for the core API client
+// IMPORTANT: Do NOT use localhost/127.0.0.1 for physical mobile devices. Use your PC's LAN IP.
 const API_URL =
-  Constants.expoConfig?.extra?.apiUrl ??
+  process.env.EXPO_PUBLIC_API_BASE_URL ??
   process.env.EXPO_PUBLIC_API_URL ??
-  "http://localhost:3000";
+  Constants.expoConfig?.extra?.apiUrl;
 
-configureApiBaseUrl(API_URL);
+if (API_URL) {
+  configureApiBaseUrl(API_URL);
+} else {
+  // Mobile app MUST have an absolute URL. If not provided, warn the developer.
+  console.warn(
+    "⚠️ No API URL configured. Physical devices will fail to connect. " +
+    "Please set EXPO_PUBLIC_API_BASE_URL to your PC's LAN IP (e.g. http://192.168.1.100:3000)."
+  );
+  // Just a fallback for simulators
+  configureApiBaseUrl("http://10.0.2.2:3000"); 
+}
 
 // Keep splash screen visible while we load
 SplashScreen.preventAutoHideAsync().catch(() => {});

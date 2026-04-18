@@ -1,1 +1,8 @@
 node_modules
+.expo
+.next
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+!.env.local.example
