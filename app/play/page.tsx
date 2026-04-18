@@ -12,7 +12,7 @@ import { ResultModal } from "@/components/result/ResultModal";
 import { usePuzzleLoader } from "@/hooks/usePuzzleLoader";
 import { useGameSession } from "@/hooks/useGameSession";
 import { cn } from "@/lib/utils/cn";
-import type { PuzzleViewModel, KeypadToken } from "@/types/puzzle";
+import type { PuzzleViewModel, KeypadToken, BlockCell } from "@/types/puzzle";
 import type { FeedbackColor } from "@/types/game";
 
 export default function PlayPage() {
@@ -68,7 +68,7 @@ function GameScreen({ puzzle, showResult, setShowResult }: GameScreenProps) {
     state,
     keyboardState,
     toast,
-    appendToken,
+    appendCell,
     deleteToken,
     clearInput,
     submitGuess,
@@ -88,7 +88,12 @@ function GameScreen({ puzzle, showResult, setShowResult }: GameScreenProps) {
 
   function handleToken(token: KeypadToken) {
     if (isGameOver) return;
-    appendToken({ value: token.value, display: token.display, type: token.type });
+    appendCell({ value: token.value, display: token.display, type: token.type });
+  }
+
+  function handleBlock(block: BlockCell) {
+    if (isGameOver) return;
+    appendCell(block);
   }
 
   return (
@@ -158,6 +163,7 @@ function GameScreen({ puzzle, showResult, setShowResult }: GameScreenProps) {
           keyboardState={keyboardState}
           disabled={isGameOver}
           onToken={handleToken}
+          onBlock={handleBlock}
           onDelete={deleteToken}
           onClear={clearInput}
           onSubmit={() => void submitGuess()}

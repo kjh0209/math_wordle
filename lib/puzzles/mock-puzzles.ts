@@ -2,32 +2,35 @@
  * lib/puzzles/mock-puzzles.ts
  *
  * Mock puzzle data for development and demo.
- * These are stored as raw_payload objects (intentionally flexible format)
- * and processed by the PuzzleAdapter.
+ * raw_payload is processed by PuzzleAdapter → PuzzleViewModel.
  *
  * TODO: Replace with Supabase-backed data once the final puzzle schema
  * and generation pipeline are finalized.
  */
 
-import type { PuzzleTransport } from "@/types/puzzle";
+import type { PuzzleTransport, InputCell, TokenUnit } from "@/types/puzzle";
 
-/**
- * Mock raw_payload shape used by the default adapter.
- * This is one candidate schema — it will be finalized with the puzzle engine.
- *
- * TODO: Finalize this payload shape when the puzzle generation engine is ready.
- */
 export interface MockPuzzlePayload {
+  /** Legacy flat string answer — used as fallback if answerCells is absent */
   answer: string;
+  /** Structured cell array (the canonical representation) */
+  answerCells: InputCell[];
   variables: Record<string, number>;
   allowedTokens: string[];
   maxAttempts: number;
 }
 
+// ─── Cell builder helpers ────────────────────────────────────────────────────
+
+function d(v: string): TokenUnit { return { value: v, display: v, type: "digit" }; }
+function op(v: string, disp?: string): TokenUnit { return { value: v, display: disp ?? v, type: "operator" }; }
+function eq(): TokenUnit { return { value: "=", display: "=", type: "equals" }; }
+function paren(v: "(" | ")"): TokenUnit { return { value: v, display: v, type: "paren" }; }
+function vari(v: string): TokenUnit { return { value: v, display: v, type: "variable" }; }
+
 const NOW = new Date().toISOString();
 const TODAY = new Date().toISOString().split("T")[0];
 
-/** Default set of mock puzzles used during development */
 export const MOCK_PUZZLES: PuzzleTransport[] = [
   {
     id: "daily-001",
@@ -36,14 +39,12 @@ export const MOCK_PUZZLES: PuzzleTransport[] = [
     title: "Mathdle #1",
     raw_payload: {
       answer: "x+2=5",
+      answerCells: [vari("x"), op("+"), d("2"), eq(), d("5")],
       variables: { x: 3 },
       allowedTokens: ["0","1","2","3","4","5","6","7","8","9","+","-","*","/","=","(",")",".","x"],
       maxAttempts: 6,
     } satisfies MockPuzzlePayload,
-    display_payload: {
-      hint: "변수 x의 값을 찾아서 등식을 완성하세요.",
-      context: { x: "?" },
-    },
+    display_payload: { hint: "변수 x의 값을 찾아서 등식을 완성하세요.", context: { x: "?" } },
     answer_payload: null,
     token_length: 5,
     difficulty: "easy",
@@ -69,13 +70,12 @@ export const MOCK_PUZZLES: PuzzleTransport[] = [
     title: "Mathdle #2",
     raw_payload: {
       answer: "3*4=12",
+      answerCells: [d("3"), op("*", "×"), d("4"), eq(), d("1"), d("2")],
       variables: {},
       allowedTokens: ["0","1","2","3","4","5","6","7","8","9","+","-","*","/","="],
       maxAttempts: 6,
     } satisfies MockPuzzlePayload,
-    display_payload: {
-      hint: "두 수의 곱셈 결과를 맞혀보세요.",
-    },
+    display_payload: { hint: "두 수의 곱셈 결과를 맞혀보세요." },
     answer_payload: null,
     token_length: 6,
     difficulty: "easy",
@@ -101,13 +101,12 @@ export const MOCK_PUZZLES: PuzzleTransport[] = [
     title: "Mathdle #3",
     raw_payload: {
       answer: "2^3=8",
+      answerCells: [d("2"), op("^"), d("3"), eq(), d("8")],
       variables: {},
       allowedTokens: ["0","1","2","3","4","5","6","7","8","9","+","-","*","/","=","^"],
       maxAttempts: 6,
     } satisfies MockPuzzlePayload,
-    display_payload: {
-      hint: "거듭제곱을 이용한 등식입니다.",
-    },
+    display_payload: { hint: "거듭제곱을 이용한 등식입니다." },
     answer_payload: null,
     token_length: 5,
     difficulty: "medium",
@@ -133,13 +132,12 @@ export const MOCK_PUZZLES: PuzzleTransport[] = [
     title: "Mathdle #4",
     raw_payload: {
       answer: "(2+3)*4=20",
+      answerCells: [paren("("), d("2"), op("+"), d("3"), paren(")"), op("*", "×"), d("4"), eq(), d("2"), d("0")],
       variables: {},
       allowedTokens: ["0","1","2","3","4","5","6","7","8","9","+","-","*","/","=","(",")"],
       maxAttempts: 6,
     } satisfies MockPuzzlePayload,
-    display_payload: {
-      hint: "괄호의 우선순위를 생각해보세요.",
-    },
+    display_payload: { hint: "괄호의 우선순위를 생각해보세요." },
     answer_payload: null,
     token_length: 10,
     difficulty: "medium",

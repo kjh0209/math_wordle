@@ -10,7 +10,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import type { PuzzleViewModel } from "@/types/puzzle";
+import type { PuzzleViewModel, InputCell, TokenUnit } from "@/types/puzzle";
 import type {
   GameState,
   GameStatus,
@@ -21,7 +21,6 @@ import type {
   ToastMessage,
   LocalGameRecord,
 } from "@/types/game";
-import type { TokenUnit } from "@/types/puzzle";
 import { colorPriority } from "@/lib/game/validator";
 import { useLocalPersistence } from "./useLocalPersistence";
 import { getSessionKey } from "@/lib/utils/session";
@@ -35,7 +34,7 @@ interface UseGameSessionReturn {
   state: GameState;
   keyboardState: KeyboardState;
   toast: ToastMessage | null;
-  appendToken: (token: TokenUnit) => void;
+  appendCell: (cell: InputCell) => void;
   deleteToken: () => void;
   clearInput: () => void;
   submitGuess: () => Promise<void>;
@@ -131,12 +130,12 @@ export function useGameSession({
     []
   );
 
-  const appendToken = useCallback(
-    (token: TokenUnit) => {
+  const appendCell = useCallback(
+    (cell: InputCell) => {
       setState((prev) => {
         if (prev.status !== "playing") return prev;
         if (prev.currentTokens.length >= puzzle.tokenLength) return prev;
-        return { ...prev, currentTokens: [...prev.currentTokens, token], errorMessage: null };
+        return { ...prev, currentTokens: [...prev.currentTokens, cell], errorMessage: null };
       });
     },
     [puzzle.tokenLength]
@@ -181,7 +180,6 @@ export function useGameSession({
 
     setIsSubmitting(true);
 
-    const guess = snap.currentTokens.map((t) => t.value).join("");
     const sessionKey = getSessionKey();
 
     try {
@@ -190,7 +188,7 @@ export function useGameSession({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           puzzleId: puzzle.id,
-          guess,
+          cells: snap.currentTokens,
           sessionKey,
           attemptNumber: snap.attemptCount + 1,
           startTimeMs: snap.startedAt,
@@ -203,6 +201,7 @@ export function useGameSession({
         solved?: boolean;
         gameOver?: boolean;
         message?: string;
+        errorKind?: "syntax" | "eval";
       };
 
       if (!data.ok || !data.feedback) {
@@ -314,7 +313,7 @@ export function useGameSession({
     state,
     keyboardState,
     toast,
-    appendToken,
+    appendCell,
     deleteToken,
     clearInput,
     submitGuess,

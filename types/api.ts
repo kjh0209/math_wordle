@@ -6,7 +6,7 @@
  * internal storage details through the API boundary.
  */
 
-import type { PuzzleViewModel, PuzzleSummary, GenerationJobSummary } from "./puzzle";
+import type { PuzzleViewModel, PuzzleSummary, GenerationJobSummary, InputCell } from "./puzzle";
 import type { FeedbackColor, GameMode } from "./game";
 import type { LeaderboardEntry, LeaderboardStats, LeaderboardFilter } from "./leaderboard";
 import type { SerializedShareState } from "./share";
@@ -37,8 +37,8 @@ export interface GetPuzzleResponse {
 
 export interface ValidateGuessRequest {
   puzzleId: string;
-  /** Token values joined as string (current transport format — may evolve) */
-  guess: string;
+  /** Structured cell array — preferred over the legacy `guess` string */
+  cells: InputCell[];
   sessionKey: string;
   attemptNumber: number;
   startTimeMs: number;
@@ -51,6 +51,12 @@ export interface ValidateGuessResponse {
   gameOver: boolean;
   /** Human-readable validation message if ok=false */
   message?: string;
+  /**
+   * Distinguishes why validation failed:
+   *   "syntax" — malformed expression
+   *   "eval"   — valid expression but equation doesn't balance
+   */
+  errorKind?: "syntax" | "eval";
 }
 
 // ─── Results ──────────────────────────────────────────────────────────────────
