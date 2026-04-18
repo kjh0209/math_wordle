@@ -7,7 +7,7 @@
  */
 
 import type { PuzzleViewModel, PuzzleSummary, PuzzleGenerationJob, PuzzleCell } from "./puzzle";
-import type { FeedbackColor, GameMode } from "./game";
+import type { FeedbackColor, GameMode, NestedFeedback } from "./game";
 import type { LeaderboardEntry, LeaderboardStats, LeaderboardFilter } from "./leaderboard";
 import type { SerializedShareState } from "./share";
 
@@ -46,7 +46,7 @@ export interface ValidateGuessRequest {
 
 export interface ValidateGuessResponse {
   ok: boolean;
-  feedback: FeedbackColor[];
+  feedback: NestedFeedback[];
   solved: boolean;
   gameOver: boolean;
   /** Human-readable validation message if ok=false */
@@ -112,7 +112,7 @@ export interface SubmitResultRequest {
   /** Token strings per attempt */
   guessHistory: string[];
   /** Color feedback per attempt */
-  feedbackHistory: FeedbackColor[][];
+  feedbackHistory: NestedFeedback[][];
 }
 
 export interface SubmitResultResponse {

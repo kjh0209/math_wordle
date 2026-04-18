@@ -177,7 +177,7 @@
     ],
     "blockDefinitions": {
       "LogBase": {
-        "display": "log_()",
+        "display": "log",
         "fieldCount": 1,
         "fieldNames": [
           "base"
@@ -185,7 +185,7 @@
         "description": "밑을 가지는 로그 블록. 뒤에 ( ) 안에 진수를 작성한다."
       },
       "SigmaRange": {
-        "display": "Σ[ , ]",
+        "display": "Σ",
         "fieldCount": 2,
         "fieldNames": [
           "start",
@@ -194,7 +194,7 @@
         "description": "시작값과 끝값을 가지는 시그마 블록. 뒤에 일반 토큰으로 식을 작성한다."
       },
       "IntegralRange": {
-        "display": "∫[ , ]",
+        "display": "∫",
         "fieldCount": 2,
         "fieldNames": [
           "start",
@@ -209,7 +209,7 @@
         "description": "시작값과 끝값을 가지는 정적분 블록.앞에 int 블럭으로 식을 작성한다."
       },
       "Comb": {
-        "display": "C( , )",
+        "display": "C",
         "fieldCount": 2,
         "fieldNames": [
           "n",
@@ -218,7 +218,7 @@
         "description": "조합 블록"
       },
       "Perm": {
-        "display": "P( , )",
+        "display": "P",
         "fieldCount": 2,
         "fieldNames": [
           "n",

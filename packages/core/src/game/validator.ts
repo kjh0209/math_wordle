@@ -113,6 +113,17 @@ function addImplicitMultiplication(expr: string): string {
 }
 
 /**
+ * Convert absolute-value pipe notation to mathjs abs():
+ *   |expr| → abs(expr)
+ * The spec uses `|` as the absolute-value delimiter (non-nested).
+ * mathjs treats `|` as bitwise-OR, which would give wrong results.
+ */
+function convertAbsolutePipes(expr: string): string {
+  // Replace every |...| pair (non-greedy, non-nested) with abs(...)
+  return expr.replace(/\|([^|]+)\|/g, "abs($1)");
+}
+
+/**
  * Build a mathjs-evaluable string from token/block cells.
  * Returns null if the cells contain a block that requires special
  * top-level handling (d/dx, IntegralRange, SigmaRange, dx).
@@ -194,7 +205,8 @@ function buildExpressionString(
           }
           idx++;
         }
-        parts.push(`log(${argParts.join("")}, ${base})`);
+        const innerExpr = convertAbsolutePipes(addImplicitMultiplication(argParts.join("")));
+        parts.push(`log(${innerExpr}, ${base})`);
         break;
       }
 
@@ -238,7 +250,7 @@ function buildExpressionString(
     }
   }
 
-  return addImplicitMultiplication(parts.join(""));
+  return convertAbsolutePipes(addImplicitMultiplication(parts.join("")));
 }
 
 function toNumber(v: any): number {
@@ -249,10 +261,10 @@ function toNumber(v: any): number {
 /** Evaluate a mathjs expression string; returns null on failure */
 function safeEval(expr: string, scope?: Record<string, number>): any {
   try {
-    const v = math.evaluate(expr, scope as Record<string, unknown>);
+    const v = math.evaluate(expr, (scope || {}) as Record<string, unknown>);
     if (typeof v === "number" && Number.isFinite(v)) return v;
     // Complex number support (mathjs Complex type)
-    if (v && typeof v === "object" && (v.isComplex === true || v.type === "Complex")) return v;
+    if (v && typeof v === "object" && (v.isComplex === true || (v as any).type === "Complex")) return v;
     return null;
   } catch {
     return null;
@@ -269,7 +281,7 @@ function mathEquals(leftVal: any, rightVal: any): boolean {
   try {
     const l = math.round(leftVal, 9);
     const r = math.round(rightVal, 9);
-    return math.deepEqual(l, r) as boolean;
+    return (math.deepEqual(l, r) as unknown) as boolean;
   } catch {
     return false;
   }
@@ -356,7 +368,7 @@ function evaluateIntegral(
     return { ok: false, message: "올바르지 않은 수식입니다." };
   }
 
-  const rhsVal = safeEval(rhsStr);
+  const rhsVal = safeEval(rhsStr, variableValue);
   if (rhsVal === null) return { ok: true };
 
   // Simpson's rule
@@ -367,8 +379,8 @@ function evaluateIntegral(
   try {
     for (let k = 0; k <= N; k++) {
       const x = toNumber(startVal) + k * h;
-      const v = safeEval(integrandStr, { x });
-      if (v === null) return { ok: true };
+      const v = safeEval(integrandStr, { ...(variableValue || {}), x });
+      if (v === null) return { ok: false, message: "피적분 함수를 계산할 수 없습니다." };
       const coeff = k === 0 || k === N ? 1 : k % 2 === 1 ? 4 : 2;
       sum += coeff * toNumber(v);
     }
@@ -418,13 +430,13 @@ function evaluateSigma(
     return { ok: false, message: "올바르지 않은 수식입니다." };
   }
 
-  const rhsVal = safeEval(rhsStr);
+  const rhsVal = safeEval(rhsStr, variableValue);
   if (rhsVal === null) return { ok: true };
 
   let sum = 0;
   for (let i = toNumber(startVal); i <= toNumber(endVal); i++) {
-    const v = safeEval(summandStr, { i });
-    if (v === null) return { ok: true };
+    const v = safeEval(summandStr, { ...(variableValue || {}), i });
+    if (v === null) return { ok: false, message: "시그마 본문을 계산할 수 없습니다." };
     sum += toNumber(v);
   }
 

@@ -5,7 +5,7 @@
 
 import type { PuzzleViewModel } from "../types/puzzle";
 import type { PuzzleCell } from "../types/puzzle";
-import type { FeedbackColor, GameMode } from "../types/game";
+import type { FeedbackColor, GameMode, NestedFeedback } from "../types/game";
 import type { LeaderboardFilter, LeaderboardResponse } from "../types/leaderboard";
 
 let _baseUrl = "";
@@ -57,7 +57,7 @@ export interface ValidateGuessRequest {
 
 export interface ValidateGuessResponse {
   ok: boolean;
-  feedback: FeedbackColor[];
+  feedback: NestedFeedback[];
   solved: boolean;
   gameOver: boolean;
   message?: string;
@@ -85,7 +85,7 @@ export interface SubmitResultRequest {
   startedAt: number;
   /** Each guess as a serialized cell array (JSON string) */
   guessHistory: string[];
-  feedbackHistory: FeedbackColor[][];
+  feedbackHistory: NestedFeedback[][];
 }
 
 export async function submitResult(

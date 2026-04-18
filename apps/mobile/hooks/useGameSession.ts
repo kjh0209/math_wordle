@@ -32,6 +32,7 @@ import {
   isFeedbackSolved,
   submitResult,
   validateGuessApi,
+  parseValueExpr,
 } from "@mathdle/core";
 import { useLocalPersistence } from "./useLocalPersistence";
 
@@ -194,42 +195,42 @@ export function useGameSession({
 
   const dismissToast = useCallback(() => setToast(null), []);
 
-  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
+  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string | number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
     if (!path || path.length === 0) {
       if (cells.length >= maxLength) return cells;
       return [...cells, newCell];
     }
-    
+
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
+
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block") return cells;
-    
+
     const newFields = { ...(targetBlock.cellFields || {}) };
     newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
-    
+
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
   }, []);
 
-  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
+  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string | number)[] | null): PuzzleCell[] => {
     if (!path || path.length === 0) {
       return cells.slice(0, -1);
     }
-    
+
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
+
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
-    
+
     const newFields = { ...targetBlock.cellFields };
     if (newFields[fieldName]) {
-       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+      newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
     }
-    
+
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
@@ -362,7 +363,7 @@ export function useGameSession({
           }));
           return;
         }
-        feedback = data.feedback as NestedFeedback[];
+        feedback = data.feedback;
         won = data.solved ?? false;
         gameOver = data.gameOver ?? false;
       } else {

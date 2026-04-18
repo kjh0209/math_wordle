@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getPuzzleById } from "@/lib/puzzles/puzzle-repository";
 import { adaptPuzzle } from "@/lib/puzzles/puzzle-adapter";
-import { compareGuessCells, validateGuessCells, mapPuzzleDbRowToDomain } from "@mathdle/core";
+import { compareGuessCells, validateGuessCells, mapPuzzleDbRowToDomain, isFeedbackSolved } from "@mathdle/core";
 import type { ValidateGuessRequest, ValidateGuessResponse } from "@/types/api";
 
 /**
@@ -50,7 +50,7 @@ export async function POST(
 
   const answerCells = dbRow.raw_payload.answer.cells;
   const feedback = compareGuessCells(guessCells, answerCells);
-  const solved = feedback.every((f) => f === "correct");
+  const solved = isFeedbackSolved(feedback);
 
   // gameOver if this attempt exhausts maxAttempts (rules.maxAttempts or default 6)
   const maxAttempts = domain.rules.maxAttempts;
