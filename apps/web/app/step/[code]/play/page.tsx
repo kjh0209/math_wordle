@@ -226,15 +226,9 @@ export default function StepPlayPage() {
         }),
       });
 
-      const data = (await res.json()) as {
-        ok: boolean;
-        feedback?: FeedbackColor[];
-        solved?: boolean;
-        gameOver?: boolean;
-        message?: string;
-      };
+      const data = (await res.json()) as import("@/types/api").ValidateGuessResponse & { message?: string };
 
-      if (!data.ok || !data.feedback) {
+      if (!data.ok) {
         const msg = data.message ?? "올바르지 않은 수식입니다.";
         showToast(msg);
         setRun((prev) => prev ? { ...prev, errorMessage: msg } : prev);
@@ -253,14 +247,15 @@ export default function StepPlayPage() {
       const nextStatus: GameStatus = won ? "win" : lost ? "lose" : "playing";
       const completedAt = nextStatus !== "playing" ? Date.now() : null;
 
-      // Update keyboard state
+      // Update keyboard state from NestedFeedback
       setKeyboardState((ks) => {
         const next = { ...ks };
         newRow.cells.forEach((cell, i) => {
-          const color = newRow.feedback[i];
-          if (!color) return;
+          const fb = newRow.feedback[i];
+          if (!fb) return;
+          const color = fb.color;
           const key = cell.type === "token" ? cell.value : cell.blockType;
-          const cur = next[key];
+          const cur = next[key] as FeedbackColor | undefined;
           const priority = (c: FeedbackColor) => c === "correct" ? 3 : c === "present" ? 2 : 1;
           if (!cur || priority(color) > priority(cur)) next[key] = color;
         });

@@ -28,7 +28,9 @@
       "Bash(ls packages/core/node_modules/.bin/tsc)",
       "Bash(ls node_modules/.bin/tsc)",
       "Bash(node_modules/.bin/tsc --noEmit)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(node -e \"const {all, create} = require\\('./packages/core/node_modules/mathjs/package.json'\\); console.log\\(all\\)\")",
+      "Bash(node -e \"const m = require\\('c:/Users/김찬혁/Desktop/math_wordle/node_modules/mathjs'\\); console.log\\(m.version\\); const math = m.create\\(m.all, {}\\); const v = math.evaluate\\('4+2'\\); console.log\\(typeof v, v\\); const p = math.parse; console.log\\(typeof p\\);\")"
     ]
   }
 }

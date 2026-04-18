@@ -35738,3 +35738,11 @@ export function selectProblemSetPuzzle(
   const candidates = unseen.length > 0 ? unseen : pool;
   return candidates[Math.floor(Math.random() * candidates.length)];
 }
+
+export function getProblemSetPuzzleById(id: string): ProblemSetPuzzle | null {
+  for (const puzzles of Object.values(PROBLEM_SETS)) {
+    const found = puzzles.find((p) => p.id === id);
+    if (found) return found;
+  }
+  return null;
+}

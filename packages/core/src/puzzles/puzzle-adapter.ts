@@ -33,40 +33,53 @@ import {
 
 // ─── DB Row → Domain Model ────────────────────────────────────────────────────
 
+/**
+ * Tokenize a block field string (e.g. "10" → ["1","0"], "pi" → ["pi"])
+ * into an array of TokenCells. Used to populate cellFields on answer blocks.
+ */
+function tokenizeFieldValue(value: string): import("../types/puzzle").TokenCell[] {
+  const tokens: import("../types/puzzle").TokenCell[] = [];
+  let i = 0;
+  while (i < value.length) {
+    const c = value[i];
+    if (/[a-zA-Z]/.test(c)) {
+      let name = c;
+      while (i + 1 < value.length && /[a-zA-Z]/.test(value[i + 1])) {
+        name += value[++i];
+      }
+      tokens.push({ type: "token", value: name });
+    } else {
+      tokens.push({ type: "token", value: c });
+    }
+    i++;
+  }
+  return tokens;
+}
+
+/**
+ * Enrich a list of PuzzleCells: for every block cell, populate `cellFields`
+ * by tokenizing each field's string value. Required so that `compareGuessCells`
+ * can compare field tokens between the answer and the user's guess.
+ */
+function enrichCellsWithFields(
+  cells: import("../types/puzzle").PuzzleCell[]
+): import("../types/puzzle").PuzzleCell[] {
+  return cells.map((cell) => {
+    if (cell.type !== "block") return cell;
+    if (cell.cellFields && Object.keys(cell.cellFields).length > 0) return cell; // already enriched
+    const cellFields: Record<string, import("../types/puzzle").PuzzleCell[]> = {};
+    for (const [key, value] of Object.entries(cell.fields)) {
+      cellFields[key] = tokenizeFieldValue(value);
+    }
+    return { ...cell, cellFields };
+  });
+}
+
 export function mapPuzzleDbRowToDomain(row: PuzzleDbRow): PuzzleDomainModel {
   const raw = row.raw_payload;
 
-  // Enrich block cells with tokenized cellFields
-  const answerCells = raw.answer.cells.map((cell) => {
-    if (cell.type === "block") {
-      const cellFields: Record<string, import("../types/puzzle").PuzzleCell[]> = {};
-      for (const [key, value] of Object.entries(cell.fields)) {
-        // Split string into 1-char tokens. For things like "10", it correctly becomes "1", "0"
-        // Wait, mathjs tokens might be distinct, e.g. "pi" or "sqrt".
-        // Instead of writing a complex tokenizer, we rely on the parser to map fields cleanly.
-        // For the static answer in JSON, we can reasonably assume single digit inputs,
-        // or we use a basic naive tokenizer for testing, but let's just create token arrays.
-        const tokens: import("../types/puzzle").PuzzleCell[] = [];
-        let i = 0;
-        while (i < value.length) {
-          const c = value[i];
-          if (/[a-zA-Z]/.test(c)) {
-            let funcName = c;
-            while (i + 1 < value.length && /[a-zA-Z]/.test(value[i + 1])) {
-              funcName += value[++i];
-            }
-            tokens.push({ type: "token", value: funcName });
-          } else {
-            tokens.push({ type: "token", value: c });
-          }
-          i++;
-        }
-        cellFields[key] = tokens;
-      }
-      return { ...cell, cellFields };
-    }
-    return cell;
-  });
+  // Enrich block cells with tokenized cellFields for field-level comparison
+  const answerCells = enrichCellsWithFields(raw.answer.cells as import("../types/puzzle").PuzzleCell[]);
 
   return {
     id: row.id,
@@ -260,7 +273,8 @@ export function mapProblemSetPuzzleToViewModel(
     level: p.level as PuzzleLevel,
     difficulty: p.difficulty as PuzzleDifficulty,
     category: p.category as PuzzleCategory,
-    variable: p.variable
+    // p.variable may be [] in auto-generated JSON (empty array instead of null)
+    variable: p.variable && !Array.isArray(p.variable)
       ? {
           name: p.variable.name,
           valueExpression: p.variable.valueExpression,
@@ -277,7 +291,8 @@ export function mapProblemSetPuzzleToViewModel(
     isDaily: false,
     dailyDate: null,
     meta: {
-      answerCells: p.answer.cells as import("../types/puzzle").PuzzleCell[],
+      // Enrich block cells so field tokens can be compared in compareGuessCells
+      answerCells: enrichCellsWithFields(p.answer.cells as import("../types/puzzle").PuzzleCell[]),
       answerExpression: p.answer.expression,
     },
   };

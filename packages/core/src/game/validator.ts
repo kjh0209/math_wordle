@@ -108,8 +108,8 @@ function addImplicitMultiplication(expr: string): string {
     // ) followed by letter: )x → )*x
     .replace(/\)([a-zA-Z])/g, ")*$1")
     // single-letter variable followed by (: x( → x*(
-    // Negative lookbehind prevents matching function names like sin(, cos(, log(
-    .replace(/(?<![a-zA-Z])([a-zA-Z])\(/g, "$1*(");
+    // (^|[^a-zA-Z]) avoids breaking function names like sin(, cos( — Hermes-compatible (no lookbehind)
+    .replace(/(^|[^a-zA-Z])([a-zA-Z])\(/g, "$1$2*(");
 }
 
 /**
@@ -262,9 +262,15 @@ function toNumber(v: any): number {
 function safeEval(expr: string, scope?: Record<string, number>): any {
   try {
     const v = math.evaluate(expr, (scope || {}) as Record<string, unknown>);
+    if (v === null || v === undefined) return null;
     if (typeof v === "number" && Number.isFinite(v)) return v;
     // Complex number support (mathjs Complex type)
-    if (v && typeof v === "object" && (v.isComplex === true || (v as any).type === "Complex")) return v;
+    if (typeof v === "object" && (v.isComplex === true || (v as any).type === "Complex")) return v;
+    // Handle BigNumber, Fraction, and other mathjs numeric wrapper types
+    try {
+      const n = Number(v);
+      if (Number.isFinite(n)) return n;
+    } catch { /* ignore */ }
     return null;
   } catch {
     return null;
@@ -304,14 +310,6 @@ function evaluateDerivative(
   const rhsStr = buildExpressionString(rhsCells, variableValue, excludeX);
 
   if (funcStr === null || rhsStr === null) return { ok: true };
-
-  try {
-    // Verify syntax first
-    math.parse(funcStr);
-    math.parse(rhsStr);
-  } catch {
-    return { ok: false, message: "올바르지 않은 수식입니다." };
-  }
 
   try {
     const derivNode = math.derivative(funcStr, "x");
@@ -359,14 +357,6 @@ function evaluateIntegral(
   const rhsStr = buildExpressionString(rhsCells, variableValue);
 
   if (integrandStr === null || rhsStr === null) return { ok: true };
-
-  // Verify syntax
-  try {
-    math.parse(integrandStr);
-    math.parse(rhsStr);
-  } catch {
-    return { ok: false, message: "올바르지 않은 수식입니다." };
-  }
 
   const rhsVal = safeEval(rhsStr, variableValue);
   if (rhsVal === null) return { ok: true };
@@ -421,14 +411,6 @@ function evaluateSigma(
   const rhsStr = buildExpressionString(rhsCells, variableValue);
 
   if (summandStr === null || rhsStr === null) return { ok: true };
-
-  // Verify syntax
-  try {
-    math.parse(summandStr);
-    math.parse(rhsStr);
-  } catch {
-    return { ok: false, message: "올바르지 않은 수식입니다." };
-  }
 
   const rhsVal = safeEval(rhsStr, variableValue);
   if (rhsVal === null) return { ok: true };
@@ -509,14 +491,6 @@ export function evaluateCellEquality(
       return { ok: true }; // Skip — special form embedded in expression
     }
 
-    // Verify basic syntax first
-    try {
-      math.parse(lhsStr);
-      math.parse(rhsStr);
-    } catch {
-      return { ok: false, message: "올바르지 않은 수식입니다." };
-    }
-
     const boundVarSet = new Set(Object.keys(variableValue ?? {}));
     const unboundVars = extractUnboundVars(lhsStr + rhsStr, boundVarSet);
 
@@ -592,6 +566,34 @@ export function compareGuessCells(
 
   type FlatNode = { path: string; key: string; consumed: boolean };
 
+  /**
+   * If a block has no cellFields but has fields strings, synthesize cellFields
+   * by splitting each field value into single-char tokens (digits, letters grouped).
+   * This makes comparison work even when the answer comes from raw JSON without cellFields.
+   */
+  function getEffectiveCellFields(cell: Extract<PuzzleCell, { type: "block" }>): Record<string, PuzzleCell[]> | null {
+    if (cell.cellFields && Object.keys(cell.cellFields).length > 0) return cell.cellFields;
+    if (!cell.fields || Object.keys(cell.fields).length === 0) return null;
+    const synth: Record<string, PuzzleCell[]> = {};
+    for (const [k, v] of Object.entries(cell.fields)) {
+      const tokens: PuzzleCell[] = [];
+      let i = 0;
+      while (i < v.length) {
+        const ch = v[i];
+        if (/[a-zA-Z]/.test(ch)) {
+          let name = ch;
+          while (i + 1 < v.length && /[a-zA-Z]/.test(v[i + 1])) name += v[++i];
+          tokens.push({ type: "token", value: name });
+        } else {
+          tokens.push({ type: "token", value: ch });
+        }
+        i++;
+      }
+      synth[k] = tokens;
+    }
+    return synth;
+  }
+
   function flatten(cells: PuzzleCell[]): FlatNode[] {
     const res: FlatNode[] = [];
     function walk(arr: PuzzleCell[], prefix: string) {
@@ -599,9 +601,12 @@ export function compareGuessCells(
         const c = arr[i];
         const currentPath = `${prefix}[${i}]`;
         res.push({ path: currentPath, key: cellKey(c), consumed: false });
-        if (c.type === "block" && c.cellFields) {
-          for (const [k, v] of Object.entries(c.cellFields)) {
-            walk(v, `${currentPath}.${k}`);
+        if (c.type === "block") {
+          const fields = getEffectiveCellFields(c);
+          if (fields) {
+            for (const [k, v] of Object.entries(fields)) {
+              walk(v, `${currentPath}.${k}`);
+            }
           }
         }
       }
@@ -641,10 +646,13 @@ export function compareGuessCells(
 
       const feedback: import("../types/game").NestedFeedback = { color };
 
-      if (c.type === "block" && c.cellFields) {
-        feedback.fields = {};
-        for (const [k, v] of Object.entries(c.cellFields)) {
-          feedback.fields[k] = buildFeedback(v, `${currentPath}.${k}`);
+      if (c.type === "block") {
+        const fields = getEffectiveCellFields(c);
+        if (fields && Object.keys(fields).length > 0) {
+          feedback.fields = {};
+          for (const [k, v] of Object.entries(fields)) {
+            feedback.fields[k] = buildFeedback(v, `${currentPath}.${k}`);
+          }
         }
       }
       return feedback;
