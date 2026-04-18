@@ -57,6 +57,8 @@ export default function StepPlayPage() {
   const [keyboardState, setKeyboardState] = useState<Record<string, FeedbackColor>>({});
   const [focusedPath, setFocusedPath] = useState<(string|number)[] | null>(null);
   const isSubmitting = useRef(false);
+  const currentCellsRef = useRef<PuzzleCell[]>([]);
+  currentCellsRef.current = run?.currentCells ?? [];
 
   // Step metadata for display (fetched separately if needed; we derive from code)
   const isBoss = parseInt(code.split("-")[1] ?? "0") === 10;
@@ -114,16 +116,12 @@ export default function StepPlayPage() {
       if (cells.length >= maxLength) return cells;
       return [...cells, newCell];
     }
-    
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block") return cells;
-    
     const newFields = { ...(targetBlock.cellFields || {}) };
-    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
-    
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath.length ? restPath : null, newCell, Infinity);
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
@@ -133,18 +131,14 @@ export default function StepPlayPage() {
     if (!path || path.length === 0) {
       return cells.slice(0, -1);
     }
-    
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
-    
     const newFields = { ...targetBlock.cellFields };
     if (newFields[fieldName]) {
-       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+      newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath.length ? restPath : null);
     }
-    
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
@@ -158,27 +152,42 @@ export default function StepPlayPage() {
       const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, prev.puzzle.answerLength);
       return { ...prev, currentCells: newCells, errorMessage: null };
     });
+
+    // Auto-advance cursor after filling a block field (each field = exactly 1 token)
+    if (focusedPath && focusedPath.length === 2) {
+      const [blockIdx, fieldName] = focusedPath as [number, string];
+      const block = currentCellsRef.current[blockIdx];
+      if (block?.type === "block") {
+        const fieldNames = Object.keys(block.fields);
+        const idx = fieldNames.indexOf(fieldName);
+        const nextField = fieldNames[idx + 1];
+        setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
+      }
+    }
   }, [focusedPath, insertAtCursor]);
 
   const appendBlock = useCallback((payload: BlockInsertPayload) => {
+    const cellFields: Record<string, PuzzleCell[]> = {};
+    for (const key of Object.keys(payload.fields || {})) {
+      cellFields[key] = [];
+    }
+    const cell: PuzzleCell = {
+      type: "block",
+      blockType: payload.blockType as import("@mathdle/core").ReservedBlock,
+      fields: payload.fields,
+      cellFields,
+    };
+    let insertedIndex = -1;
     setRun((prev) => {
       if (!prev || prev.status !== "playing") return prev;
-      
-      const cellFields: Record<string, PuzzleCell[]> = {};
-      for (const key of Object.keys(payload.fields || {})) {
-        cellFields[key] = [];
-      }
-      
-      const cell: PuzzleCell = {
-        type: "block",
-        blockType: payload.blockType as PuzzleCell extends { blockType: infer B } ? B : never,
-        fields: payload.fields,
-        cellFields
-      };
-      
       const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, prev.puzzle.answerLength);
+      if (!focusedPath) insertedIndex = newCells.length - 1;
       return { ...prev, currentCells: newCells, errorMessage: null };
     });
+    const firstField = Object.keys(payload.fields)[0];
+    if (firstField && !focusedPath && insertedIndex >= 0) {
+      setFocusedPath([insertedIndex, firstField]);
+    }
   }, [focusedPath, insertAtCursor]);
 
   const deleteCell = useCallback(() => {

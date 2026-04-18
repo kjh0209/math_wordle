@@ -12,6 +12,10 @@ interface BlockCellTileProps {
   animationDelay?: number;
   className?: string;
   nestedFeedback?: NestedFeedback;
+  /**
+   * Path prefix to this block cell in the root cells array.
+   * e.g. [0] means this block is at index 0 of the root cells.
+   */
   pathPrefix?: (string | number)[];
   focusedPath?: (string | number)[] | null;
   setFocusedPath?: (path: (string | number)[] | null) => void;
@@ -34,21 +38,33 @@ const SIZE_CLASSES = {
   lg: "px-2.5 text-sm rounded-xl",
 };
 
-// Little Helper to render a token directly
-function SmallTokenTile({ c, feedback, isFocused, onClick }: { c?: PuzzleCell; feedback?: string; isFocused: boolean; onClick: () => void }) {
-  let bg = "bg-primary/10 text-primary-foreground"; // empty
-  if (c) bg = "bg-primary/20 text-primary-foreground"; // active
-  if (isFocused && !c) bg = "bg-primary/40 ring-1 ring-primary pulse";
+interface SmallTokenTileProps {
+  c?: PuzzleCell;
+  feedback?: string;
+  isFocused: boolean;
+  onClick: () => void;
+}
+
+function SmallTokenTile({ c, feedback, isFocused, onClick }: SmallTokenTileProps) {
+  let bg = "bg-primary/10 text-primary-foreground";
+  if (c) bg = "bg-primary/20 text-primary-foreground";
+  if (isFocused && !c) bg = "bg-primary/40 ring-1 ring-primary animate-pulse";
   if (isFocused && c) bg += " ring-1 ring-primary";
-  
+
   if (feedback === "correct") bg = "bg-green-500 text-white";
   else if (feedback === "present") bg = "bg-yellow-500 text-white";
   else if (feedback === "absent") bg = "bg-slate-700 text-white";
-  
+
   const val = c?.type === "token" ? getTokenDisplay(c.value) : c?.type === "block" ? c.blockType : "";
-  
+
   return (
-    <span onClick={(e) => { e.stopPropagation(); onClick(); }} className={cn("inline-flex items-center justify-center min-w-[1.2em] min-h-[1.2em] rounded px-0.5 cursor-pointer", bg)}>
+    <span
+      onClick={(e) => { e.stopPropagation(); onClick(); }}
+      className={cn(
+        "inline-flex items-center justify-center min-w-[1.2em] min-h-[1.2em] rounded px-0.5 cursor-pointer",
+        bg
+      )}
+    >
       {val || "\u00A0"}
     </span>
   );
@@ -67,34 +83,58 @@ export function BlockCellTile({
 }: BlockCellTileProps) {
   const style = animationDelay !== undefined ? { animationDelay: `${animationDelay}ms` } : undefined;
 
+  /**
+   * Render an editable/displayable field slot.
+   * Focus path format: [...pathPrefix, fieldName]
+   * e.g. [0, "start"] — block at root[0], field "start"
+   * This is consumed by insertAtCursor/deleteAtCursor in useGameSession.
+   */
   const renderField = (fieldName: string) => {
     const fieldCells = cell.cellFields?.[fieldName] || [];
     const fieldsFeedback = nestedFeedback?.fields?.[fieldName] || [];
-    
-    // We always render at least one slot if empty, OR the cells + one empty slot at the end if focused inside?
-    // For simplicity, just render the current cells, plus one extra slot if we are actively focused at the END of this field.
-    const pathBase = [...pathPrefix, "fields", fieldName];
-    
+
+    // fieldPath is what we set as focusedPath when clicking into this field
+    const fieldPath = [...pathPrefix, fieldName];
+    const isFieldFocused =
+      focusedPath !== null &&
+      JSON.stringify(focusedPath) === JSON.stringify(fieldPath);
+
     const elements = fieldCells.map((fc, i) => {
-       const curPath = [...pathBase, i];
-       const isFoc = focusedPath && JSON.stringify(focusedPath) === JSON.stringify(curPath);
-       const fb = fieldsFeedback[i];
-       const colorStr = typeof fb === "string" ? fb : fb?.color;
-       return <SmallTokenTile key={i} c={fc} feedback={colorStr} isFocused={!!isFoc} onClick={() => setFocusedPath?.(curPath)} />;
+      const fb = fieldsFeedback[i];
+      const colorStr = typeof fb === "string" ? fb : fb?.color;
+      return (
+        <SmallTokenTile
+          key={i}
+          c={fc}
+          feedback={colorStr}
+          isFocused={false}
+          onClick={() => setFocusedPath?.(fieldPath)}
+        />
+      );
     });
-    
-    const nextIndex = fieldCells.length;
-    const nextPath = [...pathBase, nextIndex];
-    const isNextFoc = focusedPath && JSON.stringify(focusedPath) === JSON.stringify(nextPath);
-    
-    // Always show an empty trailing slot to allow appending
-    if (setFocusedPath && (elements.length === 0 || isNextFoc || !focusedPath)) {
-       elements.push(
-         <SmallTokenTile key="empty" isFocused={!!isNextFoc} onClick={() => setFocusedPath?.(nextPath)} />
-       );
+
+    // Show an empty trailing slot when: field is empty, or this field is focused
+    const showEmptySlot = setFocusedPath && (fieldCells.length === 0 || isFieldFocused);
+    if (showEmptySlot) {
+      elements.push(
+        <SmallTokenTile
+          key="empty"
+          isFocused={isFieldFocused}
+          onClick={() => setFocusedPath?.(fieldPath)}
+        />
+      );
     }
-    
-    return <span className="inline-flex gap-0.5">{elements}</span>;
+
+    return (
+      <span
+        className={cn(
+          "inline-flex gap-0.5",
+          isFieldFocused && "ring-1 ring-primary/60 rounded"
+        )}
+      >
+        {elements}
+      </span>
+    );
   };
 
   const renderDecorative = () => {

@@ -20,7 +20,7 @@ export type FeedbackColor = "correct" | "present" | "absent";
 
 export interface NestedFeedback {
   color: FeedbackColor;
-  fields?: Record<string, FeedbackColor[]>;
+  fields?: Record<string, NestedFeedback[]>;
 }
 
 export type TileState =

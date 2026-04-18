@@ -21,7 +21,7 @@ import { useGameSession } from "../hooks/useGameSession";
 import { useShareResult } from "../hooks/useShareResult";
 import { BlockFieldModal } from "../components/game/BlockFieldModal";
 import { Colors } from "../constants/Colors";
-import type { KeypadToken, FeedbackColor } from "@mathdle/core";
+import type { KeypadToken, FeedbackColor, NestedFeedback } from "@mathdle/core";
 
 export default function PlayScreen() {
   const { puzzle, loading, error, reload } = usePuzzleLoader("daily");
@@ -73,7 +73,7 @@ function GameContent({ puzzle }: { puzzle: NonNullable<ReturnType<typeof usePuzz
 
   const submittedFeedbackRows: FeedbackColor[][] = state.rows
     .filter((r) => r.status === "submitted")
-    .map((r) => r.feedback);
+    .map((r) => r.feedback.map((f) => (f as NestedFeedback).color ?? (f as unknown as FeedbackColor)));
 
   const { copied, copyText, nativeShare } = useShareResult({
     puzzle,

@@ -22,7 +22,13 @@
       "Bash(npx ts-node --project packages/core/tsconfig.json -e ' *)",
       "Bash(npx ts-node *)",
       "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('compilerOptions',{}\\).get\\('module',''\\)\\)\")",
-      "Bash(npx jest *)"
+      "Bash(npx jest *)",
+      "Bash(npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit -p packages/core/tsconfig.json)",
+      "Bash(ls packages/core/node_modules/.bin/tsc)",
+      "Bash(ls node_modules/.bin/tsc)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(npm run *)"
     ]
   }
 }

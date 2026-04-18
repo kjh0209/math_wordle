@@ -12,6 +12,7 @@ import {
   mapPuzzleDbRowToDomain,
   validateGuessCells,
   compareGuessCells,
+  isFeedbackSolved,
 } from "@mathdle/core";
 import type { ValidateGuessRequest, ValidateGuessResponse } from "@/types/api";
 
@@ -63,7 +64,7 @@ export async function POST(req: Request) {
 
     // 4. Phase 2: Compare guess to answer (Wordle style checking)
     const feedback = compareGuessCells(guessCells, domainPuzzle.answer.cells);
-    const solved = feedback.every((f) => f === "correct");
+    const solved = isFeedbackSolved(feedback);
     const gameOver = solved || attemptNumber >= domainPuzzle.rules.maxAttempts;
 
     return NextResponse.json<ValidateGuessResponse>({

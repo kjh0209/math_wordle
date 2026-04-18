@@ -15,6 +15,7 @@ import type {
   GameMode,
   GuessRow,
   FeedbackColor,
+  NestedFeedback,
   KeyboardState,
   ToastMessage,
   LocalGameRecord,
@@ -28,6 +29,7 @@ import {
   validateGuessCells,
   evaluateCellEquality,
   validateAllowedCells,
+  isFeedbackSolved,
   submitResult,
   validateGuessApi,
 } from "@mathdle/core";
@@ -89,6 +91,10 @@ export function useGameSession({
 
   const [toast, setToast] = useState<ToastMessage | null>(null);
   const [focusedPath, setFocusedPath] = useState<(string | number)[] | null>(null);
+
+  // Always-current ref so callbacks can read cells without stale closure
+  const currentCellsRef = useRef<PuzzleCell[]>([]);
+  currentCellsRef.current = state.currentCells;
 
   // ── Load saved game on mount / puzzle change ─────────────────────────
   useEffect(() => {
@@ -163,11 +169,12 @@ export function useGameSession({
     for (const row of state.rows) {
       if (row.status !== "submitted") continue;
       row.cells.forEach((cell, i) => {
-        const color = row.feedback[i];
-        if (!color) return;
+        const feedbackItem = row.feedback[i] as NestedFeedback | undefined;
+        if (!feedbackItem) return;
+        const color: FeedbackColor = feedbackItem.color;
         const key = cellDisplayKey(cell);
-        const current = ks[key];
-        if (!current || colorPriority(color) > colorPriority(current as FeedbackColor)) {
+        const current = ks[key] as FeedbackColor | undefined;
+        if (!current || colorPriority(color) > colorPriority(current)) {
           ks[key] = color;
         }
       });
@@ -248,30 +255,50 @@ export function useGameSession({
         const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
         return { ...prev, currentCells: newCells, errorMessage: null };
       });
+
+      // Auto-advance cursor after filling a block field (each field = exactly 1 token)
+      if (focusedPath && focusedPath.length === 2 && token.type !== "block") {
+        const [blockIdx, fieldName] = focusedPath as [number, string];
+        const block = currentCellsRef.current[blockIdx];
+        if (block?.type === "block") {
+          const fieldNames = Object.keys(block.fields);
+          const idx = fieldNames.indexOf(fieldName);
+          const nextField = fieldNames[idx + 1];
+          setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
+        }
+      }
     },
     [puzzle.answerLength, focusedPath, insertAtCursor],
   );
 
   const appendBlock = useCallback(
     (blockType: string, fields: Record<string, string>) => {
+      const fieldNames = Object.keys(fields);
+      let insertedIndex = -1;
+
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        
-        // Initialize cellFields for Native nested editing
+
         const cellFields: Record<string, PuzzleCell[]> = {};
-        for (const key of Object.keys(fields)) {
-           cellFields[key] = [];
+        for (const key of fieldNames) {
+          cellFields[key] = [];
         }
 
         const cell: PuzzleCell = {
           type: "block",
           blockType: blockType as any,
           fields,
-          cellFields
+          cellFields,
         };
         const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        if (!focusedPath) insertedIndex = newCells.length - 1;
         return { ...prev, currentCells: newCells, errorMessage: null };
       });
+
+      // Auto-focus first field of the newly inserted block
+      if (fieldNames.length > 0 && !focusedPath && insertedIndex >= 0) {
+        setFocusedPath([insertedIndex, fieldNames[0]]);
+      }
     },
     [puzzle.answerLength, focusedPath, insertAtCursor],
   );
@@ -307,7 +334,7 @@ export function useGameSession({
     const sessionKey = await persistence.getOrCreateSessionKey();
 
     try {
-      let feedback: FeedbackColor[];
+      let feedback: NestedFeedback[];
       let won: boolean;
       let gameOver: boolean;
 
@@ -335,7 +362,7 @@ export function useGameSession({
           }));
           return;
         }
-        feedback = data.feedback;
+        feedback = data.feedback as NestedFeedback[];
         won = data.solved ?? false;
         gameOver = data.gameOver ?? false;
       } else {
@@ -374,7 +401,7 @@ export function useGameSession({
         }
 
         feedback = compareGuessCells(snap.currentCells, answerCells);
-        won = feedback.every((f) => f === "correct");
+        won = isFeedbackSolved(feedback);
         gameOver = false;
       }
 

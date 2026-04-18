@@ -35,14 +35,15 @@ export interface BlockCell {
 /** A single cell in a puzzle answer or player guess */
 export type PuzzleCell = TokenCell | BlockCell;
 
-/** Stable key for a cell — used for Wordle-style "present" detection */
+/**
+ * Stable key for a cell — used for Wordle-style "present" detection.
+ * For blocks, only blockType is used so that a block with wrong parameters
+ * is still recognized as the same block type (green/yellow), while its
+ * internal parameter slots are compared separately via nested paths.
+ */
 export function cellKey(cell: PuzzleCell): string {
   if (cell.type === "token") return `t:${cell.value}`;
-  const fieldStr = Object.entries(cell.fields)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([, v]) => v)
-    .join(",");
-  return `b:${cell.blockType}:${fieldStr}`;
+  return `b:${cell.blockType}`;
 }
 
 /** Key for keyboard state coloring (block buttons use blockType only) */

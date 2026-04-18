@@ -7,6 +7,10 @@
  *   3. Expression equality check — handles implicit multiplication,
  *      d/dx (symbolic derivative), ∫ (numerical integration),
  *      Σ (summation), log_base, Comb, Perm
+ *
+ * Complex numbers: the spec uses `j` as the imaginary unit (to avoid
+ * confusion with sigma's index variable `i`). Internally we convert
+ * `j` → `i` when building mathjs expression strings.
  */
 
 import { all, create } from "mathjs";
@@ -44,6 +48,13 @@ export function validateAllowedCells(
     } else {
       if (!shownBlocks.includes(cell.blockType)) {
         return { ok: false, message: `허용되지 않은 블록: "${cell.blockType}"` };
+      }
+      // Recursively check cellFields
+      if (cell.cellFields) {
+        for (const fieldCells of Object.values(cell.cellFields)) {
+          const r = validateAllowedCells(fieldCells, shownTokens, shownBlocks);
+          if (!r.ok) return r;
+        }
       }
     }
   }
@@ -83,12 +94,12 @@ export function parseValueExpr(expr: string): number | null {
 /**
  * Insert * where implicit multiplication is implied:
  *   2x → 2*x,  2( → 2*(,  )( → )*(,  )x → )*x
- * Avoids breaking multi-letter function names (sin, cos, log…)
- * by only inserting * before a letter that is NOT preceded by another letter.
+ * Avoids breaking multi-letter function names (sin, cos, log…).
+ * Also avoids breaking decimal numbers like 1.5 or .5.
  */
 function addImplicitMultiplication(expr: string): string {
   return expr
-    // digit followed by letter: 2x → 2*x
+    // digit followed by letter (not a decimal dot): 2x → 2*x
     .replace(/(\d)([a-zA-Z])/g, "$1*$2")
     // digit followed by (: 2( → 2*(
     .replace(/(\d)(\()/g, "$1*$2")
@@ -106,8 +117,12 @@ function addImplicitMultiplication(expr: string): string {
  * Returns null if the cells contain a block that requires special
  * top-level handling (d/dx, IntegralRange, SigmaRange, dx).
  *
+ * Key conversions:
+ *   - `j` token → `i`  (mathjs imaginary unit; spec uses j to avoid sigma-index confusion)
+ *   - `pi` token → `pi` (mathjs constant)
+ *
  * @param excludeVars  Variable names that should NOT be substituted
- *                     (e.g., "x" when building a d/dx expression).
+ *                     (e.g., "x" when building a d/dx expression, "i" inside sigma).
  */
 function buildExpressionString(
   cells: PuzzleCell[],
@@ -115,13 +130,19 @@ function buildExpressionString(
   excludeVars: Set<string> = new Set()
 ): string | null {
   const parts: string[] = [];
-  let i = 0;
+  let idx = 0;
 
-  while (i < cells.length) {
-    const cell = cells[i];
+  while (idx < cells.length) {
+    const cell = cells[idx];
 
     if (cell.type === "token") {
       const v = cell.value;
+      // Imaginary unit: j → i (mathjs uses i for complex numbers)
+      if (v === "j") {
+        parts.push("i");
+        idx++;
+        continue;
+      }
       if (!excludeVars.has(v) && variableValue && v in variableValue) {
         parts.push(String(variableValue[v]));
       } else if (v === "pi") {
@@ -129,7 +150,7 @@ function buildExpressionString(
       } else {
         parts.push(v);
       }
-      i++;
+      idx++;
       continue;
     }
 
@@ -137,18 +158,20 @@ function buildExpressionString(
     switch (cell.blockType) {
       case "LogBase": {
         const baseCells = cell.cellFields?.base;
-        const baseStr = baseCells ? buildExpressionString(baseCells, variableValue, excludeVars) : cell.fields.base;
+        const baseStr = baseCells
+          ? buildExpressionString(baseCells, variableValue, excludeVars)
+          : cell.fields.base;
         const base = baseStr || "10";
-        i++;
+        idx++;
         // Expect opening paren next; consume it
-        if (cells[i]?.type === "token" && (cells[i] as { value: string }).value === "(") {
-          i++;
+        if (cells[idx]?.type === "token" && (cells[idx] as { value: string }).value === "(") {
+          idx++;
         }
         // Collect argument until matching closing paren
         const argParts: string[] = [];
         let depth = 1;
-        while (i < cells.length && depth > 0) {
-          const c = cells[i];
+        while (idx < cells.length && depth > 0) {
+          const c = cells[idx];
           if (c.type === "token") {
             if (c.value === "(") {
               depth++;
@@ -156,6 +179,8 @@ function buildExpressionString(
             } else if (c.value === ")") {
               depth--;
               if (depth > 0) argParts.push(")");
+            } else if (c.value === "j") {
+              argParts.push("i");
             } else {
               const cv = c.value;
               if (!excludeVars.has(cv) && variableValue && cv in variableValue) {
@@ -165,35 +190,39 @@ function buildExpressionString(
               }
             }
           } else {
-            // Nested block inside log argument — skip or unsupported
-            return null;
+            return null; // Nested block inside log argument — unsupported
           }
-          i++;
+          idx++;
         }
         parts.push(`log(${argParts.join("")}, ${base})`);
         break;
       }
 
       case "Comb": {
-        const nStr = cell.cellFields?.n ? buildExpressionString(cell.cellFields.n, variableValue, excludeVars) : cell.fields.n;
-        const rStr = cell.cellFields?.r ? buildExpressionString(cell.cellFields.r, variableValue, excludeVars) : cell.fields.r;
-        
-        // Evaluate them safely since they might be expressions like n-1
+        const nStr = cell.cellFields?.n
+          ? buildExpressionString(cell.cellFields.n, variableValue, excludeVars)
+          : cell.fields.n;
+        const rStr = cell.cellFields?.r
+          ? buildExpressionString(cell.cellFields.r, variableValue, excludeVars)
+          : cell.fields.r;
         const nVal = safeEval(nStr || "0", variableValue);
         const rVal = safeEval(rStr || "0", variableValue);
-        parts.push(String(combination(nVal ?? 0, rVal ?? 0)));
-        i++;
+        parts.push(String(combination(toNumber(nVal), toNumber(rVal))));
+        idx++;
         break;
       }
 
       case "Perm": {
-        const nStr = cell.cellFields?.n ? buildExpressionString(cell.cellFields.n, variableValue, excludeVars) : cell.fields.n;
-        const rStr = cell.cellFields?.r ? buildExpressionString(cell.cellFields.r, variableValue, excludeVars) : cell.fields.r;
-        
+        const nStr = cell.cellFields?.n
+          ? buildExpressionString(cell.cellFields.n, variableValue, excludeVars)
+          : cell.fields.n;
+        const rStr = cell.cellFields?.r
+          ? buildExpressionString(cell.cellFields.r, variableValue, excludeVars)
+          : cell.fields.r;
         const nVal = safeEval(nStr || "0", variableValue);
         const rVal = safeEval(rStr || "0", variableValue);
-        parts.push(String(permutation(nVal ?? 0, rVal ?? 0)));
-        i++;
+        parts.push(String(permutation(toNumber(nVal), toNumber(rVal))));
+        idx++;
         break;
       }
 
@@ -212,12 +241,18 @@ function buildExpressionString(
   return addImplicitMultiplication(parts.join(""));
 }
 
+function toNumber(v: any): number {
+  if (typeof v === "number") return v;
+  return 0;
+}
+
 /** Evaluate a mathjs expression string; returns null on failure */
 function safeEval(expr: string, scope?: Record<string, number>): any {
   try {
     const v = math.evaluate(expr, scope as Record<string, unknown>);
     if (typeof v === "number" && Number.isFinite(v)) return v;
-    if (v && typeof v === "object" && v.isComplex) return v;
+    // Complex number support (mathjs Complex type)
+    if (v && typeof v === "object" && (v.isComplex === true || v.type === "Complex")) return v;
     return null;
   } catch {
     return null;
@@ -230,12 +265,11 @@ function mathEquals(leftVal: any, rightVal: any): boolean {
   if (typeof leftVal === "number" && typeof rightVal === "number") {
     return Math.abs(leftVal - rightVal) < 1e-9;
   }
-  if (leftVal.isComplex && rightVal.isComplex) {
-    return Math.abs(leftVal.re - rightVal.re) < 1e-9 && Math.abs(leftVal.im - rightVal.im) < 1e-9;
-  }
-  // Try cross comparison (e.g. 5 vs 5+0i)
+  // Try deepEqual via mathjs (handles Complex vs number cross-comparison)
   try {
-    return math.deepEqual(math.round(leftVal, 9), math.round(rightVal, 9)) as boolean;
+    const l = math.round(leftVal, 9);
+    const r = math.round(rightVal, 9);
+    return math.deepEqual(l, r) as boolean;
   } catch {
     return false;
   }
@@ -246,7 +280,6 @@ function mathEquals(leftVal: any, rightVal: any): boolean {
 /**
  * d/dx [funcCells] = [rhsCells]
  * Verify that derivative(func, x) == rhs symbolically by sampling x.
- * x is the differentiation variable — excluded from variableValue substitution.
  */
 function evaluateDerivative(
   funcCells: PuzzleCell[],
@@ -258,7 +291,15 @@ function evaluateDerivative(
   const funcStr = buildExpressionString(funcCells, variableValue, excludeX);
   const rhsStr = buildExpressionString(rhsCells, variableValue, excludeX);
 
-  if (funcStr === null || rhsStr === null) return { ok: true }; // skip
+  if (funcStr === null || rhsStr === null) return { ok: true };
+
+  try {
+    // Verify syntax first
+    math.parse(funcStr);
+    math.parse(rhsStr);
+  } catch {
+    return { ok: false, message: "올바르지 않은 수식입니다." };
+  }
 
   try {
     const derivNode = math.derivative(funcStr, "x");
@@ -268,7 +309,6 @@ function evaluateDerivative(
       const scope = { x: xVal };
       const derivVal = derivNode.evaluate(scope) as number;
       const rhsVal = safeEval(rhsStr, scope);
-
       if (rhsVal === null) continue;
       if (!mathEquals(derivVal, rhsVal)) {
         return { ok: false, message: "수식은 올바르지만 등식이 성립하지 않습니다." };
@@ -290,11 +330,13 @@ function evaluateIntegral(
   rhsCells: PuzzleCell[],
   variableValue?: Record<string, number>
 ): ValidationResult {
-  const startVal = safeEval(buildExpressionString(integralBlock.cellFields?.start ?? [], variableValue) || "0", variableValue);
-  const endVal = safeEval(buildExpressionString(integralBlock.cellFields?.end ?? [], variableValue) || "1", variableValue);
+  const startStr = buildExpressionString(integralBlock.cellFields?.start ?? [], variableValue) || cell_fields_str(integralBlock, "start");
+  const endStr = buildExpressionString(integralBlock.cellFields?.end ?? [], variableValue) || cell_fields_str(integralBlock, "end");
+
+  const startVal = safeEval(startStr || "0", variableValue);
+  const endVal = safeEval(endStr || "1", variableValue);
   if (startVal === null || endVal === null) return { ok: true };
 
-  // Integrand is everything in bodyCells before the dx block
   const dxIdx = bodyCells.findIndex(
     (c) => c.type === "block" && c.blockType === "dx"
   );
@@ -306,21 +348,29 @@ function evaluateIntegral(
 
   if (integrandStr === null || rhsStr === null) return { ok: true };
 
+  // Verify syntax
+  try {
+    math.parse(integrandStr);
+    math.parse(rhsStr);
+  } catch {
+    return { ok: false, message: "올바르지 않은 수식입니다." };
+  }
+
   const rhsVal = safeEval(rhsStr);
   if (rhsVal === null) return { ok: true };
 
-  // Simpson's rule: n must be even
+  // Simpson's rule
   const N = 1000;
-  const h = ((endVal as number) - (startVal as number)) / N;
+  const h = (toNumber(endVal) - toNumber(startVal)) / N;
   let sum = 0;
 
   try {
     for (let k = 0; k <= N; k++) {
-      const x = (startVal as number) + k * h;
+      const x = toNumber(startVal) + k * h;
       const v = safeEval(integrandStr, { x });
       if (v === null) return { ok: true };
       const coeff = k === 0 || k === N ? 1 : k % 2 === 1 ? 4 : 2;
-      sum += coeff * (v as number);
+      sum += coeff * toNumber(v);
     }
     const integral = (h / 3) * sum;
     return mathEquals(integral, rhsVal)
@@ -331,9 +381,14 @@ function evaluateIntegral(
   }
 }
 
+function cell_fields_str(block: Extract<PuzzleCell, { type: "block" }>, key: string): string {
+  return block.fields?.[key] ?? "";
+}
+
 /**
  * Σ[start,end] [summandCells] = [rhsCells]
- * Sums the summand expression for i = start..end (inclusive integers).
+ * Sums the summand expression for i = start..end (inclusive).
+ * The spec uses token `i` as the sigma index variable.
  */
 function evaluateSigma(
   sigmaBlock: Extract<PuzzleCell, { type: "block" }>,
@@ -341,25 +396,36 @@ function evaluateSigma(
   rhsCells: PuzzleCell[],
   variableValue?: Record<string, number>
 ): ValidationResult {
-  const startVal = safeEval(buildExpressionString(sigmaBlock.cellFields?.start ?? [], variableValue) || "1", variableValue);
-  const endVal = safeEval(buildExpressionString(sigmaBlock.cellFields?.end ?? [], variableValue) || "1", variableValue);
+  const startStr = buildExpressionString(sigmaBlock.cellFields?.start ?? [], variableValue) || cell_fields_str(sigmaBlock, "start");
+  const endStr = buildExpressionString(sigmaBlock.cellFields?.end ?? [], variableValue) || cell_fields_str(sigmaBlock, "end");
+
+  const startVal = safeEval(startStr || "1", variableValue);
+  const endVal = safeEval(endStr || "1", variableValue);
   if (startVal === null || endVal === null) return { ok: true };
 
-  // Summation index variable is "i"
+  // Sigma index variable is `i` (spec token); exclude from variable substitution
   const excludeI = new Set(["i"]);
   const summandStr = buildExpressionString(bodyCells, variableValue, excludeI);
   const rhsStr = buildExpressionString(rhsCells, variableValue);
 
   if (summandStr === null || rhsStr === null) return { ok: true };
 
+  // Verify syntax
+  try {
+    math.parse(summandStr);
+    math.parse(rhsStr);
+  } catch {
+    return { ok: false, message: "올바르지 않은 수식입니다." };
+  }
+
   const rhsVal = safeEval(rhsStr);
   if (rhsVal === null) return { ok: true };
 
   let sum = 0;
-  for (let idx = (startVal as number); idx <= (endVal as number); idx++) {
-    const v = safeEval(summandStr, { i: idx });
+  for (let i = toNumber(startVal); i <= toNumber(endVal); i++) {
+    const v = safeEval(summandStr, { i });
     if (v === null) return { ok: true };
-    sum += (v as number);
+    sum += toNumber(v);
   }
 
   return mathEquals(sum, rhsVal)
@@ -369,12 +435,19 @@ function evaluateSigma(
 
 // ─── Main equality check ──────────────────────────────────────────────────────
 
-function extractVars(expr: string): string[] {
+/**
+ * Extract unbound single-letter variables from an expression string.
+ * Excludes mathjs built-ins: pi, e, i (imaginary unit).
+ */
+function extractUnboundVars(expr: string, boundVars: Set<string>): string[] {
   const matches = expr.match(/[a-zA-Z]+/g) || [];
-  const mathFuncs = new Set(["sin", "cos", "tan", "log", "sqrt", "pi", "e", "log_2", "log_10"]);
+  // mathjs built-in names that are NOT free variables
+  const mathBuiltins = new Set(["sin", "cos", "tan", "log", "sqrt", "pi", "e", "i"]);
   const vars = new Set<string>();
   for (const m of matches) {
-    if (!mathFuncs.has(m) && m.length === 1) vars.add(m); // mostly x, y, a, b
+    if (!mathBuiltins.has(m) && m.length === 1 && !boundVars.has(m)) {
+      vars.add(m);
+    }
   }
   return Array.from(vars);
 }
@@ -421,42 +494,28 @@ export function evaluateCellEquality(
     const rhsStr = buildExpressionString(rhsCells, variableValue);
 
     if (lhsStr === null || rhsStr === null) {
-      // Can't evaluate — skip (trust server or answer comparison)
+      return { ok: true }; // Skip — special form embedded in expression
+    }
+
+    // Verify basic syntax first
+    try {
+      math.parse(lhsStr);
+      math.parse(rhsStr);
+    } catch {
+      return { ok: false, message: "올바르지 않은 수식입니다." };
+    }
+
+    const boundVarSet = new Set(Object.keys(variableValue ?? {}));
+    const unboundVars = extractUnboundVars(lhsStr + rhsStr, boundVarSet);
+
+    if (unboundVars.length > 0) {
+      // Equations with free variables (y=2x+1, x^2+3x+2=0, etc.) are valid
+      // mathematical expressions — we cannot numerically verify them without
+      // knowing which variable is "independent". Accept as syntactically valid.
       return { ok: true };
     }
 
-    // Algebraic Equivalence Check
-    const unboundVars = extractVars(lhsStr + rhsStr).filter(v => !(variableValue && v in variableValue));
-    
-    if (unboundVars.length > 0) {
-      // It's an equation with unbound variables like 'y=2x'
-      // Evaluate F(vars) = LHS - RHS over several random points
-      const points = [
-        { [unboundVars[0]]: 1, [unboundVars[1] || '_']: 2 },
-        { [unboundVars[0]]: -1, [unboundVars[1] || '_']: 3 },
-        { [unboundVars[0]]: 0.5, [unboundVars[1] || '_']: -0.5 },
-      ];
-      
-      let allZero = true;
-      for (const pt of points) {
-        const scope = { ...variableValue, ...pt };
-        const L = safeEval(lhsStr, scope);
-        const R = safeEval(rhsStr, scope);
-        if (L === null || R === null) return { ok: false, message: "올바르지 않은 수식입니다." };
-        if (!mathEquals(L, R)) {
-          allZero = false;
-          break;
-        }
-      }
-      
-      if (allZero) return { ok: true };
-      
-      // If they are not identical, we also accept proportional algebraic equations if needed.
-      // E.g. y = 2x and 2y = 4x. But for Wordle, exact structure is color-graded. 
-      // If LHS = RHS doesn't hold directly, it's false.
-      return { ok: false, message: "수식은 올바르지만 등식이 성립하지 않습니다." };
-    }
-
+    // All variables are bound — evaluate both sides numerically
     const leftVal = safeEval(lhsStr, variableValue);
     const rightVal = safeEval(rhsStr, variableValue);
 
@@ -474,9 +533,7 @@ export function evaluateCellEquality(
 
 // ─── Legacy buildExpression (kept for backward compat) ───────────────────────
 
-/**
- * @deprecated Use evaluateCellEquality directly.
- */
+/** @deprecated Use evaluateCellEquality directly. */
 export function buildExpression(
   cells: PuzzleCell[],
   variableValue?: Record<string, number>
@@ -520,17 +577,16 @@ export function compareGuessCells(
   guessCells: PuzzleCell[],
   answerCells: PuzzleCell[]
 ): import("../types/game").NestedFeedback[] {
-  
-  // 1. Flatten both trees into nodes with paths
-  type FlatNode = { key: string; isCorrect: boolean; consumed: boolean; ref: any };
-  
-  function flatten(cells: PuzzleCell[]): { path: string, key: string }[] {
-    const res: { path: string, key: string }[] = [];
+
+  type FlatNode = { path: string; key: string; consumed: boolean };
+
+  function flatten(cells: PuzzleCell[]): FlatNode[] {
+    const res: FlatNode[] = [];
     function walk(arr: PuzzleCell[], prefix: string) {
       for (let i = 0; i < arr.length; i++) {
         const c = arr[i];
         const currentPath = `${prefix}[${i}]`;
-        res.push({ path: currentPath, key: cellKey(c) });
+        res.push({ path: currentPath, key: cellKey(c), consumed: false });
         if (c.type === "block" && c.cellFields) {
           for (const [k, v] of Object.entries(c.cellFields)) {
             walk(v, `${currentPath}.${k}`);
@@ -542,10 +598,10 @@ export function compareGuessCells(
     return res;
   }
 
-  const ansNodes = flatten(answerCells).map(n => ({ ...n, consumed: false }));
+  const ansNodes = flatten(answerCells);
   const guessNodes = flatten(guessCells).map(n => ({ ...n, color: "absent" as import("../types/game").FeedbackColor }));
 
-  // Pass 1: Correct (Exact path and key)
+  // Pass 1: Correct (exact path AND exact key)
   for (const g of guessNodes) {
     const a = ansNodes.find(n => n.path === g.path);
     if (a && a.key === g.key) {
@@ -554,7 +610,7 @@ export function compareGuessCells(
     }
   }
 
-  // Pass 2: Present (Key exists in unconsumed answer nodes)
+  // Pass 2: Present (key exists somewhere in unconsumed answer nodes)
   for (const g of guessNodes) {
     if (g.color === "correct") continue;
     const a = ansNodes.find(n => !n.consumed && n.key === g.key);
@@ -564,15 +620,15 @@ export function compareGuessCells(
     }
   }
 
-  // 3. Reconstruct NestedFeedback tree matching guessCells shape
+  // Reconstruct NestedFeedback tree matching guessCells shape
   function buildFeedback(arr: PuzzleCell[], prefix: string): import("../types/game").NestedFeedback[] {
     return arr.map((c, i) => {
       const currentPath = `${prefix}[${i}]`;
       const flatG = guessNodes.find(n => n.path === currentPath);
       const color = flatG ? flatG.color : "absent";
-      
+
       const feedback: import("../types/game").NestedFeedback = { color };
-      
+
       if (c.type === "block" && c.cellFields) {
         feedback.fields = {};
         for (const [k, v] of Object.entries(c.cellFields)) {
@@ -584,6 +640,17 @@ export function compareGuessCells(
   }
 
   return buildFeedback(guessCells, "root");
+}
+
+/** Returns true if ALL cells (including nested block fields) are "correct" */
+export function isFeedbackSolved(feedback: import("../types/game").NestedFeedback[]): boolean {
+  return feedback.every(f => {
+    if (f.color !== "correct") return false;
+    if (f.fields) {
+      return Object.values(f.fields).every(fieldFeedback => isFeedbackSolved(fieldFeedback));
+    }
+    return true;
+  });
 }
 
 export function colorPriority(color: FeedbackColor): number {

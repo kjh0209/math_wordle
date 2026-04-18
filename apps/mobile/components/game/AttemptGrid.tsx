@@ -8,6 +8,8 @@ interface AttemptGridProps {
   rows: GuessRow[];
   currentCells: PuzzleCell[];
   isInvalid?: boolean;
+  focusedPath?: (string | number)[] | null;
+  setFocusedPath?: (path: (string | number)[] | null) => void;
 }
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
@@ -41,6 +43,8 @@ export function AttemptGrid({
   rows,
   currentCells,
   isInvalid = false,
+  focusedPath = null,
+  setFocusedPath,
 }: AttemptGridProps) {
   const tileSize = Math.min(
     Math.floor((MAX_GRID_WIDTH - answerLength * 4) / answerLength),
@@ -60,6 +64,8 @@ export function AttemptGrid({
           tileSize={tileSize}
           isActive={i === activeIndex && rows.length < maxAttempts}
           isInvalid={isInvalid && i === activeIndex}
+          focusedPath={i === activeIndex ? focusedPath : null}
+          setFocusedPath={i === activeIndex ? setFocusedPath : undefined}
         />
       ))}
     </View>

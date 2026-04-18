@@ -109,13 +109,13 @@ export function AttemptRow({
       }
 
       return (
-        <div key={i} onClick={() => setFocusedPath?.(currentPath)} className="cursor-pointer">
+        <div key={i} onClick={() => setFocusedPath?.(null)} className="cursor-pointer">
           <TokenTile
             value={cell.value}
             display={getTokenDisplay(cell.value)}
             state={state}
             size={size}
-            className={cn(!isInvalid && "tile-pop", isFocused && "ring-2 ring-primary")}
+            className={cn(!isInvalid && "tile-pop")}
           />
         </div>
       );

@@ -4,7 +4,7 @@
  * hooks/useGameSession.ts — Cell-based game session (finalized spec)
  */
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { PuzzleViewModel, KeypadToken, PuzzleCell, ReservedBlock } from "@/types/puzzle";
 import type {
   GameState,
@@ -82,6 +82,8 @@ export function useGameSession({
   const [toast, setToast] = useState<ToastMessage | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedPath, setFocusedPath] = useState<(string|number)[] | null>(null);
+  const currentCellsRef = useRef<PuzzleCell[]>([]);
+  currentCellsRef.current = state.currentCells;
 
   useEffect(() => {
     setState(initState());
@@ -149,42 +151,54 @@ export function useGameSession({
     []
   );
 
+  /**
+   * Insert a cell at the position indicated by `path`.
+   * Path format:
+   *   null              → append to root cells
+   *   [blockIdx, fieldName] → append to block's field
+   * If the path element types don't match (e.g., a number path to a non-block),
+   * the insertion is silently skipped.
+   */
   const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
     if (!path || path.length === 0) {
       if (cells.length >= maxLength) return cells;
       return [...cells, newCell];
     }
-    
+
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
+
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block") return cells;
-    
+
     const newFields = { ...(targetBlock.cellFields || {}) };
-    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath, newCell, Infinity);
-    
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath.length ? restPath : null, newCell, Infinity);
+
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
   }, []);
 
+  /**
+   * Delete the last cell at the position indicated by `path`.
+   * Path format mirrors insertAtCursor.
+   */
   const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
     if (!path || path.length === 0) {
       return cells.slice(0, -1);
     }
-    
+
     const [index, fieldName, ...restPath] = path;
     if (typeof index !== "number" || typeof fieldName !== "string") return cells;
-    
+
     const targetBlock = cells[index];
     if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
-    
+
     const newFields = { ...targetBlock.cellFields };
     if (newFields[fieldName]) {
-       newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath);
+      newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath.length ? restPath : null);
     }
-    
+
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
     return newCells;
@@ -199,30 +213,51 @@ export function useGameSession({
         const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
         return { ...prev, currentCells: newCells, errorMessage: null };
       });
+
+      // Auto-advance cursor after filling a block field (each field = exactly 1 token)
+      if (focusedPath && focusedPath.length === 2) {
+        const [blockIdx, fieldName] = focusedPath as [number, string];
+        const block = currentCellsRef.current[blockIdx];
+        if (block?.type === "block") {
+          const fieldNames = Object.keys(block.fields);
+          const idx = fieldNames.indexOf(fieldName);
+          const nextField = fieldNames[idx + 1];
+          setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
+        }
+      }
     },
     [puzzle.answerLength, focusedPath, insertAtCursor]
   );
 
   const appendBlock = useCallback(
     (payload: BlockInsertPayload) => {
+      // Initialize cellFields from the spec's field names
+      const cellFields: Record<string, PuzzleCell[]> = {};
+      for (const key of Object.keys(payload.fields)) {
+        cellFields[key] = [];
+      }
+
+      const cell: PuzzleCell = {
+        type: "block",
+        blockType: payload.blockType as ReservedBlock,
+        fields: payload.fields,
+        cellFields,
+      };
+
+      let insertedIndex = -1;
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        
-        // Initialize cellFields from the JSON spec fields
-        const cellFields: Record<string, PuzzleCell[]> = {};
-        for (const key of Object.keys(payload.fields)) {
-          cellFields[key] = [];
-        }
-        
-        const cell: PuzzleCell = {
-          type: "block",
-          blockType: payload.blockType as ReservedBlock,
-          fields: payload.fields,
-          cellFields
-        };
         const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        // Track which index the block was inserted at (root-level append only)
+        if (!focusedPath) insertedIndex = newCells.length - 1;
         return { ...prev, currentCells: newCells, errorMessage: null };
       });
+
+      // Auto-focus the first field after inserting a block with fields
+      const fieldNames = Object.keys(payload.fields);
+      if (fieldNames.length > 0 && !focusedPath && insertedIndex >= 0) {
+        setFocusedPath([insertedIndex, fieldNames[0]]);
+      }
     },
     [puzzle.answerLength, focusedPath, insertAtCursor]
   );
@@ -236,7 +271,7 @@ export function useGameSession({
         errorMessage: null,
       };
     });
-  }, [focusedPath, deleteCell]);
+  }, [focusedPath, deleteAtCursor]);
 
   const clearInput = useCallback(() => {
     setState((prev) => {
