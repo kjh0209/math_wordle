@@ -6,7 +6,7 @@
  * so the game engine can be swapped independently.
  */
 
-import type { TokenUnit } from "./puzzle";
+import type { InputCell } from "./puzzle";
 
 // ─── State Machine ───────────────────────────────────────────────────────────
 
@@ -37,7 +37,7 @@ export type TileState =
   | "pending";  // Submitted but awaiting response
 
 export interface GuessRow {
-  tokens: TokenUnit[];
+  tokens: InputCell[];
   feedback: FeedbackColor[];
   status: "empty" | "active" | "submitted" | "invalid";
   /** Staggered reveal index for animations */
@@ -51,7 +51,7 @@ export interface GameState {
   mode: GameMode;
   status: GameStatus;
   rows: GuessRow[];
-  currentTokens: TokenUnit[];
+  currentTokens: InputCell[];
   errorMessage: string | null;
   startedAt: number;
   completedAt: number | null;
@@ -74,7 +74,7 @@ export interface LocalGameRecord {
   mode: GameMode;
   status: "playing" | "win" | "lose";
   rows: GuessRow[];
-  currentTokens: TokenUnit[];
+  currentTokens: InputCell[];
   startedAt: number;
   completedAt: number | null;
   savedAt: number;

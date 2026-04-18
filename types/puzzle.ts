@@ -95,7 +95,7 @@ export interface PuzzleDisplayInfo {
 export interface KeypadGroup {
   id: string;
   label: string;
-  tokens: KeypadToken[];
+  tokens: (KeypadToken | BlockKeypadToken)[];
 }
 
 export interface KeypadToken {
@@ -125,6 +125,41 @@ export interface TokenUnit {
   value: string;
   display: string;
   type: TokenType;
+}
+
+// ─── Block / Input Cell types ────────────────────────────────────────────────
+
+export type BlockType =
+  | "LogBase"
+  | "SigmaRange"
+  | "IntegralRange"
+  | "dx"
+  | "Comb"
+  | "Perm";
+
+/** A composite block cell (e.g. log base, sigma range) */
+export interface BlockCell {
+  type: "block";
+  blockType: BlockType;
+  /** Equals blockType — satisfies the { value, display } contract used by grid/preview components */
+  value: string;
+  /** Named sub-expression fields, e.g. { base: "2" } or { start: "1", end: "5" } */
+  fields: Record<string, string>;
+  display: string;
+}
+
+/** Union of all cell types that can appear in a user's guess row */
+export type InputCell = TokenUnit | BlockCell;
+
+// ─── Block keypad token ──────────────────────────────────────────────────────
+
+/** A block entry in the keypad — pressing it opens a field-input panel */
+export interface BlockKeypadToken {
+  type: "block";
+  blockType: BlockType;
+  display: string;
+  /** Human-readable labels for each field, e.g. { base: "밑", start: "시작", end: "끝" } */
+  fieldLabels: Record<string, string>;
 }
 
 // ─── Admin / Generation ──────────────────────────────────────────────────────

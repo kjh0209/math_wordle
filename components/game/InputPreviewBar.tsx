@@ -1,10 +1,10 @@
 "use client";
 
 import { cn } from "@/lib/utils/cn";
-import type { TokenUnit } from "@/types/puzzle";
+import type { InputCell } from "@/types/puzzle";
 
 interface InputPreviewBarProps {
-  tokens: TokenUnit[];
+  tokens: InputCell[];
   maxLength: number;
   onDelete?: () => void;
   className?: string;

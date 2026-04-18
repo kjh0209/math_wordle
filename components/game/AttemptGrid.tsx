@@ -3,13 +3,13 @@
 import { cn } from "@/lib/utils/cn";
 import { AttemptRow } from "./AttemptRow";
 import type { GuessRow } from "@/types/game";
-import type { TokenUnit } from "@/types/puzzle";
+import type { InputCell } from "@/types/puzzle";
 
 interface AttemptGridProps {
   tokenLength: number;
   maxAttempts: number;
   rows: GuessRow[];
-  currentTokens: TokenUnit[];
+  currentTokens: InputCell[];
   isInvalid?: boolean;
   size?: "sm" | "md" | "lg";
   className?: string;
