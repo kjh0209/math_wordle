@@ -1,85 +1,82 @@
 /**
  * POST /api/validate-guess
  *
- * Cell-based server-side guess validation.
- * Receives PuzzleCell[] — never exposes the answer to the client.
+ * Accepts the user's PuzzleCell array guess, validates it server-side against
+ * the puzzle domain rules, and returns Wordle-style feedback.
+ * The puzzle answer never leaves the server.
  */
 
 import { NextResponse } from "next/server";
-import { getPuzzleById } from "@/lib/puzzles/puzzle-repository";
-import { adaptPuzzle } from "@/lib/puzzles/puzzle-adapter";
 import {
-  validateCellCount,
-  validateAllowedCells,
-  evaluateCellEquality,
+  getMockPuzzleById,
+  mapPuzzleDbRowToDomain,
+  validateGuessCells,
   compareGuessCells,
 } from "@mathdle/core";
-import type { PuzzleCell, ReservedBlock } from "@mathdle/core";
-
-interface ValidateGuessRequest {
-  puzzleId: string;
-  guessCells: PuzzleCell[];
-  sessionKey: string;
-  attemptNumber: number;
-  startTimeMs: number;
-}
+import type { ValidateGuessRequest, ValidateGuessResponse } from "@/types/api";
 
 export async function POST(req: Request) {
   let body: ValidateGuessRequest;
-
   try {
     body = (await req.json()) as ValidateGuessRequest;
   } catch {
-    return NextResponse.json({ error: "잘못된 요청 형식입니다." }, { status: 400 });
+    return NextResponse.json<ValidateGuessResponse>(
+      { ok: false, feedback: [], solved: false, gameOver: false, message: "잘못된 요청 형식입니다." },
+      { status: 400 }
+    );
   }
 
   const { puzzleId, guessCells, sessionKey, attemptNumber } = body;
 
-  if (!puzzleId || !Array.isArray(guessCells) || !sessionKey) {
-    return NextResponse.json({ error: "필수 파라미터가 누락되었습니다." }, { status: 400 });
+  if (!puzzleId || !guessCells || !sessionKey) {
+    return NextResponse.json<ValidateGuessResponse>(
+      { ok: false, feedback: [], solved: false, gameOver: false, message: "필수 파라미터가 누락되었습니다." },
+      { status: 400 }
+    );
   }
 
   try {
-    const dbRow = await getPuzzleById(puzzleId);
+    // 1. Load puzzle raw data
+    // TODO: Replace with real DB call when Supabase is integrated
+    const dbRow = getMockPuzzleById(puzzleId);
     if (!dbRow) {
-      return NextResponse.json({ error: "퍼즐을 찾을 수 없습니다." }, { status: 404 });
+      return NextResponse.json(
+        { ok: false, feedback: [], solved: false, gameOver: false, message: "퍼즐을 찾을 수 없습니다." },
+        { status: 404 }
+      );
     }
 
-    // Full view model with answer (server-side only)
-    const vm = adaptPuzzle(dbRow, /* includeAnswer */ true);
-    const answerCells = vm.meta.answerCells ?? [];
+    // 2. Map to domain model
+    const domainPuzzle = mapPuzzleDbRowToDomain(dbRow);
 
-    // 1. Cell count
-    const countCheck = validateCellCount(guessCells, vm.answerLength);
-    if (!countCheck.ok) {
-      return NextResponse.json({ ok: false, feedback: [], solved: false, gameOver: false, message: countCheck.message });
+    // 3. Phase 1: Validate guess against puzzle constraints (length, allowed tokens, math equality)
+    const validation = validateGuessCells(guessCells, domainPuzzle);
+    if (!validation.ok) {
+      return NextResponse.json<ValidateGuessResponse>({
+        ok: false,
+        feedback: [],
+        solved: false,
+        gameOver: false,
+        message: validation.message,
+      });
     }
 
-    // 2. Allowed cells
-    const allowedCheck = validateAllowedCells(
-      guessCells,
-      vm.shownTokens,
-      vm.shownBlocks as ReservedBlock[]
-    );
-    if (!allowedCheck.ok) {
-      return NextResponse.json({ ok: false, feedback: [], solved: false, gameOver: false, message: allowedCheck.message });
-    }
-
-    // 3. Equality check (best-effort, skips unsupported blocks)
-    const variableValues = vm.meta.variableValue;
-    const eqCheck = evaluateCellEquality(guessCells, variableValues);
-    if (!eqCheck.ok) {
-      return NextResponse.json({ ok: false, feedback: [], solved: false, gameOver: false, message: eqCheck.message });
-    }
-
-    // 4. Cell comparison (Wordle feedback)
-    const feedback = compareGuessCells(guessCells, answerCells);
+    // 4. Phase 2: Compare guess to answer (Wordle style checking)
+    const feedback = compareGuessCells(guessCells, domainPuzzle.answer.cells);
     const solved = feedback.every((f) => f === "correct");
-    const gameOver = solved || attemptNumber >= vm.maxAttempts;
+    const gameOver = solved || attemptNumber >= domainPuzzle.rules.maxAttempts;
 
-    return NextResponse.json({ ok: true, feedback, solved, gameOver });
+    return NextResponse.json<ValidateGuessResponse>({
+      ok: true,
+      feedback,
+      solved,
+      gameOver,
+    });
   } catch (err) {
     console.error("[POST /api/validate-guess]", err);
-    return NextResponse.json({ error: "서버 오류가 발생했습니다." }, { status: 500 });
+    return NextResponse.json(
+      { ok: false, feedback: [], solved: false, gameOver: false, message: "서버 오류가 발생했습니다." },
+      { status: 500 }
+    );
   }
 }

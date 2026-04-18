@@ -6,7 +6,7 @@
  * internal storage details through the API boundary.
  */
 
-import type { PuzzleViewModel, PuzzleSummary, PuzzleGenerationJob } from "./puzzle";
+import type { PuzzleViewModel, PuzzleSummary, PuzzleGenerationJob, PuzzleCell } from "./puzzle";
 import type { FeedbackColor, GameMode } from "./game";
 import type { LeaderboardEntry, LeaderboardStats, LeaderboardFilter } from "./leaderboard";
 import type { SerializedShareState } from "./share";
@@ -37,8 +37,8 @@ export interface GetPuzzleResponse {
 
 export interface ValidateGuessRequest {
   puzzleId: string;
-  /** Token values joined as string (current transport format — may evolve) */
-  guess: string;
+  /** The player's guess as an array of puzzle cells */
+  guessCells: PuzzleCell[];
   sessionKey: string;
   attemptNumber: number;
   startTimeMs: number;
