@@ -1,17 +1,21 @@
 import { NextResponse } from "next/server";
-import { getLeaderboard, getPuzzleById } from "@/lib/store";
+import { getLeaderboard } from "@/lib/leaderboard/leaderboard-service";
+import type { LeaderboardFilter } from "@/types/leaderboard";
 
-export async function GET(request: Request) {
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const puzzleId = searchParams.get("puzzleId");
+  const filter = (searchParams.get("filter") ?? "today") as LeaderboardFilter;
+
+  if (!puzzleId) {
+    return NextResponse.json({ error: "puzzleId is required" }, { status: 400 });
+  }
+
   try {
-    const { searchParams } = new URL(request.url);
-    const puzzleId = searchParams.get("puzzleId") ?? undefined;
-    const puzzle = getPuzzleById(puzzleId);
-
-    return NextResponse.json({
-      puzzleId: puzzle.id,
-      items: getLeaderboard(puzzle.id)
-    });
-  } catch {
-    return NextResponse.json({ message: "리더보드를 불러오지 못했습니다." }, { status: 500 });
+    const data = await getLeaderboard(puzzleId, filter);
+    return NextResponse.json(data);
+  } catch (err) {
+    console.error("[GET /api/leaderboard]", err);
+    return NextResponse.json({ error: "서버 오류가 발생했습니다." }, { status: 500 });
   }
 }

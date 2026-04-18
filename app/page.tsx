@@ -1,218 +1,149 @@
-"use client";
-
-import { useEffect, useMemo, useState } from "react";
-import { GameBoard } from "@/components/GameBoard";
-import { Keypad } from "@/components/Keypad";
-import { Leaderboard } from "@/components/Leaderboard";
-import { colorPriority } from "@/lib/game";
-import type { FeedbackColor } from "@/lib/types";
-
-type PuzzleResponse = {
-  id: string;
-  length: number;
-  variables: Record<string, number>;
-  allowedTokens: string[];
-  maxAttempts: number;
-  difficulty: string;
-};
-
-type SubmitResponse = {
-  ok: boolean;
-  message?: string;
-  solved?: boolean;
-  colors?: FeedbackColor[];
-  shareText?: string;
-  gameOver?: boolean;
-};
-
-type Attempt = { guess: string; colors: FeedbackColor[] };
-
-type LeaderboardResponse = {
-  puzzleId: string;
-  items: { rank: number; sessionId: string; attemptsCount: number; clearTimeMs: number }[];
-};
-
-const SESSION_KEY = "mathle-session-id";
-
-function getSessionId() {
-  const existing = window.localStorage.getItem(SESSION_KEY);
-  if (existing) return existing;
-  const created = crypto.randomUUID();
-  window.localStorage.setItem(SESSION_KEY, created);
-  return created;
-}
+import Link from "next/link";
+import { AppHeader } from "@/components/ui/AppHeader";
+import { ArrowRight, BookOpen, Trophy, Sparkles, Hash } from "lucide-react";
 
 export default function HomePage() {
-  const [puzzle, setPuzzle] = useState<PuzzleResponse | null>(null);
-  const [currentInput, setCurrentInput] = useState("");
-  const [attempts, setAttempts] = useState<Attempt[]>([]);
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [solved, setSolved] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
-  const [shareText, setShareText] = useState("");
-  const [leaderboard, setLeaderboard] = useState<LeaderboardResponse["items"]>([]);
-  const [startTimeMs] = useState(Date.now());
-
-  useEffect(() => {
-    void fetchPuzzle();
-  }, []);
-
-  async function fetchPuzzle() {
-    const res = await fetch("/api/puzzle");
-    const data = (await res.json()) as PuzzleResponse;
-    setPuzzle(data);
-    await fetchLeaderboard(data.id);
-  }
-
-  async function fetchLeaderboard(puzzleId: string) {
-    const res = await fetch(`/api/leaderboard?puzzleId=${puzzleId}`);
-    const data = (await res.json()) as LeaderboardResponse;
-    setLeaderboard(data.items ?? []);
-  }
-
-  const keyboardState = useMemo(() => {
-    const state: Record<string, FeedbackColor> = {};
-    for (const attempt of attempts) {
-      attempt.guess.split("").forEach((ch, idx) => {
-        const next = attempt.colors[idx];
-        const current = state[ch];
-        if (!current || colorPriority(next) > colorPriority(current)) {
-          state[ch] = next;
-        }
-      });
-    }
-    return state;
-  }, [attempts]);
-
-  function handleKeyPress(key: string) {
-    if (!puzzle || gameOver) return;
-    if (currentInput.length >= puzzle.length) return;
-    setError("");
-    setCurrentInput((prev) => prev + key);
-  }
-
-  function handleDelete() {
-    if (gameOver) return;
-    setError("");
-    setCurrentInput((prev) => prev.slice(0, -1));
-  }
-
-  async function handleSubmit() {
-    if (!puzzle || gameOver) return;
-    setError("");
-    setIsLoading(true);
-
-    try {
-      const res = await fetch("/api/result", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          puzzleId: puzzle.id,
-          guess: currentInput,
-          sessionId: getSessionId(),
-          attemptsCount: attempts.length + 1,
-          startTimeMs
-        })
-      });
-
-      const data = (await res.json()) as SubmitResponse;
-      if (!res.ok || !data.ok || !data.colors) {
-        setError(data.message ?? "제출에 실패했습니다.");
-        return;
-      }
-
-      setAttempts((prev) => [...prev, { guess: currentInput, colors: data.colors! }]);
-      setShareText(data.shareText ?? "");
-      setSolved(Boolean(data.solved));
-      setGameOver(Boolean(data.gameOver));
-      setCurrentInput("");
-
-      if (data.gameOver) {
-        await fetchLeaderboard(puzzle.id);
-      }
-    } catch {
-      setError("네트워크 오류가 발생했습니다.");
-    } finally {
-      setIsLoading(false);
-    }
-  }
-
-  async function copyShareText() {
-    if (!shareText) return;
-    await navigator.clipboard.writeText(shareText);
-    alert("결과가 클립보드에 복사되었습니다.");
-  }
-
-  if (!puzzle) return <main className="page">로딩 중...</main>;
-
-  const variableText = Object.entries(puzzle.variables).map(([k, v]) => `${k} = ${v}`).join(", ");
-
   return (
-    <main className="page">
-      <div className="header">
-        <div>
-          <h1>Mathle</h1>
-          <p className="subtitle">수학 문제를 푸는 게임이 아니라, 수식을 구성하고 검증하는 게임</p>
+    <div className="min-h-screen flex flex-col">
+      <AppHeader />
+
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-16 max-w-2xl mx-auto w-full">
+        {/* Hero */}
+        <div className="text-center mb-12 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/20 border border-brand/30 text-brand text-sm font-medium mb-6">
+            <Sparkles className="w-3.5 h-3.5" />
+            매일 새로운 수학 퍼즐
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4">
+            Math<span className="text-brand">dle</span>
+          </h1>
+
+          <p className="text-lg text-game-text-muted max-w-md mx-auto leading-relaxed">
+            Wordle에서 영감을 받은 수학 방정식 퍼즐 게임.
+            <br />
+            수식을 조합하고 등식을 완성해보세요.
+          </p>
         </div>
-      </div>
 
-      <div className="grid">
-        <section className="card">
-          <div className="meta">
-            <div className="badge">문제 ID: {puzzle.id}</div>
-            <div className="badge">난이도: {puzzle.difficulty}</div>
-            <div className="badge">변수: {variableText || "없음"}</div>
-            <div className="badge">최대 시도: {puzzle.maxAttempts}</div>
-          </div>
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm mb-12 animate-fade-in-up">
+          <Link
+            href="/play"
+            className="flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-brand text-white font-bold text-base hover:bg-brand-600 transition-colors shadow-lg shadow-brand/25"
+          >
+            오늘의 퍼즐 풀기
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/play?mode=practice"
+            className="flex-1 flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-game-card border border-game-border text-game-text font-medium text-base hover:border-brand/40 transition-colors"
+          >
+            연습 모드
+          </Link>
+        </div>
 
-          <GameBoard
-            length={puzzle.length}
-            maxAttempts={puzzle.maxAttempts}
-            attempts={attempts}
-            currentInput={currentInput}
+        {/* Feature cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl animate-fade-in-up">
+          <FeatureCard
+            icon={<Hash className="w-5 h-5 text-brand" />}
+            title="수식 추론"
+            description="6번의 시도 안에 수학 방정식을 완성하세요"
           />
-
-          <div className="current">
-            현재 입력: <strong>{currentInput || "(비어 있음)"}</strong>
-          </div>
-
-          {error ? <p className="error">{error}</p> : null}
-
-          <Keypad
-            keys={puzzle.allowedTokens}
-            keyboardState={keyboardState}
-            onKeyPress={handleKeyPress}
-            onDelete={handleDelete}
-            onSubmit={handleSubmit}
-            disabled={isLoading || gameOver}
+          <FeatureCard
+            icon={<Trophy className="w-5 h-5 text-yellow-400" />}
+            title="리더보드"
+            description="최단 시간, 최소 시도로 순위에 오르세요"
           />
+          <FeatureCard
+            icon={<BookOpen className="w-5 h-5 text-green-400" />}
+            title="다양한 난이도"
+            description="사칙연산부터 삼각함수까지 단계별 도전"
+          />
+        </div>
 
-          {gameOver ? (
-            <div className="actions">
-              <div className="badge">{solved ? "정답을 맞혔습니다!" : "게임 오버"}</div>
-              <button className="btn secondary" onClick={() => window.location.reload()}>
-                다시 시작
-              </button>
+        {/* How to play */}
+        <div className="mt-16 w-full max-w-md">
+          <h2 className="text-lg font-bold text-game-text mb-4 text-center">
+            플레이 방법
+          </h2>
+          <div className="glass-card p-5 space-y-3">
+            <HowToStep
+              step="1"
+              text="수식 키패드를 이용해 수학 방정식을 입력하세요"
+            />
+            <HowToStep
+              step="2"
+              text="확인 버튼을 누르면 각 토큰의 힌트가 표시됩니다"
+            />
+            <HowToStep
+              step="3"
+              text="초록색은 정확한 위치, 노란색은 다른 위치에 있음을 의미합니다"
+            />
+            <HowToStep step="4" text="6번 안에 정답을 완성하면 성공입니다!" />
+
+            <div className="flex items-center gap-3 pt-2 border-t border-game-border">
+              <TileExample color="bg-tile-correct" label="정확한 위치" />
+              <TileExample color="bg-tile-present" label="다른 위치" />
+              <TileExample color="bg-tile-absent" label="없음" />
             </div>
-          ) : null}
-        </section>
-
-        <aside className="card sidebar">
-          <h2>공유</h2>
-          <p className="small">게임 종료 후 결과 문자열을 복사할 수 있습니다.</p>
-          <div className="sharebox">{shareText || "아직 공유할 결과가 없습니다."}</div>
-          <div className="actions">
-            <button className="btn primary" onClick={copyShareText} disabled={!shareText}>
-              결과 복사
-            </button>
           </div>
+        </div>
 
-          <h2 style={{ marginTop: 28 }}>리더보드</h2>
-          <p className="small">시도 횟수 우선, 동률이면 시간 순입니다.</p>
-          <Leaderboard items={leaderboard} />
-        </aside>
-      </div>
-    </main>
+        {/* Leaderboard link */}
+        <div className="mt-8">
+          <Link
+            href="/leaderboard"
+            className="flex items-center gap-2 text-sm text-game-text-muted hover:text-game-text transition-colors"
+          >
+            <Trophy className="w-4 h-4 text-yellow-400" />
+            오늘의 리더보드 보기
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </main>
+
+      <footer className="text-center text-xs text-game-muted py-6 border-t border-game-border">
+        Mathdle — 수학 방정식 워들 게임
+      </footer>
+    </div>
+  );
+}
+
+function FeatureCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="glass-card p-4">
+      <div className="mb-2">{icon}</div>
+      <h3 className="text-sm font-semibold text-game-text mb-1">{title}</h3>
+      <p className="text-xs text-game-text-muted leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+function HowToStep({ step, text }: { step: string; text: string }) {
+  return (
+    <div className="flex gap-3">
+      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-brand/20 text-brand text-xs font-bold flex items-center justify-center">
+        {step}
+      </span>
+      <p className="text-sm text-game-text-muted">{text}</p>
+    </div>
+  );
+}
+
+function TileExample({ color, label }: { color: string; label: string }) {
+  return (
+    <div className="flex items-center gap-1.5">
+      <div className={`w-5 h-5 rounded ${color}`} />
+      <span className="text-xs text-game-text-muted">{label}</span>
+    </div>
   );
 }
