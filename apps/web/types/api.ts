@@ -53,7 +53,51 @@ export interface ValidateGuessResponse {
   message?: string;
 }
 
-// ─── Results ──────────────────────────────────────────────────────────────────
+// ─── Progression & Stages ───────────────────────────────────────────────────
+
+export interface GetStagesResponse {
+  stages: import("@mathdle/core").StageMapNode[];
+}
+
+export interface GetStageDetailResponse {
+  stage: import("@mathdle/core").StageWithSteps;
+  progress: import("@mathdle/core").UserStageProgress | null;
+  stepProgress: import("@mathdle/core").UserStepProgress[];
+}
+
+export interface GetStepIntroResponse {
+  step: import("@mathdle/core").StageStep;
+  progress: import("@mathdle/core").UserStepProgress | null;
+}
+
+export interface StartRunRequest {
+  sessionKey: string;
+}
+
+export interface StartRunResponse {
+  runId: string;
+  puzzle: import("@mathdle/core").PuzzleViewModel;
+}
+
+// ─── Results & Runs ──────────────────────────────────────────────────────────
+
+export interface FinishRunRequest {
+  runId: string;
+  puzzleId: string;
+  sessionKey: string;
+  cleared: boolean;
+  attemptsCount: number;
+  clearTimeMs: number | null;
+  guessHistory: import("@mathdle/core").StepRunGuess[];
+}
+
+export interface FinishRunResponse {
+  ok: boolean;
+  nextStepUnlocked: boolean;
+  newProgress: import("@mathdle/core").UserStepProgress;
+}
+
+// ─── Legacy Results (To Be Deprecated) ────────────────────────────────────────
 
 export interface SubmitResultRequest {
   puzzleId: string;
