@@ -1,74 +1,133 @@
 /**
- * apps/mobile — Home screen
- * Brand landing with navigation to Play and Leaderboard.
+ * apps/mobile — Stage Map (Home)
+ * World map showing all stages, progression, locked/unlocked state.
  */
 
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { useEffect, useState } from "react";
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  ActivityIndicator,
+} from "react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../constants/Colors";
+import { getMockStages, getMockStepsForStage } from "@mathdle/core";
+import type { Stage } from "@mathdle/core";
 
-export default function HomeScreen() {
+interface StageNode {
+  stage: Stage;
+  totalSteps: number;
+  clearedSteps: number; // 0 until Supabase progress is wired
+  unlocked: boolean;
+}
+
+export default function StageMapScreen() {
   const router = useRouter();
+  const [nodes, setNodes] = useState<StageNode[]>([]);
+
+  useEffect(() => {
+    // Load mock stages — swap for API call when Supabase is ready
+    const stages = getMockStages();
+    const mapped: StageNode[] = stages.map((stage, idx) => ({
+      stage,
+      totalSteps: getMockStepsForStage(stage.id).length,
+      clearedSteps: 0, // TODO: load from local progress store
+      unlocked: idx === 0, // first stage always unlocked
+    }));
+    setNodes(mapped);
+  }, []);
 
   return (
     <SafeAreaView style={styles.safe}>
-      <View style={styles.container}>
-        {/* Brand header */}
-        <View style={styles.hero}>
-          <Text style={styles.logo}>🧮</Text>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.logo}>🧮</Text>
+        <View>
           <Text style={styles.brand}>Mathdle</Text>
-          <Text style={styles.tagline}>수학 방정식 워들</Text>
-          <Text style={styles.desc}>
-            매일 새로운 수식을 6번의 시도 안에 맞혀보세요.
-          </Text>
+          <Text style={styles.subtitle}>스테이지를 선택하세요</Text>
         </View>
-
-        {/* Actions */}
-        <View style={styles.actions}>
-          <TouchableOpacity
-            style={styles.primaryBtn}
-            onPress={() => router.push("/play")}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.primaryBtnIcon}>▶</Text>
-            <Text style={styles.primaryBtnText}>오늘의 퍼즐 풀기</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.secondaryBtn}
-            onPress={() => router.push("/leaderboard")}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.secondaryBtnIcon}>🏆</Text>
-            <Text style={styles.secondaryBtnText}>리더보드</Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* How to play */}
-        <View style={styles.howTo}>
-          <Text style={styles.howToTitle}>게임 방법</Text>
-          <View style={styles.steps}>
-            <StepItem icon="🔢" text="수학 토큰을 조합하여 등식을 완성하세요." />
-            <StepItem icon="🟩" text="정확한 위치의 토큰은 초록색으로 표시됩니다." />
-            <StepItem icon="🟨" text="다른 위치에 있는 토큰은 노란색으로 표시됩니다." />
-            <StepItem icon="⬛" text="등식에 없는 토큰은 회색으로 표시됩니다." />
-          </View>
-        </View>
-
-        {/* Footer */}
-        <Text style={styles.footer}>ver 1.0.0</Text>
       </View>
+
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {nodes.length === 0 ? (
+          <ActivityIndicator color={Colors.brand} style={{ marginTop: 60 }} />
+        ) : (
+          nodes.map((node, idx) => (
+            <StageCard
+              key={node.stage.id}
+              node={node}
+              onPress={() => {
+                if (node.unlocked) {
+                  router.push(`/stage/${node.stage.id}` as never);
+                }
+              }}
+            />
+          ))
+        )}
+
+        <Text style={styles.footer}>
+          스테이지를 클리어하며 수학 실력을 키워보세요 📐
+        </Text>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
-function StepItem({ icon, text }: { icon: string; text: string }) {
+function StageCard({ node, onPress }: { node: StageNode; onPress: () => void }) {
+  const { stage, totalSteps, clearedSteps, unlocked } = node;
+  const pct = totalSteps > 0 ? Math.round((clearedSteps / totalSteps) * 100) : 0;
+
   return (
-    <View style={styles.step}>
-      <Text style={styles.stepIcon}>{icon}</Text>
-      <Text style={styles.stepText}>{text}</Text>
-    </View>
+    <TouchableOpacity
+      style={[styles.card, !unlocked && styles.cardLocked]}
+      onPress={onPress}
+      activeOpacity={unlocked ? 0.75 : 1}
+      disabled={!unlocked}
+    >
+      <View style={styles.cardTop}>
+        <View style={styles.cardLeft}>
+          <Text style={styles.cardStageLabel}>STAGE {stage.stageNumber}</Text>
+          <Text style={[styles.cardTitle, !unlocked && styles.cardTitleLocked]}>
+            {stage.title}
+          </Text>
+          {stage.description ? (
+            <Text style={styles.cardDesc} numberOfLines={2}>
+              {stage.description}
+            </Text>
+          ) : null}
+        </View>
+        <View style={styles.cardRight}>
+          {unlocked ? (
+            <Text style={styles.cardPct}>{pct}%</Text>
+          ) : (
+            <Text style={styles.lockIcon}>🔒</Text>
+          )}
+        </View>
+      </View>
+
+      {unlocked && (
+        <>
+          {/* Progress bar */}
+          <View style={styles.progressTrack}>
+            <View style={[styles.progressFill, { width: `${pct}%` as any }]} />
+          </View>
+          <View style={styles.cardFooter}>
+            <Text style={styles.cardFooterText}>
+              {clearedSteps} / {totalSteps} 스텝 클리어
+            </Text>
+            <Text style={styles.cardArrow}>→</Text>
+          </View>
+        </>
+      )}
+    </TouchableOpacity>
   );
 }
 
@@ -77,113 +136,118 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.gameBg,
   },
-  container: {
-    flex: 1,
-    paddingHorizontal: 24,
-    paddingTop: 40,
-    gap: 32,
-  },
-  hero: {
+  header: {
+    flexDirection: "row",
     alignItems: "center",
-    gap: 6,
+    gap: 14,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.gameBorder,
   },
   logo: {
-    fontSize: 56,
-    marginBottom: 4,
+    fontSize: 36,
   },
   brand: {
-    fontSize: 36,
+    fontSize: 22,
     fontWeight: "900",
     color: Colors.gameText,
-    letterSpacing: 4,
+    letterSpacing: 2,
   },
-  tagline: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: Colors.brand,
-  },
-  desc: {
-    fontSize: 13,
+  subtitle: {
+    fontSize: 12,
     color: Colors.gameTextMuted,
-    marginTop: 4,
-    textAlign: "center",
-    lineHeight: 18,
-  },
-  actions: {
-    gap: 12,
-  },
-  primaryBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 10,
-    backgroundColor: Colors.brand,
-    borderRadius: 16,
-    paddingVertical: 16,
-  },
-  primaryBtnIcon: {
-    fontSize: 16,
-    color: "#fff",
-  },
-  primaryBtnText: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#fff",
-  },
-  secondaryBtn: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 10,
-    backgroundColor: Colors.gameCard,
-    borderRadius: 16,
-    paddingVertical: 14,
-    borderWidth: 1,
-    borderColor: Colors.gameBorder,
-  },
-  secondaryBtnIcon: {
-    fontSize: 16,
-  },
-  secondaryBtnText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: Colors.gameText,
-  },
-  howTo: {
-    backgroundColor: Colors.gameCard,
-    borderRadius: 16,
-    padding: 18,
-    borderWidth: 1,
-    borderColor: Colors.gameBorder,
-    gap: 12,
-  },
-  howToTitle: {
-    fontSize: 14,
-    fontWeight: "700",
-    color: Colors.gameText,
-    letterSpacing: 1,
-  },
-  steps: {
-    gap: 10,
-  },
-  step: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 10,
-  },
-  stepIcon: {
-    fontSize: 18,
     marginTop: 1,
   },
-  stepText: {
+  scroll: {
+    flex: 1,
+  },
+  scrollContent: {
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 40,
+    gap: 14,
+  },
+  card: {
+    backgroundColor: Colors.gameCard,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: Colors.brand + "66",
+    padding: 20,
+    gap: 12,
+  },
+  cardLocked: {
+    borderColor: Colors.gameBorder,
+    opacity: 0.55,
+  },
+  cardTop: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 12,
+  },
+  cardLeft: {
+    flex: 1,
+    gap: 4,
+  },
+  cardRight: {
+    alignItems: "flex-end",
+  },
+  cardStageLabel: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: Colors.brand,
+    letterSpacing: 2,
+  },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: "800",
+    color: Colors.gameText,
+  },
+  cardTitleLocked: {
+    color: Colors.gameTextMuted,
+  },
+  cardDesc: {
     fontSize: 13,
     color: Colors.gameTextMuted,
     lineHeight: 18,
-    flex: 1,
+  },
+  cardPct: {
+    fontSize: 28,
+    fontWeight: "900",
+    color: Colors.brand,
+  },
+  lockIcon: {
+    fontSize: 28,
+  },
+  progressTrack: {
+    height: 6,
+    backgroundColor: Colors.gameBg,
+    borderRadius: 3,
+    overflow: "hidden",
+  },
+  progressFill: {
+    height: "100%",
+    backgroundColor: Colors.brand,
+    borderRadius: 3,
+  },
+  cardFooter: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  cardFooterText: {
+    fontSize: 12,
+    color: Colors.gameTextMuted,
+  },
+  cardArrow: {
+    fontSize: 16,
+    color: Colors.brand,
+    fontWeight: "700",
   },
   footer: {
     textAlign: "center",
-    fontSize: 11,
+    fontSize: 12,
     color: Colors.gameMuted,
+    marginTop: 8,
   },
 });

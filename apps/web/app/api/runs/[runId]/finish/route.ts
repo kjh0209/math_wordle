@@ -1,8 +1,22 @@
 import { NextResponse } from "next/server";
-import { calculateNextStepProgress } from "@mathdle/core";
+import {
+  calculateNextStepProgress,
+  getMockStepByCode,
+  getMockStepById,
+} from "@mathdle/core";
 import type { FinishRunRequest, FinishRunResponse } from "@/types/api";
 
-export async function POST(req: Request, { params }: { params: { runId: string } }) {
+/**
+ * POST /api/runs/[runId]/finish
+ *
+ * Records the outcome of a step run and updates progression state.
+ * When Supabase is wired, `runId` will be used to look up the run record
+ * to get the correct stepId/puzzleId. For now the client sends them.
+ */
+export async function POST(
+  req: Request,
+  { params }: { params: { runId: string } }
+) {
   let body: FinishRunRequest;
   try {
     body = (await req.json()) as FinishRunRequest;
@@ -10,28 +24,29 @@ export async function POST(req: Request, { params }: { params: { runId: string }
     return NextResponse.json({ error: "Invalid request payload" }, { status: 400 });
   }
 
-  // TODO: Validate that runId actually exists via DB and matches sessionKey
+  // Resolve step — body carries stepCode so we can look it up without DB
+  const step = body.stepCode
+    ? getMockStepByCode(body.stepCode)
+    : null;
 
-  // Calculate new progress (mock: passing null as currentProgress)
-  // In reality, fetch from user_step_progress where session == body.sessionKey
-  
-  // Fake a step ID since we don't have DB linkage right here just from runId
-  // This is a temporary mockup for the offline testing
-  const mockStepId = "step-1-1"; 
+  const stepId = step?.id ?? "unknown-step";
 
   const newProgress = calculateNextStepProgress(
-    null,
+    null, // currentProgress — would come from DB in production
     body.sessionKey,
-    mockStepId,
+    stepId,
     body.puzzleId,
     body.cleared,
     body.attemptsCount,
     body.clearTimeMs
   );
 
+  // Determine if next step is now unlocked
+  const nextStepUnlocked = body.cleared && step !== null;
+
   return NextResponse.json<FinishRunResponse>({
     ok: true,
-    nextStepUnlocked: body.cleared, // mock assumption
+    nextStepUnlocked,
     newProgress,
   });
 }
