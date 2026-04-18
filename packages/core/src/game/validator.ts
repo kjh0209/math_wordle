@@ -3,8 +3,9 @@
  *
  * Validation strategy:
  *   1. Cell count check (always)
- *   2. Allowed cells check (shownTokens / shownBlocks)
- *   3. Expression equality check — handles implicit multiplication,
+ *   2. Block field count check (each block field must have exactly 1 token)
+ *   3. Allowed cells check (shownTokens / shownBlocks)
+ *   4. Expression equality check — handles implicit multiplication,
  *      d/dx (symbolic derivative), ∫ (numerical integration),
  *      Σ (summation), log_base, Comb, Perm
  *
@@ -16,6 +17,7 @@
 import { all, create } from "mathjs";
 import type { PuzzleCell, PuzzleDomainModel, ReservedBlock } from "../types/puzzle";
 import { cellKey } from "../types/puzzle";
+import { BLOCK_DEFINITIONS } from "../types/spec";
 import type { FeedbackColor } from "../types/game";
 
 const math = create(all, {});
@@ -56,6 +58,40 @@ export function validateAllowedCells(
           if (!r.ok) return r;
         }
       }
+    }
+  }
+  return { ok: true };
+}
+
+// ─── Block field count check ──────────────────────────────────────────────────
+
+/**
+ * Verify that every block in the guess has exactly 1 token per field slot.
+ * Block definitions with fieldCount 0 (dx, d/dx) are skipped.
+ * This prevents submitting incomplete or overfilled block fields.
+ */
+export function validateBlockFields(cells: PuzzleCell[]): ValidationResult {
+  for (const cell of cells) {
+    if (cell.type !== "block") continue;
+    const def = BLOCK_DEFINITIONS[cell.blockType];
+    if (!def || def.fieldCount === 0) continue;
+    for (const fieldName of def.fieldNames) {
+      const fieldCells = cell.cellFields?.[fieldName] ?? [];
+      if (fieldCells.length === 0) {
+        return {
+          ok: false,
+          message: `${cell.blockType}의 '${fieldName}' 칸을 채워주세요.`,
+        };
+      }
+      if (fieldCells.length > 1) {
+        return {
+          ok: false,
+          message: `${cell.blockType}의 '${fieldName}' 칸에는 1개의 토큰만 허용됩니다.`,
+        };
+      }
+      // Recursively check nested blocks (e.g., block inside a field)
+      const nested = validateBlockFields(fieldCells);
+      if (!nested.ok) return nested;
     }
   }
   return { ok: true };
@@ -506,6 +542,7 @@ export function evaluateCellEquality(
     const rightVal = safeEval(rhsStr, variableValue);
 
     if (leftVal === null || rightVal === null) {
+      console.error("[evaluateCellEquality] eval failed - lhsStr:", lhsStr, "rhsStr:", rhsStr, "varVal:", variableValue);
       return { ok: false, message: "올바르지 않은 수식입니다." };
     }
 
@@ -536,6 +573,7 @@ export function validateGuessCells(
 ): ValidationResult {
   const checks: ValidationResult[] = [
     validateCellCount(guessCells, puzzle.answer.length),
+    validateBlockFields(guessCells),
     validateAllowedCells(guessCells, puzzle.shownTokens, puzzle.shownBlocks),
     evaluateCellEquality(guessCells, getVariableValues(puzzle)),
   ];
@@ -666,7 +704,10 @@ export function compareGuessCells(
 export function isFeedbackSolved(feedback: import("../types/game").NestedFeedback[]): boolean {
   return feedback.every(f => {
     if (f.color !== "correct") return false;
-    if (f.fields) {
+    // Block cells: ALL inner field tokens must also be correct.
+    // Even if f.fields is missing (e.g., dx / d/dx with no fields), the block
+    // color itself being "correct" is sufficient for fieldless blocks.
+    if (f.fields && Object.keys(f.fields).length > 0) {
       return Object.values(f.fields).every(fieldFeedback => isFeedbackSolved(fieldFeedback));
     }
     return true;

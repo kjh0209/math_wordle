@@ -16,7 +16,7 @@ import type {
   ToastMessage,
   LocalGameRecord,
 } from "@/types/game";
-import { colorPriority, cellDisplayKey } from "@mathdle/core";
+import { colorPriority, cellDisplayKey, validateBlockFields } from "@mathdle/core";
 import { useLocalPersistence } from "./useLocalPersistence";
 import { getSessionKey } from "@/lib/utils/session";
 import type { BlockInsertPayload } from "@/components/game/ScientificKeypad";
@@ -172,7 +172,8 @@ export function useGameSession({
     if (!targetBlock || targetBlock.type !== "block") return cells;
 
     const newFields = { ...(targetBlock.cellFields || {}) };
-    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath.length ? restPath : null, newCell, Infinity);
+    // Each block field slot holds exactly 1 token — enforce the limit here.
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath.length ? restPath : null, newCell, 1);
 
     const newCells = [...cells];
     newCells[index] = { ...targetBlock, cellFields: newFields };
@@ -211,20 +212,29 @@ export function useGameSession({
         if (prev.status !== "playing") return prev;
         const cell: PuzzleCell = { type: "token", value: token.value };
         const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+
+        // Auto-advance cursor after filling a block field (each field = exactly 1 token).
+        // Done inside setState so we operate on the brand-new cells array.
+        if (focusedPath && focusedPath.length === 2) {
+          const [blockIdx, fieldName] = focusedPath as [number, string];
+          const block = newCells[blockIdx];
+          if (block?.type === "block") {
+            const fieldNames = Object.keys(block.fields);
+            const currentFieldCells = block.cellFields?.[fieldName] ?? [];
+            // Only advance if the field is now filled (length === 1)
+            if (currentFieldCells.length === 1) {
+              const idx = fieldNames.indexOf(fieldName as string);
+              const nextField = fieldNames[idx + 1];
+              // Schedule the focus update after setState settles
+              setTimeout(() => {
+                setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
+              }, 0);
+            }
+          }
+        }
+
         return { ...prev, currentCells: newCells, errorMessage: null };
       });
-
-      // Auto-advance cursor after filling a block field (each field = exactly 1 token)
-      if (focusedPath && focusedPath.length === 2) {
-        const [blockIdx, fieldName] = focusedPath as [number, string];
-        const block = currentCellsRef.current[blockIdx];
-        if (block?.type === "block") {
-          const fieldNames = Object.keys(block.fields);
-          const idx = fieldNames.indexOf(fieldName);
-          const nextField = fieldNames[idx + 1];
-          setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
-        }
-      }
     },
     [puzzle.answerLength, focusedPath, insertAtCursor]
   );
@@ -288,6 +298,13 @@ export function useGameSession({
     if (snap.status !== "playing") return;
     if (snap.currentCells.length < puzzle.answerLength) {
       showToast(`${puzzle.answerLength}칸을 모두 채워주세요.`);
+      return;
+    }
+
+    // Client-side block field completeness check (mirrors server-side validateBlockFields)
+    const blockFieldCheck = validateBlockFields(snap.currentCells);
+    if (!blockFieldCheck.ok) {
+      showToast(blockFieldCheck.message ?? "블록 내부 칸을 모두 채워주세요.");
       return;
     }
 
