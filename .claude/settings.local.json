@@ -11,7 +11,8 @@
       "Bash(mv tailwind.config.ts apps/web/)",
       "Bash(mv tsconfig.json apps/web/)",
       "Bash(mv next-env.d.ts apps/web/)",
-      "Bash(npm test *)"
+      "Bash(npm test *)",
+      "Bash(npm run *)"
     ]
   }
 }

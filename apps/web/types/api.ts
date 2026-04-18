@@ -56,7 +56,7 @@ export interface ValidateGuessResponse {
 // ─── Progression & Stages ───────────────────────────────────────────────────
 
 export interface GetStagesResponse {
-  stages: import("@mathdle/core").StageMapNode[];
+  stages: (import("@mathdle/core").StageMapNode & { steps: import("@mathdle/core").StageStep[] })[];
 }
 
 export interface GetStageDetailResponse {

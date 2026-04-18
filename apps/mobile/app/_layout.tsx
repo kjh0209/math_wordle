@@ -11,6 +11,7 @@ import * as SplashScreen from "expo-splash-screen";
 import Constants from "expo-constants";
 import { configureApiBaseUrl } from "@mathdle/core";
 import { Colors } from "../constants/Colors";
+import { useFonts } from "expo-font";
 
 // Configure API base URL for the core API client
 // IMPORTANT: Do NOT use localhost/127.0.0.1 for physical mobile devices. Use your PC's LAN IP.
@@ -35,13 +36,19 @@ if (API_URL) {
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
 export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    'DungGeunMo': require('../assets/fonts/DungGeunMo.ttf'),
+  });
+
   useEffect(() => {
-    // Hide splash screen after a short delay
-    const timer = setTimeout(() => {
-      SplashScreen.hideAsync().catch(() => {});
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <View style={styles.container}>

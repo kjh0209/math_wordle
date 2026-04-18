@@ -9,7 +9,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { compareGuessCells } from "./validator";
+import { compareGuessCells, evaluateCellEquality } from "./validator";
 import type { PuzzleCell, FeedbackColor } from "../types/puzzle";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -206,6 +206,7 @@ describe("compareGuessCells — block cells", () => {
   });
 
   it("block present in wrong position", () => {
+
     const sig = (): PuzzleCell => ({
       type: "block", blockType: "SigmaRange", fields: { start: "1", end: "4" },
     });
@@ -219,5 +220,44 @@ describe("compareGuessCells — block cells", () => {
     expect(fb[2]).toBe("correct");
     expect(fb[3]).toBe("correct");
     expect(fb[4]).toBe("correct");
+  });
+});
+
+// ── evaluateCellEquality — absolute value & trig ──────────────────────────────
+
+describe("evaluateCellEquality", () => {
+  it("|x|=4 with x=-4 is valid", () => {
+    const cells: PuzzleCell[] = [tok("|"), tok("x"), tok("|"), tok("="), tok("4")];
+    expect(evaluateCellEquality(cells, { x: -4 }).ok).toBe(true);
+  });
+
+  it("4=|x| with x=-4 is valid", () => {
+    const cells: PuzzleCell[] = [tok("4"), tok("="), tok("|"), tok("x"), tok("|")];
+    expect(evaluateCellEquality(cells, { x: -4 }).ok).toBe(true);
+  });
+
+  it("4=|x| with x=3 is invalid", () => {
+    const cells: PuzzleCell[] = [tok("4"), tok("="), tok("|"), tok("x"), tok("|")];
+    expect(evaluateCellEquality(cells, { x: 3 }).ok).toBe(false);
+  });
+
+  it("sin(x)=1 with x=pi/2 is valid", () => {
+    const cells: PuzzleCell[] = [tok("sin"), tok("("), tok("x"), tok(")"), tok("="), tok("1")];
+    expect(evaluateCellEquality(cells, { x: Math.PI / 2 }).ok).toBe(true);
+  });
+
+  it("sqrt(x+1)=2 with x=3 is valid", () => {
+    const cells: PuzzleCell[] = [tok("sqrt"), tok("("), tok("x"), tok("+"), tok("1"), tok(")"), tok("="), tok("2")];
+    expect(evaluateCellEquality(cells, { x: 3 }).ok).toBe(true);
+  });
+
+  it("3+4=7 is valid", () => {
+    const cells: PuzzleCell[] = [tok("3"), tok("+"), tok("4"), tok("="), tok("7")];
+    expect(evaluateCellEquality(cells).ok).toBe(true);
+  });
+
+  it("3+4=8 is invalid", () => {
+    const cells: PuzzleCell[] = [tok("3"), tok("+"), tok("4"), tok("="), tok("8")];
+    expect(evaluateCellEquality(cells).ok).toBe(false);
   });
 });

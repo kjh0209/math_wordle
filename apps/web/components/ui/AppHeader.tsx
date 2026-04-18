@@ -1,69 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { Trophy, FlaskConical, BarChart3, Settings } from "lucide-react";
+import { Settings } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 
 interface AppHeaderProps {
   className?: string;
+  /** Sub-pages: show plain title with back link instead of logo */
+  title?: string;
+  backHref?: string;
+  rightSlot?: React.ReactNode;
 }
 
-export function AppHeader({ className }: AppHeaderProps) {
+export function AppHeader({ className, title, backHref, rightSlot }: AppHeaderProps) {
   return (
     <header
-      className={cn(
-        "sticky top-0 z-40 w-full",
-        "bg-game-surface/80 backdrop-blur-md border-b border-game-border",
-        className
-      )}
+      className={cn("sticky top-0 z-40 w-full safe-top", className)}
+      style={{ background: "#080e1c", borderBottom: "2px solid #1e2d4a" }}
     >
-      <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-bold tracking-tight text-game-text group-hover:text-brand transition-colors">
-            Math<span className="text-brand">dle</span>
-          </span>
-        </Link>
+      <div className="max-w-sm mx-auto px-4 h-12 flex items-center justify-between gap-3">
+        {/* Left: logo or back */}
+        {backHref ? (
+          <Link
+            href={backHref}
+            className="text-sm text-game-muted hover:text-game-text transition-colors"
+          >
+            ← {title ?? "뒤로"}
+          </Link>
+        ) : (
+          <Link href="/" className="group">
+            {/* Swap with <img src="/assets/logo.png" className="pixel-art h-7"> later */}
+            <span className="font-mono font-black text-lg tracking-tight text-game-text group-hover:text-yellow-400 transition-colors">
+              MATH<span className="text-yellow-400">LE</span>
+            </span>
+          </Link>
+        )}
 
-        {/* Nav */}
-        <nav className="flex items-center gap-1">
-          <NavLink href="/play" icon={<FlaskConical className="w-4 h-4" />} label="Play" />
-          <NavLink href="/leaderboard" icon={<Trophy className="w-4 h-4" />} label="Board" />
-          <NavLink
+        {/* Right slot */}
+        {rightSlot ?? (
+          <Link
             href="/admin/puzzles"
-            icon={<Settings className="w-4 h-4" />}
-            label="Admin"
-            className="hidden sm:flex"
-          />
-        </nav>
+            className="p-1.5 text-game-muted hover:text-game-text transition-colors"
+            aria-label="관리자"
+          >
+            <Settings size={16} />
+          </Link>
+        )}
       </div>
     </header>
-  );
-}
-
-function NavLink({
-  href,
-  icon,
-  label,
-  className,
-}: {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-  className?: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium",
-        "text-game-text-muted hover:text-game-text hover:bg-game-card",
-        "transition-colors duration-150",
-        className
-      )}
-    >
-      {icon}
-      <span className="hidden sm:inline">{label}</span>
-    </Link>
   );
 }

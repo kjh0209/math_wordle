@@ -72,7 +72,6 @@ export function buildExpression(
         // Map token values to mathjs syntax
         if (v === "pi") parts.push("pi");
         else if (v === "sqrt") parts.push("sqrt");
-        else if (v === "|") parts.push("|"); // handled below
         else parts.push(v);
       }
     } else {
@@ -107,7 +106,18 @@ export function buildExpression(
     }
   }
 
-  return parts.join("");
+  return convertAbsoluteValue(parts.join(""));
+}
+
+/** Convert |expr| notation to abs(expr) for mathjs compatibility */
+function convertAbsoluteValue(expr: string): string {
+  let result = expr;
+  let prev = "";
+  while (prev !== result) {
+    prev = result;
+    result = result.replace(/\|([^|]*)\|/g, "abs($1)");
+  }
+  return result;
 }
 
 function factorial(n: number): number {
@@ -191,9 +201,15 @@ function getVariableValues(
   puzzle: PuzzleDomainModel
 ): Record<string, number> | undefined {
   if (!puzzle.variable) return undefined;
-  const val = parseFloat(puzzle.variable.valueExpression);
-  if (!isNaN(val)) {
-    return { [puzzle.variable.name]: val };
+  try {
+    const val = math.evaluate(puzzle.variable.valueExpression) as number;
+    if (typeof val === "number" && isFinite(val)) {
+      return { [puzzle.variable.name]: val };
+    }
+  } catch {
+    // fallback: try parseFloat
+    const val = parseFloat(puzzle.variable.valueExpression);
+    if (!isNaN(val)) return { [puzzle.variable.name]: val };
   }
   return undefined;
 }

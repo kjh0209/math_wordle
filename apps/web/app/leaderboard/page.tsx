@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AppHeader } from "@/components/ui/AppHeader";
+import { BottomNav } from "@/components/ui/BottomNav";
 import { LeaderboardTable } from "@/components/leaderboard/LeaderboardTable";
 import { LoadingState } from "@/components/ui/LoadingState";
 import { ErrorState } from "@/components/ui/ErrorState";
@@ -23,10 +24,10 @@ export default function LeaderboardPage() {
   const { loadState, filter, changeFilter, refresh } = useLeaderboard(puzzleId, "today");
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-game-bg text-game-text">
       <AppHeader />
 
-      <main className="flex-1 max-w-2xl mx-auto w-full px-4 py-6">
+      <main className="flex-1 max-w-sm mx-auto w-full px-4 pt-4 pb-20">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div>
@@ -83,6 +84,7 @@ export default function LeaderboardPage() {
           />
         )}
       </main>
+      <BottomNav />
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
-import { getMockStages } from "@mathdle/core";
+import { getMockStages, MOCK_STEPS } from "@mathdle/core";
 import type { GetStagesResponse } from "@/types/api";
 
 export async function GET() {
   const stages = getMockStages();
-  
-  // Maps simple stages into StageMapNode. Progress is null for now until complete auth is wired.
+
   const nodes = stages.map(stage => ({
     stage,
-    progress: null, // to be populated
+    steps: MOCK_STEPS.filter(s => s.stageId === stage.id),
+    progress: null,
   }));
 
   return NextResponse.json<GetStagesResponse>({ stages: nodes });

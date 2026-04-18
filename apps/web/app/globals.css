@@ -204,6 +204,12 @@
     text-wrap: balance;
   }
 
+  /* Pixel art sprite rendering */
+  .pixel-art {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
   .font-mono-game {
     font-family: 'JetBrains Mono', monospace;
   }
