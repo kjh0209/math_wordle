@@ -32,7 +32,10 @@
       "Bash(node -e \"const {all, create} = require\\('./packages/core/node_modules/mathjs/package.json'\\); console.log\\(all\\)\")",
       "Bash(node -e \"const m = require\\('c:/Users/김찬혁/Desktop/math_wordle/node_modules/mathjs'\\); console.log\\(m.version\\); const math = m.create\\(m.all, {}\\); const v = math.evaluate\\('4+2'\\); console.log\\(typeof v, v\\); const p = math.parse; console.log\\(typeof p\\);\")",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(sed -i \"s|require\\('../../assets/sprites/logo.png'\\)|require\\('../../assets/sprites/mathle_logo.png'\\)|g\" \"c:/Users/김찬혁/Desktop/math_wordle/apps/mobile/app/stage/[stageNum].tsx\" \"c:/Users/김찬혁/Desktop/math_wordle/apps/mobile/app/step/[code].tsx\")",
+      "Bash(sed -i \"s|require\\('../../../assets/sprites/logo.png'\\)|require\\('../../../assets/sprites/mathle_logo.png'\\)|g\" \"c:/Users/김찬혁/Desktop/math_wordle/apps/mobile/app/step/[code]/play.tsx\")",
+      "Bash(npx expo *)"
     ]
   }
 }

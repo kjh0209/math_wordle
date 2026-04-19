@@ -1,13 +1,12 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { useRouter, usePathname } from "expo-router";
 import { Colors } from "../../constants/Colors";
 
 interface AppHeaderProps {
-  title?: string;
   showBack?: boolean;
 }
 
-export function AppHeader({ title = "Mathdle", showBack }: AppHeaderProps) {
+export function AppHeader({ showBack }: AppHeaderProps) {
   const router = useRouter();
   const pathname = usePathname();
   const shouldShowBack = showBack ?? pathname !== "/";
@@ -21,7 +20,11 @@ export function AppHeader({ title = "Mathdle", showBack }: AppHeaderProps) {
       ) : (
         <View style={styles.backBtn} />
       )}
-      <Text style={styles.title}>{title}</Text>
+      <Image
+        source={require("../../assets/sprites/mathle_logo.png")}
+        style={styles.logo}
+        resizeMode="contain"
+      />
       <View style={styles.backBtn} />
     </View>
   );
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingVertical: 8,
     backgroundColor: Colors.gameSurface,
     borderBottomWidth: 1,
     borderBottomColor: Colors.gameBorder,
@@ -48,10 +51,8 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: Colors.gameText,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "800",
-    color: Colors.gameText,
-    letterSpacing: 2,
+  logo: {
+    width: 120,
+    height: 36,
   },
 });
