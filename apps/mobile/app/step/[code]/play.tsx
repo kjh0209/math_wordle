@@ -183,7 +183,7 @@ function GameContent({
       {/* Game header */}
       <View style={styles.gameHeader}>
         <TouchableOpacity onPress={onBack} style={styles.backBtn} activeOpacity={0.7}>
-          <Image source={require('../../../assets/sprites/logo.png')} style={styles.logo} resizeMode="contain" />
+          <Image source={require('../../../assets/sprites/mathle_logo.png')} style={styles.logo} resizeMode="contain" />
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.stepCode}>{stepCode}</Text>

@@ -63,7 +63,7 @@ export default function StepIntroScreen() {
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.replace('/' as never)} style={styles.backBtn}>
-            <Image source={require('../../assets/sprites/logo.png')} style={styles.logo} resizeMode="contain" />
+            <Image source={require('../../assets/sprites/mathle_logo.png')} style={styles.logo} resizeMode="contain" />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => router.replace('/' as never)} style={styles.backArrow}>
             <Text style={styles.backArrowText}>← 맵으로</Text>

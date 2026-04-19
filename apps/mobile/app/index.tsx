@@ -175,12 +175,13 @@ function WorldMap({ steps, currentStepIndex }: { steps: StageStep[]; currentStep
         </Svg>
       </View>
 
-      {/* Nodes — node sprite + label only; zIndex separates cleared/current/locked */}
+      {/* Nodes — directly positioned (no full-size wrapper Views to avoid zIndex bleed) */}
       {steps.map((step, i) => {
         const { x, y } = nodeCoords(i, step, containerHeight);
         const isCleared = currentStepIndex > i;
         const isCurrent = currentStepIndex === i;
         const half = step.isBoss ? BOSS_HALF : NODE_HALF;
+        const nodeZ = isCurrent ? 3 : isCleared ? 2 : 1;
 
         let source;
         if (step.isBoss) {
@@ -194,53 +195,43 @@ function WorldMap({ steps, currentStepIndex }: { steps: StageStep[]; currentStep
         }
 
         return (
-          <View
-            key={step.id}
-            style={{
-              position: 'absolute', left: 0, top: 0, width: SVG_W, height: containerHeight,
-              zIndex: isCurrent ? 3 : isCleared ? 2 : 1,
-            }}
-            pointerEvents="box-none"
-          >
+          <React.Fragment key={step.id}>
             <TouchableOpacity
               activeOpacity={0.8}
               onPress={() => handleNodePress(step, isCleared, isCurrent)}
-              style={{ position: 'absolute', left: x - half, top: y - half, width: half * 2, height: half * 2 }}
+              style={{ position: 'absolute', left: x - half, top: y - half, width: half * 2, height: half * 2, zIndex: nodeZ }}
             >
               <Image source={source} style={{ width: '100%', height: '100%', resizeMode: 'contain' }} />
             </TouchableOpacity>
 
             {!step.isBoss && (
               <Text
-                style={{ position: 'absolute', left: x - 50, top: y + half + 4, width: 100, textAlign: 'center', color: '#fff', fontSize: 13, fontFamily: 'DungGeunMo', textShadowColor: '#000', textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 1 }}
+                style={{ position: 'absolute', left: x - 50, top: y + half + 4, width: 100, textAlign: 'center', color: '#fff', fontSize: 13, fontFamily: 'DungGeunMo', textShadowColor: '#000', textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 1, zIndex: nodeZ }}
                 pointerEvents="none"
               >
                 {step.code}
               </Text>
             )}
             {step.isBoss && (
-              <View style={{ position: 'absolute', left: x - 100, top: y + half + 4, width: 200, alignItems: 'center' }} pointerEvents="none">
+              <View style={{ position: 'absolute', left: x - 100, top: y + half + 4, width: 200, alignItems: 'center', zIndex: nodeZ }} pointerEvents="none">
                 <Text style={{ color: '#eab308', fontSize: 18, fontFamily: 'DungGeunMo', textShadowColor: '#000', textShadowOffset: { width: 1, height: 1 }, textShadowRadius: 1 }}>BOSS</Text>
               </View>
             )}
-          </View>
+          </React.Fragment>
         );
       })}
 
-      {/* Current-step overlay — always on top (zIndex 10) */}
+      {/* Current-step overlay — directly positioned, always on top (zIndex 10) */}
       {currentStepIndex >= 0 && currentStepIndex < steps.length && (() => {
         const step = steps[currentStepIndex];
         const { x, y } = nodeCoords(currentStepIndex, step, containerHeight);
         const half = step.isBoss ? BOSS_HALF : NODE_HALF;
         return (
-          <View
-            key="current-overlay"
-            style={{ position: 'absolute', left: 0, top: 0, width: SVG_W, height: containerHeight, zIndex: 10 }}
-            pointerEvents="none"
-          >
+          <React.Fragment key="current-overlay">
             {/* NODE-ANIMATIONS glow */}
             <View
-              style={{ position: 'absolute', left: x - NODE_FX_FRAME_W / 2, top: y - NODE_FX_DISPLAY_H / 2, width: NODE_FX_FRAME_W, height: NODE_FX_DISPLAY_H, overflow: 'hidden', opacity: 0.85 }}
+              style={{ position: 'absolute', left: x - NODE_FX_FRAME_W / 2, top: y - NODE_FX_DISPLAY_H / 2, width: NODE_FX_FRAME_W, height: NODE_FX_DISPLAY_H, overflow: 'hidden', opacity: 0.85, zIndex: 10 }}
+              pointerEvents="none"
             >
               <Image
                 source={require('../assets/sprites/NODE-ANIMATIONS.png')}
@@ -249,12 +240,13 @@ function WorldMap({ steps, currentStepIndex }: { steps: StageStep[]; currentStep
             </View>
 
             {/* Accent stars */}
-            <Image source={require('../assets/sprites/result-star.png')} style={{ position: 'absolute', left: x - half - 15, top: y - half - 5,  width: 16, height: 16, opacity: 0.8 }} />
-            <Image source={require('../assets/sprites/result-star.png')} style={{ position: 'absolute', left: x + half + 5,  top: y - half + 10, width: 12, height: 12, opacity: 0.6 }} />
+            <Image source={require('../assets/sprites/result-star.png')} style={{ position: 'absolute', left: x - half - 15, top: y - half - 5,  width: 16, height: 16, opacity: 0.8, zIndex: 10 }} />
+            <Image source={require('../assets/sprites/result-star.png')} style={{ position: 'absolute', left: x + half + 5,  top: y - half + 10, width: 12, height: 12, opacity: 0.6, zIndex: 10 }} />
 
-            {/* Player + map-pointer (float animation applied via Animated.View) */}
+            {/* Player + map-pointer */}
             <Animated.View
-              style={{ position: 'absolute', left: x - 24, top: y - half - 56, transform: [{ translateY: floatAnim }] }}
+              style={{ position: 'absolute', left: x - 24, top: y - half - 56, transform: [{ translateY: floatAnim }], zIndex: 10 }}
+              pointerEvents="none"
             >
               <View style={{ width: IDLE_FRAME_W, height: IDLE_FRAME_W, overflow: 'hidden' }}>
                 <Image
@@ -269,9 +261,10 @@ function WorldMap({ steps, currentStepIndex }: { steps: StageStep[]; currentStep
               />
             </Animated.View>
 
-            {/* Dialogue bubble — topmost, above player */}
+            {/* Dialogue bubble */}
             <View
-              style={{ position: 'absolute', left: x - 70, top: y - half - 116, width: 140, height: 54 }}
+              style={{ position: 'absolute', left: x - 70, top: y - half - 116, width: 140, height: 54, zIndex: 10 }}
+              pointerEvents="none"
             >
               <ImageBackground
                 source={require('../assets/sprites/dialogue-bubble.png')}
@@ -283,7 +276,7 @@ function WorldMap({ steps, currentStepIndex }: { steps: StageStep[]; currentStep
                 </Text>
               </ImageBackground>
             </View>
-          </View>
+          </React.Fragment>
         );
       })()}
 
@@ -373,7 +366,7 @@ export default function StageMapScreen() {
 
           {/* Fixed top bar */}
           <View style={styles.topBar}>
-            <Image source={require('../assets/sprites/logo.png')} style={styles.logo} resizeMode="contain" />
+            <Image source={require('../assets/sprites/mathle_logo.png')} style={styles.logo} resizeMode="contain" />
             <TouchableOpacity
               onPress={() => switchMode(!isAdmin)}
               style={[styles.adminPill, isAdmin && styles.adminPillActive]}
