@@ -11,6 +11,8 @@ import {
   TouchableOpacity,
   StyleSheet,
   ActivityIndicator,
+  ImageBackground,
+  Image,
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -51,9 +53,9 @@ export default function StageDetailScreen() {
 
   if (!stage) {
     return (
-      <SafeAreaView style={styles.safe}>
-        <ActivityIndicator color={Colors.brand} style={{ marginTop: 60 }} />
-      </SafeAreaView>
+      <View style={{ flex: 1, backgroundColor: Colors.gameBg }}>
+        <ActivityIndicator color={Colors.warning} style={{ marginTop: 60 }} />
+      </View>
     );
   }
 
@@ -61,62 +63,73 @@ export default function StageDetailScreen() {
   const pct = nodes.length > 0 ? Math.round((clearedCount / nodes.length) * 100) : 0;
 
   return (
-    <SafeAreaView style={styles.safe}>
-      {/* Header */}
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.replace("/" as never)} style={styles.backBtn}>
-          <Text style={styles.backText}>← 스테이지 맵</Text>
-        </TouchableOpacity>
-      </View>
+    <ImageBackground source={require('../../assets/sprites/map-bg.png')} resizeMode="repeat" style={{ flex: 1 }}>
+      <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
 
-      <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Stage card */}
-        <View style={styles.stageCard}>
-          <Text style={styles.stageLabel}>STAGE {stage.stageNumber}</Text>
-          <Text style={styles.stageTitle}>{stage.title}</Text>
-          {stage.description ? (
-            <Text style={styles.stageDesc}>{stage.description}</Text>
-          ) : null}
-          <View style={styles.progressRow}>
-            <View style={styles.progressTrack}>
-              <View style={[styles.progressFill, { width: `${pct}%` as any }]} />
-            </View>
-            <Text style={styles.progressLabel}>
-              {clearedCount}/{nodes.length}
-            </Text>
-          </View>
+        {/* Header */}
+        <View style={styles.header}>
+          <TouchableOpacity onPress={() => router.replace('/' as never)} style={styles.backBtn}>
+            <Image source={require('../../assets/sprites/logo.png')} style={styles.logo} resizeMode="contain" />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => router.replace('/' as never)} style={styles.backArrow}>
+            <Text style={styles.backArrowText}>← 맵으로</Text>
+          </TouchableOpacity>
         </View>
 
-        {/* Step list */}
-        {nodes.map((node) => (
-          <StepCard
-            key={node.step.id}
-            node={node}
-            onPress={() => {
-              if (node.unlocked) {
-                router.push(`/step/${node.step.code}` as never);
-              }
-            }}
-          />
-        ))}
-      </ScrollView>
-    </SafeAreaView>
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.scrollContent}
+          showsVerticalScrollIndicator={false}
+        >
+          {/* Stage card */}
+          <View style={styles.stageCard}>
+            <Text style={styles.stageLabel}>WORLD {stage.stageNumber}</Text>
+            <Text style={styles.stageTitle}>{stage.title}</Text>
+            {stage.description ? (
+              <Text style={styles.stageDesc}>{stage.description}</Text>
+            ) : null}
+            <View style={styles.progressRow}>
+              <View style={styles.progressTrack}>
+                <View style={[styles.progressFill, { width: `${pct}%` as any }]} />
+              </View>
+              <Text style={styles.progressLabel}>{clearedCount}/{nodes.length}</Text>
+            </View>
+          </View>
+
+          {/* Step list */}
+          {nodes.map((node) => (
+            <StepCard
+              key={node.step.id}
+              node={node}
+              onPress={() => {
+                if (node.unlocked) router.push(`/step/${node.step.code}` as never);
+              }}
+            />
+          ))}
+        </ScrollView>
+      </SafeAreaView>
+    </ImageBackground>
   );
 }
 
-function StepCard({
-  node,
-  onPress,
-}: {
-  node: StepNode;
-  onPress: () => void;
-}) {
+function StepCard({ node, onPress }: { node: StepNode; onPress: () => void }) {
   const { step, cleared, unlocked } = node;
   const isBoss = step.isBoss;
+
+  let nodeSource;
+  if (isBoss) {
+    nodeSource = cleared
+      ? require('../../assets/sprites/node-boss-cleared.png')
+      : unlocked
+      ? require('../../assets/sprites/node-boss-active.png')
+      : require('../../assets/sprites/node-boss-locked.png');
+  } else {
+    nodeSource = cleared
+      ? require('../../assets/sprites/node-normal-cleared.png')
+      : unlocked
+      ? require('../../assets/sprites/node-normal-unlocked.png')
+      : require('../../assets/sprites/node-normal-locked.png');
+  }
 
   return (
     <TouchableOpacity
@@ -130,35 +143,15 @@ function StepCard({
       activeOpacity={unlocked ? 0.75 : 1}
       disabled={!unlocked}
     >
-      {/* Icon */}
-      <View
-        style={[
-          styles.stepIcon,
-          cleared
-            ? styles.stepIconCleared
-            : isBoss
-            ? styles.stepIconBoss
-            : unlocked
-            ? styles.stepIconUnlocked
-            : styles.stepIconLocked,
-        ]}
-      >
-        <Text style={styles.stepIconText}>
-          {cleared ? "✓" : !unlocked ? "🔒" : isBoss ? "👑" : String(step.stepNumber)}
-        </Text>
-      </View>
+      <Image source={nodeSource} style={styles.nodeIcon} resizeMode="contain" />
 
-      {/* Info */}
       <View style={styles.stepInfo}>
         <View style={styles.stepInfoTop}>
-          <Text style={styles.stepCode}>{step.code}</Text>
-          {isBoss && <Text style={styles.bossTag}>BOSS</Text>}
-          {cleared && <Text style={styles.clearedTag}>클리어</Text>}
+          <Text style={[styles.stepCode, isBoss && styles.stepCodeBoss]}>{step.code}</Text>
+          {isBoss && <View style={styles.bossTag}><Text style={styles.bossTagText}>BOSS</Text></View>}
+          {cleared && <View style={styles.clearedTag}><Text style={styles.clearedTagText}>CLEAR</Text></View>}
         </View>
-        <Text
-          style={[styles.stepTitle, !unlocked && styles.stepTitleLocked]}
-          numberOfLines={1}
-        >
+        <Text style={[styles.stepTitle, !unlocked && styles.stepTitleLocked]} numberOfLines={1}>
           {step.title}
         </Text>
         {step.difficulty && (
@@ -178,80 +171,83 @@ function diffLabel(d: string) {
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: Colors.gameBg },
+  safe: { flex: 1 },
+
   header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.gameBorder,
+    paddingVertical: 8,
+    borderBottomWidth: 2,
+    borderBottomColor: '#1e2d4a',
+    backgroundColor: 'rgba(8,14,28,0.85)',
   },
-  backBtn: { alignSelf: "flex-start" },
-  backText: { fontSize: 14, color: Colors.brand, fontWeight: "600" },
+  backBtn: {},
+  logo: { width: 120, height: 32 },
+  backArrow: { padding: 4 },
+  backArrowText: { fontSize: 13, color: '#eab308', fontFamily: 'DungGeunMo', fontWeight: '700' },
+
   scroll: { flex: 1 },
-  scrollContent: { paddingHorizontal: 16, paddingTop: 16, paddingBottom: 40, gap: 12 },
+  scrollContent: { paddingHorizontal: 16, paddingTop: 16, paddingBottom: 60, gap: 10 },
 
   stageCard: {
-    backgroundColor: Colors.gameCard,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: Colors.brand + "55",
-    padding: 20,
+    backgroundColor: 'rgba(19,31,53,0.9)',
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: 'rgba(99,102,241,0.4)',
+    padding: 16,
     marginBottom: 4,
     gap: 6,
   },
-  stageLabel: { fontSize: 10, fontWeight: "700", color: Colors.brand, letterSpacing: 2 },
-  stageTitle: { fontSize: 22, fontWeight: "900", color: Colors.gameText },
-  stageDesc: { fontSize: 13, color: Colors.gameTextMuted },
-  progressRow: { flexDirection: "row", alignItems: "center", gap: 10, marginTop: 4 },
-  progressTrack: { flex: 1, height: 6, backgroundColor: Colors.gameBg, borderRadius: 3, overflow: "hidden" },
-  progressFill: { height: "100%", backgroundColor: Colors.brand, borderRadius: 3 },
-  progressLabel: { fontSize: 12, color: Colors.gameTextMuted, minWidth: 32, textAlign: "right" },
+  stageLabel: { fontSize: 10, fontWeight: '700', color: '#6366f1', letterSpacing: 3, fontFamily: 'DungGeunMo' },
+  stageTitle: { fontSize: 20, fontWeight: '900', color: Colors.gameText, fontFamily: 'DungGeunMo' },
+  stageDesc: { fontSize: 12, color: Colors.gameTextMuted },
+  progressRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginTop: 4 },
+  progressTrack: { flex: 1, height: 8, backgroundColor: '#0f1729', borderWidth: 1, borderColor: '#1e2d4a', overflow: 'hidden' },
+  progressFill: { height: '100%', backgroundColor: '#6366f1' },
+  progressLabel: { fontSize: 12, color: Colors.gameMuted, fontFamily: 'DungGeunMo', minWidth: 32, textAlign: 'right' },
 
   stepCard: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 12,
-    backgroundColor: Colors.gameCard,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: Colors.gameBorder,
-    padding: 14,
+    backgroundColor: 'rgba(19,31,53,0.85)',
+    borderWidth: 2,
+    borderColor: '#1e2d4a',
+    borderRadius: 10,
+    padding: 12,
   },
-  stepCardBoss: { borderColor: "#F59E0B88", backgroundColor: "#451A0310" },
-  stepCardCleared: { borderColor: "#16A34A55" },
-  stepCardLocked: { opacity: 0.45 },
+  stepCardBoss: { borderColor: 'rgba(245,158,11,0.5)', backgroundColor: 'rgba(69,26,3,0.25)' },
+  stepCardCleared: { borderColor: 'rgba(22,163,74,0.5)' },
+  stepCardLocked: { opacity: 0.4 },
 
-  stepIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 12,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-  },
-  stepIconUnlocked: { backgroundColor: Colors.gameBg, borderColor: Colors.gameBorder },
-  stepIconLocked: { backgroundColor: Colors.gameBg, borderColor: Colors.gameBorder + "80" },
-  stepIconCleared: { backgroundColor: "#14532D30", borderColor: "#16A34A80" },
-  stepIconBoss: { backgroundColor: "#451A0330", borderColor: "#F59E0B80" },
-  stepIconText: { fontSize: 14, fontWeight: "700", color: Colors.gameText },
+  nodeIcon: { width: 48, height: 48 },
 
   stepInfo: { flex: 1, gap: 2 },
-  stepInfoTop: { flexDirection: "row", alignItems: "center", gap: 6 },
-  stepCode: { fontSize: 11, fontFamily: "monospace", color: Colors.gameMuted },
+  stepInfoTop: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  stepCode: { fontSize: 11, fontFamily: 'DungGeunMo', color: '#eab308', letterSpacing: 1 },
+  stepCodeBoss: { color: '#FCD34D' },
   bossTag: {
-    fontSize: 10, fontWeight: "700",
-    backgroundColor: "#451A0340", color: "#F59E0B",
-    paddingHorizontal: 6, paddingVertical: 1,
-    borderRadius: 4, borderWidth: 1, borderColor: "#F59E0B50",
+    backgroundColor: 'rgba(69,26,3,0.4)',
+    borderWidth: 1,
+    borderColor: 'rgba(245,158,11,0.5)',
+    borderRadius: 4,
+    paddingHorizontal: 5,
+    paddingVertical: 1,
   },
+  bossTagText: { fontSize: 9, fontWeight: '700', color: '#FCD34D', fontFamily: 'DungGeunMo' },
   clearedTag: {
-    fontSize: 10,
-    backgroundColor: "#14532D30", color: "#4ADE80",
-    paddingHorizontal: 6, paddingVertical: 1,
-    borderRadius: 4, borderWidth: 1, borderColor: "#16A34A40",
+    backgroundColor: 'rgba(20,83,45,0.4)',
+    borderWidth: 1,
+    borderColor: 'rgba(22,163,74,0.5)',
+    borderRadius: 4,
+    paddingHorizontal: 5,
+    paddingVertical: 1,
   },
-  stepTitle: { fontSize: 15, fontWeight: "700", color: Colors.gameText },
+  clearedTagText: { fontSize: 9, fontWeight: '700', color: '#4ade80', fontFamily: 'DungGeunMo' },
+  stepTitle: { fontSize: 14, fontWeight: '700', color: Colors.gameText, fontFamily: 'DungGeunMo' },
   stepTitleLocked: { color: Colors.gameTextMuted },
   stepDiff: { fontSize: 11, color: Colors.gameMuted },
-  stepArrow: { fontSize: 18, color: Colors.brand },
+  stepArrow: { fontSize: 18, color: '#eab308', fontFamily: 'DungGeunMo' },
 });

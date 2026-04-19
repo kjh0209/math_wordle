@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { Colors } from "../../constants/Colors";
 import type { TileState } from "@mathdle/core";
 
@@ -8,20 +8,38 @@ interface TokenTileProps {
   size: number;
 }
 
-const STATE_COLORS: Record<TileState, { bg: string; border: string }> = {
-  empty:     { bg: Colors.tileEmpty,   border: Colors.gameBorder },
-  active:    { bg: Colors.tileActive,  border: Colors.brand },
-  correct:   { bg: Colors.tileCorrect, border: Colors.tileCorrect },
-  present:   { bg: Colors.tilePresent, border: Colors.tilePresent },
-  absent:    { bg: Colors.tileAbsent,  border: Colors.tileAbsent },
-  invalid:   { bg: Colors.tileEmpty,   border: Colors.error },
-  revealing: { bg: Colors.tileActive,  border: Colors.gameBorder },
-  pending:   { bg: Colors.tileEmpty,   border: Colors.gameBorder },
+const TILE_SPRITE: Partial<Record<TileState, ReturnType<typeof require>>> = {
+  present: require('../../assets/sprites/tile-present.png'),
+  absent:  require('../../assets/sprites/tile-absent.png'),
+};
+
+const STATE_COLORS: Record<TileState, { bg: string; border: string; text: string }> = {
+  empty:     { bg: '#0a1122',          border: '#1e2d4a',        text: Colors.gameText },
+  active:    { bg: '#0f1c35',          border: '#6366f1',        text: Colors.gameText },
+  correct:   { bg: Colors.tileCorrect, border: Colors.tileCorrect, text: '#fff' },
+  present:   { bg: Colors.tilePresent, border: Colors.tilePresent, text: '#fff' },
+  absent:    { bg: Colors.tileAbsent,  border: Colors.tileAbsent,  text: Colors.gameMuted },
+  invalid:   { bg: '#0a1122',          border: Colors.error,     text: Colors.error },
+  revealing: { bg: '#0f1c35',          border: '#1e2d4a',        text: Colors.gameText },
+  pending:   { bg: '#0a1122',          border: '#1e2d4a',        text: Colors.gameText },
 };
 
 export function TokenTile({ display, state, size }: TokenTileProps) {
-  const colors = STATE_COLORS[state] ?? STATE_COLORS.empty;
-  const fontSize = size > 40 ? 18 : size > 30 ? 15 : 12;
+  const c = STATE_COLORS[state] ?? STATE_COLORS.empty;
+  const fontSize = size > 40 ? 17 : size > 30 ? 14 : 11;
+  const sprite = TILE_SPRITE[state];
+
+  if (sprite) {
+    return (
+      <ImageBackground
+        source={sprite}
+        resizeMode="stretch"
+        style={[styles.tile, { width: size, height: size }]}
+      >
+        <Text style={[styles.text, { fontSize, color: '#fff' }]}>{display}</Text>
+      </ImageBackground>
+    );
+  }
 
   return (
     <View
@@ -30,18 +48,17 @@ export function TokenTile({ display, state, size }: TokenTileProps) {
         {
           width: size,
           height: size,
-          backgroundColor: colors.bg,
-          borderColor: colors.border,
+          backgroundColor: c.bg,
+          borderColor: c.border,
+          borderWidth: state === 'active' ? 2 : 2,
         },
       ]}
     >
       <Text
         style={[
           styles.text,
-          { fontSize },
-          state === "correct" || state === "present" || state === "absent"
-            ? styles.submittedText
-            : null,
+          { fontSize, color: c.text },
+          state === 'correct' && styles.submittedText,
         ]}
       >
         {display}
@@ -52,17 +69,18 @@ export function TokenTile({ display, state, size }: TokenTileProps) {
 
 const styles = StyleSheet.create({
   tile: {
-    borderRadius: 8,
+    borderRadius: 4,
     borderWidth: 2,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     margin: 2,
+    overflow: 'hidden',
   },
   text: {
-    fontWeight: "700",
-    color: Colors.gameText,
+    fontWeight: '700',
+    fontFamily: 'DungGeunMo',
   },
   submittedText: {
-    color: "#fff",
+    color: '#fff',
   },
 });

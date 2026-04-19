@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     letterSpacing: 1,
     paddingLeft: 6,
+    fontFamily: 'DungGeunMo',
   },
   keys: {
     flexDirection: "row",
