@@ -12,8 +12,8 @@ npm install
 # 웹
 npm run dev:web       # http://localhost:3000
 
-# 모바일 (Expo)
-npm run start:mobile
+# 모바일 (Expo) — LAN 모드, 오프라인 버전 체크 스킵
+cd apps/mobile && EXPO_OFFLINE=1 npx expo start --lan --clear
 ```
 
 ---
@@ -66,15 +66,20 @@ math_wordle/
 │   │
 │   └── mobile/                       # Expo React Native 앱 (@mathdle/mobile)
 │       ├── app/
+│       │   ├── index.tsx             # 홈 — 스테이지 월드맵
+│       │   ├── stage/[stageNum].tsx  # 스테이지 상세 (스텝 목록)
+│       │   └── step/[code]/          # 스텝 인트로 + play
 │       ├── components/game/
 │       ├── hooks/
+│       ├── utils/progress.ts         # AsyncStorage 기반 스텝 클리어 진행도
 │       └── storage/
 │
 ├── packages/
 │   └── core/                         # 공유 비즈니스 로직 (@mathdle/core)
 │       └── src/
 │           ├── game/                 # validator, progression, share
-│           ├── puzzles/              # puzzle-adapter, mock-puzzles, mock-progression
+│           ├── puzzles/              # problem-sets (PROBLEM_SETS + getProblemSetPuzzleById), puzzle-adapter
+│           ├── config/               # stage-config (getStepByCode, selectPuzzleForStep)
 │           ├── api/                  # client
 │           ├── storage/
 │           ├── types/                # puzzle, game, progression, spec, ...
@@ -95,6 +100,8 @@ math_wordle/
 ```
 
 각 스텝은 5개의 퍼즐 풀을 가지며, 스텝 10번은 **보스 스텝**입니다. 보스를 클리어해야 다음 스테이지가 열립니다.
+
+퍼즐 ID 규칙: `{stageNum}_{stepNum}_{poolIndex}` (예: `9_6_1`). 스텝 시작 시 `start-run`이 풀에서 랜덤 선택 후 `runId`를 반환합니다.
 
 ---
 
