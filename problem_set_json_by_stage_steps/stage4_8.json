@@ -1,0 +1,442 @@
+[
+  {
+    "id": "s4_8_1",
+    "level": "middle2",
+    "title": "소수와 함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5x+1",
+      "display": "y=0.5x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1=2이므로 y=2이다.",
+    "puzzle": "y=0.5x+1"
+  },
+  {
+    "id": "s4_8_2",
+    "level": "middle2",
+    "title": "소수와 함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5x+1",
+      "display": "y=0.5x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1=2이므로 y=2이다.",
+    "puzzle": "y=0.5x+1"
+  },
+  {
+    "id": "s4_8_3",
+    "level": "middle2",
+    "title": "소수와 함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5x+1",
+      "display": "y=0.5x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1=2이므로 y=2이다.",
+    "puzzle": "y=0.5x+1"
+  },
+  {
+    "id": "s4_8_4",
+    "level": "middle2",
+    "title": "소수와 함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5x+1",
+      "display": "y=0.5x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1=2이므로 y=2이다.",
+    "puzzle": "y=0.5x+1"
+  },
+  {
+    "id": "s4_8_5",
+    "level": "middle2",
+    "title": "소수와 함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=0.5x+1",
+      "display": "y=0.5x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 0.5*2+1=2이므로 y=2이다.",
+    "puzzle": "y=0.5x+1"
+  }
+]

@@ -33,8 +33,53 @@ import {
 
 // ─── DB Row → Domain Model ────────────────────────────────────────────────────
 
+/**
+ * Tokenize a block field string (e.g. "10" → ["1","0"], "pi" → ["pi"])
+ * into an array of TokenCells. Used to populate cellFields on answer blocks.
+ */
+function tokenizeFieldValue(value: string): import("../types/puzzle").TokenCell[] {
+  const tokens: import("../types/puzzle").TokenCell[] = [];
+  let i = 0;
+  while (i < value.length) {
+    const c = value[i];
+    if (/[a-zA-Z]/.test(c)) {
+      let name = c;
+      while (i + 1 < value.length && /[a-zA-Z]/.test(value[i + 1])) {
+        name += value[++i];
+      }
+      tokens.push({ type: "token", value: name });
+    } else {
+      tokens.push({ type: "token", value: c });
+    }
+    i++;
+  }
+  return tokens;
+}
+
+/**
+ * Enrich a list of PuzzleCells: for every block cell, populate `cellFields`
+ * by tokenizing each field's string value. Required so that `compareGuessCells`
+ * can compare field tokens between the answer and the user's guess.
+ */
+function enrichCellsWithFields(
+  cells: import("../types/puzzle").PuzzleCell[]
+): import("../types/puzzle").PuzzleCell[] {
+  return cells.map((cell) => {
+    if (cell.type !== "block") return cell;
+    if (cell.cellFields && Object.keys(cell.cellFields).length > 0) return cell; // already enriched
+    const cellFields: Record<string, import("../types/puzzle").PuzzleCell[]> = {};
+    for (const [key, value] of Object.entries(cell.fields)) {
+      cellFields[key] = tokenizeFieldValue(value);
+    }
+    return { ...cell, cellFields };
+  });
+}
+
 export function mapPuzzleDbRowToDomain(row: PuzzleDbRow): PuzzleDomainModel {
   const raw = row.raw_payload;
+
+  // Enrich block cells with tokenized cellFields for field-level comparison
+  const answerCells = enrichCellsWithFields(raw.answer.cells as import("../types/puzzle").PuzzleCell[]);
 
   return {
     id: row.id,
@@ -43,7 +88,10 @@ export function mapPuzzleDbRowToDomain(row: PuzzleDbRow): PuzzleDomainModel {
     difficulty: row.difficulty as PuzzleDifficulty,
     category: row.category as PuzzleCategory,
     variable: raw.variable ?? null,
-    answer: raw.answer,
+    answer: {
+      ...raw.answer,
+      cells: answerCells,
+    },
     rules: {
       requiresVariable: raw.rules.requiresVariable ?? DEFAULT_RULES.requiresVariable,
       allowImplicitMultiplication:
@@ -105,7 +153,7 @@ export function adaptPuzzle(
 
 type TokenCategory = "digit" | "operator" | "paren" | "function" | "constant" | "variable";
 
-const DIGIT_ORDER = ["7","8","9","4","5","6","1","2","3","0","."];
+const DIGIT_ORDER = ["0","1","2","3","4","5","6","7","8","9","."];
 
 function classifyToken(value: string): TokenCategory {
   const def = TOKEN_DEFINITIONS[value as keyof typeof TOKEN_DEFINITIONS];
@@ -209,6 +257,45 @@ export function buildKeypadGroups(
   }
 
   return groups;
+}
+
+// ─── Problem-set puzzle → ViewModel ──────────────────────────────────────────
+
+export function mapProblemSetPuzzleToViewModel(
+  p: import("./problem-sets").ProblemSetPuzzle
+): PuzzleViewModel {
+  const shownBlocks = (p.shownBlocks ?? []).filter((b): b is ReservedBlock =>
+    (["LogBase", "SigmaRange", "IntegralRange", "dx", "d/dx", "Comb", "Perm"] as string[]).includes(b)
+  );
+  return {
+    id: p.id,
+    title: p.title,
+    level: p.level as PuzzleLevel,
+    difficulty: p.difficulty as PuzzleDifficulty,
+    category: p.category as PuzzleCategory,
+    // p.variable may be [] in auto-generated JSON (empty array instead of null)
+    variable: p.variable && !Array.isArray(p.variable)
+      ? {
+          name: p.variable.name,
+          valueExpression: p.variable.valueExpression,
+          valueDisplay: p.variable.valueDisplay,
+        }
+      : null,
+    answerDisplay: p.answer.display,
+    answerLength: p.answer.length,
+    maxAttempts: (p.rules as any).maxAttempts ?? 6,
+    shownTokens: p.shownTokens,
+    shownBlocks,
+    availableTokenGroups: buildKeypadGroups(p.shownTokens, shownBlocks),
+    explanation: p.explanation ?? null,
+    isDaily: false,
+    dailyDate: null,
+    meta: {
+      // Enrich block cells so field tokens can be compared in compareGuessCells
+      answerCells: enrichCellsWithFields(p.answer.cells as import("../types/puzzle").PuzzleCell[]),
+      answerExpression: p.answer.expression,
+    },
+  };
 }
 
 // ─── Validation context extractor (for server-side use) ───────────────────────

@@ -5,6 +5,7 @@ import type { PuzzleViewModel } from "@mathdle/core";
 interface PuzzleHeaderCardProps {
   puzzle: PuzzleViewModel;
   attemptCount: number;
+  solved?: boolean;
 }
 
 const DIFF_COLORS: Record<string, string> = {
@@ -14,7 +15,7 @@ const DIFF_COLORS: Record<string, string> = {
   expert: "#a855f7",
 };
 
-export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps) {
+export function PuzzleHeaderCard({ puzzle, attemptCount, solved }: PuzzleHeaderCardProps) {
   const diffColor = DIFF_COLORS[puzzle.difficulty] ?? Colors.gameTextMuted;
 
   return (
@@ -35,7 +36,7 @@ export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps
         </View>
       </View>
 
-      {puzzle.explanation && (
+      {solved && puzzle.explanation && (
         <Text style={styles.hint}>💡 {puzzle.explanation}</Text>
       )}
 
@@ -55,10 +56,9 @@ export function PuzzleHeaderCard({ puzzle, attemptCount }: PuzzleHeaderCardProps
         <View style={styles.contextRow}>
           <View style={styles.contextChip}>
             <Text style={styles.contextKey}>{puzzle.variable.name}</Text>
+            <Text style={styles.contextEq}>=</Text>
             <Text style={styles.contextVal}>
-              {puzzle.variable.valueDisplay === "?"
-                ? "?"
-                : puzzle.variable.valueDisplay}
+              {puzzle.variable.valueDisplay}
             </Text>
           </View>
         </View>
@@ -154,9 +154,13 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: Colors.brand,
   },
+  contextEq: {
+    fontSize: 13,
+    color: Colors.gameTextMuted,
+  },
   contextVal: {
     fontSize: 13,
     color: Colors.gameText,
-    fontWeight: "500",
+    fontWeight: "700",
   },
 });

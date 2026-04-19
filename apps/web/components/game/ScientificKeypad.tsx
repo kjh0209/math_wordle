@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Delete, RotateCcw, CornerDownLeft, Plus } from "lucide-react";
+import { Delete, RotateCcw, CornerDownLeft } from "lucide-react";
 import { cn } from "@/lib/utils/cn";
 import { KeypadButton } from "./KeypadButton";
 import type { KeypadGroup, KeypadToken, ReservedBlock } from "@/types/puzzle";
@@ -9,6 +8,7 @@ import type { KeyboardState } from "@/types/game";
 
 export interface BlockInsertPayload {
   blockType: ReservedBlock;
+  /** Initial field values (keys = fieldNames, values = empty strings for new blocks) */
   fields: Record<string, string>;
 }
 
@@ -35,91 +35,24 @@ export function ScientificKeypad({
   onSubmit,
   className,
 }: ScientificKeypadProps) {
-  // Pending block: user pressed a block button and must fill in fields
-  const [pendingBlock, setPendingBlock] = useState<{
-    token: KeypadToken;
-    fields: Record<string, string>;
-  } | null>(null);
-
   function handleTokenPress(token: KeypadToken) {
     if (disabled) return;
 
     if (token.type === "block") {
-      if ((token.blockFieldCount ?? 0) === 0) {
-        // No fields — insert immediately
-        onBlockInsert({ blockType: token.blockType!, fields: {} });
-      } else {
-        // Show field input form
-        const defaultFields: Record<string, string> = {};
-        (token.blockFieldNames ?? []).forEach((name) => (defaultFields[name] = ""));
-        setPendingBlock({ token, fields: defaultFields });
-      }
+      // Insert the block immediately with empty field slots.
+      // The user then clicks the inline slots inside the block tile to fill them
+      // using the keypad — Word equation-editor style.
+      const emptyFields: Record<string, string> = {};
+      (token.blockFieldNames ?? []).forEach((name) => (emptyFields[name] = ""));
+      onBlockInsert({ blockType: token.blockType!, fields: emptyFields });
       return;
     }
 
     onToken(token);
   }
 
-  function handleBlockConfirm() {
-    if (!pendingBlock) return;
-    onBlockInsert({
-      blockType: pendingBlock.token.blockType!,
-      fields: pendingBlock.fields,
-    });
-    setPendingBlock(null);
-  }
-
   return (
     <div className={cn("w-full flex flex-col gap-3", className)}>
-      {/* Block field input form */}
-      {pendingBlock && (
-        <div className="rounded-xl border border-brand/40 bg-game-card p-3 flex flex-col gap-2 animate-fade-in">
-          <p className="text-xs font-semibold text-brand">
-            {pendingBlock.token.display} — 값을 입력하세요
-          </p>
-          <div className="flex gap-2 flex-wrap">
-            {(pendingBlock.token.blockFieldNames ?? []).map((fieldName) => (
-              <div key={fieldName} className="flex items-center gap-1.5">
-                <label className="text-xs text-game-muted">{fieldName}:</label>
-                <input
-                  type="text"
-                  className={cn(
-                    "w-16 h-8 px-2 rounded-lg text-sm text-center font-mono",
-                    "bg-game-surface border border-game-border text-game-text",
-                    "focus:outline-none focus:border-brand"
-                  )}
-                  value={pendingBlock.fields[fieldName] ?? ""}
-                  onChange={(e) =>
-                    setPendingBlock((prev) =>
-                      prev
-                        ? { ...prev, fields: { ...prev.fields, [fieldName]: e.target.value } }
-                        : null
-                    )
-                  }
-                  placeholder="?"
-                  autoFocus
-                />
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={handleBlockConfirm}
-              className="flex-1 h-8 rounded-lg bg-brand text-white text-xs font-semibold flex items-center justify-center gap-1"
-            >
-              <Plus className="w-3 h-3" /> 삽입
-            </button>
-            <button
-              type="button"
-              onClick={() => setPendingBlock(null)}
-              className="px-3 h-8 rounded-lg bg-game-surface border border-game-border text-game-muted text-xs"
-            >
-              취소
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Token / Block groups */}
       {groups.map((group) => (

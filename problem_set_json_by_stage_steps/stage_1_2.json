@@ -1,0 +1,287 @@
+[
+  {
+    "id": "1_2_1",
+    "level": "elementary_arithmetic",
+    "title": "덧셈 확장",
+    "variable": null,
+    "answer": {
+      "expression": "4+2=6",
+      "display": "4+2=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "4+2=6이다."
+  },
+  {
+    "id": "1_2_2",
+    "level": "elementary_arithmetic",
+    "title": "덧셈 확장",
+    "variable": null,
+    "answer": {
+      "expression": "5+3=8",
+      "display": "5+3=8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "5+3=8이다."
+  },
+  {
+    "id": "1_2_3",
+    "level": "elementary_arithmetic",
+    "title": "덧셈 확장",
+    "variable": null,
+    "answer": {
+      "expression": "6+1=7",
+      "display": "6+1=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "6+1=7이다."
+  },
+  {
+    "id": "1_2_4",
+    "level": "elementary_arithmetic",
+    "title": "덧셈 확장",
+    "variable": null,
+    "answer": {
+      "expression": "7+2=9",
+      "display": "7+2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "7"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "7+2=9이다."
+  },
+  {
+    "id": "1_2_5",
+    "level": "elementary_arithmetic",
+    "title": "덧셈 확장",
+    "variable": null,
+    "answer": {
+      "expression": "4+5=9",
+      "display": "4+5=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "4+5=9이다."
+  }
+]

@@ -1,16 +1,26 @@
 import { NextResponse } from "next/server";
 import { getPuzzleById } from "@/lib/puzzles/puzzle-repository";
-import { adaptPuzzle } from "@/lib/puzzles/puzzle-adapter";
-import { compareGuessCells, validateGuessCells, mapPuzzleDbRowToDomain } from "@mathdle/core";
+import {
+  compareGuessCells,
+  validateGuessCells,
+  validateCellCount,
+  validateAllowedCells,
+  evaluateCellEquality,
+  mapPuzzleDbRowToDomain,
+  mapProblemSetPuzzleToViewModel,
+  getProblemSetPuzzleById,
+  extractValidationContext,
+  isFeedbackSolved,
+} from "@mathdle/core";
+import type { PuzzleCell } from "@mathdle/core";
 import type { ValidateGuessRequest, ValidateGuessResponse } from "@/types/api";
 
 /**
  * POST /api/runs/[runId]/submit-guess
  *
  * Validates a guess within a step run context.
- * The runId ties this guess to a specific step_attempt_runs record.
- * For now the puzzle is resolved from the request body (puzzleId),
- * but when Supabase is wired the run record itself carries the puzzleId.
+ * Resolves the puzzle from the Supabase DB first, then falls back to
+ * the problem-set JSON (for step puzzles with IDs like "9_6_1").
  */
 export async function POST(
   req: Request,
@@ -29,37 +39,65 @@ export async function POST(
     return NextResponse.json({ error: "puzzleId and guessCells are required" }, { status: 400 });
   }
 
+  // ── Try DB puzzle first ──────────────────────────────────────────────────────
   const dbRow = await getPuzzleById(puzzleId);
-  if (!dbRow) {
+
+  if (dbRow) {
+    const domain = mapPuzzleDbRowToDomain(dbRow);
+    const validation = validateGuessCells(guessCells, domain);
+
+    if (!validation.ok) {
+      return NextResponse.json<ValidateGuessResponse>({
+        ok: false, feedback: [], solved: false, gameOver: false,
+        message: validation.message,
+      });
+    }
+
+    const feedback = compareGuessCells(guessCells, domain.answer.cells);
+    const solved = isFeedbackSolved(feedback);
+    const maxAttempts = domain.rules.maxAttempts;
+    const gameOver = !solved && attemptNumber >= maxAttempts;
+
+    return NextResponse.json<ValidateGuessResponse>({ ok: true, feedback, solved, gameOver });
+  }
+
+  // ── Fall back to problem-set puzzle ─────────────────────────────────────────
+  const problemPuzzle = getProblemSetPuzzleById(puzzleId);
+  if (!problemPuzzle) {
     return NextResponse.json({ error: "Puzzle not found" }, { status: 404 });
   }
 
-  // Server-side validation with answer
-  const domain = mapPuzzleDbRowToDomain(dbRow);
-  const validation = validateGuessCells(guessCells, domain);
+  const vm = mapProblemSetPuzzleToViewModel(problemPuzzle);
+  const ctx = extractValidationContext(vm);
 
-  if (!validation.ok) {
+  const countCheck = validateCellCount(guessCells, vm.answerLength);
+  if (!countCheck.ok) {
     return NextResponse.json<ValidateGuessResponse>({
-      ok: false,
-      feedback: [],
-      solved: false,
-      gameOver: false,
-      message: validation.message,
+      ok: false, feedback: [], solved: false, gameOver: false,
+      message: countCheck.message,
     });
   }
 
-  const answerCells = dbRow.raw_payload.answer.cells;
-  const feedback = compareGuessCells(guessCells, answerCells);
-  const solved = feedback.every((f) => f === "correct");
+  const allowedCheck = validateAllowedCells(guessCells, ctx.shownTokens, ctx.shownBlocks);
+  if (!allowedCheck.ok) {
+    return NextResponse.json<ValidateGuessResponse>({
+      ok: false, feedback: [], solved: false, gameOver: false,
+      message: allowedCheck.message,
+    });
+  }
 
-  // gameOver if this attempt exhausts maxAttempts (rules.maxAttempts or default 6)
-  const maxAttempts = domain.rules.maxAttempts;
+  const eqCheck = evaluateCellEquality(guessCells as PuzzleCell[], ctx.variableValue);
+  if (!eqCheck.ok) {
+    return NextResponse.json<ValidateGuessResponse>({
+      ok: false, feedback: [], solved: false, gameOver: false,
+      message: eqCheck.message,
+    });
+  }
+
+  const feedback = compareGuessCells(guessCells as PuzzleCell[], ctx.answerCells as PuzzleCell[]);
+  const solved = isFeedbackSolved(feedback);
+  const maxAttempts = (problemPuzzle.rules as { maxAttempts?: number }).maxAttempts ?? 6;
   const gameOver = !solved && attemptNumber >= maxAttempts;
 
-  return NextResponse.json<ValidateGuessResponse>({
-    ok: true,
-    feedback,
-    solved,
-    gameOver,
-  });
+  return NextResponse.json<ValidateGuessResponse>({ ok: true, feedback, solved, gameOver });
 }

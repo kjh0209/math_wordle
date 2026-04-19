@@ -1,0 +1,372 @@
+[
+  {
+    "id": "s9_6_1",
+    "level": "calculus",
+    "title": "적분 응용",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "1",
+            "end": "2"
+          }
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "1부터 2까지 x를 적분하면 3/2이다.",
+    "puzzle": "∫[1,2]x dx=3/2"
+  },
+  {
+    "id": "s9_6_2",
+    "level": "calculus",
+    "title": "적분 응용",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "1",
+            "end": "2"
+          }
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "1부터 2까지 x를 적분하면 3/2이다.",
+    "puzzle": "∫[1,2]x dx=3/2"
+  },
+  {
+    "id": "s9_6_3",
+    "level": "calculus",
+    "title": "적분 응용",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "1",
+            "end": "2"
+          }
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "1부터 2까지 x를 적분하면 3/2이다.",
+    "puzzle": "∫[1,2]x dx=3/2"
+  },
+  {
+    "id": "s9_6_4",
+    "level": "calculus",
+    "title": "적분 응용",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "1",
+            "end": "2"
+          }
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "1부터 2까지 x를 적분하면 3/2이다.",
+    "puzzle": "∫[1,2]x dx=3/2"
+  },
+  {
+    "id": "s9_6_5",
+    "level": "calculus",
+    "title": "적분 응용",
+    "variable": [],
+    "answer": {
+      "expression": "∫[1,2]x dx=3/2",
+      "display": "∫[1,2]x dx=3÷2",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "IntegralRange",
+          "fields": {
+            "start": "1",
+            "end": "2"
+          }
+        },
+        {
+          "type": "block",
+          "blockType": "dx",
+          "fields": {}
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "integral",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "/",
+      "x",
+      "+",
+      "-",
+      ".",
+      "*",
+      "^",
+      "("
+    ],
+    "shownBlocks": [
+      "IntegralRange",
+      "dx"
+    ],
+    "explanation": "1부터 2까지 x를 적분하면 3/2이다.",
+    "puzzle": "∫[1,2]x dx=3/2"
+  }
+]

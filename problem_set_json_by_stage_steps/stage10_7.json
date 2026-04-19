@@ -1,0 +1,287 @@
+[
+  {
+    "id": "s10_7_1",
+    "level": "probstat",
+    "title": "순열과 조합 비교",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm",
+      "Comb"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s10_7_2",
+    "level": "probstat",
+    "title": "순열과 조합 비교",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm",
+      "Comb"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s10_7_3",
+    "level": "probstat",
+    "title": "순열과 조합 비교",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm",
+      "Comb"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s10_7_4",
+    "level": "probstat",
+    "title": "순열과 조합 비교",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm",
+      "Comb"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s10_7_5",
+    "level": "probstat",
+    "title": "순열과 조합 비교",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm",
+      "Comb"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  }
+]

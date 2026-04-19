@@ -1,0 +1,367 @@
+[
+  {
+    "id": "s5_3_1",
+    "level": "middle3",
+    "title": "절댓값과 제곱",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "-3",
+        "valueDisplay": "-3"
+      }
+    ],
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "absolute-value",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 절댓값은 3이다.",
+    "puzzle": "|x|=3"
+  },
+  {
+    "id": "s5_3_2",
+    "level": "middle3",
+    "title": "절댓값과 제곱",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "-3",
+        "valueDisplay": "-3"
+      }
+    ],
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "absolute-value",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 절댓값은 3이다.",
+    "puzzle": "|x|=3"
+  },
+  {
+    "id": "s5_3_3",
+    "level": "middle3",
+    "title": "절댓값과 제곱",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "-3",
+        "valueDisplay": "-3"
+      }
+    ],
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "absolute-value",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 절댓값은 3이다.",
+    "puzzle": "|x|=3"
+  },
+  {
+    "id": "s5_3_4",
+    "level": "middle3",
+    "title": "절댓값과 제곱",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "-3",
+        "valueDisplay": "-3"
+      }
+    ],
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "absolute-value",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 절댓값은 3이다.",
+    "puzzle": "|x|=3"
+  },
+  {
+    "id": "s5_3_5",
+    "level": "middle3",
+    "title": "절댓값과 제곱",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "-3",
+        "valueDisplay": "-3"
+      }
+    ],
+    "answer": {
+      "expression": "|x|=3",
+      "display": "|x|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "absolute-value",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 절댓값은 3이다.",
+    "puzzle": "|x|=3"
+  }
+]

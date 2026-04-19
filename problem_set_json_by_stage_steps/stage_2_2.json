@@ -1,0 +1,323 @@
+[
+  {
+    "id": "2_2_1",
+    "level": "middle_variable",
+    "title": "변수 뺄셈",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "x-1=3",
+      "display": "x-1=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "-",
+      "=",
+      "+",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 4-1=3이다."
+  },
+  {
+    "id": "2_2_2",
+    "level": "middle_variable",
+    "title": "변수 뺄셈",
+    "variable": {
+      "name": "x",
+      "valueExpression": "5",
+      "valueDisplay": "5"
+    },
+    "answer": {
+      "expression": "x-2=3",
+      "display": "x-2=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "-",
+      "=",
+      "+",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 5-2=3이다."
+  },
+  {
+    "id": "2_2_3",
+    "level": "middle_variable",
+    "title": "변수 뺄셈",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "5-x=2",
+      "display": "5-x=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "x",
+      "=",
+      "+",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 5-3=2이다."
+  },
+  {
+    "id": "2_2_4",
+    "level": "middle_variable",
+    "title": "변수 뺄셈",
+    "variable": {
+      "name": "x",
+      "valueExpression": "2",
+      "valueDisplay": "2"
+    },
+    "answer": {
+      "expression": "6-x=4",
+      "display": "6-x=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "x",
+      "=",
+      "+",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 6-2=4이다."
+  },
+  {
+    "id": "2_2_5",
+    "level": "middle_variable",
+    "title": "변수 뺄셈",
+    "variable": {
+      "name": "x",
+      "valueExpression": "5",
+      "valueDisplay": "5"
+    },
+    "answer": {
+      "expression": "x-x=0",
+      "display": "x-x=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "-",
+      "x",
+      "=",
+      "+",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 5-5=0이다."
+  }
+]

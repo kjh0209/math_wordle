@@ -1,0 +1,607 @@
+[
+  {
+    "id": "s5_7_1",
+    "level": "middle3",
+    "title": "인수분해 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 17
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 좌변은 9-4=5, 우변은 1*5=5이다.",
+    "puzzle": "x^2-4=(x-2)*(x+2)"
+  },
+  {
+    "id": "s5_7_2",
+    "level": "middle3",
+    "title": "인수분해 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 17
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 좌변은 9-4=5, 우변은 1*5=5이다.",
+    "puzzle": "x^2-4=(x-2)*(x+2)"
+  },
+  {
+    "id": "s5_7_3",
+    "level": "middle3",
+    "title": "인수분해 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 17
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 좌변은 9-4=5, 우변은 1*5=5이다.",
+    "puzzle": "x^2-4=(x-2)*(x+2)"
+  },
+  {
+    "id": "s5_7_4",
+    "level": "middle3",
+    "title": "인수분해 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 17
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 좌변은 9-4=5, 우변은 1*5=5이다.",
+    "puzzle": "x^2-4=(x-2)*(x+2)"
+  },
+  {
+    "id": "s5_7_5",
+    "level": "middle3",
+    "title": "인수분해 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4=(x-2)*(x+2)",
+      "display": "x^2-4=(x-2)×(x+2)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 17
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 좌변은 9-4=5, 우변은 1*5=5이다.",
+    "puzzle": "x^2-4=(x-2)*(x+2)"
+  }
+]

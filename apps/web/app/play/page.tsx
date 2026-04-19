@@ -73,6 +73,8 @@ function GameScreen({ puzzle, showResult, setShowResult }: GameScreenProps) {
     deleteCell,
     clearInput,
     submitGuess,
+    focusedPath,
+    setFocusedPath,
   } = useGameSession({ puzzle, mode: "daily" });
 
   const isGameOver = state.status === "win" || state.status === "lose";
@@ -115,6 +117,8 @@ function GameScreen({ puzzle, showResult, setShowResult }: GameScreenProps) {
           isInvalid={isInvalid}
           size="lg"
           className="items-center"
+          focusedPath={focusedPath}
+          setFocusedPath={setFocusedPath}
         />
 
         {!isGameOver && (

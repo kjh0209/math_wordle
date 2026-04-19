@@ -1,0 +1,677 @@
+[
+  {
+    "id": "s6_4_1",
+    "level": "common1",
+    "title": "곱셈 공식",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 19
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3, y=1이면 좌변은 4*2=8이고 우변은 9-1=8이다.",
+    "puzzle": "(x+y)*(x-y)=x^2-y^2"
+  },
+  {
+    "id": "s6_4_2",
+    "level": "common1",
+    "title": "곱셈 공식",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 19
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3, y=1이면 좌변은 4*2=8이고 우변은 9-1=8이다.",
+    "puzzle": "(x+y)*(x-y)=x^2-y^2"
+  },
+  {
+    "id": "s6_4_3",
+    "level": "common1",
+    "title": "곱셈 공식",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 19
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3, y=1이면 좌변은 4*2=8이고 우변은 9-1=8이다.",
+    "puzzle": "(x+y)*(x-y)=x^2-y^2"
+  },
+  {
+    "id": "s6_4_4",
+    "level": "common1",
+    "title": "곱셈 공식",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 19
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3, y=1이면 좌변은 4*2=8이고 우변은 9-1=8이다.",
+    "puzzle": "(x+y)*(x-y)=x^2-y^2"
+  },
+  {
+    "id": "s6_4_5",
+    "level": "common1",
+    "title": "곱셈 공식",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "3",
+        "valueDisplay": "3"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+y)*(x-y)=x^2-y^2",
+      "display": "(x+y)×(x-y)=x^2-y^2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 19
+    },
+    "difficulty": "hard",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3, y=1이면 좌변은 4*2=8이고 우변은 9-1=8이다.",
+    "puzzle": "(x+y)*(x-y)=x^2-y^2"
+  }
+]

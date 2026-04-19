@@ -1,0 +1,336 @@
+[
+  {
+    "id": "s3_7_1",
+    "level": "middle1",
+    "title": "문자 도입 1",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "x+4=9",
+      "display": "x+4=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5를 대입하면 5+4=9가 된다.",
+    "puzzle": "x+4=9"
+  },
+  {
+    "id": "s3_7_2",
+    "level": "middle1",
+    "title": "문자 도입 1",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "x+2=7",
+      "display": "x+2=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5를 대입하면 5+4=9가 된다.",
+    "puzzle": "x+2=7"
+  },
+  {
+    "id": "s3_7_3",
+    "level": "middle1",
+    "title": "문자 도입 1",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "x+5=10",
+      "display": "x+5=10",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5를 대입하면 5+4=9가 된다.",
+    "puzzle": "x+5=10"
+  },
+  {
+    "id": "s3_7_4",
+    "level": "middle1",
+    "title": "문자 도입 1",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "x+1=6",
+      "display": "x+1=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5를 대입하면 5+4=9가 된다.",
+    "puzzle": "x+1=6"
+  },
+  {
+    "id": "s3_7_5",
+    "level": "middle1",
+    "title": "문자 도입 1",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "x+3=8",
+      "display": "x+3=8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "=",
+      "x"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5를 대입하면 5+4=9가 된다.",
+    "puzzle": "x+3=8"
+  }
+]

@@ -1,0 +1,471 @@
+[
+  {
+    "id": "s5_8_1",
+    "level": "middle3",
+    "title": "이차방정식 감각",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-5x+6=0",
+      "display": "x^2-5x+6=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 4-10+6=0이다.",
+    "puzzle": "x^2-5x+6=0"
+  },
+  {
+    "id": "s5_8_2",
+    "level": "middle3",
+    "title": "이차방정식 감각",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-3x+2=0",
+      "display": "x^2-3x+2=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 4-10+6=0이다.",
+    "puzzle": "x^2-3x+2=0"
+  },
+  {
+    "id": "s5_8_3",
+    "level": "middle3",
+    "title": "이차방정식 감각",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-4x+3=0",
+      "display": "x^2-4x+3=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 4-10+6=0이다.",
+    "puzzle": "x^2-4x+3=0"
+  },
+  {
+    "id": "s5_8_4",
+    "level": "middle3",
+    "title": "이차방정식 감각",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-7x+12=0",
+      "display": "x^2-7x+12=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "7"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 11
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 4-10+6=0이다.",
+    "puzzle": "x^2-7x+12=0"
+  },
+  {
+    "id": "s5_8_5",
+    "level": "middle3",
+    "title": "이차방정식 감각",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "x^2-6x+8=0",
+      "display": "x^2-6x+8=0",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 4-10+6=0이다.",
+    "puzzle": "x^2-6x+8=0"
+  }
+]

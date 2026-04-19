@@ -1,0 +1,287 @@
+[
+  {
+    "id": "1_3_1",
+    "level": "elementary_arithmetic",
+    "title": "뺄셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "3-1=2",
+      "display": "3-1=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "3-1=2이다."
+  },
+  {
+    "id": "1_3_2",
+    "level": "elementary_arithmetic",
+    "title": "뺄셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "4-2=2",
+      "display": "4-2=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "4-2=2이다."
+  },
+  {
+    "id": "1_3_3",
+    "level": "elementary_arithmetic",
+    "title": "뺄셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "5-2=3",
+      "display": "5-2=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "5-2=3이다."
+  },
+  {
+    "id": "1_3_4",
+    "level": "elementary_arithmetic",
+    "title": "뺄셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "6-3=3",
+      "display": "6-3=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "6-3=3이다."
+  },
+  {
+    "id": "1_3_5",
+    "level": "elementary_arithmetic",
+    "title": "뺄셈 도입",
+    "variable": null,
+    "answer": {
+      "expression": "7-4=3",
+      "display": "7-4=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "7"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "7-4=3이다."
+  }
+]

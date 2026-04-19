@@ -4,7 +4,7 @@
  * hooks/useGameSession.ts — Cell-based game session (finalized spec)
  */
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { PuzzleViewModel, KeypadToken, PuzzleCell, ReservedBlock } from "@/types/puzzle";
 import type {
   GameState,
@@ -16,7 +16,7 @@ import type {
   ToastMessage,
   LocalGameRecord,
 } from "@/types/game";
-import { colorPriority, cellDisplayKey } from "@mathdle/core";
+import { colorPriority, cellDisplayKey, validateBlockFields } from "@mathdle/core";
 import { useLocalPersistence } from "./useLocalPersistence";
 import { getSessionKey } from "@/lib/utils/session";
 import type { BlockInsertPayload } from "@/components/game/ScientificKeypad";
@@ -36,6 +36,8 @@ interface UseGameSessionReturn {
   clearInput: () => void;
   submitGuess: () => Promise<void>;
   dismissToast: () => void;
+  focusedPath: (string|number)[] | null;
+  setFocusedPath: (path: (string|number)[] | null) => void;
 }
 
 export function useGameSession({
@@ -79,9 +81,13 @@ export function useGameSession({
   const [state, setState] = useState<GameState>(initState);
   const [toast, setToast] = useState<ToastMessage | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [focusedPath, setFocusedPath] = useState<(string|number)[] | null>(null);
+  const currentCellsRef = useRef<PuzzleCell[]>([]);
+  currentCellsRef.current = state.currentCells;
 
   useEffect(() => {
     setState(initState());
+    setFocusedPath(null);
   }, [puzzle.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
@@ -99,20 +105,39 @@ export function useGameSession({
     saveGame(record);
   }, [state, saveGame]);
 
-  // Keyboard state: best feedback color per cell display key
+  // Keyboard state: best feedback color per cell display key.
+  // We need to flatten the nested feedback to find best color for tokens.
   const keyboardState = useMemo<KeyboardState>(() => {
     const ks: KeyboardState = {};
-    for (const row of state.rows) {
-      if (row.status !== "submitted") continue;
-      row.cells.forEach((cell, i) => {
-        const color = row.feedback[i];
-        if (!color) return;
+    
+    function processFeedback(cells: PuzzleCell[], feedbackList: import("@/types/game").NestedFeedback[] | import("@/types/game").FeedbackColor[]) {
+      cells.forEach((cell, i) => {
+        const feedbackObj = feedbackList[i];
+        if (!feedbackObj) return;
+        
+        // Handle both backward-compatible string colors and NestedFeedback objects
+        const color = typeof feedbackObj === "string" ? feedbackObj : feedbackObj.color;
+        
         const key = cellDisplayKey(cell);
         const current = ks[key];
-        if (!current || colorPriority(color) > colorPriority(current as FeedbackColor)) {
-          ks[key] = color;
+        if (!current || colorPriority(color as FeedbackColor) > colorPriority(current as FeedbackColor)) {
+          ks[key] = color as FeedbackColor;
+        }
+
+        // Process sub-fields recursively
+        if (cell.type === "block" && cell.cellFields && typeof feedbackObj !== "string" && feedbackObj.fields) {
+          for (const [fieldName, fieldCells] of Object.entries(cell.cellFields)) {
+            if (feedbackObj.fields[fieldName]) {
+              processFeedback(fieldCells, feedbackObj.fields[fieldName]);
+            }
+          }
         }
       });
+    }
+
+    for (const row of state.rows) {
+      if (row.status !== "submitted") continue;
+      processFeedback(row.cells, row.feedback);
     }
     return ks;
   }, [state.rows]);
@@ -126,33 +151,125 @@ export function useGameSession({
     []
   );
 
+  /**
+   * Insert a cell at the position indicated by `path`.
+   * Path format:
+   *   null              → append to root cells
+   *   [blockIdx, fieldName] → append to block's field
+   * If the path element types don't match (e.g., a number path to a non-block),
+   * the insertion is silently skipped.
+   */
+  const insertAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null, newCell: PuzzleCell, maxLength: number): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      if (cells.length >= maxLength) return cells;
+      return [...cells, newCell];
+    }
+
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block") return cells;
+
+    const newFields = { ...(targetBlock.cellFields || {}) };
+    // Each block field slot holds exactly 1 token — enforce the limit here.
+    newFields[fieldName] = insertAtCursor(newFields[fieldName] || [], restPath.length ? restPath : null, newCell, 1);
+
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
+  /**
+   * Delete the last cell at the position indicated by `path`.
+   * Path format mirrors insertAtCursor.
+   */
+  const deleteAtCursor = useCallback((cells: PuzzleCell[], path: (string|number)[] | null): PuzzleCell[] => {
+    if (!path || path.length === 0) {
+      return cells.slice(0, -1);
+    }
+
+    const [index, fieldName, ...restPath] = path;
+    if (typeof index !== "number" || typeof fieldName !== "string") return cells;
+
+    const targetBlock = cells[index];
+    if (!targetBlock || targetBlock.type !== "block" || !targetBlock.cellFields) return cells;
+
+    const newFields = { ...targetBlock.cellFields };
+    if (newFields[fieldName]) {
+      newFields[fieldName] = deleteAtCursor(newFields[fieldName], restPath.length ? restPath : null);
+    }
+
+    const newCells = [...cells];
+    newCells[index] = { ...targetBlock, cellFields: newFields };
+    return newCells;
+  }, []);
+
   const appendToken = useCallback(
     (token: KeypadToken) => {
       if (token.type === "block") return; // handled by appendBlock
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        if (prev.currentCells.length >= puzzle.answerLength) return prev;
         const cell: PuzzleCell = { type: "token", value: token.value };
-        return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+
+        // Auto-advance cursor after filling a block field (each field = exactly 1 token).
+        // Done inside setState so we operate on the brand-new cells array.
+        if (focusedPath && focusedPath.length === 2) {
+          const [blockIdx, fieldName] = focusedPath as [number, string];
+          const block = newCells[blockIdx];
+          if (block?.type === "block") {
+            const fieldNames = Object.keys(block.fields);
+            const currentFieldCells = block.cellFields?.[fieldName] ?? [];
+            // Only advance if the field is now filled (length === 1)
+            if (currentFieldCells.length === 1) {
+              const idx = fieldNames.indexOf(fieldName as string);
+              const nextField = fieldNames[idx + 1];
+              // Schedule the focus update after setState settles
+              setTimeout(() => {
+                setFocusedPath(nextField !== undefined ? [blockIdx, nextField] : null);
+              }, 0);
+            }
+          }
+        }
+
+        return { ...prev, currentCells: newCells, errorMessage: null };
       });
     },
-    [puzzle.answerLength]
+    [puzzle.answerLength, focusedPath, insertAtCursor]
   );
 
   const appendBlock = useCallback(
     (payload: BlockInsertPayload) => {
+      // Initialize cellFields from the spec's field names
+      const cellFields: Record<string, PuzzleCell[]> = {};
+      for (const key of Object.keys(payload.fields)) {
+        cellFields[key] = [];
+      }
+
+      const cell: PuzzleCell = {
+        type: "block",
+        blockType: payload.blockType as ReservedBlock,
+        fields: payload.fields,
+        cellFields,
+      };
+
+      let insertedIndex = -1;
       setState((prev) => {
         if (prev.status !== "playing") return prev;
-        if (prev.currentCells.length >= puzzle.answerLength) return prev;
-        const cell: PuzzleCell = {
-          type: "block",
-          blockType: payload.blockType as ReservedBlock,
-          fields: payload.fields,
-        };
-        return { ...prev, currentCells: [...prev.currentCells, cell], errorMessage: null };
+        const newCells = insertAtCursor(prev.currentCells, focusedPath, cell, puzzle.answerLength);
+        // Track which index the block was inserted at (root-level append only)
+        if (!focusedPath) insertedIndex = newCells.length - 1;
+        return { ...prev, currentCells: newCells, errorMessage: null };
       });
+
+      // Auto-focus the first field after inserting a block with fields
+      const fieldNames = Object.keys(payload.fields);
+      if (fieldNames.length > 0 && !focusedPath && insertedIndex >= 0) {
+        setFocusedPath([insertedIndex, fieldNames[0]]);
+      }
     },
-    [puzzle.answerLength]
+    [puzzle.answerLength, focusedPath, insertAtCursor]
   );
 
   const deleteCell = useCallback(() => {
@@ -160,17 +277,18 @@ export function useGameSession({
       if (prev.status !== "playing") return prev;
       return {
         ...prev,
-        currentCells: prev.currentCells.slice(0, -1),
+        currentCells: deleteAtCursor(prev.currentCells, focusedPath),
         errorMessage: null,
       };
     });
-  }, []);
+  }, [focusedPath, deleteAtCursor]);
 
   const clearInput = useCallback(() => {
     setState((prev) => {
       if (prev.status !== "playing") return prev;
       return { ...prev, currentCells: [], errorMessage: null };
     });
+    setFocusedPath(null);
   }, []);
 
   const submitGuess = useCallback(async () => {
@@ -180,6 +298,13 @@ export function useGameSession({
     if (snap.status !== "playing") return;
     if (snap.currentCells.length < puzzle.answerLength) {
       showToast(`${puzzle.answerLength}칸을 모두 채워주세요.`);
+      return;
+    }
+
+    // Client-side block field completeness check (mirrors server-side validateBlockFields)
+    const blockFieldCheck = validateBlockFields(snap.currentCells);
+    if (!blockFieldCheck.ok) {
+      showToast(blockFieldCheck.message ?? "블록 내부 칸을 모두 채워주세요.");
       return;
     }
 
@@ -202,7 +327,7 @@ export function useGameSession({
 
       const data = (await res.json()) as {
         ok: boolean;
-        feedback?: FeedbackColor[];
+        feedback?: import("@/types/game").NestedFeedback[];
         solved?: boolean;
         gameOver?: boolean;
         message?: string;
@@ -304,5 +429,7 @@ export function useGameSession({
     clearInput,
     submitGuess,
     dismissToast,
+    focusedPath,
+    setFocusedPath,
   };
 }

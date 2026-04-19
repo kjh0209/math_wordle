@@ -1,0 +1,467 @@
+[
+  {
+    "id": "s7_6_1",
+    "level": "common2",
+    "title": "유리함수 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=(x+1)/x",
+      "display": "y=(x+1)÷x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=(1+1)/1=2이다.",
+    "puzzle": "y=(x+1)/x"
+  },
+  {
+    "id": "s7_6_2",
+    "level": "common2",
+    "title": "유리함수 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=(x+1)/x",
+      "display": "y=(x+1)÷x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=(1+1)/1=2이다.",
+    "puzzle": "y=(x+1)/x"
+  },
+  {
+    "id": "s7_6_3",
+    "level": "common2",
+    "title": "유리함수 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=(x+1)/x",
+      "display": "y=(x+1)÷x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=(1+1)/1=2이다.",
+    "puzzle": "y=(x+1)/x"
+  },
+  {
+    "id": "s7_6_4",
+    "level": "common2",
+    "title": "유리함수 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=(x+1)/x",
+      "display": "y=(x+1)÷x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=(1+1)/1=2이다.",
+    "puzzle": "y=(x+1)/x"
+  },
+  {
+    "id": "s7_6_5",
+    "level": "common2",
+    "title": "유리함수 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=(x+1)/x",
+      "display": "y=(x+1)÷x",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=(1+1)/1=2이다.",
+    "puzzle": "y=(x+1)/x"
+  }
+]

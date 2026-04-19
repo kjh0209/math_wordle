@@ -1,0 +1,282 @@
+[
+  {
+    "id": "s10_1_1",
+    "level": "probstat",
+    "title": "순열 기본",
+    "variable": [],
+    "answer": {
+      "expression": "4P2=12",
+      "display": "4P2=12",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P2는 4*3=12이다.",
+    "puzzle": "4P2=12"
+  },
+  {
+    "id": "s10_1_2",
+    "level": "probstat",
+    "title": "순열 기본",
+    "variable": [],
+    "answer": {
+      "expression": "5P2=20",
+      "display": "5P2=20",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P2는 4*3=12이다.",
+    "puzzle": "5P2=20"
+  },
+  {
+    "id": "s10_1_3",
+    "level": "probstat",
+    "title": "순열 기본",
+    "variable": [],
+    "answer": {
+      "expression": "6P2=30",
+      "display": "6P2=30",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P2는 4*3=12이다.",
+    "puzzle": "6P2=30"
+  },
+  {
+    "id": "s10_1_4",
+    "level": "probstat",
+    "title": "순열 기본",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P2는 4*3=12이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s10_1_5",
+    "level": "probstat",
+    "title": "순열 기본",
+    "variable": [],
+    "answer": {
+      "expression": "5P3=60",
+      "display": "5P3=60",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "5",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "easy",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P2는 4*3=12이다.",
+    "puzzle": "5P3=60"
+  }
+]

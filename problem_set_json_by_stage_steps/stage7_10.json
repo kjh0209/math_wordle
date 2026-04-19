@@ -1,0 +1,475 @@
+[
+  {
+    "id": "s7_10_1",
+    "level": "common2",
+    "title": "공통수학2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "0",
+        "valueDisplay": "0"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "x^2+y^2=1",
+      "display": "x^2+y^2=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=0, y=1이면 x^2+y^2=1이다.",
+    "puzzle": "x^2+y^2=1"
+  },
+  {
+    "id": "s7_10_2",
+    "level": "common2",
+    "title": "공통수학2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "0",
+        "valueDisplay": "0"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "x^2+y^2=4",
+      "display": "x^2+y^2=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=0, y=1이면 x^2+y^2=1이다.",
+    "puzzle": "x^2+y^2=4"
+  },
+  {
+    "id": "s7_10_3",
+    "level": "common2",
+    "title": "공통수학2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "0",
+        "valueDisplay": "0"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "x^2+y^2=9",
+      "display": "x^2+y^2=9",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "9"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=0, y=1이면 x^2+y^2=1이다.",
+    "puzzle": "x^2+y^2=9"
+  },
+  {
+    "id": "s7_10_4",
+    "level": "common2",
+    "title": "공통수학2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "0",
+        "valueDisplay": "0"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "x^2+y^2=16",
+      "display": "x^2+y^2=16",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=0, y=1이면 x^2+y^2=1이다.",
+    "puzzle": "x^2+y^2=16"
+  },
+  {
+    "id": "s7_10_5",
+    "level": "common2",
+    "title": "공통수학2 종합",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "0",
+        "valueDisplay": "0"
+      },
+      {
+        "name": "y",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "x^2+y^2=25",
+      "display": "x^2+y^2=25",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=0, y=1이면 x^2+y^2=1이다.",
+    "puzzle": "x^2+y^2=25"
+  }
+]

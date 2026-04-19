@@ -1,0 +1,382 @@
+[
+  {
+    "id": "2_7_1",
+    "level": "elementary_fraction_decimal",
+    "title": "소수 도입",
+    "variable": null,
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "=",
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5+1.5=2이다."
+  },
+  {
+    "id": "2_7_2",
+    "level": "elementary_fraction_decimal",
+    "title": "소수 도입",
+    "variable": null,
+    "answer": {
+      "expression": "1.2+0.8=2",
+      "display": "1.2+0.8=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "8"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "=",
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "1.2+0.8=2이다."
+  },
+  {
+    "id": "2_7_3",
+    "level": "elementary_fraction_decimal",
+    "title": "소수 도입",
+    "variable": null,
+    "answer": {
+      "expression": "2.5-0.5=2",
+      "display": "2.5-0.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "-",
+      "=",
+      "+",
+      "*",
+      "x",
+      "/",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "2.5-0.5=2이다."
+  },
+  {
+    "id": "2_7_4",
+    "level": "elementary_fraction_decimal",
+    "title": "소수 도입",
+    "variable": null,
+    "answer": {
+      "expression": "1.5+1.5=3",
+      "display": "1.5+1.5=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "=",
+      "-",
+      "*",
+      "x",
+      "/",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "1.5+1.5=3이다."
+  },
+  {
+    "id": "2_7_5",
+    "level": "elementary_fraction_decimal",
+    "title": "소수 도입",
+    "variable": null,
+    "answer": {
+      "expression": "3.2-1.2=2",
+      "display": "3.2-1.2=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "-",
+      "=",
+      "+",
+      "*",
+      "x",
+      "/",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "3.2-1.2=2이다."
+  }
+]

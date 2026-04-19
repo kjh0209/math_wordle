@@ -1,0 +1,427 @@
+[
+  {
+    "id": "s5_2_1",
+    "level": "middle3",
+    "title": "근호 계산",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "sqrt(x+4)=3",
+      "display": "sqrt(x+4)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 x+4=9이고, sqrt(9)=3이다.",
+    "puzzle": "sqrt(x+4)=3"
+  },
+  {
+    "id": "s5_2_2",
+    "level": "middle3",
+    "title": "근호 계산",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "sqrt(x+4)=3",
+      "display": "sqrt(x+4)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 x+4=9이고, sqrt(9)=3이다.",
+    "puzzle": "sqrt(x+4)=3"
+  },
+  {
+    "id": "s5_2_3",
+    "level": "middle3",
+    "title": "근호 계산",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "sqrt(x+4)=3",
+      "display": "sqrt(x+4)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 x+4=9이고, sqrt(9)=3이다.",
+    "puzzle": "sqrt(x+4)=3"
+  },
+  {
+    "id": "s5_2_4",
+    "level": "middle3",
+    "title": "근호 계산",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "sqrt(x+4)=3",
+      "display": "sqrt(x+4)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 x+4=9이고, sqrt(9)=3이다.",
+    "puzzle": "sqrt(x+4)=3"
+  },
+  {
+    "id": "s5_2_5",
+    "level": "middle3",
+    "title": "근호 계산",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "5",
+        "valueDisplay": "5"
+      }
+    ],
+    "answer": {
+      "expression": "sqrt(x+4)=3",
+      "display": "sqrt(x+4)=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 x+4=9이고, sqrt(9)=3이다.",
+    "puzzle": "sqrt(x+4)=3"
+  }
+]

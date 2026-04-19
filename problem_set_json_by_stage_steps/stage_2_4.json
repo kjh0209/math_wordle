@@ -1,0 +1,362 @@
+[
+  {
+    "id": "2_4_1",
+    "level": "middle_linear_expression",
+    "title": "절댓값 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-2",
+      "valueDisplay": "-2"
+    },
+    "answer": {
+      "expression": "|x+3|=1",
+      "display": "|x+3|=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "|",
+      "x",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-2이면 |-2+3|=1이다."
+  },
+  {
+    "id": "2_4_2",
+    "level": "middle_linear_expression",
+    "title": "절댓값 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-2",
+      "valueDisplay": "-2"
+    },
+    "answer": {
+      "expression": "|x-1|=3",
+      "display": "|x-1|=3",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "|",
+      "x",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-2이면 |-2-1|=3이다."
+  },
+  {
+    "id": "2_4_3",
+    "level": "middle_linear_expression",
+    "title": "절댓값 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "-3",
+      "valueDisplay": "-3"
+    },
+    "answer": {
+      "expression": "|x+2|=1",
+      "display": "|x+2|=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "|",
+      "x",
+      "+",
+      "=",
+      "-",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=-3이면 |-3+2|=1이다."
+  },
+  {
+    "id": "2_4_4",
+    "level": "middle_linear_expression",
+    "title": "절댓값 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "|2-x|=1",
+      "display": "|2-x|=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "|",
+      "-",
+      "x",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 |2-3|=1이다."
+  },
+  {
+    "id": "2_4_5",
+    "level": "middle_linear_expression",
+    "title": "절댓값 응용",
+    "variable": {
+      "name": "x",
+      "valueExpression": "2",
+      "valueDisplay": "2"
+    },
+    "answer": {
+      "expression": "|x-4|=2",
+      "display": "|x-4|=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "|"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 7
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "|",
+      "x",
+      "-",
+      "=",
+      "+",
+      "*",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 |2-4|=2이다."
+  }
+]

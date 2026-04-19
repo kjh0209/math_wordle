@@ -1,0 +1,402 @@
+[
+  {
+    "id": "s4_7_1",
+    "level": "middle2",
+    "title": "소수 도입",
+    "variable": [],
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5와 1.5를 더하면 2가 된다.",
+    "puzzle": "0.5+1.5=2"
+  },
+  {
+    "id": "s4_7_2",
+    "level": "middle2",
+    "title": "소수 도입",
+    "variable": [],
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5와 1.5를 더하면 2가 된다.",
+    "puzzle": "0.5+1.5=2"
+  },
+  {
+    "id": "s4_7_3",
+    "level": "middle2",
+    "title": "소수 도입",
+    "variable": [],
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5와 1.5를 더하면 2가 된다.",
+    "puzzle": "0.5+1.5=2"
+  },
+  {
+    "id": "s4_7_4",
+    "level": "middle2",
+    "title": "소수 도입",
+    "variable": [],
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5와 1.5를 더하면 2가 된다.",
+    "puzzle": "0.5+1.5=2"
+  },
+  {
+    "id": "s4_7_5",
+    "level": "middle2",
+    "title": "소수 도입",
+    "variable": [],
+    "answer": {
+      "expression": "0.5+1.5=2",
+      "display": "0.5+1.5=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 9
+    },
+    "difficulty": "medium",
+    "category": "arithmetic",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "0.5와 1.5를 더하면 2가 된다.",
+    "puzzle": "0.5+1.5=2"
+  }
+]

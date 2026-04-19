@@ -1,0 +1,317 @@
+[
+  {
+    "id": "s8_8_1",
+    "level": "algebra",
+    "title": "시그마 도입",
+    "variable": [],
+    "answer": {
+      "expression": "Σ[1,4]i=10",
+      "display": "Σ[1,4]i=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "SigmaRange",
+          "fields": {
+            "start": "1",
+            "end": "4"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "summation",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "SigmaRange"
+    ],
+    "explanation": "1부터 4까지 i를 더하면 10이다.",
+    "puzzle": "Σ[1,4]i=10"
+  },
+  {
+    "id": "s8_8_2",
+    "level": "algebra",
+    "title": "시그마 도입",
+    "variable": [],
+    "answer": {
+      "expression": "Σ[1,4]i=10",
+      "display": "Σ[1,4]i=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "SigmaRange",
+          "fields": {
+            "start": "1",
+            "end": "4"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "summation",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "SigmaRange"
+    ],
+    "explanation": "1부터 4까지 i를 더하면 10이다.",
+    "puzzle": "Σ[1,4]i=10"
+  },
+  {
+    "id": "s8_8_3",
+    "level": "algebra",
+    "title": "시그마 도입",
+    "variable": [],
+    "answer": {
+      "expression": "Σ[1,4]i=10",
+      "display": "Σ[1,4]i=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "SigmaRange",
+          "fields": {
+            "start": "1",
+            "end": "4"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "summation",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "SigmaRange"
+    ],
+    "explanation": "1부터 4까지 i를 더하면 10이다.",
+    "puzzle": "Σ[1,4]i=10"
+  },
+  {
+    "id": "s8_8_4",
+    "level": "algebra",
+    "title": "시그마 도입",
+    "variable": [],
+    "answer": {
+      "expression": "Σ[1,4]i=10",
+      "display": "Σ[1,4]i=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "SigmaRange",
+          "fields": {
+            "start": "1",
+            "end": "4"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "summation",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "SigmaRange"
+    ],
+    "explanation": "1부터 4까지 i를 더하면 10이다.",
+    "puzzle": "Σ[1,4]i=10"
+  },
+  {
+    "id": "s8_8_5",
+    "level": "algebra",
+    "title": "시그마 도입",
+    "variable": [],
+    "answer": {
+      "expression": "Σ[1,4]i=10",
+      "display": "Σ[1,4]i=10",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "SigmaRange",
+          "fields": {
+            "start": "1",
+            "end": "4"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "hard",
+    "category": "summation",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "i",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "SigmaRange"
+    ],
+    "explanation": "1부터 4까지 i를 더하면 10이다.",
+    "puzzle": "Σ[1,4]i=10"
+  }
+]

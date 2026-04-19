@@ -1,0 +1,282 @@
+[
+  {
+    "id": "s10_6_1",
+    "level": "probstat",
+    "title": "조합 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "6C2는 15이다.",
+    "puzzle": "6C2=15"
+  },
+  {
+    "id": "s10_6_2",
+    "level": "probstat",
+    "title": "조합 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "6C2는 15이다.",
+    "puzzle": "6C2=15"
+  },
+  {
+    "id": "s10_6_3",
+    "level": "probstat",
+    "title": "조합 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "6C2는 15이다.",
+    "puzzle": "6C2=15"
+  },
+  {
+    "id": "s10_6_4",
+    "level": "probstat",
+    "title": "조합 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "6C2는 15이다.",
+    "puzzle": "6C2=15"
+  },
+  {
+    "id": "s10_6_5",
+    "level": "probstat",
+    "title": "조합 심화",
+    "variable": [],
+    "answer": {
+      "expression": "6C2=15",
+      "display": "6C2=15",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Comb",
+          "fields": {
+            "n": "6",
+            "r": "2"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "="
+    ],
+    "shownBlocks": [
+      "Comb"
+    ],
+    "explanation": "6C2는 15이다.",
+    "puzzle": "6C2=15"
+  }
+]

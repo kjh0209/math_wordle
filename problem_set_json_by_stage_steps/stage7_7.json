@@ -1,0 +1,407 @@
+[
+  {
+    "id": "s7_7_1",
+    "level": "common2",
+    "title": "무리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=sqrt(x)",
+      "display": "y=sqrt(x)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 y=sqrt(4)=2이다.",
+    "puzzle": "y=sqrt(x)"
+  },
+  {
+    "id": "s7_7_2",
+    "level": "common2",
+    "title": "무리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=sqrt(x)",
+      "display": "y=sqrt(x)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 y=sqrt(4)=2이다.",
+    "puzzle": "y=sqrt(x)"
+  },
+  {
+    "id": "s7_7_3",
+    "level": "common2",
+    "title": "무리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=sqrt(x)",
+      "display": "y=sqrt(x)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 y=sqrt(4)=2이다.",
+    "puzzle": "y=sqrt(x)"
+  },
+  {
+    "id": "s7_7_4",
+    "level": "common2",
+    "title": "무리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=sqrt(x)",
+      "display": "y=sqrt(x)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 y=sqrt(4)=2이다.",
+    "puzzle": "y=sqrt(x)"
+  },
+  {
+    "id": "s7_7_5",
+    "level": "common2",
+    "title": "무리함수",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "4",
+        "valueDisplay": "4"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=sqrt(x)",
+      "display": "y=sqrt(x)",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "sqrt"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        }
+      ],
+      "length": 6
+    },
+    "difficulty": "medium",
+    "category": "root",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 y=sqrt(4)=2이다.",
+    "puzzle": "y=sqrt(x)"
+  }
+]

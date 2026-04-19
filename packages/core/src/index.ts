@@ -17,6 +17,8 @@ export * from "./game/progression";
 export * from "./puzzles/mock-puzzles";
 export * from "./puzzles/mock-progression";
 export * from "./puzzles/puzzle-adapter";
+export * from "./puzzles/problem-sets";
+export * from "./puzzles/stage-config";
 
 // Storage
 export * from "./storage/adapter";

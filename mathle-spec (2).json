@@ -1,54 +1,164 @@
 {
   "cellSpec": {
-    "cellTypes": ["token", "block"],
+    "cellTypes": [
+      "token",
+      "block"
+    ],
     "description": "게임의 한 칸은 하나의 cell이며, token 또는 block 타입을 가진다."
   },
   "tokenSpec": {
     "reservedTokens": [
-      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
       ".",
-      "+", "-", "*", "/", "^",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
       "=",
-      "(", ")", "|",
-      "x", "i", "pi", "e",
-      "sin", "cos", "tan", "sqrt"
+      "(",
+      ")",
+      "|",
+      "x",
+      "y",
+      "i",
+      "j",
+      "pi",
+      "e",
+      "sin",
+      "cos",
+      "tan",
+      "sqrt"
     ],
     "tokenDefinitions": {
-      "0": { "display": "0", "type": "digit" },
-      "1": { "display": "1", "type": "digit" },
-      "2": { "display": "2", "type": "digit" },
-      "3": { "display": "3", "type": "digit" },
-      "4": { "display": "4", "type": "digit" },
-      "5": { "display": "5", "type": "digit" },
-      "6": { "display": "6", "type": "digit" },
-      "7": { "display": "7", "type": "digit" },
-      "8": { "display": "8", "type": "digit" },
-      "9": { "display": "9", "type": "digit" },
-      ".": { "display": ".", "type": "decimal-point" },
-      "+": { "display": "+", "type": "operator" },
-      "-": { "display": "-", "type": "operator" },
-      "*": { "display": "×", "type": "operator" },
-      "/": { "display": "÷", "type": "operator" },
-      "^": { "display": "^", "type": "operator" },
-      "=": { "display": "=", "type": "relation" },
-      "(": { "display": "(", "type": "grouping" },
-      ")": { "display": ")", "type": "grouping" },
+      "0": {
+        "display": "0",
+        "type": "digit"
+      },
+      "1": {
+        "display": "1",
+        "type": "digit"
+      },
+      "2": {
+        "display": "2",
+        "type": "digit"
+      },
+      "3": {
+        "display": "3",
+        "type": "digit"
+      },
+      "4": {
+        "display": "4",
+        "type": "digit"
+      },
+      "5": {
+        "display": "5",
+        "type": "digit"
+      },
+      "6": {
+        "display": "6",
+        "type": "digit"
+      },
+      "7": {
+        "display": "7",
+        "type": "digit"
+      },
+      "8": {
+        "display": "8",
+        "type": "digit"
+      },
+      "9": {
+        "display": "9",
+        "type": "digit"
+      },
+      ".": {
+        "display": ".",
+        "type": "decimal-point"
+      },
+      "+": {
+        "display": "+",
+        "type": "operator"
+      },
+      "-": {
+        "display": "-",
+        "type": "operator"
+      },
+      "*": {
+        "display": "×",
+        "type": "operator"
+      },
+      "/": {
+        "display": "÷",
+        "type": "operator"
+      },
+      "^": {
+        "display": "^",
+        "type": "operator"
+      },
+      "=": {
+        "display": "=",
+        "type": "relation"
+      },
+      "(": {
+        "display": "(",
+        "type": "grouping"
+      },
+      ")": {
+        "display": ")",
+        "type": "grouping"
+      },
       "|": {
         "display": "|",
         "type": "delimiter",
         "description": "절댓값 기호. 짝을 이루어 식을 감싼다."
       },
-      "x": { "display": "x", "type": "variable" },
+      "x": {
+        "display": "x",
+        "type": "variable"
+      },
+      "y": {
+        "display": "y",
+        "type": "variable"
+      },
       "i": {
         "display": "i",
         "type": "index-variable",
         "description": "시그마 본문에서 사용하는 인덱스 변수"
       },
-      "pi": { "display": "π", "type": "constant" },
-      "e": { "display": "e", "type": "constant" },
-      "sin": { "display": "sin", "type": "function-token" },
-      "cos": { "display": "cos", "type": "function-token" },
-      "tan": { "display": "tan", "type": "function-token" },
+      "j": {
+        "display": "j",
+        "type": "constant",
+        "description": "허수"
+      },
+      "pi": {
+        "display": "π",
+        "type": "constant"
+      },
+      "e": {
+        "display": "e",
+        "type": "constant"
+      },
+      "sin": {
+        "display": "sin",
+        "type": "function-token"
+      },
+      "cos": {
+        "display": "cos",
+        "type": "function-token"
+      },
+      "tan": {
+        "display": "tan",
+        "type": "function-token"
+      },
       "sqrt": {
         "display": "√",
         "type": "function-token",
@@ -67,39 +177,53 @@
     ],
     "blockDefinitions": {
       "LogBase": {
-        "display": "log_()",
+        "display": "log",
         "fieldCount": 1,
-        "fieldNames": ["base"],
+        "fieldNames": [
+          "base"
+        ],
         "description": "밑을 가지는 로그 블록. 뒤에 ( ) 안에 진수를 작성한다."
       },
       "SigmaRange": {
-        "display": "Σ[ , ]",
+        "display": "Σ",
         "fieldCount": 2,
-        "fieldNames": ["start", "end"],
+        "fieldNames": [
+          "start",
+          "end"
+        ],
         "description": "시작값과 끝값을 가지는 시그마 블록. 뒤에 일반 토큰으로 식을 작성한다."
       },
       "IntegralRange": {
-        "display": "∫[ , ]",
+        "display": "∫",
         "fieldCount": 2,
-        "fieldNames": ["start", "end"],
+        "fieldNames": [
+          "start",
+          "end"
+        ],
         "description": "시작값과 끝값을 가지는 정적분 블록. 뒤에 dx 블럭으로 식을 작성한다."
       },
-      "dx" : {
+      "dx": {
         "display": "dx",
         "fieldCount": 0,
         "fieldNames": [],
         "description": "시작값과 끝값을 가지는 정적분 블록.앞에 int 블럭으로 식을 작성한다."
       },
       "Comb": {
-        "display": "C( , )",
+        "display": "C",
         "fieldCount": 2,
-        "fieldNames": ["n", "r"],
+        "fieldNames": [
+          "n",
+          "r"
+        ],
         "description": "조합 블록"
       },
       "Perm": {
-        "display": "P( , )",
+        "display": "P",
         "fieldCount": 2,
-        "fieldNames": ["n", "r"],
+        "fieldNames": [
+          "n",
+          "r"
+        ],
         "description": "순열 블록"
       }
     }
@@ -122,7 +246,11 @@
     ]
   },
   "difficultySpec": {
-    "allowedDifficulties": ["easy", "medium", "hard"]
+    "allowedDifficulties": [
+      "easy",
+      "medium",
+      "hard"
+    ]
   },
   "categorySpec": {
     "allowedCategories": [

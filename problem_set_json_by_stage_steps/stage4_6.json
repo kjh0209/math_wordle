@@ -1,0 +1,652 @@
+[
+  {
+    "id": "s4_6_1",
+    "level": "middle2",
+    "title": "다항식 곱셈 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+1)*(x+2)=x^2+3x+2",
+      "display": "(x+1)×(x+2)=x^2+3x+2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 20
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 좌변은 2*3=6, 우변은 1+3+2=6이다.",
+    "puzzle": "(x+1)*(x+2)=x^2+3x+2"
+  },
+  {
+    "id": "s4_6_2",
+    "level": "middle2",
+    "title": "다항식 곱셈 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+1)*(x+2)=x^2+3x+2",
+      "display": "(x+1)×(x+2)=x^2+3x+2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 20
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 좌변은 2*3=6, 우변은 1+3+2=6이다.",
+    "puzzle": "(x+1)*(x+2)=x^2+3x+2"
+  },
+  {
+    "id": "s4_6_3",
+    "level": "middle2",
+    "title": "다항식 곱셈 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+1)*(x+2)=x^2+3x+2",
+      "display": "(x+1)×(x+2)=x^2+3x+2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 20
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 좌변은 2*3=6, 우변은 1+3+2=6이다.",
+    "puzzle": "(x+1)*(x+2)=x^2+3x+2"
+  },
+  {
+    "id": "s4_6_4",
+    "level": "middle2",
+    "title": "다항식 곱셈 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+1)*(x+2)=x^2+3x+2",
+      "display": "(x+1)×(x+2)=x^2+3x+2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 20
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 좌변은 2*3=6, 우변은 1+3+2=6이다.",
+    "puzzle": "(x+1)*(x+2)=x^2+3x+2"
+  },
+  {
+    "id": "s4_6_5",
+    "level": "middle2",
+    "title": "다항식 곱셈 확장",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      }
+    ],
+    "answer": {
+      "expression": "(x+1)*(x+2)=x^2+3x+2",
+      "display": "(x+1)×(x+2)=x^2+3x+2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "^"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 20
+    },
+    "difficulty": "hard",
+    "category": "quadratic",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 좌변은 2*3=6, 우변은 1+3+2=6이다.",
+    "puzzle": "(x+1)*(x+2)=x^2+3x+2"
+  }
+]

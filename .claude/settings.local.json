@@ -12,7 +12,26 @@
       "Bash(mv tsconfig.json apps/web/)",
       "Bash(mv next-env.d.ts apps/web/)",
       "Bash(npm test *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(node scripts/generate-problem-sets.js)",
+      "Bash(node -e ' *)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(json.dumps\\(p.get\\('answerCells',[]\\),ensure_ascii=False\\)\\) for p in data]\")",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(json.dumps\\(data[0],ensure_ascii=False,indent=2\\)\\)\")",
+      "Bash(python3 -c \" import json,sys data=json.load\\(sys.stdin\\) for p in data[:2]: print\\('id:', p.get\\('id'\\)\\) print\\('answer:', p['answer']['expression']\\) cells = p['answer']['cells'] blocks = [c for c in cells if c['type']=='block'] if blocks: print\\('blocks:', blocks\\) print\\(\\) \" done)",
+      "Bash(python3 -c \" import json,sys data=json.load\\(sys.stdin\\) for p in data[:1]: print\\('id:', p.get\\('id'\\)\\) print\\('answer:', p['answer']['expression']\\) cells = p['answer']['cells'] blocks = [c for c in cells if c['type']=='block'] if blocks: print\\('blocks:', blocks\\) \" done)",
+      "Bash(python3 -c ' *)",
+      "Bash(npx ts-node --project packages/core/tsconfig.json -e ' *)",
+      "Bash(npx ts-node *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('compilerOptions',{}\\).get\\('module',''\\)\\)\")",
+      "Bash(npx jest *)",
+      "Bash(npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit -p packages/core/tsconfig.json)",
+      "Bash(ls packages/core/node_modules/.bin/tsc)",
+      "Bash(ls node_modules/.bin/tsc)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(node -e \"const {all, create} = require\\('./packages/core/node_modules/mathjs/package.json'\\); console.log\\(all\\)\")",
+      "Bash(node -e \"const m = require\\('c:/Users/김찬혁/Desktop/math_wordle/node_modules/mathjs'\\); console.log\\(m.version\\); const math = m.create\\(m.all, {}\\); const v = math.evaluate\\('4+2'\\); console.log\\(typeof v, v\\); const p = math.parse; console.log\\(typeof p\\);\")",
+      "Bash(git add *)"
     ]
   }
 }

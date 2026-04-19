@@ -1,0 +1,312 @@
+[
+  {
+    "id": "s6_8_1",
+    "level": "common1",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s6_8_2",
+    "level": "common1",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s6_8_3",
+    "level": "common1",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s6_8_4",
+    "level": "common1",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  },
+  {
+    "id": "s6_8_5",
+    "level": "common1",
+    "title": "순열 확장",
+    "variable": [],
+    "answer": {
+      "expression": "4P3=24",
+      "display": "4P3=24",
+      "cells": [
+        {
+          "type": "block",
+          "blockType": "Perm",
+          "fields": {
+            "n": "4",
+            "r": "3"
+          }
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 4
+    },
+    "difficulty": "medium",
+    "category": "combinatorics",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "-",
+      ".",
+      "*",
+      "/",
+      "("
+    ],
+    "shownBlocks": [
+      "Perm"
+    ],
+    "explanation": "4P3은 4*3*2=24이다.",
+    "puzzle": "4P3=24"
+  }
+]

@@ -1,0 +1,465 @@
+[
+  {
+    "id": "s8_10_1",
+    "level": "algebra",
+    "title": "대수 종합",
+    "variable": [],
+    "answer": {
+      "expression": "sin(pi/2)+1=2",
+      "display": "sin(pi÷2)+1=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sin"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "pi"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "trigonometry",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/",
+      "(",
+      ")",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
+    ],
+    "shownBlocks": [
+      "LogBase",
+      "SigmaRange"
+    ],
+    "explanation": "sin(π/2)는 1이므로 전체 값은 2가 된다.",
+    "puzzle": "sin(pi/2)+1=2"
+  },
+  {
+    "id": "s8_10_2",
+    "level": "algebra",
+    "title": "대수 종합",
+    "variable": [],
+    "answer": {
+      "expression": "cos(0)+1=2",
+      "display": "cos(0)+1=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 8
+    },
+    "difficulty": "hard",
+    "category": "trigonometry",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/",
+      "(",
+      ")",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
+    ],
+    "shownBlocks": [
+      "LogBase",
+      "SigmaRange"
+    ],
+    "explanation": "sin(π/2)는 1이므로 전체 값은 2가 된다.",
+    "puzzle": "cos(0)+1=2"
+  },
+  {
+    "id": "s8_10_3",
+    "level": "algebra",
+    "title": "대수 종합",
+    "variable": [],
+    "answer": {
+      "expression": "tan(pi/4)+1=2",
+      "display": "tan(pi÷4)+1=2",
+      "cells": [
+        {
+          "type": "token",
+          "value": "tan"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "pi"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "2"
+        }
+      ],
+      "length": 10
+    },
+    "difficulty": "hard",
+    "category": "trigonometry",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/",
+      "(",
+      ")",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
+    ],
+    "shownBlocks": [
+      "LogBase",
+      "SigmaRange"
+    ],
+    "explanation": "sin(π/2)는 1이므로 전체 값은 2가 된다.",
+    "puzzle": "tan(pi/4)+1=2"
+  },
+  {
+    "id": "s8_10_4",
+    "level": "algebra",
+    "title": "대수 종합",
+    "variable": [],
+    "answer": {
+      "expression": "sin(pi/6)+0.5=1",
+      "display": "sin(pi÷6)+0.5=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "sin"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "pi"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "6"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "trigonometry",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/",
+      "(",
+      ")",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
+    ],
+    "shownBlocks": [
+      "LogBase",
+      "SigmaRange"
+    ],
+    "explanation": "sin(π/2)는 1이므로 전체 값은 2가 된다.",
+    "puzzle": "sin(pi/6)+0.5=1"
+  },
+  {
+    "id": "s8_10_5",
+    "level": "algebra",
+    "title": "대수 종합",
+    "variable": [],
+    "answer": {
+      "expression": "cos(pi/3)+0.5=1",
+      "display": "cos(pi÷3)+0.5=1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "cos"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "pi"
+        },
+        {
+          "type": "token",
+          "value": "/"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        },
+        {
+          "type": "token",
+          "value": "."
+        },
+        {
+          "type": "token",
+          "value": "5"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 12
+    },
+    "difficulty": "hard",
+    "category": "trigonometry",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "=",
+      "+",
+      "/",
+      "(",
+      ")",
+      "pi",
+      "sin",
+      "cos",
+      "tan",
+      "e",
+      "-",
+      "*",
+      ".",
+      "^",
+      "sqrt"
+    ],
+    "shownBlocks": [
+      "LogBase",
+      "SigmaRange"
+    ],
+    "explanation": "sin(π/2)는 1이므로 전체 값은 2가 된다.",
+    "puzzle": "cos(pi/3)+0.5=1"
+  }
+]

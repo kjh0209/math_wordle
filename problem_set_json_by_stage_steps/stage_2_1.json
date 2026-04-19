@@ -1,0 +1,323 @@
+[
+  {
+    "id": "2_1_1",
+    "level": "middle_variable",
+    "title": "변수 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "2",
+      "valueDisplay": "2"
+    },
+    "answer": {
+      "expression": "x+3=5",
+      "display": "x+3=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "+",
+      "=",
+      "-",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 2+3=5이다."
+  },
+  {
+    "id": "2_1_2",
+    "level": "middle_variable",
+    "title": "변수 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "3",
+      "valueDisplay": "3"
+    },
+    "answer": {
+      "expression": "x+4=7",
+      "display": "x+4=7",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "4"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "7"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "+",
+      "=",
+      "-",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=3이면 3+4=7이다."
+  },
+  {
+    "id": "2_1_3",
+    "level": "middle_variable",
+    "title": "변수 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "4",
+      "valueDisplay": "4"
+    },
+    "answer": {
+      "expression": "2+x=6",
+      "display": "2+x=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "+",
+      "x",
+      "=",
+      "-",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=4이면 2+4=6이다."
+  },
+  {
+    "id": "2_1_4",
+    "level": "middle_variable",
+    "title": "변수 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "5",
+      "valueDisplay": "5"
+    },
+    "answer": {
+      "expression": "x+1=6",
+      "display": "x+1=6",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "6"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "+",
+      "=",
+      "-",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=5이면 5+1=6이다."
+  },
+  {
+    "id": "2_1_5",
+    "level": "middle_variable",
+    "title": "변수 도입",
+    "variable": {
+      "name": "x",
+      "valueExpression": "2",
+      "valueDisplay": "2"
+    },
+    "answer": {
+      "expression": "x+x=4",
+      "display": "x+x=4",
+      "cells": [
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "4"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "x",
+      "+",
+      "x",
+      "=",
+      "-",
+      "*",
+      "|",
+      "/"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=2이면 2+2=4이다."
+  }
+]

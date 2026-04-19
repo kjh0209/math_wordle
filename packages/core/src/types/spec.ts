@@ -56,7 +56,7 @@ export const RESERVED_TOKENS = [
   "+", "-", "*", "/", "^",
   "=",
   "(", ")", "|",
-  "x", "i", "pi", "e",
+  "x", "y", "i", "j", "pi", "e",
   "sin", "cos", "tan", "sqrt",
 ] as const;
 
@@ -90,7 +90,9 @@ export const TOKEN_DEFINITIONS: Record<ReservedToken, TokenDefinition> = {
   ")": { display: ")", type: "grouping" },
   "|": { display: "|", type: "delimiter", description: "절댓값 기호" },
   "x": { display: "x", type: "variable" },
+  "y": { display: "y", type: "variable" },
   "i": { display: "i", type: "index-variable", description: "시그마 인덱스 변수" },
+  "j": { display: "j", type: "constant", description: "허수 단위" },
   "pi": { display: "π", type: "constant" },
   "e": { display: "e", type: "constant" },
   "sin": { display: "sin", type: "function-token" },
@@ -111,6 +113,7 @@ export const RESERVED_BLOCKS = [
   "SigmaRange",
   "IntegralRange",
   "dx",
+  "d/dx",
   "Comb",
   "Perm",
 ] as const;
@@ -149,6 +152,12 @@ export const BLOCK_DEFINITIONS: Record<ReservedBlock, BlockDefinition> = {
     fieldNames: [],
     description: "미분 변수 블록",
   },
+  "d/dx": {
+    display: "d/dx",
+    fieldCount: 0,
+    fieldNames: [],
+    description: "미분 연산자 블록",
+  },
   Comb: {
     display: "C( , )",
     fieldCount: 2,
@@ -177,6 +186,8 @@ export function getBlockDisplay(
       return `∫[${fields.start ?? "?"},${fields.end ?? "?"}]`;
     case "dx":
       return "dx";
+    case "d/dx":
+      return "d/dx";
     case "Comb":
       return `C(${fields.n ?? "?"},${fields.r ?? "?"})`;
     case "Perm":

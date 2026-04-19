@@ -1,0 +1,387 @@
+[
+  {
+    "id": "s7_2_1",
+    "level": "common2",
+    "title": "직선의 방정식 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=x+1",
+      "display": "y=x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=2이다.",
+    "puzzle": "y=x+1"
+  },
+  {
+    "id": "s7_2_2",
+    "level": "common2",
+    "title": "직선의 방정식 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=x+1",
+      "display": "y=x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=2이다.",
+    "puzzle": "y=x+1"
+  },
+  {
+    "id": "s7_2_3",
+    "level": "common2",
+    "title": "직선의 방정식 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=x+1",
+      "display": "y=x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=2이다.",
+    "puzzle": "y=x+1"
+  },
+  {
+    "id": "s7_2_4",
+    "level": "common2",
+    "title": "직선의 방정식 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=x+1",
+      "display": "y=x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=2이다.",
+    "puzzle": "y=x+1"
+  },
+  {
+    "id": "s7_2_5",
+    "level": "common2",
+    "title": "직선의 방정식 2",
+    "variable": [
+      {
+        "name": "x",
+        "valueExpression": "1",
+        "valueDisplay": "1"
+      },
+      {
+        "name": "y",
+        "valueExpression": "2",
+        "valueDisplay": "2"
+      }
+    ],
+    "answer": {
+      "expression": "y=x+1",
+      "display": "y=x+1",
+      "cells": [
+        {
+          "type": "token",
+          "value": "y"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "x"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "1"
+        }
+      ],
+      "length": 5
+    },
+    "difficulty": "easy",
+    "category": "function",
+    "rules": {
+      "requiresVariable": true,
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "sqrt"
+    ],
+    "shownBlocks": [],
+    "explanation": "x=1이면 y=2이다.",
+    "puzzle": "y=x+1"
+  }
+]

@@ -1,0 +1,533 @@
+[
+  {
+    "id": "s6_2_1",
+    "level": "common1",
+    "title": "복소수 계산",
+    "variable": [],
+    "answer": {
+      "expression": "(2+i)*(2-i)=5",
+      "display": "(2+i)×(2-i)=5",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "5"
+        }
+      ],
+      "length": 13
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "(2+i)(2-i)=4+1=5이다.",
+    "puzzle": "(2+i)*(2-i)=5"
+  },
+  {
+    "id": "s6_2_2",
+    "level": "common1",
+    "title": "복소수 계산",
+    "variable": [],
+    "answer": {
+      "expression": "(3+i)*(3-i)=10",
+      "display": "(3+i)×(3-i)=10",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 14
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "(3+i)(3-i)=9+1=10이다.",
+    "puzzle": "(3+i)*(3-i)=10"
+  },
+  {
+    "id": "s6_2_3",
+    "level": "common1",
+    "title": "복소수 계산",
+    "variable": [],
+    "answer": {
+      "expression": "(1+3i)*(1-3i)=10",
+      "display": "(1+3i)×(1-3i)=10",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "0"
+        }
+      ],
+      "length": 16
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "(1+3i)(1-3i)=1+9=10이다.",
+    "puzzle": "(1+3i)*(1-3i)=10"
+  },
+  {
+    "id": "s6_2_4",
+    "level": "common1",
+    "title": "복소수 계산",
+    "variable": [],
+    "answer": {
+      "expression": "(2+2i)*(2-2i)=8",
+      "display": "(2+2i)×(2-2i)=8",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "8"
+        }
+      ],
+      "length": 15
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "(2+2i)(2-2i)=4+4=8이다.",
+    "puzzle": "(2+2i)*(2-2i)=8"
+  },
+  {
+    "id": "s6_2_5",
+    "level": "common1",
+    "title": "복소수 계산",
+    "variable": [],
+    "answer": {
+      "expression": "(3+2i)*(3-2i)=13",
+      "display": "(3+2i)×(3-2i)=13",
+      "cells": [
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "+"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "*"
+        },
+        {
+          "type": "token",
+          "value": "("
+        },
+        {
+          "type": "token",
+          "value": "3"
+        },
+        {
+          "type": "token",
+          "value": "-"
+        },
+        {
+          "type": "token",
+          "value": "2"
+        },
+        {
+          "type": "token",
+          "value": "i"
+        },
+        {
+          "type": "token",
+          "value": ")"
+        },
+        {
+          "type": "token",
+          "value": "="
+        },
+        {
+          "type": "token",
+          "value": "1"
+        },
+        {
+          "type": "token",
+          "value": "3"
+        }
+      ],
+      "length": 16
+    },
+    "difficulty": "medium",
+    "category": "algebra",
+    "rules": {
+      "allowImplicitMultiplication": true
+    },
+    "shownTokens": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      ".",
+      "+",
+      "-",
+      "*",
+      "/",
+      "^",
+      "=",
+      "(",
+      ")",
+      "x",
+      "y",
+      "i",
+      "sqrt",
+      "|"
+    ],
+    "shownBlocks": [],
+    "explanation": "(3+2i)(3-2i)=9+4=13이다.",
+    "puzzle": "(3+2i)*(3-2i)=13"
+  }
+]
